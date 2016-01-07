@@ -312,6 +312,8 @@ namespace Microsoft { namespace MSR { namespace CNTK {
 			m_multiverso = new MultiversoWrapper<ElemType>(learnableNodes,
 				g_mpi->NumNodesInUse(),
 				m_isPipeline,
+				m_MomentumAdd,
+				m_ElasticAdd,
 				m_adjustlearningrateatbeginning,
 				m_adjustcoefficient,
 				m_adjustnbminibatch);
@@ -659,6 +661,13 @@ namespace Microsoft { namespace MSR { namespace CNTK {
                         _wunlink(GetCheckPointFileNameForEpoch(i - 1).c_str());
                     }
                 }
+				// EASGD logic
+				if (m_parallelizationMethod == ParallelizationMethod::DataParallelASGD && m_ElasticAdd > 0.)
+				{
+					m_multiverso->ModelLoadServer(learnableNodes);
+					net->Save(GetModelNameForEpoch(i) + L".server");
+					m_multiverso->ModelLoadBack(learnableNodes);
+				}
             }
 
             if (learnRatePerSample < 1e-12)
@@ -850,14 +859,6 @@ namespace Microsoft { namespace MSR { namespace CNTK {
             size_t actualMBSize = 0;
             bool wasDataRead = DataReaderHelpers::GetMinibatchIntoNetwork(*trainSetDataReader, net, criterionNodes[0],
                                                                           useDistributedMBReading, useParallelTrain, *inputMatrices, actualMBSize);
-
-			if (!m_multiversoBarrier && useASGD)
-			{
-				fprintf(stderr, "Ready to train.....");
-				m_multiverso->_adaptor->Barrier();
-				m_multiversoBarrier = true;
-				fprintf(stderr, "Go!\n");
-			}
 
             if (!wasDataRead && (!useDistributedMBReading || noMoreSamplesToProcess))   // in case of distributed reading, we do a few more loops until all ranks have completed
                 break;  // end of epoch
@@ -1094,6 +1095,14 @@ namespace Microsoft { namespace MSR { namespace CNTK {
 
 			if (useASGD && g_mpi->NumNodesInUse() > 1)
 			{
+
+				if (!m_multiversoBarrier && useASGD)
+				{
+					fprintf(stderr, "Ready to train.....");
+					m_multiverso->_adaptor->Barrier();
+					m_multiversoBarrier = true;
+					fprintf(stderr, "Go!\n");
+				}
 				// Determine if any samples were processed across any of the ranks
 				if (useDistributedMBReading)
 				{
@@ -2762,6 +2771,8 @@ namespace Microsoft { namespace MSR { namespace CNTK {
 
 		m_nFramesBetweenASGDSync = 1280;
 		m_nEpochBarrier = 0;
+		m_MomentumAdd = 0.;
+		m_ElasticAdd = 0.;
 		m_adjustlearningrateatbeginning = AdjustLearningRateatBeginning::None;
 
 
@@ -2797,6 +2808,8 @@ namespace Microsoft { namespace MSR { namespace CNTK {
 				const ConfigRecordType & configDataParallelASGD(configParallelTrain(L"DataParallelASGD", ConfigRecordType::Record()));
 				m_nFramesBetweenASGDSync = configDataParallelASGD(L"SyncFrequencyInFrames", (size_t)1280);
 				m_isPipeline = configDataParallelASGD(L"UsePipeline", true);
+				m_MomentumAdd = configDataParallelASGD(L"UseMomentumAdd", (double)0.);
+				m_ElasticAdd = configDataParallelASGD(L"UseElasticAdd", (double)0.);
 				m_nEpochBarrier = configDataParallelASGD(L"EpochBarrier", (size_t)0);
 				if (configDataParallelASGD.Exists(L"AdjustLearningRateAtBeginning"))
 				{

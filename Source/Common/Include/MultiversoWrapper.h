@@ -56,6 +56,8 @@ namespace Microsoft {
 				MultiversoWrapper(const std::list<ComputationNodeBasePtr> & learnableNodes,
 					int localWorkerNumber,
 					bool isPipeline = true,
+					double momentumAdd = 0.,
+					double elasticAdd = 0.,
 					AdjustLearningRateatBeginning adjusttype = AdjustLearningRateatBeginning::None,
 					double adjustcoef = 0.2,
 					size_t adjustnbmb = 600)
@@ -64,6 +66,11 @@ namespace Microsoft {
 					_adjustlearningrateatbeginningtype = adjusttype;
 					_adjustcoefficient = adjustcoef;
 					_adjustnbmb = adjustnbmb;
+
+					_momentumAdd = momentumAdd;
+					_elasticAdd = elasticAdd;
+					if (_momentumAdd * _elasticAdd != 0)
+						InvalidArgument("Please choose Elastic Add or Momentum Add.\n");
 
 					_isInitialized = false;
 
@@ -199,7 +206,12 @@ namespace Microsoft {
 
 							mat.CopyToArray(px, _vTableLength[i]);
 
-							ElemType * py = _pPCache[_pCacheState[_nCacheIdx]] + _vTableIdx[i];
+							ElemType * py;
+							if(_elasticAdd <= 0.)
+								py = _pPCache[_pCacheState[_nCacheIdx]] + _vTableIdx[i];
+							else
+								//must be wrong. _pDelta is using in the other thread.
+								py = _pDelta + _vTableIdx[i];
 
 							mat.SetValue(mat.GetNumRows(), mat.GetNumCols(), mat.GetDeviceId(), py);
 
@@ -229,18 +241,35 @@ namespace Microsoft {
 							//Sync for copy
 							CudaErrorCheck(cudaStreamSynchronize(_commStream));
 
+							if (_elasticAdd <= 0.){
 							//Calculate delta
 							transform(_pDelta, _pDelta + _lTotalLength, _pPCache[t_cacheIdx], _pDelta, std::minus<ElemType>());
 
 							//////Communication
 							for (int row = 0; row < _nClients; row++)
-								_adaptor->Add(table_id, row, _pDelta + _pIdxEachServer[row], factor);
+									_adaptor->Add(table_id, row, _pDelta + _pIdxEachServer[row], factor);
 							_adaptor->BatchLoad(table_id, _pPCache[t_cacheIdx], _pIdxEachServer, _pSizeEachServer);
+							}
+							else
+							{
+								_adaptor->BatchLoad(table_id, _pPCache[t_cacheIdx], _pIdxEachServer, _pSizeEachServer);
+
+								transform(_pDelta, _pDelta + _lTotalLength, _pPCache[t_cacheIdx], _pPCache[t_cacheIdx], std::minus<ElemType>());
+
+								for (int row = 0; row < _nClients; row++)
+									_adaptor->Add(table_id, row, _pPCache[t_cacheIdx] + _pIdxEachServer[row], (float)_elasticAdd);
+
+								transform(_pDelta, _pDelta + _lTotalLength, _pPCache[t_cacheIdx], _pDelta, std::minus<ElemType>());
+							}
 
 							//CPU buffer -> GPU buffer
 							for (int widx = 0; widx < _nTableCnt; widx++)
 							{
-								ElemType * py = _pPCache[t_cacheIdx] + _vTableIdx[widx];
+								ElemType * py;
+								if (_elasticAdd <= 0.)
+									py = _pPCache[t_cacheIdx] + _vTableIdx[widx];
+								else
+									py = _pDelta + _vTableIdx[widx];
 
 								CudaErrorCheck(cudaMemcpyAsync(_pPMatrixCache[t_cacheIdx][widx]->BufferPointer(),
 									py,
@@ -257,16 +286,27 @@ namespace Microsoft {
 							float factor = getUpdateCoefficient();
 							int table_id = 0, t_cacheIdx = _nCacheIdx;
 
+							if(_elasticAdd <= 0.)
+							{
 							transform(_pDelta, _pDelta + _lTotalLength, _pPCache[t_cacheIdx], _pDelta, std::minus<ElemType>());
 							for (int row = 0; row < g_mpi->NumNodesInUse(); row++)
-								_adaptor->Add(table_id, row, _pDelta + _pIdxEachServer[row], factor);
+									_adaptor->Add(table_id, row, _pDelta + _pIdxEachServer[row], factor);
 
 
 							_adaptor->BatchLoad(table_id, _pPCache[t_cacheIdx], _pIdxEachServer, _pSizeEachServer);
+							}
+							else
+							{
+								_adaptor->BatchLoad(table_id, _pPCache[t_cacheIdx], _pIdxEachServer, _pSizeEachServer);
+								transform(_pDelta, _pDelta + _lTotalLength, _pPCache[t_cacheIdx], _pPCache[t_cacheIdx], std::minus<ElemType>());
+								for (int row = 0; row < g_mpi->NumNodesInUse(); row++)
+									_adaptor->Add(table_id, row, _pPCache[t_cacheIdx] + _pIdxEachServer[row], (float)_elasticAdd);
 
-						});
+								transform(_pDelta, _pDelta + _lTotalLength, _pPCache[t_cacheIdx], _pDelta, std::minus<ElemType>());
+							}
+					});
 #endif
-					}
+				}
 					else
 					{
 						float factor = getUpdateCoefficient();
@@ -278,13 +318,25 @@ namespace Microsoft {
 							ElemType * px = _pDelta + _vTableIdx[i];
 							mat.CopyToArray(px, _vTableLength[i]);
 						}
-
+						if (_elasticAdd <= 0.)
+						{
 						transform(_pDelta, _pDelta + _lTotalLength, _pPCache[0], _pDelta, std::minus<ElemType>());
 
 						for (int row = 0; row < _nClients; row++)
-							_adaptor->Add(table_id, row, _pDelta + _pIdxEachServer[row], factor);
+								_adaptor->Add(table_id, row, _pDelta + _pIdxEachServer[row], factor);
 
 						_adaptor->BatchLoad(table_id, _pPCache[0], _pIdxEachServer, _pSizeEachServer);
+						}
+						else
+						{
+							_adaptor->BatchLoad(table_id, _pPCache[0], _pIdxEachServer, _pSizeEachServer);
+							transform(_pDelta, _pDelta + _lTotalLength, _pPCache[0], _pPCache[0], std::minus<ElemType>());
+
+							for (int row = 0; row < _nClients; row++)
+								_adaptor->Add(table_id, row, _pPCache[0] + _pIdxEachServer[row], (float)_elasticAdd);
+
+							transform(_pDelta, _pDelta + _lTotalLength, _pPCache[0], _pDelta, std::minus<ElemType>());
+						}
 
 						i = 0;
 
@@ -293,12 +345,57 @@ namespace Microsoft {
 							ComputationNodePtr node = dynamic_pointer_cast<ComputationNode<ElemType>>(*nodeIter);
 							Microsoft::MSR::CNTK::Matrix<ElemType> &mat = node->Value();
 
-							ElemType * px = _pPCache[0] + _vTableIdx[i];
+							ElemType * px;
+							if (_elasticAdd <= 0.)
+								px = _pPCache[0] + _vTableIdx[i];
+							else
+								px = _pDelta + _vTableIdx[i];
 
 							mat.SetValue(mat.GetNumRows(), mat.GetNumCols(), mat.GetDeviceId(), px);
 						}
 					}
 				}
+
+				void ModelLoadServer(const std::list<ComputationNodeBasePtr> & learnableNodes)
+				{
+					int i = 0, table_id = 0;
+					for (auto nodeIter = learnableNodes.begin(); nodeIter != learnableNodes.end(); nodeIter++, i++)
+					{
+						ComputationNodePtr node = dynamic_pointer_cast<ComputationNode<ElemType>>(*nodeIter);
+						Microsoft::MSR::CNTK::Matrix<ElemType> &mat = node->Value();
+
+						ElemType * px = _pTempForLocal + _vTableIdx[i];
+						mat.CopyToArray(px, _vTableLength[i]);
+					}
+
+					_adaptor->BatchLoad(table_id, _pTempForServer, _pIdxEachServer, _pSizeEachServer);
+
+					i = 0;
+
+					for (auto nodeIter = learnableNodes.begin(); nodeIter != learnableNodes.end(); nodeIter++, i++)
+					{
+						ComputationNodePtr node = dynamic_pointer_cast<ComputationNode<ElemType>>(*nodeIter);
+						Microsoft::MSR::CNTK::Matrix<ElemType> &mat = node->Value();
+
+						ElemType * px = _pTempForServer + _vTableIdx[i];
+
+							mat.SetValue(mat.GetNumRows(), mat.GetNumCols(), mat.GetDeviceId(), px);
+						}
+				}
+
+				void ModelLoadBack(const std::list<ComputationNodeBasePtr> & learnableNodes)
+				{
+					int i = 0;
+					for (auto nodeIter = learnableNodes.begin(); nodeIter != learnableNodes.end(); nodeIter++, i++)
+					{
+						ComputationNodePtr node = dynamic_pointer_cast<ComputationNode<ElemType>>(*nodeIter);
+						Microsoft::MSR::CNTK::Matrix<ElemType> &mat = node->Value();
+
+						ElemType * px = _pTempForLocal + _vTableIdx[i];
+
+						mat.SetValue(mat.GetNumRows(), mat.GetNumCols(), mat.GetDeviceId(), px);
+					}
+			}
 
 			private:
 				void Init(const std::list<ComputationNodeBasePtr> & learnableNodes, int localWorkerNumber)
@@ -346,6 +443,9 @@ namespace Microsoft {
 						CudaErrorCheck(cudaMallocHost((void **)&_pPCache[i], sizeof(ElemType) * (_lTotalLength + 1), cudaHostAllocPortable));
 
 					CudaErrorCheck(cudaMallocHost((void **)&_pDelta, sizeof(ElemType) * (_lTotalLength + 1), cudaHostAllocPortable));
+
+					CudaErrorCheck(cudaMallocHost((void **)&_pTempForServer, sizeof(ElemType) * (_lTotalLength + 1), cudaHostAllocPortable));
+					CudaErrorCheck(cudaMallocHost((void **)&_pTempForLocal, sizeof(ElemType) * (_lTotalLength + 1), cudaHostAllocPortable));
 
 					//GPU memory cache
 					for (int i = 0; i < _nLocalCache; i++)
@@ -397,6 +497,9 @@ namespace Microsoft {
 				int * _pCacheState;
 				int _nCacheIdx;
 
+				double _momentumAdd;
+				double _elasticAdd;
+
 				size_t _commCnt;
 
 				AdjustLearningRateatBeginning _adjustlearningrateatbeginningtype;
@@ -409,6 +512,9 @@ namespace Microsoft {
 				ElemType * _pDelta;
 				ElemType ** _pPCache;
 
+				ElemType * _pTempForServer;
+				ElemType * _pTempForLocal;
+
 				size_t * _pSizeEachServer;
 				size_t * _pIdxEachServer;
 
@@ -418,7 +524,7 @@ namespace Microsoft {
 #ifndef CPUONLY
 				cudaStream_t _commStream;
 #endif
-			};
-		}
+		};
 	}
+}
 }
