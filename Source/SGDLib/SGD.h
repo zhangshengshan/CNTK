@@ -247,6 +247,8 @@ protected:
 	size_t m_nFramesBetweenASGDSync;
 	bool m_isPipeline;
 	size_t m_nEpochBarrier;
+	double m_MomentumAdd;
+	double m_ElasticAdd;
 	AdjustLearningRateatBeginning m_adjustlearningrateatbeginning;
 	double m_adjustcoefficient;
 	size_t m_adjustnbminibatch;
