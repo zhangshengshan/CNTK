@@ -7,6 +7,7 @@ ndlMacros = "$ConfigDir$/Macros.ndl"
 
 parallelTrain = false
 numCPUThreads = 8
+initOnCpuOnly = true
 
 train = [
     action = "train"
@@ -20,7 +21,7 @@ train = [
     
     BrainScriptNetworkBuilder = [
 
-        // HACK to enforce same evaluation order or LearnableParameters as for NDL, as to get same radomization
+        // HACK to enforce same evaluation order or LearnableParameters as for NDL, as to get same rnadomization
         // Nodes are evaluated in sorting order.
         A1 = conv1_act; A2 = conv2_act; A3 = h1 ; A5 = ol
 
