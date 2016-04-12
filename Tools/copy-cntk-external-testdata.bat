@@ -13,6 +13,7 @@ if not "%~1" == "" echo Error: This script doesn't take any explicit parameters.
 if defined CNTK_EXTERNAL_TESTDATA_SOURCE_DIRECTORY if exist "%CNTK_EXTERNAL_TESTDATA_SOURCE_DIRECTORY%" goto :continue
 
 echo Error: %%CNTK_EXTERNAL_TESTDATA_SOURCE_DIRECTORY%% must point to a local directory to mirror to (absolute path)
+exit /b 1
 
 :continue
 
