@@ -43,12 +43,11 @@ if %REMOTEVERSION% LSS %LOCALVERSION% (
   echo Remote version is less ^(likely remote is not available^).
 )
 
-@REM TODO use to just updated timestamps (will remove): robocopy "%REMOTEDIR%" "%LOCALDIR%" /e /timfix /r:2 /w:60 /fft /xj /z /xf VERSION /a-:R /np /xn /xo
 if %REMOTEVERSION% GTR %LOCALVERSION% (
   echo Remote version is greater ^(must copy^)
   @REM Remove local VERSION file and only re-add in case of success.
   if exist "%LOCALVERSIONPATH%" del "%LOCALVERSIONPATH%"
-  robocopy "%REMOTEDIR%" "%LOCALDIR%" /mir /r:2 /w:60 /fft /xj /z /xf VERSION /np
+  robocopy "%REMOTEDIR%" "%LOCALDIR%" /mir /r:2 /w:60 /fft /xj /z /xf VERSION /xd *.zip@ /np
   if not errorlevel 8 echo Successful robocopy, copying version&copy "%REMOTEVERSIONPATH%" "%LOCALVERSIONPATH%"
 )
 
