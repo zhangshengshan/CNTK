@@ -7,7 +7,7 @@ ndlMacros = "$ConfigDir$/Macros.ndl"
 
 parallelTrain = false
 numCPUThreads = 8
-initOnCpuOnly = true
+# TODO should enable initOnCpuOnly (and remove overrides below). Right now, it destabilizes the test for CPU and GPU.
 
 train = [
     action = "train"
@@ -21,7 +21,7 @@ train = [
     
     BrainScriptNetworkBuilder = [
 
-        // HACK to enforce same evaluation order or LearnableParameters as for NDL, as to get same rnadomization
+        // HACK to enforce same evaluation order or LearnableParameters as for NDL, as to get same randomization
         // Nodes are evaluated in sorting order.
         A1 = conv1_act; A2 = conv2_act; A3 = h1 ; A5 = ol
 
