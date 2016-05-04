@@ -57,16 +57,16 @@
       <PreprocessorDefinitions>WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <UseFullPaths>true</UseFullPaths>
       <OpenMPSupport>true</OpenMPSupport>
-      <AdditionalIncludeDirectories>$(MSMPI_INC);$(SolutionDir)Source\Readers\ReaderLib;$(SolutionDir)Source\Common\Include;$(SolutionDir)Source\Math;$(SolutionDir)Source\ActionsLib;$(SolutionDir)Source\ComputationNetworkLib;$(SolutionDir)Source\CNTK\BrainScript;$(BOOST_INCLUDE_PATH)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSMPI_INC);$(SolutionDir)Source\Readers\ReaderLib;$(SolutionDir)Source\Common\Include;$(SolutionDir)Source\Math;$(SolutionDir)Source\ActionsLib;$(SolutionDir)Source\ComputationNetworkLib;$(SolutionDir)Source\CNTK\BrainScript;$(BOOST_INCLUDE_PATH);$(SolutionDir)Source\PerformanceProfilerDll</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4819</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>math.lib;common.lib;actionslib.lib;computationnetworklib.lib;sequencetraininglib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>math.lib;common.lib;actionslib.lib;computationnetworklib.lib;sequencetraininglib.lib;PerformanceProfilerDll.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>$(MSMPI_LIB64);$(OutDir)..;$(BOOST_LIB_PATH);$(NvmlLibPath)</AdditionalLibraryDirectories>
-      <DelayLoadDLLs>math.dll;msmpi.dll</DelayLoadDLLs>
+      <DelayLoadDLLs>math.dll;msmpi.dll;PerformanceProfilerDll.dll</DelayLoadDLLs>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="$(DebugBuild)">
@@ -94,7 +94,7 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(CudaLibPath)</AdditionalLibraryDirectories>
-      <DelayLoadDLLs>%(DelayLoadDLLs);nvml.dll;$(CudaRuntimeDll)</DelayLoadDLLs>
+      <DelayLoadDLLs>%(DelayLoadDLLs);nvml.dll;PerformanceProfilerDll.dll;$(CudaRuntimeDll)</DelayLoadDLLs>
     </Link>
     <PostBuildEvent>
       <Command>copy /Y "$(TargetDir)\..\CNTKTextFormatReader.dll" "$(TargetDir)"</Command>
@@ -134,7 +134,7 @@
   </Target>
   <Target Name="CopyUnitTestDependencies" AfterTargets="Build">
     <ItemGroup>
-      <UnitTestDependencies Include="$(OutDir)..\Math.dll;$(UnitTestDlls);" />
+      <UnitTestDependencies Include="$(OutDir)..\Math.dll;$(OutDir)..\PerformanceProfilerDll.dll;$(UnitTestDlls);" />
     </ItemGroup>
     <Copy SourceFiles="@(UnitTestDependencies)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true">
       <Output TaskParameter="DestinationFiles" ItemName="NewFileWrites" />

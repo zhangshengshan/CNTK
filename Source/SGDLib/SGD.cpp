@@ -18,6 +18,7 @@
 
 #include "SimpleDistGradAggregator.h"
 #include "ProgressTracing.h"
+#include "PerformanceProfiler.h"
 
 #include <map>
 #include <set>
@@ -43,6 +44,7 @@ template <class ElemType>
 void SGD<ElemType>::Train(function<ComputationNetworkPtr(DEVICEID_TYPE)> createNetworkFn, DEVICEID_TYPE deviceId,
                           IDataReader* trainSetDataReader,
                           IDataReader* validationSetDataReader,
+                          CudaProfilerTimer& cudaProfilerTimer,
                           const bool makeMode)
 {
     // determine which epoch to start with, including recovering a checkpoint if any and 'makeMode' enabled
@@ -80,7 +82,7 @@ void SGD<ElemType>::Train(function<ComputationNetworkPtr(DEVICEID_TYPE)> createN
     // set tracing flags
     net->EnableNodeTracing(m_traceNodeNamesReal, m_traceNodeNamesCategory, m_traceNodeNamesSparse);
 
-    TrainOrAdaptModel(startEpoch, net, loadNetworkFromCheckpoint, net, nullptr, trainSetDataReader, validationSetDataReader);
+    TrainOrAdaptModel(startEpoch, net, loadNetworkFromCheckpoint, net, nullptr, trainSetDataReader, validationSetDataReader, cudaProfilerTimer);
 }
 
 // -----------------------------------------------------------------------
@@ -91,7 +93,9 @@ template <class ElemType>
 void SGD<ElemType>::Adapt(wstring origModelFileName, wstring refNodeName,
                           IDataReader* trainSetDataReader,
                           IDataReader* validationSetDataReader,
-                          const DEVICEID_TYPE deviceId, const bool makeMode)
+                          const DEVICEID_TYPE deviceId, 
+                          CudaProfilerTimer& cudaProfilerTimer,
+                          const bool makeMode)
 {
     int startEpoch = DetermineStartEpoch(makeMode);
     if (startEpoch == m_maxEpochs)
@@ -134,7 +138,7 @@ void SGD<ElemType>::Adapt(wstring origModelFileName, wstring refNodeName,
         refNode = refNet->GetNodeFromName(refNodeName);
     }
 
-    TrainOrAdaptModel(startEpoch, net, networkLoadedFromCheckpoint, refNet, refNode, trainSetDataReader, validationSetDataReader);
+    TrainOrAdaptModel(startEpoch, net, networkLoadedFromCheckpoint, refNet, refNode, trainSetDataReader, validationSetDataReader, cudaProfilerTimer);
 }
 
 // -----------------------------------------------------------------------
@@ -149,7 +153,8 @@ void SGD<ElemType>::TrainOrAdaptModel(int startEpoch, ComputationNetworkPtr net,
                                       ComputationNetworkPtr refNet,
                                       ComputationNodeBasePtr refNode,
                                       IDataReader* trainSetDataReader,
-                                      IDataReader* validationSetDataReader)
+                                      IDataReader* validationSetDataReader,
+                                      CudaProfilerTimer& cudaProfilerTimer)
 {
     let& criterionNodes = GetTrainCriterionNodes(net);
 
@@ -354,6 +359,9 @@ void SGD<ElemType>::TrainOrAdaptModel(int startEpoch, ComputationNetworkPtr net,
     // --- MAIN EPOCH LOOP
     for (int i = startEpoch; i < (int) m_maxEpochs; i++) // TODO: why is this an int, and not a size_t?
     {
+        // Awlays skip the first epoch for profiling to avoid startup behavior
+        if (i > startEpoch) ProfilerEnable(true);
+
         // Synchronize all ranks before proceeding to ensure that
         // rank 0 has finished writing the previous model file
         if (m_mpi != nullptr)
@@ -392,7 +400,8 @@ void SGD<ElemType>::TrainOrAdaptModel(int startEpoch, ComputationNetworkPtr net,
                                                                      trainSetDataReader, featureNodes, labelNodes,
                                                                      criterionNodes, evaluationNodes, inputMatrices,
                                                                      learnableNodes, smoothedGradients,
-                                                                     learnRateInitialized, largestPrevLearnRatePerSample);
+                                                                     learnRateInitialized, largestPrevLearnRatePerSample,
+                                                                     cudaProfilerTimer);
             learningRateAdjustmentFactor = newLearningRatePerSample / learnRatePerSample;
             learnRatePerSample = newLearningRatePerSample;
 
@@ -439,7 +448,8 @@ void SGD<ElemType>::TrainOrAdaptModel(int startEpoch, ComputationNetworkPtr net,
                                                           m_mbSize[i], featureNodes, labelNodes,
                                                           criterionNodes, evaluationNodes,
                                                           inputMatrices, learnableNodes,
-                                                          smoothedGradients, learningRateAdjustmentFactor);
+                                                          smoothedGradients, learningRateAdjustmentFactor,
+                                                          cudaProfilerTimer);
             m_prevChosenMinibatchSize = chosenMinibatchSize;
         }
         else
@@ -461,6 +471,7 @@ void SGD<ElemType>::TrainOrAdaptModel(int startEpoch, ComputationNetworkPtr net,
 
         EpochCriterion epochCriterion; // criterion values are returned in this
         std::vector<EpochCriterion> epochEvalErrors(evaluationNodes.size());
+
         TrainOneEpoch(net,
                       refNet,
                       refNode,
@@ -475,7 +486,9 @@ void SGD<ElemType>::TrainOrAdaptModel(int startEpoch, ComputationNetworkPtr net,
                       evaluationNodes,
                       inputMatrices,
                       learnableNodes, smoothedGradients,
-                      epochCriterion, epochEvalErrors);
+                      epochCriterion, epochEvalErrors,
+                      cudaProfilerTimer);
+
         totalTrainingSamplesSeen += epochCriterion.second; // aggregate #training samples, for logging purposes only
 
         timer.Stop();
@@ -490,19 +503,19 @@ void SGD<ElemType>::TrainOrAdaptModel(int startEpoch, ComputationNetworkPtr net,
         epochCriterion.LogCriterion(criterionNodes[0]->NodeName());
 
         m_lastFinishedEpochTrainLoss = epochCriterion.Average();
-        for (size_t j = 0; j < epochEvalErrors.size(); j++)
+            for (size_t j = 0; j < epochEvalErrors.size(); j++)
             epochEvalErrors[j].LogCriterion(evaluationNodes[j]->NodeName());
         fprintf(stderr, "totalSamplesSeen = %d; learningRatePerSample = %.8g; epochTime=%.6gs\n", (int)totalTrainingSamplesSeen, learnRatePerSample, epochTime);
 #if 0
         // TODO: This was only printed if >1 eval criterion. Why? Needed?
-        LOGPRINTF(stderr, "Finished Epoch[%2d of %d]:     Criterion Node [%ls] Per Sample = %.8g\n",
-            i + 1, (int)m_maxEpochs, criterionNodes[0]->NodeName().c_str(), epochCriterion.Average());
+            LOGPRINTF(stderr, "Finished Epoch[%2d of %d]:     Criterion Node [%ls] Per Sample = %.8g\n",
+                      i + 1, (int)m_maxEpochs, criterionNodes[0]->NodeName().c_str(), epochCriterion.Average());
 
-        for (size_t j = 0; j < epochEvalErrors.size(); j++)
-        {
-            LOGPRINTF(stderr, "Finished Epoch[%2d of %d]:     Evaluation Node [%ls] Per Sample = %.8g\n",
-                i + 1, (int) m_maxEpochs, evalNodeNames[j].c_str(), epochEvalErrors[j].Average());
-        }
+            for (size_t j = 0; j < epochEvalErrors.size(); j++)
+            {
+                LOGPRINTF(stderr, "Finished Epoch[%2d of %d]:     Evaluation Node [%ls] Per Sample = %.8g\n",
+                          i + 1, (int) m_maxEpochs, evalNodeNames[j].c_str(), epochEvalErrors[j].Average());
+            }
 #endif
 
         if (validationSetDataReader != trainSetDataReader && validationSetDataReader != nullptr)
@@ -518,7 +531,7 @@ void SGD<ElemType>::TrainOrAdaptModel(int startEpoch, ComputationNetworkPtr net,
                 cvSetTrainAndEvalNodes.push_back(node->NodeName());
             }
 
-            // BUGBUG: We should not use the training MB size. The training MB size is constrained by both convergence and memory. Eval is only constrained by memory.
+                // BUGBUG: We should not use the training MB size. The training MB size is constrained by both convergence and memory. Eval is only constrained by memory.
             let vScore = evalforvalidation.Evaluate(validationSetDataReader, cvSetTrainAndEvalNodes, m_mbSize[i]);
             LOGPRINTF(stderr, "Finished Epoch[%2d of %d]: [Validate] ", i + 1, (int)m_maxEpochs);
             for (size_t k = 0; k < vScore.size() /*&& k < 2*/; k++)
@@ -665,34 +678,34 @@ void SGD<ElemType>::TrainOrAdaptModel(int startEpoch, ComputationNetworkPtr net,
                 // Set i back to the loaded model
                 i -= m_learnRateAdjustInterval;
                 LOGPRINTF(stderr, "SGD: revoke back to and update checkpoint file for epoch %d\n", i+1); // report 1 based epoch number
-                SaveCheckPointInfo(i, totalTrainingSamplesSeen, learnRatePerSample, smoothedGradients, prevCriterion, chosenMinibatchSize);
+            SaveCheckPointInfo(i, totalTrainingSamplesSeen, learnRatePerSample, smoothedGradients, prevCriterion, chosenMinibatchSize);
             }
             else
             {
                 SaveCheckPointInfo(i, totalTrainingSamplesSeen, learnRatePerSample, smoothedGradients, prevCriterion, chosenMinibatchSize);
-                auto modelName = GetModelNameForEpoch(i);
-                LOGPRINTF(stderr, "SGD: Saving checkpoint model '%ls'\n", modelName.c_str());
-                net->Save(modelName);
-                if (!m_keepCheckPointFiles)
+            auto modelName = GetModelNameForEpoch(i);
+            LOGPRINTF(stderr, "SGD: Saving checkpoint model '%ls'\n", modelName.c_str());
+            net->Save(modelName);
+            if (!m_keepCheckPointFiles)
+            {
+                // delete previous checkpoint file to save space
+                if (m_autoLearnRateSearchType == LearningRateSearchAlgorithm::AdjustAfterEpoch && m_loadBestModel)
                 {
-                    // delete previous checkpoint file to save space
-                    if (m_autoLearnRateSearchType == LearningRateSearchAlgorithm::AdjustAfterEpoch && m_loadBestModel)
-                    {
-                        if (epochsSinceLastLearnRateAdjust != 1)
-                        {
-                            _wunlink(GetCheckPointFileNameForEpoch(i - 1).c_str());
-                        }
-                        if (epochsSinceLastLearnRateAdjust == m_learnRateAdjustInterval)
-                        {
-                            _wunlink(GetCheckPointFileNameForEpoch(i - m_learnRateAdjustInterval).c_str());
-                        }
-                    }
-                    else
+                    if (epochsSinceLastLearnRateAdjust != 1)
                     {
                         _wunlink(GetCheckPointFileNameForEpoch(i - 1).c_str());
                     }
+                    if (epochsSinceLastLearnRateAdjust == m_learnRateAdjustInterval)
+                    {
+                        _wunlink(GetCheckPointFileNameForEpoch(i - m_learnRateAdjustInterval).c_str());
+                    }
+                }
+                else
+                {
+                    _wunlink(GetCheckPointFileNameForEpoch(i - 1).c_str());
                 }
             }
+        }
         }
         else
         {
@@ -757,8 +770,11 @@ size_t SGD<ElemType>::TrainOneEpoch(ComputationNetworkPtr net,
                                     std::list<Matrix<ElemType>>& smoothedGradients,
                                     /*out*/ EpochCriterion& epochCriterion,
                                     /*out*/ std::vector<EpochCriterion>& epochEvalErrors,
+                                    CudaProfilerTimer& cudaProfilerTimer,
                                     const std::string& prefixMsg)
 {
+    PROFILE_SCOPE(profilerEvtMainEpoch);
+
     ScopedNetworkOperationMode modeGuard(net, NetworkOperationMode::training);
 
     // bring our 'out' values into consistent state
@@ -881,13 +897,22 @@ size_t SGD<ElemType>::TrainOneEpoch(ComputationNetworkPtr net,
         if (m_perfTraceLevel > 0)
             fineGrainedPerfMeasurementTimer.Start();
 
+        auto minibatchProfilerState = ProfilerTimeBegin();
+
+        cudaProfilerTimer.Update();
+
         // get minibatch
         // TODO: is it guaranteed that the GPU is already completed at this point, is it safe to overwrite the buffers?
         size_t actualMBSize = 0;
+
+        auto profilerState = ProfilerTimeBegin();
         bool wasDataRead = DataReaderHelpers::GetMinibatchIntoNetwork<ElemType>(*trainSetDataReader, net, criterionNodes[0],
                                                                                 useDistributedMBReading, useParallelTrain, *inputMatrices, actualMBSize, m_mpi);
+
         if (!wasDataRead && (!useDistributedMBReading || noMoreSamplesToProcess)) // in case of distributed reading, we do a few more loops until all ranks have completed
+        {
             break;                                                                // end of epoch
+        }
 
         if (m_perfTraceLevel > 0)
         {
@@ -897,10 +922,17 @@ size_t SGD<ElemType>::TrainOneEpoch(ComputationNetworkPtr net,
         }
 
         // Note: If !wasDataRead then the data that GetMinibatchIntoNetwork() was supposed to full in are undefined.
+        // Note: If !wasDataRead then the data that GetMinibatchIntoNetwork() was supposed to fill in are undefined.
         // Must not touch them.
 
         if (!wasDataRead)
+        {
             actualMBSize = 0; // (undefined if !wasDataRead)
+            ProfilerEnable(false);
+        }
+
+        ProfilerTimeEnd(profilerState, profilerEvtMainGetMinibatch);
+        profilerState = ProfilerTimeBegin();
 
         nSamplesSinceLastModelSync += actualMBSize;
 
@@ -960,20 +992,23 @@ size_t SGD<ElemType>::TrainOneEpoch(ComputationNetworkPtr net,
 
                 // compute eval node first since when gradient is computed the forward function values
                 // may be changed and need to be recomputed when gradient and function value share the same matrix
+                {
                 net->ForwardProp(evaluationNodes); // the bulk of this evaluation is reused in ComputeGradient() below
 
                 // ===========================================================
                 // forward prop for training criterion
                 // ===========================================================
-
                 net->ForwardProp(criterionNodes[0]);
+                }
 
                 // ===========================================================
                 // backprop
                 // ===========================================================
 
                 if (learnRatePerSample > 0.01 * m_minLearnRate) // only compute gradient when learning rate is large enough
+                {
                     net->Backprop(criterionNodes[0]);
+                }
 
                 // house-keeping for sub-minibatching
                 if (actualNumSubminibatches > 1)
@@ -981,6 +1016,7 @@ size_t SGD<ElemType>::TrainOneEpoch(ComputationNetworkPtr net,
             }                                                        // end sub-minibatch loop
             if (actualNumSubminibatches > 1)
                 smbDispatcher.DoneWithCurrentMinibatch();
+
         } // if (actualMBSize > 0)
 
         if (m_perfTraceLevel > 0)
@@ -991,6 +1027,12 @@ size_t SGD<ElemType>::TrainOneEpoch(ComputationNetworkPtr net,
             computeTime = fineGrainedPerfMeasurementTimer.ElapsedSeconds();
             fineGrainedPerfMeasurementTimer.Start();
         }
+        ProfilerTimeEnd(profilerState, profilerEvtMainFB);
+        profilerState = ProfilerTimeBegin();
+
+        // for progress and statistics, we should only count frames that are not gaps
+        // BUGBUG: Once we have multiple layouts, this must be done on a per-criterion basis.
+        //size_t numSamplesWithLabel = wasDataRead ? net->GetNumSamplesWithLabelOfNetwork(actualMBSize) : 0;
 
         // for momentum/clipping/regularization/etc., as well as for progress and statistics, we should only count frames that are not gaps
         // #samples according to the default dynamic axis, for use with criterion nodes that do not have an MBLayout
@@ -1061,6 +1103,9 @@ size_t SGD<ElemType>::TrainOneEpoch(ComputationNetworkPtr net,
                 epochEvalErrors[i] += m_gradHeader->evalErrors[i];
         }
 
+        ProfilerTimeEnd(profilerState, profilerEvtMainGradient);
+        profilerState = ProfilerTimeBegin();
+
         // update model parameters
         if ((aggregateNumSamples > 0) && (learnRatePerSample > m_minLearnRate * 0.01))
         {
@@ -1096,6 +1141,7 @@ size_t SGD<ElemType>::TrainOneEpoch(ComputationNetworkPtr net,
 #endif
                 }
             }
+            
         }
 
         if (m_perfTraceLevel > 0)
@@ -1111,7 +1157,7 @@ size_t SGD<ElemType>::TrainOneEpoch(ComputationNetworkPtr net,
 
         // aggregation by model averaging or block momentum 
         if (useModelAggregation)
-        {
+            {
             if (nSamplesSinceLastModelSync >= blockSizePerWorker)
             {
                 bool synced = m_pMASGDHelper->OnArrivingAtSyncPoint(learnableNodes, smoothedGradients, nSamplesSinceLastModelSync);
@@ -1127,6 +1173,9 @@ size_t SGD<ElemType>::TrainOneEpoch(ComputationNetworkPtr net,
             }
         }
 
+        ProfilerTimeEnd(profilerState, profilerEvtMainWeights);
+        profilerState = ProfilerTimeBegin();
+        
         timer.Stop();
         numMBsRun++;
 
@@ -1157,7 +1206,7 @@ size_t SGD<ElemType>::TrainOneEpoch(ComputationNetworkPtr net,
             let trainSamplesSinceLastLogged = (int)epochCriterionSinceLastLogged.second;
 
             // determine progress in percent
-            int mbProgNumPrecision = 2;
+                int mbProgNumPrecision = 2;
             double mbProg = 0.0;
             if (epochNumber > 0 || (int)epochSize > 0) // TODO: explain this condition in a comment
             {
@@ -1175,7 +1224,7 @@ size_t SGD<ElemType>::TrainOneEpoch(ComputationNetworkPtr net,
             // progress tracing for compute cluster management
             let wasProgressPrinted = ProgressTracing::TraceProgressPercentage(epochNumber, mbProg, false);
 
-            // progress tracing for regular log
+                // progress tracing for regular log
             if (m_traceLevel > 0)
             {
                 PREPENDTS(stderr);
@@ -1226,6 +1275,9 @@ size_t SGD<ElemType>::TrainOneEpoch(ComputationNetworkPtr net,
         AttemptUtteranceDerivativeFeatures(net, trainSetDataReader, featureNodes, inputMatrices);
 
         profiler.NextSample();
+    
+        ProfilerTimeEnd(profilerState, profilerEvtMainPost);
+        ProfilerTimeEnd(minibatchProfilerState, profilerEvtMainMinibatch);
     }
 
     // --- END MAIN MINIBATCH LOOP
@@ -1400,7 +1452,8 @@ double SGD<ElemType>::SearchForBestLearnRate(ComputationNetworkPtr net,
                                              const std::list<ComputationNodeBasePtr>& learnableNodes,
                                              std::list<Matrix<ElemType>>& smoothedGradients,
                                              const bool learnRateInitialized,
-                                             const double largestPrevLearnRatePerSample)
+                                             const double largestPrevLearnRatePerSample,
+                                             CudaProfilerTimer& cudaProfilerTimer)
 {
     double bestLearnRatePerSample = curLearnRate;
 
@@ -1444,6 +1497,7 @@ double SGD<ElemType>::SearchForBestLearnRate(ComputationNetworkPtr net,
                                     inputMatrices, learnableNodes,
                                     smoothedGradients,
                                     /*out*/ baseCriterion, /*out*/ epochEvalErrors,
+                                    cudaProfilerTimer,
                                     "BaseAdaptiveLearnRateSearch:");
 
     if (m_autoLearnRateSearchType == LearningRateSearchAlgorithm::SearchBeforeEpoch)
@@ -1471,6 +1525,7 @@ double SGD<ElemType>::SearchForBestLearnRate(ComputationNetworkPtr net,
                                         evaluationNodes, inputMatrices,
                                         learnableNodes, smoothedGradients,
                                         /*out*/ epochCriterion, /*out*/ epochEvalErrors,
+                                        cudaProfilerTimer,
                                         "AdaptiveLearnRateSearch:");
     } while (epochCriterion.IsNan() || (epochCriterion.Average() > baseCriterion.Average() && learnRatePerSample > minLearnRate));
 
@@ -1492,6 +1547,7 @@ double SGD<ElemType>::SearchForBestLearnRate(ComputationNetworkPtr net,
                                         inputMatrices, learnableNodes,
                                         smoothedGradients,
                                         /*out*/ leftCriterion, /*out*/ epochEvalErrors,
+                                        cudaProfilerTimer,
                                         "DetailBaseAdaptiveLearnRateSearch:");
 
         while (rightLearnRatePerSample > leftLearnRatePerSample * 1.2)
@@ -1512,6 +1568,7 @@ double SGD<ElemType>::SearchForBestLearnRate(ComputationNetworkPtr net,
                                                 smoothedGradients,
                                                 /*out*/ rightCriterion,
                                                 /*out*/ epochEvalErrors,
+                                                cudaProfilerTimer,
                                                 "DetailRightAdaptiveLearnRateSearch:");
             }
             else
@@ -1530,6 +1587,7 @@ double SGD<ElemType>::SearchForBestLearnRate(ComputationNetworkPtr net,
                                                 smoothedGradients,
                                                 /*out*/ leftCriterion,
                                                 /*out*/ epochEvalErrors,
+                                                cudaProfilerTimer,
                                                 "DetailLeftAdaptiveLearnRateSearch:");
             }
         }
@@ -1565,7 +1623,8 @@ size_t SGD<ElemType>::AdaptiveMinibatchSizing(ComputationNetworkPtr net,
                                               StreamMinibatchInputs* inputMatrices,
                                               const std::list<ComputationNodeBasePtr>& learnableNodes,
                                               std::list<Matrix<ElemType>>& smoothedGradients,
-                                              const double learningRateAdjustmentFactor)
+                                              const double learningRateAdjustmentFactor,
+                                              CudaProfilerTimer& cudaProfilerTimer)
 {
     size_t minMinibatchSize = initialMinibatchSize;
     size_t chosenMinibatchSize = initialMinibatchSize;
@@ -1634,7 +1693,8 @@ size_t SGD<ElemType>::AdaptiveMinibatchSizing(ComputationNetworkPtr net,
                                                          labelNodes, criterionNodes,
                                                          evaluationNodes, inputMatrices,
                                                          learnableNodes, smoothedGradients,
-                                                         minMinibatchSize, maxMinibatchSize);
+                                                         minMinibatchSize, maxMinibatchSize,
+                                                         cudaProfilerTimer);
     }
 
     return chosenMinibatchSize;
@@ -1667,7 +1727,8 @@ size_t SGD<ElemType>::SearchForBestMinibatchSize(ComputationNetworkPtr net,
                                                  StreamMinibatchInputs* inputMatrices,
                                                  const std::list<ComputationNodeBasePtr>& learnableNodes,
                                                  std::list<Matrix<ElemType>>& smoothedGradients,
-                                                 const size_t minMinibatchSize, const size_t maxMinibatchSize)
+                                                 const size_t minMinibatchSize, const size_t maxMinibatchSize,
+                                                 CudaProfilerTimer& cudaProfilerTimer)
 {
     // may happen for automatically reduced learning rates
     if (minMinibatchSize > maxMinibatchSize)
@@ -1707,6 +1768,7 @@ size_t SGD<ElemType>::SearchForBestMinibatchSize(ComputationNetworkPtr net,
                                         evaluationNodes, inputMatrices,
                                         learnableNodes, smoothedGradients,
                                         /*out*/ epochCriterion, /*out*/ epochEvalErrors,
+                                        cudaProfilerTimer,
                                         isFirstIteration ? "BaseAdaptiveMinibatchSearch:" : "AdaptiveMinibatchSearch:");
 
         if (isFirstIteration)
@@ -1763,6 +1825,7 @@ void SGD<ElemType>::TrainOneMiniEpochAndReloadModel(ComputationNetworkPtr net,
                                                     std::list<Matrix<ElemType>>& smoothedGradients,
                                                     /*out*/ EpochCriterion& epochCriterion,
                                                     /*out*/ std::vector<EpochCriterion>& epochEvalErrors,
+                                                    CudaProfilerTimer& cudaProfilerTimer,
                                                     std::string prefixMsg)
 {
     TrainOneEpoch(net, refNet, refNode, epochNumber, epochSize,
@@ -1770,6 +1833,7 @@ void SGD<ElemType>::TrainOneMiniEpochAndReloadModel(ComputationNetworkPtr net,
                   labelNodes, criterionNodes, evaluationNodes,
                   inputMatrices, learnableNodes, smoothedGradients,
                   /*out*/ epochCriterion, /*out*/ epochEvalErrors,
+                  cudaProfilerTimer,
                   prefixMsg);
 
     LOGPRINTF(stderr, "Finished Mini-Epoch For LearnRate Selection: ");
@@ -1862,9 +1926,9 @@ void SGD<ElemType>::InitModelAggregationHandler(int traceLevel, DEVICEID_TYPE de
         return; // no need to do anything if already initialized. TODO: make it singleton 
     }
     if (GetParallelizationMethod() == ParallelizationMethod::modelAveragingSGD)
-    {
+        {
         m_pMASGDHelper = make_shared<BasicModelAveragingSGD<ElemType>>(m_mpi, traceLevel, devID);
-    }
+        }
     else if (GetParallelizationMethod() == ParallelizationMethod::blockMomentumSGD)
     {
 #ifndef CNTK_PARALLEL_TRAINING_SUPPORT
@@ -2611,27 +2675,27 @@ SGDParams::SGDParams(const ConfigRecordType& configSGD, size_t sizeofElemType)
         else
         {
             size_t numMPIWorkers = pMPI->NumNodesInUse();            
-            const ConfigRecordType& configParallelTrain(configSGD(L"ParallelTrain", ConfigRecordType::Record()));
-            m_parallelizationMethod = ParseParallelizationMethod(configParallelTrain(L"parallelizationMethod", L"none"));
+        const ConfigRecordType& configParallelTrain(configSGD(L"ParallelTrain", ConfigRecordType::Record()));
+        m_parallelizationMethod = ParseParallelizationMethod(configParallelTrain(L"parallelizationMethod", L"none"));
             m_parallelizationStartEpochNum = configParallelTrain(L"parallelizationStartEpoch", (int)1) - 1; // Epoch numbers internally are 0 based
-            m_enableDistributedMBReading = configParallelTrain(L"distributedMBReading", false);
+        m_enableDistributedMBReading = configParallelTrain(L"distributedMBReading", false);
             m_syncStatsTrace = configParallelTrain(L"syncPerfStats", (int)0);
 
-            if (configParallelTrain.Exists(L"DataParallelSGD"))
-            {
-                const ConfigRecordType& configDataParallelSGD(configParallelTrain(L"DataParallelSGD", ConfigRecordType::Record()));
-                size_t defaultGradientBits = 8 * sizeofElemType;
-                m_numGradientBits = configDataParallelSGD(L"gradientBits", defaultGradientBits);
-                m_zeroThresholdFor1Bit = configDataParallelSGD(L"useZeroThresholdFor1BitQuantization", true);
-                m_bufferedAsyncGradientAggregation = configDataParallelSGD(L"useBufferedAsyncGradientAggregation", false);
+        if (configParallelTrain.Exists(L"DataParallelSGD"))
+        {
+            const ConfigRecordType& configDataParallelSGD(configParallelTrain(L"DataParallelSGD", ConfigRecordType::Record()));
+            size_t defaultGradientBits = 8 * sizeofElemType;
+            m_numGradientBits = configDataParallelSGD(L"gradientBits", defaultGradientBits);
+            m_zeroThresholdFor1Bit = configDataParallelSGD(L"useZeroThresholdFor1BitQuantization", true);
+            m_bufferedAsyncGradientAggregation = configDataParallelSGD(L"useBufferedAsyncGradientAggregation", false);
                 if ( m_numGradientBits < 1 || m_numGradientBits > (8 * sizeofElemType) )
-                {
-                    InvalidArgument("gradientBits must be in the range [1, 32] when using precision=float and in range [1, 64] when using precision=double!");
-                }
-            }
-            if (configParallelTrain.Exists(L"ModelAveragingSGD"))
             {
-                const ConfigRecordType& configMASGD(configParallelTrain(L"ModelAveragingSGD", ConfigRecordType::Record()));
+                InvalidArgument("gradientBits must be in the range [1, 32] when using precision=float and in range [1, 64] when using precision=double!");
+            }
+        }
+        if (configParallelTrain.Exists(L"ModelAveragingSGD"))
+        {
+            const ConfigRecordType& configMASGD(configParallelTrain(L"ModelAveragingSGD", ConfigRecordType::Record()));
                 if (configMASGD.Exists(L"blockSizePerWorker") && configMASGD.Exists(L"blockSize"))
                 {
                     InvalidArgument("It is only allowed to set blockSizePerWorker or blockSize, not both of them");
@@ -2728,11 +2792,11 @@ SGDParams::SGDParams(const ConfigRecordType& configSGD, size_t sizeofElemType)
                 {
                     double blockMomentum = 1.0 - 1.0 / (double)numMPIWorkers;   // this is a default value which ensures each block update contributes equally
                     m_blockMomentumAsTimeConstant = BlockMomentumSGD<double>::Momentum2TimeConstant(blockMomentum, m_modelAggregationBlockSize);
-                }
+        }
 #endif 
                 InitializeAndCheckBlockMomentumSGDParameters();
                 
-            }
+    }
         } // if (!pMPI)
     } // if (configSGD.Exists(L"ParallelTrain"))
 }
