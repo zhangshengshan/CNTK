@@ -131,3 +131,12 @@ def test_export_deferred_context():
         with open(ctx.export("name")) as config_file:
             assert config_file.readlines()[-1] == "command=Train:Test:Write:Eval"
         
+
+def test_no_input():
+    import cntk as C
+
+    x = C.constant([1,2])
+    y = C.constant([3,4])
+
+    with C.LocalExecutionContext('t', clean_up=False) as ctx:
+       print(ctx.eval(C.element_times(x,y)))
