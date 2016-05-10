@@ -114,7 +114,7 @@ ifdef CUDA_PATH
   ifdef CUDNN_PATH
     INCLUDEPATH += $(CUDNN_PATH)/cuda/include
     LIBPATH += $(CUDNN_PATH)/cuda/lib64 $(CUDA_PATH)/targets/x86_64-linux/lib/stubs
-    LIBS += -lcudnn
+    LIBS += -lcudnn5
     COMMON_FLAGS +=-DUSE_CUDNN
   endif
 else
@@ -292,6 +292,7 @@ MATH_SRC +=\
 	$(SOURCEDIR)/Math/CuDnnConvolutionEngine.cu \
 	$(SOURCEDIR)/Math/CuDnnBatchNormalization.cu \
 	$(SOURCEDIR)/Math/GPUDataTransferer.cpp \
+        $(SOURCEDIR)/Math/CuDnnRNN.cpp
 
 else
 MATH_SRC +=\
@@ -629,6 +630,7 @@ CNTK_SRC =\
 	$(SOURCEDIR)/CNTK/BrainScript/BrainScriptTest.cpp \
 	$(SOURCEDIR)/Common/BestGpu.cpp \
 	$(SOURCEDIR)/Common/MPIWrapper.cpp \
+        $(SOURCEDIR)/ComputationNetworkLib/RNNNodes.cpp
 
 
 ifdef CUDA_PATH
@@ -654,6 +656,14 @@ $(CNTK): $(CNTK_OBJ) | $(CNTKMATH_LIB)
 	@mkdir -p $(dir $@)
 	@echo building output for $(ARCH) with build type $(BUILDTYPE)
 	$(CXX) $(LDFLAGS) $(patsubst %,-L%, $(LIBDIR) $(LIBPATH) $(NVMLPATH)) $(patsubst %,$(RPATH)%, $(ORIGINLIBDIR) $(LIBPATH)) -o $@ $^ $(LIBS) -l$(CNTKMATH) -fopenmp
+
+# manually deploy libcudnn
+
+ALL+=$(LIBDIR)/libcudnn5.so.5.0.4
+
+$(LIBDIR)/libcudnn5.so.5.0.4:
+	mkdir -p $(LIBDIR)
+	cp -r $(CUDNN_PATH)/cuda/lib64/libcudnn* $(LIBDIR)
 
 # deployable resources: standard library of BS
 CNTK_CORE_BS:=$(BINDIR)/cntk.core.bs

@@ -7,7 +7,7 @@
 
 #include "Basics.h"
 #include "TensorShape.h"
-#include <cudnn.h>
+#include "cudnn5.h"
 #include <memory>
 
 namespace Microsoft { namespace MSR { namespace CNTK {
