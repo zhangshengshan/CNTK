@@ -287,8 +287,8 @@ public:
 
     virtual void UpdateFunctionMBSize() override
     {
-        m_logOfRight->Resize(Input(1)->Value());
-        m_leftDivRight->Resize(Input(1)->Value());
+//        m_logOfRight->Resize(Input(1)->Value());
+//        m_leftDivRight->Resize(Input(1)->Value());
     }
 
     // -sum(left_i * log(right_i))
@@ -316,8 +316,8 @@ public:
         if (flags & CopyNodeFlags::copyNodeValue)
         {
             auto node = dynamic_pointer_cast<CrossEntropyNode<ElemType>>(nodeP);
-            node->m_logOfRight->SetValue(*m_logOfRight);
-            node->m_leftDivRight->SetValue(*m_leftDivRight);
+            if (m_logOfRight != nullptr) node->m_logOfRight->SetValue(*m_logOfRight);
+            if (m_leftDivRight != nullptr) node->m_leftDivRight->SetValue(*m_leftDivRight);
         }
     }
 
