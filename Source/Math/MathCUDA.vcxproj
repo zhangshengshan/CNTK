@@ -30,7 +30,7 @@
         <CuDnnIncPath>$(CUDNN_PATH)\include</CuDnnIncPath>
         <CuDnnLibPath>$(CUDNN_PATH)\lib\x64</CuDnnLibPath>
         <CuDnnLib>cudnn.lib</CuDnnLib>
-        <CuDnnDll>$(CUDNN_PATH)\bin\cudnn64_4.dll</CuDnnDll>
+        <CuDnnDll>$(CUDNN_PATH)\bin\cudnn64_5.dll</CuDnnDll>
       </PropertyGroup>
     </When>
     <Otherwise>
@@ -57,6 +57,10 @@
   <PropertyGroup Condition="$(ReleaseBuild)">
     <CudaCodeGen>$(CNTK_CUDA_CODEGEN_RELEASE)</CudaCodeGen>
     <CudaCodeGen Condition="'$(CudaCodeGen)'==''">compute_30,sm_30;compute_35,sm_35;compute_50,sm_50;</CudaCodeGen>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(DAALIncludeDir);$(IncludePath)</IncludePath>
+    <LibraryPath>$(DAALLibDir);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
@@ -103,7 +107,15 @@ if exist "$(CuDnnDll)" xcopy /D /Y "$(CuDnnDll)" "$(OutputPath)"
     </ClCompile>
     <CudaCompile>
       <HostDebugInfo>false</HostDebugInfo>
+      <Include Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Include>
     </CudaCompile>
+    <CudaLink>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalDependencies>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalLibraryDirectories>
+    </CudaLink>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\Common\Include\File.h" />
@@ -119,6 +131,7 @@ if exist "$(CuDnnDll)" xcopy /D /Y "$(CuDnnDll)" "$(OutputPath)"
     <ClInclude Include="cudalib.h" />
     <ClInclude Include="CuDnnCommon.h" />
     <ClInclude Include="CuDnnFactories.h" />
+    <ClInclude Include="CuDnnRNN.h" />
     <ClInclude Include="GPUDataTransferer.h" />
     <ClInclude Include="GPURNGHandle.h" />
     <ClInclude Include="GPUTensor.h" />
@@ -164,6 +177,7 @@ if exist "$(CuDnnDll)" xcopy /D /Y "$(CuDnnDll)" "$(OutputPath)"
       <FileType>CppCode</FileType>
     </CudaCompile>
     <ClCompile Include="CuDnnCommon.cpp" />
+    <ClCompile Include="CuDnnRNN.cpp" />
     <ClCompile Include="GPUDataTransferer.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
