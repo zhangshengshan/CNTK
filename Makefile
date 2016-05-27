@@ -114,7 +114,7 @@ ifdef CUDA_PATH
   ifdef CUDNN_PATH
     INCLUDEPATH += $(CUDNN_PATH)/cuda/include
     LIBPATH += $(CUDNN_PATH)/cuda/lib64 $(CUDA_PATH)/targets/x86_64-linux/lib/stubs
-    LIBS += -lcudnn5
+    LIBS += -lcudnn
     COMMON_FLAGS +=-DUSE_CUDNN
   endif
 else
