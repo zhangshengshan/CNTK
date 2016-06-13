@@ -762,4 +762,58 @@ public:
 template class DummyCriterionNode<float>;
 template class DummyCriterionNode<double>;
 
+// -----------------------------------------------------------------------
+// AsSparseNode
+//------------------------------------------------------------------------
+
+template <class ElemType>
+class AsSparseNode : public ComputationNode<ElemType>, public NumInputs<1>
+{
+    typedef ComputationNode<ElemType> Base;
+    UsingComputationNodeMembers;
+
+public:
+    AsSparseNode(DEVICEID_TYPE deviceId, const wstring& name)
+        : Base(deviceId, name)
+    {
+    }
+
+    virtual void /*ComputationNode::*/ ForwardProp(const FrameRange& fr) override
+    {
+        size_t rank = DetermineElementwiseTensorRank();
+        auto result = ValueTensorFor(rank, fr);
+        TensorView<ElemType> input = Input(0)->ValueTensorFor(rank, fr);
+        
+        std::shared_ptr<Matrix<ElemType>> inputMatrix = input.AsMatrix();
+        std::shared_ptr<Matrix<ElemType>> resultMatrix = result.AsMatrix();
+
+        resultMatrix->SwitchToMatrixType(MatrixType::SPARSE, MatrixFormat::matrixFormatSparseCSC, true);
+    }
+
+    virtual void /*ComputationNode::*/ BackpropTo(const size_t inputIndex, const FrameRange& fr) override
+    {
+        assert(inputIndex == 0);
+
+        //TODO: implement;
+    }
+
+    virtual void /*ComputationNodeBase::*/ Validate(bool isFinalValidationPass) override
+    {
+        ValidateUnaryMap(isFinalValidationPass);
+    }
+
+    virtual bool OutputUsedInComputingInputNodesGradients() const override
+    {
+        return false;
+    }
+    virtual bool InputUsedInComputingInputNodesGradients(size_t /*childIndex*/) const override
+    {
+        return false;
+    }
+};
+
+template class AsSparseNode<float>;
+template class AsSparseNode<double>;
+
+
 } } }
