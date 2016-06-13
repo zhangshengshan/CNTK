@@ -101,6 +101,7 @@ static shared_ptr<ComputationNode<ElemType>> CreateStandardNode(const std::wstri
 #ifdef COMING_SOON
     else if (nodeType == OperationNameOf(ShiftNode))                            return New<ShiftNode<ElemType>>(forward<_Types>(_Args)...);
 #endif
+    else if (nodeType == OperationNameOf(AsSparseNode))                         return New<AsSparseNode<ElemType>>(forward<_Types>(_Args)...);
     else if (nodeType == OperationNameOf(SigmoidNode))                          return New<SigmoidNode<ElemType>>(forward<_Types>(_Args)...);
     else if (nodeType == OperationNameOf(SinNode))                              return New<SinNode<ElemType>>(forward<_Types>(_Args)...);
     else if (nodeType == OperationNameOf(SliceNode))                            return New<SliceNode<ElemType>>(forward<_Types>(_Args)...);
@@ -503,6 +504,12 @@ template <class ElemType>
 shared_ptr<ComputationNode<ElemType>> ComputationNetworkBuilder<ElemType>::RectifiedLinear(const ComputationNodePtr a, const std::wstring nodeName)
 {
     return net.AddNodeToNetAndAttachInputs(New<RectifiedLinearNode<ElemType>>(net.GetDeviceId(), nodeName), { a });
+}
+
+template <class ElemType>
+shared_ptr<ComputationNode<ElemType>> ComputationNetworkBuilder<ElemType>::AsSparse(const ComputationNodePtr a, const std::wstring nodeName)
+{
+    return net.AddNodeToNetAndAttachInputs(New<AsSparseNode<ElemType>>(net.GetDeviceId(), nodeName), { a });
 }
 
 template <class ElemType>

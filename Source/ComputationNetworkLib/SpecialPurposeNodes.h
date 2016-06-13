@@ -770,9 +770,16 @@ template <class ElemType>
 class AsSparseNode : public ComputationNode<ElemType>, public NumInputs<1>
 {
     typedef ComputationNode<ElemType> Base;
-    UsingComputationNodeMembers;
+    UsingComputationNodeMembersBoilerplate;
+
+    static const std::wstring TypeName()
+    {
+        return L"AsSparse";
+    }
 
 public:
+    DeclareConstructorFromConfigWithNumInputs(AsSparseNode);
+
     AsSparseNode(DEVICEID_TYPE deviceId, const wstring& name)
         : Base(deviceId, name)
     {
@@ -782,12 +789,12 @@ public:
     {
         size_t rank = DetermineElementwiseTensorRank();
         auto result = ValueTensorFor(rank, fr);
-        TensorView<ElemType> input = Input(0)->ValueTensorFor(rank, fr);
+     //   TensorView<ElemType> input = Input(0)->ValueTensorFor(rank, fr);
         
-        std::shared_ptr<Matrix<ElemType>> inputMatrix = input.AsMatrix();
-        std::shared_ptr<Matrix<ElemType>> resultMatrix = result.AsMatrix();
+    //    std::shared_ptr<Matrix<ElemType>> inputMatrix = input.AsMatrix();
+     //   std::shared_ptr<Matrix<ElemType>> resultMatrix = result.AsMatrix();
 
-        resultMatrix->SwitchToMatrixType(MatrixType::SPARSE, MatrixFormat::matrixFormatSparseCSC, true);
+     //   resultMatrix->SwitchToMatrixType(MatrixType::SPARSE, MatrixFormat::matrixFormatSparseCSC, true);
     }
 
     virtual void /*ComputationNode::*/ BackpropTo(const size_t inputIndex, const FrameRange& fr) override
