@@ -141,6 +141,11 @@ public:
 
     shared_ptr<Matrix<ElemType>> AsMatrix() const;
 
+    void AsSparse()
+    {
+        this->GetSOB().SwitchToMatrixType(MatrixType::SPARSE, MatrixFormat::matrixFormatSparseCSC, true);
+    }
+
 private:
     // -------------------------------------------------------------------
     // accessors

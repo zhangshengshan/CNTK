@@ -23,6 +23,8 @@ Fac(n) = if n > 1 then Fac(n-1) * n else 1
 IsSameObject(a,b) = new CompareFunction [ what = 'IsSameObject' ; args = (a : b) ]
 Mod(x, y)  = new NumericFunction [ what = 'Mod' ;  args = (x:y) ] 
 IntDiv(x, y)  = new NumericFunction [ what = 'IntDiv' ;  args = (x:y) ] 
+AsSparse(_, tag='') = new ComputationNode [ operation = 'AsSparse' ; inputs = _ /*plus the function args*/ ]
+
 
 
 ##############################################################################

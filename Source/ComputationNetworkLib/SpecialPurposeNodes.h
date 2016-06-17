@@ -789,12 +789,10 @@ public:
     {
         size_t rank = DetermineElementwiseTensorRank();
         auto result = ValueTensorFor(rank, fr);
-     //   TensorView<ElemType> input = Input(0)->ValueTensorFor(rank, fr);
+        TensorView<ElemType> input = Input(0)->ValueTensorFor(rank, fr);
         
-    //    std::shared_ptr<Matrix<ElemType>> inputMatrix = input.AsMatrix();
-     //   std::shared_ptr<Matrix<ElemType>> resultMatrix = result.AsMatrix();
-
-     //   resultMatrix->SwitchToMatrixType(MatrixType::SPARSE, MatrixFormat::matrixFormatSparseCSC, true);
+        result.AssignCopyOf(input);
+        result.AsSparse();
     }
 
     virtual void /*ComputationNode::*/ BackpropTo(const size_t inputIndex, const FrameRange& fr) override

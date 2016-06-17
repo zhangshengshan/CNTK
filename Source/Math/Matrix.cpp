@@ -981,7 +981,8 @@ void Matrix<ElemType>::CopyElementsFromDenseToSparse(CPUMatrix<ElemType>& from, 
     foreach_coord (row, col, from)
     {
         auto val = from(row, col);
-        dest.SetValue(row, col, val);
+        if (val != 0)
+            dest.SetValue(row, col, val);
     }
 }
 
