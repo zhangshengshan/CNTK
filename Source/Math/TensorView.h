@@ -146,6 +146,11 @@ public:
         this->GetSOB().SwitchToMatrixType(MatrixType::SPARSE, MatrixFormat::matrixFormatSparseCSC, true);
     }
 
+    void AsDense()
+    {
+        this->GetSOB().SwitchToMatrixType(MatrixType::DENSE, MatrixFormat::matrixFormatDenseColMajor, true);
+    }
+
 private:
     // -------------------------------------------------------------------
     // accessors

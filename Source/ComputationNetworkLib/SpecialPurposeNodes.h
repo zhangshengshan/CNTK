@@ -776,30 +776,63 @@ class AsSparseNode : public ComputationNode<ElemType>, public NumInputs<1>
     {
         return L"AsSparse";
     }
+    std::wstring m_targetType;
+
 
 public:
-    DeclareConstructorFromConfigWithNumInputs(AsSparseNode);
+    //DeclareConstructorFromConfigWithNumInputs(AsSparseNode);
 
-    AsSparseNode(DEVICEID_TYPE deviceId, const wstring& name)
-        : Base(deviceId, name)
+    AsSparseNode(DEVICEID_TYPE deviceId, const wstring& name, std::wstring targetType = std::wstring())
+        : Base(deviceId, name), m_targetType(targetType)
     {
     }
 
+    AsSparseNode(const ScriptableObjects::IConfigRecordPtr configp)
+        : AsSparseNode(configp->Get(L"deviceId"), L"<placeholder>", configp->Get(L"type"))
+    {
+        AttachInputsFromConfig(configp, this->GetExpectedNumInputs());
+    }
+
+
     virtual void /*ComputationNode::*/ ForwardProp(const FrameRange& fr) override
     {
-        size_t rank = DetermineElementwiseTensorRank();
-        auto result = ValueTensorFor(rank, fr);
-        TensorView<ElemType> input = Input(0)->ValueTensorFor(rank, fr);
+//        auto& result = ValueAsMatrix();
+//        auto& input = Input(0)->ValueAsMatrix();
         
-        result.AssignCopyOf(input);
-        result.AsSparse();
+//        result.SetValue(input);
+
+        //MatrixType type = MatrixType::UNDETERMINED;
+        if (m_targetType == wstring(L"sparse"))
+        {
+            size_t rank = DetermineElementwiseTensorRank();
+            auto result = ValueTensorFor(rank, fr);
+            TensorView<ElemType> input = Input(0)->ValueTensorFor(rank, fr);
+
+            result.AssignCopyOf(input);
+            result.AsSparse();
+        }
+        else if (m_targetType == wstring(L"dense"))
+        {
+        }
+        else
+        {
+
+        }
     }
 
     virtual void /*ComputationNode::*/ BackpropTo(const size_t inputIndex, const FrameRange& fr) override
     {
         assert(inputIndex == 0);
 
-        //TODO: implement;
+        size_t rank = DetermineElementwiseTensorRank();
+        auto gradient = GradientTensorFor(rank, fr);
+        auto inputGradient = Input(inputIndex)->GradientTensorFor(rank, fr.AllowBroadcast());
+
+        // if reduction then mask the respective input(s) (zero out the gaps)
+        if (Input(inputIndex)->ReducesInTimeWrt(shared_from_this()))
+            MaskMissingGradientColumnsToZero(fr);
+
+       inputGradient.AddCopyOf(gradient);
     }
 
     virtual void /*ComputationNodeBase::*/ Validate(bool isFinalValidationPass) override
