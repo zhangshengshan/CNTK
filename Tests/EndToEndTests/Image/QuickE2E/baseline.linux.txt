@@ -3,11 +3,11 @@ CPU info:
     Hardware threads: 24
     Total Memory: 264172964 kB
 -------------------------------------------------------------------
-=== Running /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/release/bin/cntk configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E/cntk.cntk currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data RunDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E OutputDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu DeviceId=0 timestamping=true
+=== Running /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/release/bin/cntk configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E/cntk.cntk currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data RunDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E OutputDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu DeviceId=0 timestamping=true
 -------------------------------------------------------------------
 Build info: 
 
-		Built time: Jul 13 2016 12:01:30
+		Built time: Jul 14 2016 12:04:41
 		Last modified date: Tue Jul 12 04:28:35 2016
 		Build type: release
 		Build target: GPU
@@ -17,45 +17,45 @@ Build info:
 		CUB_PATH: /usr/local/cub-1.4.1
 		CUDNN_PATH: /usr/local/cudnn-4.0
 		Build Branch: HEAD
-		Build SHA1: 50bb4c8afbc87c14548a5b5f315a064186a5cb5f
-		Built by philly on 2bc22072e267
+		Build SHA1: 72bee394bf461e8f6f0feb593a8416c05f481957
+		Built by philly on 34e58dd0283f
 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
 -------------------------------------------------------------------
 Changed current directory to /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data
-07/13/2016 12:22:33: -------------------------------------------------------------------
-07/13/2016 12:22:33: Build info: 
+07/14/2016 12:21:47: -------------------------------------------------------------------
+07/14/2016 12:21:47: Build info: 
 
-07/13/2016 12:22:33: 		Built time: Jul 13 2016 12:01:30
-07/13/2016 12:22:33: 		Last modified date: Tue Jul 12 04:28:35 2016
-07/13/2016 12:22:33: 		Build type: release
-07/13/2016 12:22:33: 		Build target: GPU
-07/13/2016 12:22:33: 		With 1bit-SGD: no
-07/13/2016 12:22:33: 		Math lib: mkl
-07/13/2016 12:22:33: 		CUDA_PATH: /usr/local/cuda-7.5
-07/13/2016 12:22:33: 		CUB_PATH: /usr/local/cub-1.4.1
-07/13/2016 12:22:33: 		CUDNN_PATH: /usr/local/cudnn-4.0
-07/13/2016 12:22:33: 		Build Branch: HEAD
-07/13/2016 12:22:33: 		Build SHA1: 50bb4c8afbc87c14548a5b5f315a064186a5cb5f
-07/13/2016 12:22:33: 		Built by philly on 2bc22072e267
-07/13/2016 12:22:33: 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
-07/13/2016 12:22:33: -------------------------------------------------------------------
-07/13/2016 12:22:34: -------------------------------------------------------------------
-07/13/2016 12:22:34: GPU info:
+07/14/2016 12:21:47: 		Built time: Jul 14 2016 12:04:41
+07/14/2016 12:21:47: 		Last modified date: Tue Jul 12 04:28:35 2016
+07/14/2016 12:21:47: 		Build type: release
+07/14/2016 12:21:47: 		Build target: GPU
+07/14/2016 12:21:47: 		With 1bit-SGD: no
+07/14/2016 12:21:47: 		Math lib: mkl
+07/14/2016 12:21:47: 		CUDA_PATH: /usr/local/cuda-7.5
+07/14/2016 12:21:47: 		CUB_PATH: /usr/local/cub-1.4.1
+07/14/2016 12:21:47: 		CUDNN_PATH: /usr/local/cudnn-4.0
+07/14/2016 12:21:47: 		Build Branch: HEAD
+07/14/2016 12:21:47: 		Build SHA1: 72bee394bf461e8f6f0feb593a8416c05f481957
+07/14/2016 12:21:47: 		Built by philly on 34e58dd0283f
+07/14/2016 12:21:47: 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
+07/14/2016 12:21:47: -------------------------------------------------------------------
+07/14/2016 12:21:48: -------------------------------------------------------------------
+07/14/2016 12:21:48: GPU info:
 
-07/13/2016 12:22:34: 		Device[0]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:22:34: 		Device[1]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:22:34: 		Device[2]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:22:34: 		Device[3]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:22:34: -------------------------------------------------------------------
+07/14/2016 12:21:48: 		Device[0]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:21:48: 		Device[1]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:21:48: 		Device[2]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:21:48: 		Device[3]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:21:48: -------------------------------------------------------------------
 
-07/13/2016 12:22:34: Running on localhost at 2016/07/13 12:22:34
-07/13/2016 12:22:34: Command line: 
-/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/release/bin/cntk  configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E/cntk.cntk  currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data  RunDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu  DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data  ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E  OutputDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu  DeviceId=0  timestamping=true
+07/14/2016 12:21:48: Running on localhost at 2016/07/14 12:21:48
+07/14/2016 12:21:48: Command line: 
+/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/release/bin/cntk  configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E/cntk.cntk  currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data  RunDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu  DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data  ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E  OutputDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu  DeviceId=0  timestamping=true
 
 
 
-07/13/2016 12:22:34: >>>>>>>>>>>>>>>>>>>> RAW CONFIG (VARIABLES NOT RESOLVED) >>>>>>>>>>>>>>>>>>>>
-07/13/2016 12:22:34: precision = "float"
+07/14/2016 12:21:48: >>>>>>>>>>>>>>>>>>>> RAW CONFIG (VARIABLES NOT RESOLVED) >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:21:48: precision = "float"
 command = train:test
 deviceId = $DeviceId$
 parallelTrain = false
@@ -164,24 +164,24 @@ test = [
     ]
 ]
 currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data
-RunDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu
+RunDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu
 DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data
 ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E
-OutputDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu
+OutputDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu
 DeviceId=0
 timestamping=true
 
-07/13/2016 12:22:34: <<<<<<<<<<<<<<<<<<<< RAW CONFIG (VARIABLES NOT RESOLVED)  <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:21:48: <<<<<<<<<<<<<<<<<<<< RAW CONFIG (VARIABLES NOT RESOLVED)  <<<<<<<<<<<<<<<<<<<<
 
-07/13/2016 12:22:34: >>>>>>>>>>>>>>>>>>>> RAW CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
-07/13/2016 12:22:34: precision = "float"
+07/14/2016 12:21:48: >>>>>>>>>>>>>>>>>>>> RAW CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:21:48: precision = "float"
 command = train:test
 deviceId = 0
 parallelTrain = false
 numCPUThreads = 8
 train = [
     action = "train"
-    modelPath = "/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu/models/cntk.dnn"
+    modelPath = "/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu/models/cntk.dnn"
     traceLevel = 1
     BrainScriptNetworkBuilder = [
         // HACK to enforce same evaluation order or LearnableParameters as for NDL, as to get same radomization
@@ -266,7 +266,7 @@ train = [
 ]
 test = [
     action = "test"
-    modelPath = "/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu/models/cntk.dnn"
+    modelPath = "/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu/models/cntk.dnn"
     reader = [
         readerType = "CNTKTextFormatReader"
         file = "/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data/Test_cntk_text.txt"
@@ -283,29 +283,29 @@ test = [
     ]
 ]
 currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data
-RunDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu
+RunDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu
 DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data
 ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E
-OutputDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu
+OutputDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu
 DeviceId=0
 timestamping=true
 
-07/13/2016 12:22:34: <<<<<<<<<<<<<<<<<<<< RAW CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:21:48: <<<<<<<<<<<<<<<<<<<< RAW CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
 
-07/13/2016 12:22:34: >>>>>>>>>>>>>>>>>>>> PROCESSED CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:21:48: >>>>>>>>>>>>>>>>>>>> PROCESSED CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
 configparameters: cntk.cntk:command=train:test
 configparameters: cntk.cntk:ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E
 configparameters: cntk.cntk:currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data
 configparameters: cntk.cntk:DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data
 configparameters: cntk.cntk:deviceId=0
 configparameters: cntk.cntk:numCPUThreads=8
-configparameters: cntk.cntk:OutputDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu
+configparameters: cntk.cntk:OutputDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu
 configparameters: cntk.cntk:parallelTrain=false
 configparameters: cntk.cntk:precision=float
-configparameters: cntk.cntk:RunDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu
+configparameters: cntk.cntk:RunDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu
 configparameters: cntk.cntk:test=[
     action = "test"
-    modelPath = "/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu/models/cntk.dnn"
+    modelPath = "/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu/models/cntk.dnn"
     reader = [
         readerType = "CNTKTextFormatReader"
         file = "/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data/Test_cntk_text.txt"
@@ -325,7 +325,7 @@ configparameters: cntk.cntk:test=[
 configparameters: cntk.cntk:timestamping=true
 configparameters: cntk.cntk:train=[
     action = "train"
-    modelPath = "/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu/models/cntk.dnn"
+    modelPath = "/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu/models/cntk.dnn"
     traceLevel = 1
     BrainScriptNetworkBuilder = [
         // HACK to enforce same evaluation order or LearnableParameters as for NDL, as to get same radomization
@@ -409,23 +409,23 @@ configparameters: cntk.cntk:train=[
     ]
 ]
 
-07/13/2016 12:22:34: <<<<<<<<<<<<<<<<<<<< PROCESSED CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
-07/13/2016 12:22:34: Commands: train test
-07/13/2016 12:22:34: Precision = "float"
-07/13/2016 12:22:34: Using 8 CPU threads.
-07/13/2016 12:22:34: CNTKModelPath: /tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu/models/cntk.dnn
-07/13/2016 12:22:34: CNTKCommandTrainInfo: train : 5
-07/13/2016 12:22:34: CNTKCommandTrainInfo: CNTKNoMoreCommands_Total : 5
+07/14/2016 12:21:48: <<<<<<<<<<<<<<<<<<<< PROCESSED CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:21:48: Commands: train test
+07/14/2016 12:21:48: Precision = "float"
+07/14/2016 12:21:48: Using 8 CPU threads.
+07/14/2016 12:21:48: CNTKModelPath: /tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu/models/cntk.dnn
+07/14/2016 12:21:48: CNTKCommandTrainInfo: train : 5
+07/14/2016 12:21:48: CNTKCommandTrainInfo: CNTKNoMoreCommands_Total : 5
 
-07/13/2016 12:22:34: ##############################################################################
-07/13/2016 12:22:34: #                                                                            #
-07/13/2016 12:22:34: # Action "train"                                                             #
-07/13/2016 12:22:34: #                                                                            #
-07/13/2016 12:22:34: ##############################################################################
+07/14/2016 12:21:48: ##############################################################################
+07/14/2016 12:21:48: #                                                                            #
+07/14/2016 12:21:48: # Action "train"                                                             #
+07/14/2016 12:21:48: #                                                                            #
+07/14/2016 12:21:48: ##############################################################################
 
-07/13/2016 12:22:34: CNTKCommandTrainBegin: train
+07/14/2016 12:21:48: CNTKCommandTrainBegin: train
 useParallelTrain option is not enabled. ParallelTrain config will be ignored.
-07/13/2016 12:22:34: Creating virgin network.
+07/14/2016 12:21:48: Creating virgin network.
 
 Post-processing network...
 
@@ -482,14 +482,14 @@ pool2: using cuDNN convolution engine for geometry: Input: 8 x 8 x 32, Output: 4
 
 Post-processing network complete.
 
-07/13/2016 12:22:34: Created model with 27 nodes on GPU 0.
+07/14/2016 12:21:48: Created model with 27 nodes on GPU 0.
 
-07/13/2016 12:22:34: Training criterion node(s):
-07/13/2016 12:22:34: 	ce = CrossEntropyWithSoftmax
+07/14/2016 12:21:48: Training criterion node(s):
+07/14/2016 12:21:48: 	ce = CrossEntropyWithSoftmax
 
-07/13/2016 12:22:34: Evaluation criterion node(s):
+07/14/2016 12:21:48: Evaluation criterion node(s):
 
-07/13/2016 12:22:34: 	err = ErrorPrediction
+07/14/2016 12:21:48: 	err = ErrorPrediction
 
 
 Allocating matrices for forward and/or backward propagation.
@@ -497,90 +497,90 @@ Allocating matrices for forward and/or backward propagation.
 Memory Sharing Structure:
 
 (nil): {[err Gradient[1]] [featScale Gradient[1 x 1]] [featScaled Gradient[28 x 28 x 1 x *]] [features Gradient[28 x 28 x 1 x *]] [labels Gradient[10 x *]] }
-0x1eee608: {[h1.W Value[128 x 4 x 4 x 32]] }
-0x1eef948: {[conv2_act.convB Value[1 x 1 x 32]] }
-0x1eefd68: {[ol.W Value[10 x 128]] }
-0x1ef0448: {[labels Value[10 x *]] }
-0x1ef7948: {[conv1_act.convB Value[1 x 1 x 16]] }
-0x1ef81d8: {[h1.b Value[128]] }
-0x1ef94c8: {[ol.b Value[10 x 1]] }
-0x2545dc8: {[conv1_act.convW Value[16 x 25]] }
-0x2d13838: {[featScale Value[1 x 1]] }
-0x2d13908: {[features Value[28 x 28 x 1 x *]] }
-0x2d166c8: {[conv2_act.convW Value[32 x 400]] }
-0x2d1ad68: {[err Value[1]] }
-0x76113f8: {[ce Value[1]] }
-0x7616158: {[conv1_act.conv Value[24 x 24 x 16 x *]] }
-0x76164b8: {[featScaled Value[28 x 28 x 1 x *]] }
-0x7616a58: {[conv1_act.convPlusB Value[24 x 24 x 16 x *]] [conv1_act.convW Gradient[16 x 25]] }
-0x761ffd8: {[conv1_act.conv Gradient[24 x 24 x 16 x *]] [conv1_act.out Value[24 x 24 x 16 x *]] }
-0x7620198: {[conv1_act.convPlusB Gradient[24 x 24 x 16 x *]] [pool1 Value[12 x 12 x 16 x *]] }
-0x7620358: {[conv2_act.conv Value[8 x 8 x 32 x *]] }
-0x7620518: {[conv1_act.convB Gradient[1 x 1 x 16]] [conv1_act.out Gradient[24 x 24 x 16 x *]] }
-0x76206d8: {[conv2_act.convPlusB Value[8 x 8 x 32 x *]] [conv2_act.convW Gradient[32 x 400]] }
-0x7620898: {[conv2_act.conv Gradient[8 x 8 x 32 x *]] [conv2_act.out Value[8 x 8 x 32 x *]] }
-0x7620a58: {[conv2_act.convPlusB Gradient[8 x 8 x 32 x *]] [pool1 Gradient[12 x 12 x 16 x *]] [pool2 Value[4 x 4 x 32 x *]] }
-0x7620c18: {[conv2_act.convB Gradient[1 x 1 x 32]] [conv2_act.out Gradient[8 x 8 x 32 x *]] [h1.z.PlusArgs[0] Value[128 x *]] }
-0x7620dd8: {[h1.W Gradient[128 x 4 x 4 x 32]] [h1.z Value[128 x *]] }
-0x7620f98: {[h1.out Value[128 x *]] [h1.z.PlusArgs[0] Gradient[128 x *]] }
-0x7621158: {[h1.z Gradient[128 x *]] [ol.out.PlusArgs[0] Value[10 x *]] [pool2 Gradient[4 x 4 x 32 x *]] }
-0x7621318: {[ol.W Gradient[10 x 128]] [ol.out Value[10 x 1 x *]] }
-0x7621d98: {[ce Gradient[1]] }
-0x7621f58: {[h1.b Gradient[128]] [h1.out Gradient[128 x *]] [ol.out Gradient[10 x 1 x *]] }
-0x7622118: {[ol.out.PlusArgs[0] Gradient[10 x *]] }
-0x76222d8: {[ol.b Gradient[10 x 1]] }
+0x1c3f518: {[labels Value[10 x *]] }
+0x1c48b28: {[conv1_act.convB Value[1 x 1 x 16]] }
+0x1c49788: {[ol.b Value[10 x 1]] }
+0x1c4ac28: {[conv2_act.convB Value[1 x 1 x 32]] }
+0x1c4b888: {[ol.W Value[10 x 128]] }
+0x1c4c768: {[featScaled Value[28 x 28 x 1 x *]] }
+0x1c588f8: {[conv1_act.convW Value[16 x 25]] }
+0x2aa2458: {[h1.W Value[128 x 4 x 4 x 32]] }
+0x2aa30e8: {[conv2_act.convW Value[32 x 400]] }
+0x2aa3208: {[h1.b Value[128]] }
+0x2aba3f8: {[err Value[1]] }
+0x2ad7e98: {[featScale Value[1 x 1]] }
+0x2ad80c8: {[features Value[28 x 28 x 1 x *]] }
+0x2f19158: {[ce Value[1]] }
+0x73a23f8: {[conv1_act.conv Value[24 x 24 x 16 x *]] }
+0x73a48f8: {[conv1_act.convPlusB Value[24 x 24 x 16 x *]] [conv1_act.convW Gradient[16 x 25]] }
+0x73a4ab8: {[conv1_act.conv Gradient[24 x 24 x 16 x *]] [conv1_act.out Value[24 x 24 x 16 x *]] }
+0x73ae0a8: {[conv1_act.convPlusB Gradient[24 x 24 x 16 x *]] [pool1 Value[12 x 12 x 16 x *]] }
+0x73ae208: {[conv2_act.conv Value[8 x 8 x 32 x *]] }
+0x73ae368: {[conv1_act.convB Gradient[1 x 1 x 16]] [conv1_act.out Gradient[24 x 24 x 16 x *]] }
+0x73ae528: {[conv2_act.convPlusB Value[8 x 8 x 32 x *]] [conv2_act.convW Gradient[32 x 400]] }
+0x73ae6e8: {[conv2_act.conv Gradient[8 x 8 x 32 x *]] [conv2_act.out Value[8 x 8 x 32 x *]] }
+0x73ae8a8: {[conv2_act.convPlusB Gradient[8 x 8 x 32 x *]] [pool1 Gradient[12 x 12 x 16 x *]] [pool2 Value[4 x 4 x 32 x *]] }
+0x73aea68: {[conv2_act.convB Gradient[1 x 1 x 32]] [conv2_act.out Gradient[8 x 8 x 32 x *]] [h1.z.PlusArgs[0] Value[128 x *]] }
+0x73aec28: {[h1.W Gradient[128 x 4 x 4 x 32]] [h1.z Value[128 x *]] }
+0x73aede8: {[h1.out Value[128 x *]] [h1.z.PlusArgs[0] Gradient[128 x *]] }
+0x73aefa8: {[h1.z Gradient[128 x *]] [ol.out.PlusArgs[0] Value[10 x *]] [pool2 Gradient[4 x 4 x 32 x *]] }
+0x73af168: {[ol.W Gradient[10 x 128]] [ol.out Value[10 x 1 x *]] }
+0x73afbe8: {[ce Gradient[1]] }
+0x73afda8: {[h1.b Gradient[128]] [h1.out Gradient[128 x *]] [ol.out Gradient[10 x 1 x *]] }
+0x73aff68: {[ol.out.PlusArgs[0] Gradient[10 x *]] }
+0x73b0128: {[ol.b Gradient[10 x 1]] }
 
-07/13/2016 12:22:34: No PreCompute nodes found, skipping PreCompute step.
+07/14/2016 12:21:48: No PreCompute nodes found, skipping PreCompute step.
 
-07/13/2016 12:22:34: Starting Epoch 1: learning rate per sample = 0.000002  effective momentum = 0.904837  momentum as time constant = 1000.0 samples
+07/14/2016 12:21:48: Starting Epoch 1: learning rate per sample = 0.000002  effective momentum = 0.904837  momentum as time constant = 1000.0 samples
 BlockRandomizer::StartEpoch: epoch 0: frames [0..1000] (first sequence at sample 0), data subset 0 of 1
 
-07/13/2016 12:22:34: Starting minibatch loop.
-07/13/2016 12:22:35:  Epoch[ 1 of 5]-Minibatch[   1-  10, 100.00%]: ce = 2.32771924 * 1000; err = 0.90000000 * 1000; time = 0.1715s; samplesPerSecond = 5830.1
-07/13/2016 12:22:35: Finished Epoch[ 1 of 5]: [Training] ce = 2.32771924 * 1000; err = 0.90000000 * 1000; totalSamplesSeen = 1000; learningRatePerSample = 2e-06; epochTime=0.171977s
-07/13/2016 12:22:35: SGD: Saving checkpoint model '/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu/models/cntk.dnn.1'
+07/14/2016 12:21:48: Starting minibatch loop.
+07/14/2016 12:21:48:  Epoch[ 1 of 5]-Minibatch[   1-  10, 100.00%]: ce = 2.32771924 * 1000; err = 0.90000000 * 1000; time = 0.1697s; samplesPerSecond = 5894.2
+07/14/2016 12:21:48: Finished Epoch[ 1 of 5]: [Training] ce = 2.32771924 * 1000; err = 0.90000000 * 1000; totalSamplesSeen = 1000; learningRatePerSample = 2e-06; epochTime=0.1701s
+07/14/2016 12:21:48: SGD: Saving checkpoint model '/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu/models/cntk.dnn.1'
 
-07/13/2016 12:22:35: Starting Epoch 2: learning rate per sample = 0.000002  effective momentum = 0.904837  momentum as time constant = 1000.0 samples
+07/14/2016 12:21:48: Starting Epoch 2: learning rate per sample = 0.000002  effective momentum = 0.904837  momentum as time constant = 1000.0 samples
 BlockRandomizer::StartEpoch: epoch 1: frames [1000..2000] (first sequence at sample 1000), data subset 0 of 1
 
-07/13/2016 12:22:35: Starting minibatch loop.
-07/13/2016 12:22:35:  Epoch[ 2 of 5]-Minibatch[   1-  10, 100.00%]: ce = 2.32675269 * 1000; err = 0.90000000 * 1000; time = 0.0253s; samplesPerSecond = 39530.4
-07/13/2016 12:22:35: Finished Epoch[ 2 of 5]: [Training] ce = 2.32675269 * 1000; err = 0.90000000 * 1000; totalSamplesSeen = 2000; learningRatePerSample = 2e-06; epochTime=0.025553s
-07/13/2016 12:22:35: SGD: Saving checkpoint model '/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu/models/cntk.dnn.2'
+07/14/2016 12:21:48: Starting minibatch loop.
+07/14/2016 12:21:48:  Epoch[ 2 of 5]-Minibatch[   1-  10, 100.00%]: ce = 2.32675269 * 1000; err = 0.90000000 * 1000; time = 0.0254s; samplesPerSecond = 39359.2
+07/14/2016 12:21:48: Finished Epoch[ 2 of 5]: [Training] ce = 2.32675269 * 1000; err = 0.90000000 * 1000; totalSamplesSeen = 2000; learningRatePerSample = 2e-06; epochTime=0.025635s
+07/14/2016 12:21:48: SGD: Saving checkpoint model '/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu/models/cntk.dnn.2'
 
-07/13/2016 12:22:35: Starting Epoch 3: learning rate per sample = 0.000002  effective momentum = 0.904837  momentum as time constant = 1000.0 samples
+07/14/2016 12:21:48: Starting Epoch 3: learning rate per sample = 0.000002  effective momentum = 0.904837  momentum as time constant = 1000.0 samples
 BlockRandomizer::StartEpoch: epoch 2: frames [2000..3000] (first sequence at sample 2000), data subset 0 of 1
 
-07/13/2016 12:22:35: Starting minibatch loop.
-07/13/2016 12:22:35:  Epoch[ 3 of 5]-Minibatch[   1-  10, 100.00%]: ce = 2.32544702 * 1000; err = 0.90000000 * 1000; time = 0.0260s; samplesPerSecond = 38522.3
-07/13/2016 12:22:35: Finished Epoch[ 3 of 5]: [Training] ce = 2.32544702 * 1000; err = 0.90000000 * 1000; totalSamplesSeen = 3000; learningRatePerSample = 2e-06; epochTime=0.026187s
-07/13/2016 12:22:35: SGD: Saving checkpoint model '/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu/models/cntk.dnn.3'
+07/14/2016 12:21:48: Starting minibatch loop.
+07/14/2016 12:21:48:  Epoch[ 3 of 5]-Minibatch[   1-  10, 100.00%]: ce = 2.32544702 * 1000; err = 0.90000000 * 1000; time = 0.0254s; samplesPerSecond = 39385.6
+07/14/2016 12:21:48: Finished Epoch[ 3 of 5]: [Training] ce = 2.32544702 * 1000; err = 0.90000000 * 1000; totalSamplesSeen = 3000; learningRatePerSample = 2e-06; epochTime=0.025621s
+07/14/2016 12:21:48: SGD: Saving checkpoint model '/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu/models/cntk.dnn.3'
 
-07/13/2016 12:22:35: Starting Epoch 4: learning rate per sample = 0.000002  effective momentum = 0.904837  momentum as time constant = 1000.0 samples
+07/14/2016 12:21:48: Starting Epoch 4: learning rate per sample = 0.000002  effective momentum = 0.904837  momentum as time constant = 1000.0 samples
 BlockRandomizer::StartEpoch: epoch 3: frames [3000..4000] (first sequence at sample 3000), data subset 0 of 1
 
-07/13/2016 12:22:35: Starting minibatch loop.
-07/13/2016 12:22:35:  Epoch[ 4 of 5]-Minibatch[   1-  10, 100.00%]: ce = 2.32398853 * 1000; err = 0.90000000 * 1000; time = 0.0253s; samplesPerSecond = 39497.6
-07/13/2016 12:22:35: Finished Epoch[ 4 of 5]: [Training] ce = 2.32398853 * 1000; err = 0.90000000 * 1000; totalSamplesSeen = 4000; learningRatePerSample = 2e-06; epochTime=0.02553s
-07/13/2016 12:22:35: SGD: Saving checkpoint model '/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu/models/cntk.dnn.4'
+07/14/2016 12:21:48: Starting minibatch loop.
+07/14/2016 12:21:48:  Epoch[ 4 of 5]-Minibatch[   1-  10, 100.00%]: ce = 2.32398853 * 1000; err = 0.90000000 * 1000; time = 0.0258s; samplesPerSecond = 38816.9
+07/14/2016 12:21:48: Finished Epoch[ 4 of 5]: [Training] ce = 2.32398853 * 1000; err = 0.90000000 * 1000; totalSamplesSeen = 4000; learningRatePerSample = 2e-06; epochTime=0.026014s
+07/14/2016 12:21:48: SGD: Saving checkpoint model '/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu/models/cntk.dnn.4'
 
-07/13/2016 12:22:35: Starting Epoch 5: learning rate per sample = 0.000002  effective momentum = 0.904837  momentum as time constant = 1000.0 samples
+07/14/2016 12:21:48: Starting Epoch 5: learning rate per sample = 0.000002  effective momentum = 0.904837  momentum as time constant = 1000.0 samples
 BlockRandomizer::StartEpoch: epoch 4: frames [4000..5000] (first sequence at sample 4000), data subset 0 of 1
 
-07/13/2016 12:22:35: Starting minibatch loop.
-07/13/2016 12:22:35:  Epoch[ 5 of 5]-Minibatch[   1-  10, 100.00%]: ce = 2.32253198 * 1000; err = 0.90000000 * 1000; time = 0.0260s; samplesPerSecond = 38427.5
-07/13/2016 12:22:35: Finished Epoch[ 5 of 5]: [Training] ce = 2.32253198 * 1000; err = 0.90000000 * 1000; totalSamplesSeen = 5000; learningRatePerSample = 2e-06; epochTime=0.026245s
-07/13/2016 12:22:35: SGD: Saving checkpoint model '/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu/models/cntk.dnn'
-07/13/2016 12:22:35: CNTKCommandTrainEnd: train
+07/14/2016 12:21:48: Starting minibatch loop.
+07/14/2016 12:21:48:  Epoch[ 5 of 5]-Minibatch[   1-  10, 100.00%]: ce = 2.32253198 * 1000; err = 0.90000000 * 1000; time = 0.0254s; samplesPerSecond = 39432.2
+07/14/2016 12:21:48: Finished Epoch[ 5 of 5]: [Training] ce = 2.32253198 * 1000; err = 0.90000000 * 1000; totalSamplesSeen = 5000; learningRatePerSample = 2e-06; epochTime=0.025592s
+07/14/2016 12:21:48: SGD: Saving checkpoint model '/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu/models/cntk.dnn'
+07/14/2016 12:21:48: CNTKCommandTrainEnd: train
 
-07/13/2016 12:22:35: Action "train" complete.
+07/14/2016 12:21:48: Action "train" complete.
 
 
-07/13/2016 12:22:35: ##############################################################################
-07/13/2016 12:22:35: #                                                                            #
-07/13/2016 12:22:35: # Action "test"                                                              #
-07/13/2016 12:22:35: #                                                                            #
-07/13/2016 12:22:35: ##############################################################################
+07/14/2016 12:21:48: ##############################################################################
+07/14/2016 12:21:48: #                                                                            #
+07/14/2016 12:21:48: # Action "test"                                                              #
+07/14/2016 12:21:48: #                                                                            #
+07/14/2016 12:21:48: ##############################################################################
 
 
 Post-processing network...
@@ -646,47 +646,47 @@ Allocating matrices for forward and/or backward propagation.
 Memory Sharing Structure:
 
 (nil): {[ce Gradient[1]] [conv1_act.conv Gradient[24 x 24 x 16 x *1]] [conv1_act.convB Gradient[1 x 1 x 16]] [conv1_act.convPlusB Gradient[24 x 24 x 16 x *1]] [conv1_act.convW Gradient[16 x 25]] [conv1_act.out Gradient[24 x 24 x 16 x *1]] [conv2_act.conv Gradient[8 x 8 x 32 x *1]] [conv2_act.convB Gradient[1 x 1 x 32]] [conv2_act.convPlusB Gradient[8 x 8 x 32 x *1]] [conv2_act.convW Gradient[32 x 400]] [conv2_act.out Gradient[8 x 8 x 32 x *1]] [err Gradient[1]] [featScale Gradient[1 x 1]] [featScaled Gradient[28 x 28 x 1 x *1]] [features Gradient[28 x 28 x 1 x *1]] [h1.W Gradient[128 x 4 x 4 x 32]] [h1.b Gradient[128]] [h1.out Gradient[128 x *1]] [h1.z Gradient[128 x *1]] [h1.z.PlusArgs[0] Gradient[128 x *1]] [labels Gradient[10 x *1]] [ol.W Gradient[10 x 128]] [ol.b Gradient[10 x 1]] [ol.out Gradient[10 x 1 x *1]] [ol.out.PlusArgs[0] Gradient[10 x *1]] [pool1 Gradient[12 x 12 x 16 x *1]] [pool2 Gradient[4 x 4 x 32 x *1]] }
-0x1e016b8: {[conv1_act.convB Value[1 x 1 x 16]] }
-0x1e0efe8: {[ce Value[1]] }
-0x1e0fba8: {[conv2_act.convB Value[1 x 1 x 32]] }
-0x1e10878: {[conv1_act.convW Value[16 x 25]] }
-0x1e12698: {[conv2_act.convW Value[32 x 400]] }
-0x1e18ac8: {[labels Value[10 x *1]] }
-0x1e18b78: {[h1.b Value[128]] }
-0x1ead538: {[ol.b Value[10 x 1]] }
-0x1ead638: {[ol.W Value[10 x 128]] }
-0x1eaeea8: {[h1.W Value[128 x 4 x 4 x 32]] }
-0x1edaa38: {[conv1_act.conv Value[24 x 24 x 16 x *1]] }
-0x1edb0d8: {[conv1_act.convPlusB Value[24 x 24 x 16 x *1]] }
-0x1edb298: {[conv1_act.out Value[24 x 24 x 16 x *1]] }
-0x1edb458: {[pool1 Value[12 x 12 x 16 x *1]] }
-0x1edb618: {[conv2_act.conv Value[8 x 8 x 32 x *1]] }
-0x1edb998: {[conv2_act.convPlusB Value[8 x 8 x 32 x *1]] }
-0x1edbb58: {[conv2_act.out Value[8 x 8 x 32 x *1]] }
-0x1edbd18: {[pool2 Value[4 x 4 x 32 x *1]] }
-0x211a9b8: {[featScaled Value[28 x 28 x 1 x *1]] }
-0x50fac88: {[err Value[1]] }
-0x7624738: {[features Value[28 x 28 x 1 x *1]] }
-0x76247e8: {[featScale Value[1 x 1]] }
-0x7627d18: {[h1.z.PlusArgs[0] Value[128 x *1]] }
-0x7627e78: {[h1.z Value[128 x *1]] }
-0x7627fd8: {[h1.out Value[128 x *1]] }
-0x7628138: {[ol.out.PlusArgs[0] Value[10 x *1]] }
-0x76282f8: {[ol.out Value[10 x 1 x *1]] }
+0x7f7a02b3b038: {[ce Value[1]] }
+0x7f7a02b3b878: {[conv1_act.convB Value[1 x 1 x 16]] }
+0x7f7a02b3d398: {[conv1_act.convW Value[16 x 25]] }
+0x7f7a02b3d9c8: {[conv2_act.convB Value[1 x 1 x 32]] }
+0x7f7a02b3f5c8: {[conv2_act.convW Value[32 x 400]] }
+0x7f7a02b40218: {[featScale Value[1 x 1]] }
+0x7f7a02b40e48: {[features Value[28 x 28 x 1 x *1]] }
+0x7f7a02b41518: {[h1.b Value[128]] }
+0x7f7a02b41a88: {[h1.W Value[128 x 4 x 4 x 32]] }
+0x7f7a02b43348: {[labels Value[10 x *1]] }
+0x7f7a02b438a8: {[ol.W Value[10 x 128]] }
+0x7f7a02b43be8: {[ol.b Value[10 x 1]] }
+0x7f7a02b459b8: {[err Value[1]] }
+0x7f7a02bb34e8: {[featScaled Value[28 x 28 x 1 x *1]] }
+0x7f7a02bb36d8: {[conv1_act.conv Value[24 x 24 x 16 x *1]] }
+0x7f7a02bb3b98: {[conv1_act.convPlusB Value[24 x 24 x 16 x *1]] }
+0x7f7a02bb3d58: {[conv1_act.out Value[24 x 24 x 16 x *1]] }
+0x7f7a02bb3f18: {[pool1 Value[12 x 12 x 16 x *1]] }
+0x7f7a02bbd468: {[conv2_act.conv Value[8 x 8 x 32 x *1]] }
+0x7f7a02bbd728: {[conv2_act.convPlusB Value[8 x 8 x 32 x *1]] }
+0x7f7a02bbd888: {[conv2_act.out Value[8 x 8 x 32 x *1]] }
+0x7f7a02bbda48: {[pool2 Value[4 x 4 x 32 x *1]] }
+0x7f7a02bbdc08: {[h1.z.PlusArgs[0] Value[128 x *1]] }
+0x7f7a02bbddc8: {[h1.z Value[128 x *1]] }
+0x7f7a02bbdf88: {[h1.out Value[128 x *1]] }
+0x7f7a02bbe148: {[ol.out.PlusArgs[0] Value[10 x *1]] }
+0x7f7a02bbe308: {[ol.out Value[10 x 1 x *1]] }
 
 BlockRandomizer::StartEpoch: epoch 0: frames [0..100] (first sequence at sample 0), data subset 0 of 1
-07/13/2016 12:22:35: Final Results: Minibatch[1-1]: err = 0.90000000 * 100; ce = 2.32170563 * 100; perplexity = 10.19304503
+07/14/2016 12:21:48: Final Results: Minibatch[1-1]: err = 0.90000000 * 100; ce = 2.32170563 * 100; perplexity = 10.19304503
 
-07/13/2016 12:22:35: Action "test" complete.
+07/14/2016 12:21:48: Action "test" complete.
 
-07/13/2016 12:22:35: __COMPLETED__
+07/14/2016 12:21:48: __COMPLETED__
 === Deleting last epoch data
 ==== Re-running from checkpoint
-=== Running /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/release/bin/cntk configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E/cntk.cntk currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data RunDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E OutputDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu DeviceId=0 timestamping=true makeMode=true
+=== Running /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/release/bin/cntk configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E/cntk.cntk currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data RunDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E OutputDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu DeviceId=0 timestamping=true makeMode=true
 -------------------------------------------------------------------
 Build info: 
 
-		Built time: Jul 13 2016 12:01:30
+		Built time: Jul 14 2016 12:04:41
 		Last modified date: Tue Jul 12 04:28:35 2016
 		Build type: release
 		Build target: GPU
@@ -696,45 +696,45 @@ Build info:
 		CUB_PATH: /usr/local/cub-1.4.1
 		CUDNN_PATH: /usr/local/cudnn-4.0
 		Build Branch: HEAD
-		Build SHA1: 50bb4c8afbc87c14548a5b5f315a064186a5cb5f
-		Built by philly on 2bc22072e267
+		Build SHA1: 72bee394bf461e8f6f0feb593a8416c05f481957
+		Built by philly on 34e58dd0283f
 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
 -------------------------------------------------------------------
 Changed current directory to /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data
-07/13/2016 12:22:36: -------------------------------------------------------------------
-07/13/2016 12:22:36: Build info: 
+07/14/2016 12:21:49: -------------------------------------------------------------------
+07/14/2016 12:21:49: Build info: 
 
-07/13/2016 12:22:36: 		Built time: Jul 13 2016 12:01:30
-07/13/2016 12:22:36: 		Last modified date: Tue Jul 12 04:28:35 2016
-07/13/2016 12:22:36: 		Build type: release
-07/13/2016 12:22:36: 		Build target: GPU
-07/13/2016 12:22:36: 		With 1bit-SGD: no
-07/13/2016 12:22:36: 		Math lib: mkl
-07/13/2016 12:22:36: 		CUDA_PATH: /usr/local/cuda-7.5
-07/13/2016 12:22:36: 		CUB_PATH: /usr/local/cub-1.4.1
-07/13/2016 12:22:36: 		CUDNN_PATH: /usr/local/cudnn-4.0
-07/13/2016 12:22:36: 		Build Branch: HEAD
-07/13/2016 12:22:36: 		Build SHA1: 50bb4c8afbc87c14548a5b5f315a064186a5cb5f
-07/13/2016 12:22:36: 		Built by philly on 2bc22072e267
-07/13/2016 12:22:36: 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
-07/13/2016 12:22:36: -------------------------------------------------------------------
-07/13/2016 12:22:37: -------------------------------------------------------------------
-07/13/2016 12:22:37: GPU info:
+07/14/2016 12:21:49: 		Built time: Jul 14 2016 12:04:41
+07/14/2016 12:21:49: 		Last modified date: Tue Jul 12 04:28:35 2016
+07/14/2016 12:21:49: 		Build type: release
+07/14/2016 12:21:49: 		Build target: GPU
+07/14/2016 12:21:49: 		With 1bit-SGD: no
+07/14/2016 12:21:49: 		Math lib: mkl
+07/14/2016 12:21:49: 		CUDA_PATH: /usr/local/cuda-7.5
+07/14/2016 12:21:49: 		CUB_PATH: /usr/local/cub-1.4.1
+07/14/2016 12:21:49: 		CUDNN_PATH: /usr/local/cudnn-4.0
+07/14/2016 12:21:49: 		Build Branch: HEAD
+07/14/2016 12:21:49: 		Build SHA1: 72bee394bf461e8f6f0feb593a8416c05f481957
+07/14/2016 12:21:49: 		Built by philly on 34e58dd0283f
+07/14/2016 12:21:49: 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
+07/14/2016 12:21:49: -------------------------------------------------------------------
+07/14/2016 12:21:50: -------------------------------------------------------------------
+07/14/2016 12:21:50: GPU info:
 
-07/13/2016 12:22:37: 		Device[0]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:22:37: 		Device[1]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:22:37: 		Device[2]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:22:37: 		Device[3]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:22:37: -------------------------------------------------------------------
+07/14/2016 12:21:50: 		Device[0]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:21:50: 		Device[1]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:21:50: 		Device[2]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:21:50: 		Device[3]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:21:50: -------------------------------------------------------------------
 
-07/13/2016 12:22:37: Running on localhost at 2016/07/13 12:22:37
-07/13/2016 12:22:37: Command line: 
-/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/release/bin/cntk  configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E/cntk.cntk  currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data  RunDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu  DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data  ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E  OutputDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu  DeviceId=0  timestamping=true  makeMode=true
+07/14/2016 12:21:50: Running on localhost at 2016/07/14 12:21:50
+07/14/2016 12:21:50: Command line: 
+/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/release/bin/cntk  configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E/cntk.cntk  currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data  RunDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu  DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data  ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E  OutputDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu  DeviceId=0  timestamping=true  makeMode=true
 
 
 
-07/13/2016 12:22:37: >>>>>>>>>>>>>>>>>>>> RAW CONFIG (VARIABLES NOT RESOLVED) >>>>>>>>>>>>>>>>>>>>
-07/13/2016 12:22:37: precision = "float"
+07/14/2016 12:21:50: >>>>>>>>>>>>>>>>>>>> RAW CONFIG (VARIABLES NOT RESOLVED) >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:21:50: precision = "float"
 command = train:test
 deviceId = $DeviceId$
 parallelTrain = false
@@ -843,25 +843,25 @@ test = [
     ]
 ]
 currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data
-RunDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu
+RunDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu
 DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data
 ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E
-OutputDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu
+OutputDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu
 DeviceId=0
 timestamping=true
 makeMode=true
 
-07/13/2016 12:22:37: <<<<<<<<<<<<<<<<<<<< RAW CONFIG (VARIABLES NOT RESOLVED)  <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:21:50: <<<<<<<<<<<<<<<<<<<< RAW CONFIG (VARIABLES NOT RESOLVED)  <<<<<<<<<<<<<<<<<<<<
 
-07/13/2016 12:22:37: >>>>>>>>>>>>>>>>>>>> RAW CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
-07/13/2016 12:22:37: precision = "float"
+07/14/2016 12:21:50: >>>>>>>>>>>>>>>>>>>> RAW CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:21:50: precision = "float"
 command = train:test
 deviceId = 0
 parallelTrain = false
 numCPUThreads = 8
 train = [
     action = "train"
-    modelPath = "/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu/models/cntk.dnn"
+    modelPath = "/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu/models/cntk.dnn"
     traceLevel = 1
     BrainScriptNetworkBuilder = [
         // HACK to enforce same evaluation order or LearnableParameters as for NDL, as to get same radomization
@@ -946,7 +946,7 @@ train = [
 ]
 test = [
     action = "test"
-    modelPath = "/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu/models/cntk.dnn"
+    modelPath = "/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu/models/cntk.dnn"
     reader = [
         readerType = "CNTKTextFormatReader"
         file = "/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data/Test_cntk_text.txt"
@@ -963,17 +963,17 @@ test = [
     ]
 ]
 currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data
-RunDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu
+RunDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu
 DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data
 ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E
-OutputDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu
+OutputDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu
 DeviceId=0
 timestamping=true
 makeMode=true
 
-07/13/2016 12:22:37: <<<<<<<<<<<<<<<<<<<< RAW CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:21:50: <<<<<<<<<<<<<<<<<<<< RAW CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
 
-07/13/2016 12:22:37: >>>>>>>>>>>>>>>>>>>> PROCESSED CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:21:50: >>>>>>>>>>>>>>>>>>>> PROCESSED CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
 configparameters: cntk.cntk:command=train:test
 configparameters: cntk.cntk:ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/QuickE2E
 configparameters: cntk.cntk:currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data
@@ -981,13 +981,13 @@ configparameters: cntk.cntk:DataDir=/home/philly/jenkins/workspace/CNTK-Test-Lin
 configparameters: cntk.cntk:deviceId=0
 configparameters: cntk.cntk:makeMode=true
 configparameters: cntk.cntk:numCPUThreads=8
-configparameters: cntk.cntk:OutputDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu
+configparameters: cntk.cntk:OutputDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu
 configparameters: cntk.cntk:parallelTrain=false
 configparameters: cntk.cntk:precision=float
-configparameters: cntk.cntk:RunDir=/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu
+configparameters: cntk.cntk:RunDir=/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu
 configparameters: cntk.cntk:test=[
     action = "test"
-    modelPath = "/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu/models/cntk.dnn"
+    modelPath = "/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu/models/cntk.dnn"
     reader = [
         readerType = "CNTKTextFormatReader"
         file = "/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Image/Data/Test_cntk_text.txt"
@@ -1007,7 +1007,7 @@ configparameters: cntk.cntk:test=[
 configparameters: cntk.cntk:timestamping=true
 configparameters: cntk.cntk:train=[
     action = "train"
-    modelPath = "/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu/models/cntk.dnn"
+    modelPath = "/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu/models/cntk.dnn"
     traceLevel = 1
     BrainScriptNetworkBuilder = [
         // HACK to enforce same evaluation order or LearnableParameters as for NDL, as to get same radomization
@@ -1091,23 +1091,23 @@ configparameters: cntk.cntk:train=[
     ]
 ]
 
-07/13/2016 12:22:37: <<<<<<<<<<<<<<<<<<<< PROCESSED CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
-07/13/2016 12:22:37: Commands: train test
-07/13/2016 12:22:37: Precision = "float"
-07/13/2016 12:22:37: Using 8 CPU threads.
-07/13/2016 12:22:37: CNTKModelPath: /tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu/models/cntk.dnn
-07/13/2016 12:22:37: CNTKCommandTrainInfo: train : 5
-07/13/2016 12:22:37: CNTKCommandTrainInfo: CNTKNoMoreCommands_Total : 5
+07/14/2016 12:21:50: <<<<<<<<<<<<<<<<<<<< PROCESSED CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:21:50: Commands: train test
+07/14/2016 12:21:50: Precision = "float"
+07/14/2016 12:21:50: Using 8 CPU threads.
+07/14/2016 12:21:50: CNTKModelPath: /tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu/models/cntk.dnn
+07/14/2016 12:21:50: CNTKCommandTrainInfo: train : 5
+07/14/2016 12:21:50: CNTKCommandTrainInfo: CNTKNoMoreCommands_Total : 5
 
-07/13/2016 12:22:37: ##############################################################################
-07/13/2016 12:22:37: #                                                                            #
-07/13/2016 12:22:37: # Action "train"                                                             #
-07/13/2016 12:22:37: #                                                                            #
-07/13/2016 12:22:37: ##############################################################################
+07/14/2016 12:21:50: ##############################################################################
+07/14/2016 12:21:50: #                                                                            #
+07/14/2016 12:21:50: # Action "train"                                                             #
+07/14/2016 12:21:50: #                                                                            #
+07/14/2016 12:21:50: ##############################################################################
 
-07/13/2016 12:22:37: CNTKCommandTrainBegin: train
+07/14/2016 12:21:50: CNTKCommandTrainBegin: train
 useParallelTrain option is not enabled. ParallelTrain config will be ignored.
-07/13/2016 12:22:37: Starting from checkpoint. Loading network from '/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu/models/cntk.dnn.4'.
+07/14/2016 12:21:50: Starting from checkpoint. Loading network from '/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu/models/cntk.dnn.4'.
 
 Post-processing network...
 
@@ -1164,14 +1164,14 @@ pool2: using cuDNN convolution engine for geometry: Input: 8 x 8 x 32, Output: 4
 
 Post-processing network complete.
 
-07/13/2016 12:22:37: Loaded model with 27 nodes on GPU 0.
+07/14/2016 12:21:50: Loaded model with 27 nodes on GPU 0.
 
-07/13/2016 12:22:37: Training criterion node(s):
-07/13/2016 12:22:37: 	ce = CrossEntropyWithSoftmax
+07/14/2016 12:21:50: Training criterion node(s):
+07/14/2016 12:21:50: 	ce = CrossEntropyWithSoftmax
 
-07/13/2016 12:22:37: Evaluation criterion node(s):
+07/14/2016 12:21:50: Evaluation criterion node(s):
 
-07/13/2016 12:22:37: 	err = ErrorPrediction
+07/14/2016 12:21:50: 	err = ErrorPrediction
 
 
 Allocating matrices for forward and/or backward propagation.
@@ -1179,58 +1179,58 @@ Allocating matrices for forward and/or backward propagation.
 Memory Sharing Structure:
 
 (nil): {[err Gradient[1]] [featScale Gradient[1 x 1]] [featScaled Gradient[28 x 28 x 1 x *]] [features Gradient[28 x 28 x 1 x *]] [labels Gradient[10 x *]] }
-0x7f3b73c2f6b8: {[featScaled Value[28 x 28 x 1 x *]] }
-0x7f3b73c2f9a8: {[conv1_act.convPlusB Value[24 x 24 x 16 x *]] [conv1_act.convW Gradient[16 x 25]] }
-0x7f3b73c30088: {[conv1_act.conv Value[24 x 24 x 16 x *]] }
-0x7f3b73c39538: {[conv2_act.conv Value[8 x 8 x 32 x *]] }
-0x7f3b73c396f8: {[conv1_act.convB Gradient[1 x 1 x 16]] [conv1_act.out Gradient[24 x 24 x 16 x *]] }
-0x7f3b73c398b8: {[conv2_act.convPlusB Value[8 x 8 x 32 x *]] [conv2_act.convW Gradient[32 x 400]] }
-0x7f3b73c39a78: {[conv2_act.conv Gradient[8 x 8 x 32 x *]] [conv2_act.out Value[8 x 8 x 32 x *]] }
-0x7f3b73c39c38: {[conv2_act.convPlusB Gradient[8 x 8 x 32 x *]] [pool1 Gradient[12 x 12 x 16 x *]] [pool2 Value[4 x 4 x 32 x *]] }
-0x7f3b73c39df8: {[conv2_act.convB Gradient[1 x 1 x 32]] [conv2_act.out Gradient[8 x 8 x 32 x *]] [h1.z.PlusArgs[0] Value[128 x *]] }
-0x7f3b73c39fb8: {[h1.W Gradient[128 x 4 x 4 x 32]] [h1.z Value[128 x *]] }
-0x7f3b73c3a178: {[h1.out Value[128 x *]] [h1.z.PlusArgs[0] Gradient[128 x *]] }
-0x7f3b73c3a338: {[h1.z Gradient[128 x *]] [ol.out.PlusArgs[0] Value[10 x *]] [pool2 Gradient[4 x 4 x 32 x *]] }
-0x7f3b73c3a4f8: {[ol.W Gradient[10 x 128]] [ol.out Value[10 x 1 x *]] }
-0x7f3b73c3af78: {[ce Gradient[1]] }
-0x7f3b73c3b138: {[h1.b Gradient[128]] [h1.out Gradient[128 x *]] [ol.out Gradient[10 x 1 x *]] }
-0x7f3b73c3b2f8: {[ol.out.PlusArgs[0] Gradient[10 x *]] }
-0x7f3b73c3b4b8: {[ol.b Gradient[10 x 1]] }
-0x7f3b7ba51d68: {[ce Value[1]] }
-0x7f3b7ba52178: {[conv1_act.conv Gradient[24 x 24 x 16 x *]] [conv1_act.out Value[24 x 24 x 16 x *]] }
-0x7f3b7ba52338: {[conv1_act.convPlusB Gradient[24 x 24 x 16 x *]] [pool1 Value[12 x 12 x 16 x *]] }
-0x7f3b7e2ed638: {[conv1_act.convW Value[16 x 25]] }
-0x7f3b7e2eea18: {[conv2_act.convB Value[1 x 1 x 32]] }
-0x7f3b7e2f00a8: {[conv2_act.convW Value[32 x 400]] }
-0x7f3b7e2f17b8: {[features Value[28 x 28 x 1 x *]] }
-0x7f3b7e2f1ee8: {[h1.W Value[128 x 4 x 4 x 32]] }
-0x7f3b7e2f21e8: {[h1.b Value[128]] }
-0x7f3b7e2f4358: {[labels Value[10 x *]] }
-0x7f3b7e2f4bf8: {[ol.b Value[10 x 1]] }
-0x7f3b7e2f5c18: {[ol.W Value[10 x 128]] }
-0x7f3b7e2fa338: {[err Value[1]] }
-0x7f3b7e2fe868: {[featScale Value[1 x 1]] }
-0x7f3b827dc008: {[conv1_act.convB Value[1 x 1 x 16]] }
+0x7f6318b5fb08: {[featScaled Value[28 x 28 x 1 x *]] }
+0x7f6318b5fcf8: {[conv1_act.conv Value[24 x 24 x 16 x *]] }
+0x7f6318b69948: {[conv1_act.convPlusB Gradient[24 x 24 x 16 x *]] [pool1 Value[12 x 12 x 16 x *]] }
+0x7f6318b69aa8: {[conv2_act.conv Value[8 x 8 x 32 x *]] }
+0x7f6318b69c08: {[conv1_act.convB Gradient[1 x 1 x 16]] [conv1_act.out Gradient[24 x 24 x 16 x *]] }
+0x7f6318b69dc8: {[conv2_act.convPlusB Value[8 x 8 x 32 x *]] [conv2_act.convW Gradient[32 x 400]] }
+0x7f6318b69f88: {[conv2_act.conv Gradient[8 x 8 x 32 x *]] [conv2_act.out Value[8 x 8 x 32 x *]] }
+0x7f6318b6a148: {[conv2_act.convPlusB Gradient[8 x 8 x 32 x *]] [pool1 Gradient[12 x 12 x 16 x *]] [pool2 Value[4 x 4 x 32 x *]] }
+0x7f6318b6a308: {[conv2_act.convB Gradient[1 x 1 x 32]] [conv2_act.out Gradient[8 x 8 x 32 x *]] [h1.z.PlusArgs[0] Value[128 x *]] }
+0x7f6318b6a4c8: {[h1.W Gradient[128 x 4 x 4 x 32]] [h1.z Value[128 x *]] }
+0x7f6318b6a688: {[h1.out Value[128 x *]] [h1.z.PlusArgs[0] Gradient[128 x *]] }
+0x7f6318b6a848: {[h1.z Gradient[128 x *]] [ol.out.PlusArgs[0] Value[10 x *]] [pool2 Gradient[4 x 4 x 32 x *]] }
+0x7f6318b6aa08: {[ol.W Gradient[10 x 128]] [ol.out Value[10 x 1 x *]] }
+0x7f6318b6b488: {[ce Gradient[1]] }
+0x7f6318b6b648: {[h1.b Gradient[128]] [h1.out Gradient[128 x *]] [ol.out Gradient[10 x 1 x *]] }
+0x7f6318b6b808: {[ol.out.PlusArgs[0] Gradient[10 x *]] }
+0x7f6318b6b9c8: {[ol.b Gradient[10 x 1]] }
+0x7f6322f185d8: {[conv2_act.convW Value[32 x 400]] }
+0x7f6322f19118: {[featScale Value[1 x 1]] }
+0x7f6322f19d68: {[features Value[28 x 28 x 1 x *]] }
+0x7f6322f1a418: {[h1.b Value[128]] }
+0x7f6322f1a988: {[h1.W Value[128 x 4 x 4 x 32]] }
+0x7f6322f1c968: {[labels Value[10 x *]] }
+0x7f6322f1d208: {[ol.b Value[10 x 1]] }
+0x7f6322f1e228: {[ol.W Value[10 x 128]] }
+0x7f6322f21ec8: {[err Value[1]] }
+0x7f6322f52f28: {[conv1_act.convPlusB Value[24 x 24 x 16 x *]] [conv1_act.convW Gradient[16 x 25]] }
+0x7f6322f530e8: {[conv1_act.conv Gradient[24 x 24 x 16 x *]] [conv1_act.out Value[24 x 24 x 16 x *]] }
+0x7f6322f53c28: {[ce Value[1]] }
+0x7f63231dd4d8: {[conv1_act.convW Value[16 x 25]] }
+0x7f63231dda98: {[conv2_act.convB Value[1 x 1 x 32]] }
+0x7f63276dc468: {[conv1_act.convB Value[1 x 1 x 16]] }
 
-07/13/2016 12:22:37: No PreCompute nodes found, skipping PreCompute step.
+07/14/2016 12:21:50: No PreCompute nodes found, skipping PreCompute step.
 
-07/13/2016 12:22:37: Starting Epoch 5: learning rate per sample = 0.000002  effective momentum = 0.904837  momentum as time constant = 1000.0 samples
+07/14/2016 12:21:50: Starting Epoch 5: learning rate per sample = 0.000002  effective momentum = 0.904837  momentum as time constant = 1000.0 samples
 BlockRandomizer::StartEpoch: epoch 4: frames [4000..5000] (first sequence at sample 4000), data subset 0 of 1
 
-07/13/2016 12:22:37: Starting minibatch loop.
-07/13/2016 12:22:37:  Epoch[ 5 of 5]-Minibatch[   1-  10, 100.00%]: ce = 2.32253198 * 1000; err = 0.90000000 * 1000; time = 0.1680s; samplesPerSecond = 5952.6
-07/13/2016 12:22:37: Finished Epoch[ 5 of 5]: [Training] ce = 2.32253198 * 1000; err = 0.90000000 * 1000; totalSamplesSeen = 5000; learningRatePerSample = 2e-06; epochTime=0.168903s
-07/13/2016 12:22:37: SGD: Saving checkpoint model '/tmp/cntk-test-20160713122133.128226/Image_QuickE2E@release_gpu/models/cntk.dnn'
-07/13/2016 12:22:37: CNTKCommandTrainEnd: train
+07/14/2016 12:21:50: Starting minibatch loop.
+07/14/2016 12:21:51:  Epoch[ 5 of 5]-Minibatch[   1-  10, 100.00%]: ce = 2.32253198 * 1000; err = 0.90000000 * 1000; time = 0.1768s; samplesPerSecond = 5656.9
+07/14/2016 12:21:51: Finished Epoch[ 5 of 5]: [Training] ce = 2.32253198 * 1000; err = 0.90000000 * 1000; totalSamplesSeen = 5000; learningRatePerSample = 2e-06; epochTime=0.177217s
+07/14/2016 12:21:51: SGD: Saving checkpoint model '/tmp/cntk-test-20160714122046.657909/Image_QuickE2E@release_gpu/models/cntk.dnn'
+07/14/2016 12:21:51: CNTKCommandTrainEnd: train
 
-07/13/2016 12:22:37: Action "train" complete.
+07/14/2016 12:21:51: Action "train" complete.
 
 
-07/13/2016 12:22:37: ##############################################################################
-07/13/2016 12:22:37: #                                                                            #
-07/13/2016 12:22:37: # Action "test"                                                              #
-07/13/2016 12:22:37: #                                                                            #
-07/13/2016 12:22:37: ##############################################################################
+07/14/2016 12:21:51: ##############################################################################
+07/14/2016 12:21:51: #                                                                            #
+07/14/2016 12:21:51: # Action "test"                                                              #
+07/14/2016 12:21:51: #                                                                            #
+07/14/2016 12:21:51: ##############################################################################
 
 
 Post-processing network...
@@ -1296,37 +1296,37 @@ Allocating matrices for forward and/or backward propagation.
 Memory Sharing Structure:
 
 (nil): {[ce Gradient[1]] [conv1_act.conv Gradient[24 x 24 x 16 x *1]] [conv1_act.convB Gradient[1 x 1 x 16]] [conv1_act.convPlusB Gradient[24 x 24 x 16 x *1]] [conv1_act.convW Gradient[16 x 25]] [conv1_act.out Gradient[24 x 24 x 16 x *1]] [conv2_act.conv Gradient[8 x 8 x 32 x *1]] [conv2_act.convB Gradient[1 x 1 x 32]] [conv2_act.convPlusB Gradient[8 x 8 x 32 x *1]] [conv2_act.convW Gradient[32 x 400]] [conv2_act.out Gradient[8 x 8 x 32 x *1]] [err Gradient[1]] [featScale Gradient[1 x 1]] [featScaled Gradient[28 x 28 x 1 x *1]] [features Gradient[28 x 28 x 1 x *1]] [h1.W Gradient[128 x 4 x 4 x 32]] [h1.b Gradient[128]] [h1.out Gradient[128 x *1]] [h1.z Gradient[128 x *1]] [h1.z.PlusArgs[0] Gradient[128 x *1]] [labels Gradient[10 x *1]] [ol.W Gradient[10 x 128]] [ol.b Gradient[10 x 1]] [ol.out Gradient[10 x 1 x *1]] [ol.out.PlusArgs[0] Gradient[10 x *1]] [pool1 Gradient[12 x 12 x 16 x *1]] [pool2 Gradient[4 x 4 x 32 x *1]] }
-0x24f86a8: {[labels Value[10 x *1]] }
-0x24f8eb8: {[ol.b Value[10 x 1]] }
-0x24f9d28: {[ol.W Value[10 x 128]] }
-0x24fd868: {[err Value[1]] }
-0x2502e58: {[conv1_act.convPlusB Value[24 x 24 x 16 x *1]] }
-0x2503018: {[conv1_act.out Value[24 x 24 x 16 x *1]] }
-0x25031d8: {[pool1 Value[12 x 12 x 16 x *1]] }
-0x2860c18: {[conv2_act.convW Value[32 x 400]] }
-0x28625e8: {[featScale Value[1 x 1]] }
-0x2863238: {[features Value[28 x 28 x 1 x *1]] }
-0x28638e8: {[h1.b Value[128]] }
-0x2864948: {[h1.W Value[128 x 4 x 4 x 32]] }
-0x2880c48: {[featScaled Value[28 x 28 x 1 x *1]] }
-0x2880e38: {[conv1_act.conv Value[24 x 24 x 16 x *1]] }
-0x288abf8: {[conv2_act.conv Value[8 x 8 x 32 x *1]] }
-0x288af78: {[conv2_act.convPlusB Value[8 x 8 x 32 x *1]] }
-0x288b138: {[conv2_act.out Value[8 x 8 x 32 x *1]] }
-0x288b2f8: {[pool2 Value[4 x 4 x 32 x *1]] }
-0x288b4b8: {[h1.z.PlusArgs[0] Value[128 x *1]] }
-0x288b678: {[h1.z Value[128 x *1]] }
-0x288b838: {[h1.out Value[128 x *1]] }
-0x288b9f8: {[ol.out.PlusArgs[0] Value[10 x *1]] }
-0x288bbb8: {[ol.out Value[10 x 1 x *1]] }
-0x29035e8: {[conv1_act.convB Value[1 x 1 x 16]] }
-0x2904818: {[conv1_act.convW Value[16 x 25]] }
-0x2905a68: {[conv2_act.convB Value[1 x 1 x 32]] }
-0x2e000d8: {[ce Value[1]] }
+0x7f6311fe2fb8: {[pool2 Value[4 x 4 x 32 x *1]] }
+0x7f6311fe3178: {[h1.z.PlusArgs[0] Value[128 x *1]] }
+0x7f6311fe3338: {[h1.z Value[128 x *1]] }
+0x7f6311fe34f8: {[h1.out Value[128 x *1]] }
+0x7f6311fe36b8: {[ol.out.PlusArgs[0] Value[10 x *1]] }
+0x7f6311fe3878: {[ol.out Value[10 x 1 x *1]] }
+0x7f631217cdd8: {[conv2_act.convB Value[1 x 1 x 32]] }
+0x7f6318b6d928: {[h1.W Value[128 x 4 x 4 x 32]] }
+0x7f6318b80ac8: {[err Value[1]] }
+0x7f6322f1fdb8: {[conv1_act.conv Value[24 x 24 x 16 x *1]] }
+0x7f6322f22b68: {[conv1_act.convB Value[1 x 1 x 16]] }
+0x7f6327634c18: {[conv2_act.conv Value[8 x 8 x 32 x *1]] }
+0x7f6327634f98: {[conv2_act.convPlusB Value[8 x 8 x 32 x *1]] }
+0x7f6327635158: {[conv2_act.out Value[8 x 8 x 32 x *1]] }
+0x7f6327635a68: {[labels Value[10 x *1]] }
+0x7f63276684a8: {[ce Value[1]] }
+0x7f63276855b8: {[h1.b Value[128]] }
+0x7f63276dc388: {[features Value[28 x 28 x 1 x *1]] }
+0x7f6328800c88: {[conv2_act.convW Value[32 x 400]] }
+0x7f632880a048: {[conv1_act.convPlusB Value[24 x 24 x 16 x *1]] }
+0x7f632880a208: {[conv1_act.out Value[24 x 24 x 16 x *1]] }
+0x7f632880a3c8: {[pool1 Value[12 x 12 x 16 x *1]] }
+0x7f63288f7c88: {[conv1_act.convW Value[16 x 25]] }
+0x7f63288fa1c8: {[featScaled Value[28 x 28 x 1 x *1]] }
+0x7f63288fb548: {[featScale Value[1 x 1]] }
+0x7f63288fcd88: {[ol.b Value[10 x 1]] }
+0x7f63288fce28: {[ol.W Value[10 x 128]] }
 
 BlockRandomizer::StartEpoch: epoch 0: frames [0..100] (first sequence at sample 0), data subset 0 of 1
-07/13/2016 12:22:37: Final Results: Minibatch[1-1]: err = 0.90000000 * 100; ce = 2.32170563 * 100; perplexity = 10.19304503
+07/14/2016 12:21:51: Final Results: Minibatch[1-1]: err = 0.90000000 * 100; ce = 2.32170563 * 100; perplexity = 10.19304503
 
-07/13/2016 12:22:37: Action "test" complete.
+07/14/2016 12:21:51: Action "test" complete.
 
-07/13/2016 12:22:37: __COMPLETED__
+07/14/2016 12:21:51: __COMPLETED__

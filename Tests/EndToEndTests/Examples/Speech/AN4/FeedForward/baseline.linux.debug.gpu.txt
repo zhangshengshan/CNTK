@@ -3,12 +3,12 @@ CPU info:
     Hardware threads: 24
     Total Memory: 264172964 kB
 -------------------------------------------------------------------
-=== Running /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/1bitsgd/debug/bin/cntk configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/FeedForward/../../../../../../Examples/Speech/AN4/Config/FeedForward.cntk currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data RunDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_FeedForward@debug_gpu DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/FeedForward/../../../../../../Examples/Speech/AN4/Config OutputDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_FeedForward@debug_gpu DeviceId=0 timestamping=true speechTrain=[SGD=[maxEpochs=1]] speechTrain=[SGD=[epochSize=2048]]
+=== Running /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/1bitsgd/debug/bin/cntk configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/FeedForward/../../../../../../Examples/Speech/AN4/Config/FeedForward.cntk currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data RunDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_FeedForward@debug_gpu DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/FeedForward/../../../../../../Examples/Speech/AN4/Config OutputDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_FeedForward@debug_gpu DeviceId=0 timestamping=true speechTrain=[SGD=[maxEpochs=1]] speechTrain=[SGD=[epochSize=2048]]
 -------------------------------------------------------------------
 Build info: 
 
-		Built time: Jul 13 2016 15:56:58
-		Last modified date: Tue Jul 12 10:36:36 2016
+		Built time: Jul 14 2016 12:03:01
+		Last modified date: Wed Jul 13 15:01:07 2016
 		Build type: debug
 		Build target: GPU
 		With 1bit-SGD: yes
@@ -17,8 +17,8 @@ Build info:
 		CUB_PATH: /usr/local/cub-1.4.1
 		CUDNN_PATH: /usr/local/cudnn-4.0
 		Build Branch: HEAD
-		Build SHA1: 539ab7467b022b4ffa087721bcf20d18485c8d0d
-		Built by philly on a77bf6d98305
+		Build SHA1: 72bee394bf461e8f6f0feb593a8416c05f481957
+		Built by philly on 389da049305d
 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
 -------------------------------------------------------------------
 Changed current directory to /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data
@@ -31,40 +31,40 @@ ping [requestnodes (after change)]: all 1 nodes responded
 mpihelper: only one MPI process: MPI operation will be boring
 ping [mpihelper]: 1 nodes pinging each other
 ping [mpihelper]: all 1 nodes responded
-07/13/2016 16:45:24: -------------------------------------------------------------------
-07/13/2016 16:45:24: Build info: 
+07/14/2016 12:09:02: -------------------------------------------------------------------
+07/14/2016 12:09:02: Build info: 
 
-07/13/2016 16:45:24: 		Built time: Jul 13 2016 15:56:58
-07/13/2016 16:45:24: 		Last modified date: Tue Jul 12 10:36:36 2016
-07/13/2016 16:45:24: 		Build type: debug
-07/13/2016 16:45:24: 		Build target: GPU
-07/13/2016 16:45:24: 		With 1bit-SGD: yes
-07/13/2016 16:45:24: 		Math lib: mkl
-07/13/2016 16:45:24: 		CUDA_PATH: /usr/local/cuda-7.5
-07/13/2016 16:45:24: 		CUB_PATH: /usr/local/cub-1.4.1
-07/13/2016 16:45:24: 		CUDNN_PATH: /usr/local/cudnn-4.0
-07/13/2016 16:45:24: 		Build Branch: HEAD
-07/13/2016 16:45:24: 		Build SHA1: 539ab7467b022b4ffa087721bcf20d18485c8d0d
-07/13/2016 16:45:24: 		Built by philly on a77bf6d98305
-07/13/2016 16:45:24: 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
-07/13/2016 16:45:24: -------------------------------------------------------------------
-07/13/2016 16:45:25: -------------------------------------------------------------------
-07/13/2016 16:45:25: GPU info:
+07/14/2016 12:09:02: 		Built time: Jul 14 2016 12:03:01
+07/14/2016 12:09:02: 		Last modified date: Wed Jul 13 15:01:07 2016
+07/14/2016 12:09:02: 		Build type: debug
+07/14/2016 12:09:02: 		Build target: GPU
+07/14/2016 12:09:02: 		With 1bit-SGD: yes
+07/14/2016 12:09:02: 		Math lib: mkl
+07/14/2016 12:09:02: 		CUDA_PATH: /usr/local/cuda-7.5
+07/14/2016 12:09:02: 		CUB_PATH: /usr/local/cub-1.4.1
+07/14/2016 12:09:02: 		CUDNN_PATH: /usr/local/cudnn-4.0
+07/14/2016 12:09:02: 		Build Branch: HEAD
+07/14/2016 12:09:02: 		Build SHA1: 72bee394bf461e8f6f0feb593a8416c05f481957
+07/14/2016 12:09:02: 		Built by philly on 389da049305d
+07/14/2016 12:09:02: 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
+07/14/2016 12:09:02: -------------------------------------------------------------------
+07/14/2016 12:09:03: -------------------------------------------------------------------
+07/14/2016 12:09:03: GPU info:
 
-07/13/2016 16:45:25: 		Device[0]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 16:45:25: 		Device[1]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 16:45:25: 		Device[2]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 16:45:25: 		Device[3]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 16:45:25: -------------------------------------------------------------------
+07/14/2016 12:09:03: 		Device[0]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:09:03: 		Device[1]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:09:03: 		Device[2]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:09:03: 		Device[3]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:09:03: -------------------------------------------------------------------
 
-07/13/2016 16:45:25: Running on localhost at 2016/07/13 16:45:25
-07/13/2016 16:45:25: Command line: 
-/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/1bitsgd/debug/bin/cntk  configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/FeedForward/../../../../../../Examples/Speech/AN4/Config/FeedForward.cntk  currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data  RunDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_FeedForward@debug_gpu  DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data  ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/FeedForward/../../../../../../Examples/Speech/AN4/Config  OutputDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_FeedForward@debug_gpu  DeviceId=0  timestamping=true  speechTrain=[SGD=[maxEpochs=1]]  speechTrain=[SGD=[epochSize=2048]]
+07/14/2016 12:09:03: Running on localhost at 2016/07/14 12:09:03
+07/14/2016 12:09:03: Command line: 
+/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/1bitsgd/debug/bin/cntk  configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/FeedForward/../../../../../../Examples/Speech/AN4/Config/FeedForward.cntk  currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data  RunDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_FeedForward@debug_gpu  DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data  ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/FeedForward/../../../../../../Examples/Speech/AN4/Config  OutputDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_FeedForward@debug_gpu  DeviceId=0  timestamping=true  speechTrain=[SGD=[maxEpochs=1]]  speechTrain=[SGD=[epochSize=2048]]
 
 
 
-07/13/2016 16:45:25: >>>>>>>>>>>>>>>>>>>> RAW CONFIG (VARIABLES NOT RESOLVED) >>>>>>>>>>>>>>>>>>>>
-07/13/2016 16:45:25: RootDir = ".."
+07/14/2016 12:09:03: >>>>>>>>>>>>>>>>>>>> RAW CONFIG (VARIABLES NOT RESOLVED) >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:09:03: RootDir = ".."
 ConfigDir = "$RootDir$/Config"
 DataDir = "$RootDir$/Data"
 OutputDir = "$RootDir$/Output"
@@ -126,28 +126,28 @@ speechTrain = [
     ]
 ]
 currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data
-RunDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_FeedForward@debug_gpu
+RunDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_FeedForward@debug_gpu
 DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data
 ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/FeedForward/../../../../../../Examples/Speech/AN4/Config
-OutputDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_FeedForward@debug_gpu
+OutputDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_FeedForward@debug_gpu
 DeviceId=0
 timestamping=true
 speechTrain=[SGD=[maxEpochs=1]]
 speechTrain=[SGD=[epochSize=2048]]
 
-07/13/2016 16:45:25: <<<<<<<<<<<<<<<<<<<< RAW CONFIG (VARIABLES NOT RESOLVED)  <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:09:03: <<<<<<<<<<<<<<<<<<<< RAW CONFIG (VARIABLES NOT RESOLVED)  <<<<<<<<<<<<<<<<<<<<
 
-07/13/2016 16:45:25: >>>>>>>>>>>>>>>>>>>> RAW CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
-07/13/2016 16:45:25: RootDir = ".."
+07/14/2016 12:09:03: >>>>>>>>>>>>>>>>>>>> RAW CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:09:03: RootDir = ".."
 ConfigDir = "../Config"
 DataDir = "../Data"
 OutputDir = "../Output"
-ModelDir = "/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_FeedForward@debug_gpu/Models"
+ModelDir = "/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_FeedForward@debug_gpu/Models"
 deviceId = -1
 command = speechTrain
 precision = "float"
 traceLevel = "1"
-modelPath = "/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_FeedForward@debug_gpu/Models/cntkSpeechFF.dnn"
+modelPath = "/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_FeedForward@debug_gpu/Models/cntkSpeechFF.dnn"
 parallelTrain = true
 speechTrain = [
     action = "train"
@@ -200,30 +200,30 @@ speechTrain = [
     ]
 ]
 currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data
-RunDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_FeedForward@debug_gpu
+RunDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_FeedForward@debug_gpu
 DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data
 ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/FeedForward/../../../../../../Examples/Speech/AN4/Config
-OutputDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_FeedForward@debug_gpu
+OutputDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_FeedForward@debug_gpu
 DeviceId=0
 timestamping=true
 speechTrain=[SGD=[maxEpochs=1]]
 speechTrain=[SGD=[epochSize=2048]]
 
-07/13/2016 16:45:25: <<<<<<<<<<<<<<<<<<<< RAW CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:09:03: <<<<<<<<<<<<<<<<<<<< RAW CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
 
-07/13/2016 16:45:25: >>>>>>>>>>>>>>>>>>>> PROCESSED CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:09:03: >>>>>>>>>>>>>>>>>>>> PROCESSED CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
 configparameters: FeedForward.cntk:command=speechTrain
 configparameters: FeedForward.cntk:ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/FeedForward/../../../../../../Examples/Speech/AN4/Config
 configparameters: FeedForward.cntk:currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data
 configparameters: FeedForward.cntk:DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data
 configparameters: FeedForward.cntk:deviceId=0
-configparameters: FeedForward.cntk:ModelDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_FeedForward@debug_gpu/Models
-configparameters: FeedForward.cntk:modelPath=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_FeedForward@debug_gpu/Models/cntkSpeechFF.dnn
-configparameters: FeedForward.cntk:OutputDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_FeedForward@debug_gpu
+configparameters: FeedForward.cntk:ModelDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_FeedForward@debug_gpu/Models
+configparameters: FeedForward.cntk:modelPath=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_FeedForward@debug_gpu/Models/cntkSpeechFF.dnn
+configparameters: FeedForward.cntk:OutputDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_FeedForward@debug_gpu
 configparameters: FeedForward.cntk:parallelTrain=true
 configparameters: FeedForward.cntk:precision=float
 configparameters: FeedForward.cntk:RootDir=..
-configparameters: FeedForward.cntk:RunDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_FeedForward@debug_gpu
+configparameters: FeedForward.cntk:RunDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_FeedForward@debug_gpu
 configparameters: FeedForward.cntk:speechTrain=[
     action = "train"
     SimpleNetworkBuilder = [
@@ -277,20 +277,20 @@ configparameters: FeedForward.cntk:speechTrain=[
 
 configparameters: FeedForward.cntk:timestamping=true
 configparameters: FeedForward.cntk:traceLevel=1
-07/13/2016 16:45:25: <<<<<<<<<<<<<<<<<<<< PROCESSED CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
-07/13/2016 16:45:25: Commands: speechTrain
-07/13/2016 16:45:25: Precision = "float"
-07/13/2016 16:45:25: CNTKModelPath: /tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_FeedForward@debug_gpu/Models/cntkSpeechFF.dnn
-07/13/2016 16:45:25: CNTKCommandTrainInfo: speechTrain : 1
-07/13/2016 16:45:25: CNTKCommandTrainInfo: CNTKNoMoreCommands_Total : 1
+07/14/2016 12:09:03: <<<<<<<<<<<<<<<<<<<< PROCESSED CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:09:03: Commands: speechTrain
+07/14/2016 12:09:03: Precision = "float"
+07/14/2016 12:09:03: CNTKModelPath: /tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_FeedForward@debug_gpu/Models/cntkSpeechFF.dnn
+07/14/2016 12:09:03: CNTKCommandTrainInfo: speechTrain : 1
+07/14/2016 12:09:03: CNTKCommandTrainInfo: CNTKNoMoreCommands_Total : 1
 
-07/13/2016 16:45:25: ##############################################################################
-07/13/2016 16:45:25: #                                                                            #
-07/13/2016 16:45:25: # Action "train"                                                             #
-07/13/2016 16:45:25: #                                                                            #
-07/13/2016 16:45:25: ##############################################################################
+07/14/2016 12:09:03: ##############################################################################
+07/14/2016 12:09:03: #                                                                            #
+07/14/2016 12:09:03: # Action "train"                                                             #
+07/14/2016 12:09:03: #                                                                            #
+07/14/2016 12:09:03: ##############################################################################
 
-07/13/2016 16:45:25: CNTKCommandTrainBegin: speechTrain
+07/14/2016 12:09:03: CNTKCommandTrainBegin: speechTrain
 SimpleNetworkBuilder Using GPU 0
 reading script file /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data/glob_0000.scp ... 948 entries
 total 132 state names in state list /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data/state.list
@@ -299,7 +299,7 @@ htkmlfreader: reading MLF file /home/philly/jenkins/workspace/CNTK-Test-Linux-W1
 label set 0: 129 classes
 minibatchutterancesource: 948 utterances grouped into 3 chunks, av. chunk size: 316.0 utterances, 84244.7 frames
 
-07/13/2016 16:45:25: Creating virgin network.
+07/14/2016 12:09:03: Creating virgin network.
 SetUniformRandomValue (GPU): creating curand object with seed 1, sizeof(ElemType)==4
 
 Post-processing network...
@@ -352,14 +352,14 @@ Validating network, final pass.
 
 Post-processing network complete.
 
-07/13/2016 16:45:25: Created model with 25 nodes on GPU 0.
+07/14/2016 12:09:03: Created model with 25 nodes on GPU 0.
 
-07/13/2016 16:45:25: Training criterion node(s):
-07/13/2016 16:45:25: 	CrossEntropyWithSoftmax = CrossEntropyWithSoftmax
+07/14/2016 12:09:03: Training criterion node(s):
+07/14/2016 12:09:03: 	CrossEntropyWithSoftmax = CrossEntropyWithSoftmax
 
-07/13/2016 16:45:25: Evaluation criterion node(s):
+07/14/2016 12:09:03: Evaluation criterion node(s):
 
-07/13/2016 16:45:25: 	EvalErrorPrediction = ErrorPrediction
+07/14/2016 12:09:03: 	EvalErrorPrediction = ErrorPrediction
 
 
 Allocating matrices for forward and/or backward propagation.
@@ -367,56 +367,56 @@ Allocating matrices for forward and/or backward propagation.
 Memory Sharing Structure:
 
 (nil): {[EvalErrorPrediction Gradient[1]] [InvStdOfFeatures Gradient[363]] [LogOfPrior Gradient[132]] [MVNormalizedFeatures Gradient[363 x *]] [MeanOfFeatures Gradient[363]] [PosteriorProb Gradient[132 x 1 x *]] [PosteriorProb Value[132 x 1 x *]] [Prior Gradient[132]] [ScaledLogLikelihood Gradient[132 x 1 x *]] [features Gradient[363 x *]] [labels Gradient[132 x *]] }
-0x7fdf12f98488: {[B1 Value[512 x 1]] }
-0x7fdf12f995f8: {[W2 Value[132 x 512]] }
-0x7fdf12f99d78: {[B2 Value[132 x 1]] }
-0x7fdf12f9b0f8: {[labels Value[132 x *]] }
-0x7fdf12f9c358: {[Prior Value[132]] }
-0x7fdf12fa1c28: {[EvalErrorPrediction Value[1]] }
-0x7fdf12fa1f08: {[ScaledLogLikelihood Value[132 x 1 x *]] }
-0x7fdf12fa20c8: {[CrossEntropyWithSoftmax Value[1]] }
-0x7fdf12fa2788: {[LogOfPrior Value[132]] }
-0x7fdf12fa3958: {[MVNormalizedFeatures Value[363 x *]] }
-0x7fdf12fa4058: {[W0*features Value[512 x *]] }
-0x7fdf12fa4588: {[W0 Gradient[512 x 363]] [W0*features+B0 Value[512 x 1 x *]] }
-0x7fdf12fa46e8: {[H1 Value[512 x 1 x *]] [W0*features Gradient[512 x *]] }
-0x7fdf12fa48a8: {[W0*features+B0 Gradient[512 x 1 x *]] [W1*H1 Value[512 x 1 x *]] }
-0x7fdf12fa4a68: {[W1 Gradient[512 x 512]] [W1*H1+B1 Value[512 x 1 x *]] }
-0x7fdf12fa4c28: {[H2 Value[512 x 1 x *]] [W1*H1 Gradient[512 x 1 x *]] }
-0x7fdf12fa4de8: {[B0 Gradient[512 x 1]] [H1 Gradient[512 x 1 x *]] [W1*H1+B1 Gradient[512 x 1 x *]] [W2*H1 Value[132 x 1 x *]] }
-0x7fdf12fa4fa8: {[HLast Value[132 x 1 x *]] [W2 Gradient[132 x 512]] }
-0x7fdf12fa5b08: {[CrossEntropyWithSoftmax Gradient[1]] }
-0x7fdf12fa5cc8: {[B1 Gradient[512 x 1]] [H2 Gradient[512 x 1 x *]] [HLast Gradient[132 x 1 x *]] }
-0x7fdf12fa5e88: {[W2*H1 Gradient[132 x 1 x *]] }
-0x7fdf12fa6048: {[B2 Gradient[132 x 1]] }
-0x7fdf137c3a18: {[B0 Value[512 x 1]] }
-0x7fdf137c5aa8: {[W1 Value[512 x 512]] }
-0x7fdf185159d8: {[MeanOfFeatures Value[363]] }
-0x7fdf18515e38: {[InvStdOfFeatures Value[363]] }
-0x7fdf18516b38: {[W0 Value[512 x 363]] }
-0x7fdf1a9739b8: {[features Value[363 x *]] }
+0x7fe93b2a9678: {[MVNormalizedFeatures Value[363 x *]] }
+0x7fe93b2a9d78: {[W0*features Value[512 x *]] }
+0x7fe93b2aa2a8: {[W0 Gradient[512 x 363]] [W0*features+B0 Value[512 x 1 x *]] }
+0x7fe93b2aa408: {[H1 Value[512 x 1 x *]] [W0*features Gradient[512 x *]] }
+0x7fe93b2aa5c8: {[W0*features+B0 Gradient[512 x 1 x *]] [W1*H1 Value[512 x 1 x *]] }
+0x7fe93b2aa788: {[W1 Gradient[512 x 512]] [W1*H1+B1 Value[512 x 1 x *]] }
+0x7fe93b2aa948: {[H2 Value[512 x 1 x *]] [W1*H1 Gradient[512 x 1 x *]] }
+0x7fe93b2aab08: {[B0 Gradient[512 x 1]] [H1 Gradient[512 x 1 x *]] [W1*H1+B1 Gradient[512 x 1 x *]] [W2*H1 Value[132 x 1 x *]] }
+0x7fe93b2aacc8: {[HLast Value[132 x 1 x *]] [W2 Gradient[132 x 512]] }
+0x7fe93b2ab828: {[CrossEntropyWithSoftmax Gradient[1]] }
+0x7fe93b2ab9e8: {[B1 Gradient[512 x 1]] [H2 Gradient[512 x 1 x *]] [HLast Gradient[132 x 1 x *]] }
+0x7fe93b2abba8: {[W2*H1 Gradient[132 x 1 x *]] }
+0x7fe93b2abd68: {[B2 Gradient[132 x 1]] }
+0x7fe93b8adda8: {[labels Value[132 x *]] }
+0x7fe93b8af008: {[Prior Value[132]] }
+0x7fe93b8b48a8: {[EvalErrorPrediction Value[1]] }
+0x7fe93b8b4ba8: {[ScaledLogLikelihood Value[132 x 1 x *]] }
+0x7fe93b8b4d68: {[CrossEntropyWithSoftmax Value[1]] }
+0x7fe93b8b5368: {[LogOfPrior Value[132]] }
+0x7fe93b8b6fa8: {[B0 Value[512 x 1]] }
+0x7fe93b8b9078: {[W1 Value[512 x 512]] }
+0x7fe93b8b9e48: {[B1 Value[512 x 1]] }
+0x7fe93b8bafe8: {[W2 Value[132 x 512]] }
+0x7fe93b8bb768: {[B2 Value[132 x 1]] }
+0x7fe93ba43a58: {[MeanOfFeatures Value[363]] }
+0x7fe93ba43f28: {[InvStdOfFeatures Value[363]] }
+0x7fe93ba44738: {[W0 Value[512 x 363]] }
+0x7fe9412c8748: {[features Value[363 x *]] }
 
 
-07/13/2016 16:45:25: Precomputing --> 3 PreCompute nodes found.
+07/14/2016 12:09:03: Precomputing --> 3 PreCompute nodes found.
 
-07/13/2016 16:45:25: 	MeanOfFeatures = Mean()
-07/13/2016 16:45:25: 	InvStdOfFeatures = InvStdDev()
-07/13/2016 16:45:25: 	Prior = Mean()
+07/14/2016 12:09:03: 	MeanOfFeatures = Mean()
+07/14/2016 12:09:03: 	InvStdOfFeatures = InvStdDev()
+07/14/2016 12:09:03: 	Prior = Mean()
 minibatchiterator: epoch 0: frames [0..252734] (first utterance at frame 0), data subset 0 of 1, with 1 datapasses
 requiredata: determined feature kind as 33-dimensional 'USER' with frame shift 10.0 ms
 
-07/13/2016 16:45:30: Precomputing --> Completed.
+07/14/2016 12:09:08: Precomputing --> Completed.
 
 
-07/13/2016 16:45:30: Starting Epoch 1: learning rate per sample = 0.003906  effective momentum = 0.900000  momentum as time constant = 2429.8 samples
+07/14/2016 12:09:08: Starting Epoch 1: learning rate per sample = 0.003906  effective momentum = 0.900000  momentum as time constant = 2429.8 samples
 minibatchiterator: epoch 0: frames [0..2048] (first utterance at frame 0), data subset 0 of 1, with 1 datapasses
 
-07/13/2016 16:45:30: Starting minibatch loop, DataParallelSGD training (MyRank = 0, NumNodes = 1, NumGradientBits = 1), distributed reading is ENABLED.
-07/13/2016 16:45:30: Finished Epoch[ 1 of 1]: [Training] CrossEntropyWithSoftmax = 4.49202067 * 2048; EvalErrorPrediction = 0.93164062 * 2048; totalSamplesSeen = 2048; learningRatePerSample = 0.00390625; epochTime=0.086693s
-07/13/2016 16:45:30: SGD: Saving checkpoint model '/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_FeedForward@debug_gpu/Models/cntkSpeechFF.dnn'
-07/13/2016 16:45:30: CNTKCommandTrainEnd: speechTrain
+07/14/2016 12:09:08: Starting minibatch loop, DataParallelSGD training (MyRank = 0, NumNodes = 1, NumGradientBits = 1), distributed reading is ENABLED.
+07/14/2016 12:09:08: Finished Epoch[ 1 of 1]: [Training] CrossEntropyWithSoftmax = 4.49202067 * 2048; EvalErrorPrediction = 0.93164062 * 2048; totalSamplesSeen = 2048; learningRatePerSample = 0.00390625; epochTime=0.085336s
+07/14/2016 12:09:08: SGD: Saving checkpoint model '/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_FeedForward@debug_gpu/Models/cntkSpeechFF.dnn'
+07/14/2016 12:09:08: CNTKCommandTrainEnd: speechTrain
 
-07/13/2016 16:45:30: Action "train" complete.
+07/14/2016 12:09:08: Action "train" complete.
 
-07/13/2016 16:45:30: __COMPLETED__
+07/14/2016 12:09:08: __COMPLETED__
 ~MPIWrapper

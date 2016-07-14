@@ -1,15 +1,15 @@
 CPU info:
-    CPU Model Name: Intel(R) Xeon(R) CPU W3550 @ 3.07GHz
-    Hardware threads: 4
-    Total Memory: 12580388 kB
+    CPU Model Name: Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz
+    Hardware threads: 24
+    Total Memory: 268381192 kB
 -------------------------------------------------------------------
 Copying test data to local directory
-=== Running /cygdrive/c/jenkins/workspace/CNTK-Test-Windows-W1/x64/release/cntk.exe configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet/AlexNetCommon.cntk currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu\TestData RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu\TestData ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu DeviceId=0 timestamping=true configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet/AlexNet.cntk
+=== Running /cygdrive/c/jenkins/workspace/CNTK-Test-Windows-W1/x64/release/cntk.exe configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet/AlexNetCommon.cntk currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu\TestData RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu\TestData ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu DeviceId=0 timestamping=true configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet/AlexNet.cntk
 -------------------------------------------------------------------
 Build info: 
 
-		Built time: Jul 13 2016 03:55:32
-		Last modified date: Fri Jul  8 10:29:45 2016
+		Built time: Jul 14 2016 05:09:49
+		Last modified date: Fri Jul  8 10:29:39 2016
 		Build type: Release
 		Build target: GPU
 		With 1bit-SGD: no
@@ -18,42 +18,44 @@ Build info:
 		CUB_PATH: C:\src\cub-1.4.1
 		CUDNN_PATH: c:\NVIDIA\cudnn-4.0\cuda
 		Build Branch: HEAD
-		Build SHA1: 50bb4c8afbc87c14548a5b5f315a064186a5cb5f
-		Built by svcphil on LIANA-09-w
+		Build SHA1: 72bee394bf461e8f6f0feb593a8416c05f481957
+		Built by svcphil on DPHAIM-24
 		Build Path: c:\jenkins\workspace\CNTK-Build-Windows\Source\CNTK\
 -------------------------------------------------------------------
-Changed current directory to C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu\TestData
-07/13/2016 04:39:07: -------------------------------------------------------------------
-07/13/2016 04:39:07: Build info: 
+Changed current directory to C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu\TestData
+07/14/2016 05:29:38: -------------------------------------------------------------------
+07/14/2016 05:29:38: Build info: 
 
-07/13/2016 04:39:07: 		Built time: Jul 13 2016 03:55:32
-07/13/2016 04:39:07: 		Last modified date: Fri Jul  8 10:29:45 2016
-07/13/2016 04:39:07: 		Build type: Release
-07/13/2016 04:39:07: 		Build target: GPU
-07/13/2016 04:39:07: 		With 1bit-SGD: no
-07/13/2016 04:39:07: 		Math lib: mkl
-07/13/2016 04:39:07: 		CUDA_PATH: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5
-07/13/2016 04:39:07: 		CUB_PATH: C:\src\cub-1.4.1
-07/13/2016 04:39:07: 		CUDNN_PATH: c:\NVIDIA\cudnn-4.0\cuda
-07/13/2016 04:39:07: 		Build Branch: HEAD
-07/13/2016 04:39:07: 		Build SHA1: 50bb4c8afbc87c14548a5b5f315a064186a5cb5f
-07/13/2016 04:39:07: 		Built by svcphil on LIANA-09-w
-07/13/2016 04:39:07: 		Build Path: c:\jenkins\workspace\CNTK-Build-Windows\Source\CNTK\
-07/13/2016 04:39:07: -------------------------------------------------------------------
-07/13/2016 04:39:08: -------------------------------------------------------------------
-07/13/2016 04:39:08: GPU info:
+07/14/2016 05:29:38: 		Built time: Jul 14 2016 05:09:49
+07/14/2016 05:29:38: 		Last modified date: Fri Jul  8 10:29:39 2016
+07/14/2016 05:29:38: 		Build type: Release
+07/14/2016 05:29:38: 		Build target: GPU
+07/14/2016 05:29:38: 		With 1bit-SGD: no
+07/14/2016 05:29:38: 		Math lib: mkl
+07/14/2016 05:29:38: 		CUDA_PATH: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5
+07/14/2016 05:29:38: 		CUB_PATH: C:\src\cub-1.4.1
+07/14/2016 05:29:38: 		CUDNN_PATH: c:\NVIDIA\cudnn-4.0\cuda
+07/14/2016 05:29:38: 		Build Branch: HEAD
+07/14/2016 05:29:38: 		Build SHA1: 72bee394bf461e8f6f0feb593a8416c05f481957
+07/14/2016 05:29:38: 		Built by svcphil on DPHAIM-24
+07/14/2016 05:29:38: 		Build Path: c:\jenkins\workspace\CNTK-Build-Windows\Source\CNTK\
+07/14/2016 05:29:38: -------------------------------------------------------------------
+07/14/2016 05:29:39: -------------------------------------------------------------------
+07/14/2016 05:29:39: GPU info:
 
-07/13/2016 04:39:08: 		Device[0]: cores = 2496; computeCapability = 5.2; type = "Quadro M4000"; memory = 8192 MB
-07/13/2016 04:39:08: -------------------------------------------------------------------
+07/14/2016 05:29:39: 		Device[0]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3072 MB
+07/14/2016 05:29:39: 		Device[1]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3072 MB
+07/14/2016 05:29:39: 		Device[2]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3072 MB
+07/14/2016 05:29:39: -------------------------------------------------------------------
 
-07/13/2016 04:39:08: Running on cntk-muc02 at 2016/07/13 04:39:08
-07/13/2016 04:39:08: Command line: 
-C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet/AlexNetCommon.cntk  currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu\TestData  RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu  DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu\TestData  ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet  OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu  DeviceId=0  timestamping=true  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet/AlexNet.cntk
+07/14/2016 05:29:39: Running on DPHAIM-25 at 2016/07/14 05:29:39
+07/14/2016 05:29:39: Command line: 
+C:\jenkins\workspace\CNTK-Test-Windows-W1\x64\release\cntk.exe  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet/AlexNetCommon.cntk  currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu\TestData  RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu  DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu\TestData  ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet  OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu  DeviceId=0  timestamping=true  configFile=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet/AlexNet.cntk
 
 
 
-07/13/2016 04:39:08: >>>>>>>>>>>>>>>>>>>> RAW CONFIG (VARIABLES NOT RESOLVED) >>>>>>>>>>>>>>>>>>>>
-07/13/2016 04:39:08: ModelDir = "$RunDir$/models"
+07/14/2016 05:29:39: >>>>>>>>>>>>>>>>>>>> RAW CONFIG (VARIABLES NOT RESOLVED) >>>>>>>>>>>>>>>>>>>>
+07/14/2016 05:29:39: ModelDir = "$RunDir$/models"
 ndlMacros=$ConfigDir$/Macros.ndl
 precision=float
 deviceId=Auto
@@ -101,11 +103,11 @@ Test=[
         networkDescription=$ConfigDir$/AlexNet.ndl
     ]
 ]
-currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu\TestData
-RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu
-DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu\TestData
+currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu\TestData
+RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu
+DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu\TestData
 ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet
-OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu
+OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu
 DeviceId=0
 timestamping=true
 Train=[
@@ -146,10 +148,10 @@ Test=[
     ]    
 ]
 
-07/13/2016 04:39:08: <<<<<<<<<<<<<<<<<<<< RAW CONFIG (VARIABLES NOT RESOLVED)  <<<<<<<<<<<<<<<<<<<<
+07/14/2016 05:29:39: <<<<<<<<<<<<<<<<<<<< RAW CONFIG (VARIABLES NOT RESOLVED)  <<<<<<<<<<<<<<<<<<<<
 
-07/13/2016 04:39:08: >>>>>>>>>>>>>>>>>>>> RAW CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
-07/13/2016 04:39:08: ModelDir = "C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu/models"
+07/14/2016 05:29:39: >>>>>>>>>>>>>>>>>>>> RAW CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
+07/14/2016 05:29:39: ModelDir = "C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu/models"
 ndlMacros=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet/Macros.ndl
 precision=float
 deviceId=Auto
@@ -159,7 +161,7 @@ traceLevel=1
 numMBsToShowResult=100
 Train=[
     action=train
-    modelPath=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu/models/AlexNet
+    modelPath=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu/models/AlexNet
     NDLNetworkBuilder=[
         networkDescription=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet/AlexNet.ndl
     ]
@@ -185,23 +187,23 @@ Train=[
 ]
 AddTop5Eval=[    
     action=edit
-    CurModel=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu/models/AlexNet
-    NewModel=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu/models/AlexNet.Top5
+    CurModel=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu/models/AlexNet
+    NewModel=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu/models/AlexNet.Top5
     editPath=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet/add_top5_layer.mel
 ]
 Test=[
     action=test
-    modelPath=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu/models/AlexNet.Top5
+    modelPath=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu/models/AlexNet.Top5
     minibatchSize=16
      NDLNetworkBuilder=[
         networkDescription=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet/AlexNet.ndl
     ]
 ]
-currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu\TestData
-RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu
-DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu\TestData
+currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu\TestData
+RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu
+DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu\TestData
 ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet
-OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu
+OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu
 DeviceId=0
 timestamping=true
 Train=[
@@ -242,31 +244,31 @@ Test=[
     ]    
 ]
 
-07/13/2016 04:39:08: <<<<<<<<<<<<<<<<<<<< RAW CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
+07/14/2016 05:29:39: <<<<<<<<<<<<<<<<<<<< RAW CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
 
-07/13/2016 04:39:08: >>>>>>>>>>>>>>>>>>>> PROCESSED CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
+07/14/2016 05:29:39: >>>>>>>>>>>>>>>>>>>> PROCESSED CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
 configparameters: AlexNet.cntk:AddTop5Eval=[    
     action=edit
-    CurModel=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu/models/AlexNet
-    NewModel=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu/models/AlexNet.Top5
+    CurModel=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu/models/AlexNet
+    NewModel=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu/models/AlexNet.Top5
     editPath=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet/add_top5_layer.mel
 ]
 
 configparameters: AlexNet.cntk:command=Train:AddTop5Eval:Test
 configparameters: AlexNet.cntk:ConfigDir=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet
-configparameters: AlexNet.cntk:currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu\TestData
-configparameters: AlexNet.cntk:DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu\TestData
+configparameters: AlexNet.cntk:currentDirectory=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu\TestData
+configparameters: AlexNet.cntk:DataDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu\TestData
 configparameters: AlexNet.cntk:deviceId=0
-configparameters: AlexNet.cntk:ModelDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu/models
+configparameters: AlexNet.cntk:ModelDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu/models
 configparameters: AlexNet.cntk:ndlMacros=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet/Macros.ndl
 configparameters: AlexNet.cntk:numMBsToShowResult=100
-configparameters: AlexNet.cntk:OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu
+configparameters: AlexNet.cntk:OutputDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu
 configparameters: AlexNet.cntk:parallelTrain=false
 configparameters: AlexNet.cntk:precision=float
-configparameters: AlexNet.cntk:RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu
+configparameters: AlexNet.cntk:RunDir=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu
 configparameters: AlexNet.cntk:Test=[
     action=test
-    modelPath=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu/models/AlexNet.Top5
+    modelPath=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu/models/AlexNet.Top5
     minibatchSize=16
      NDLNetworkBuilder=[
         networkDescription=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet/AlexNet.ndl
@@ -293,7 +295,7 @@ configparameters: AlexNet.cntk:timestamping=true
 configparameters: AlexNet.cntk:traceLevel=1
 configparameters: AlexNet.cntk:Train=[
     action=train
-    modelPath=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu/models/AlexNet
+    modelPath=C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu/models/AlexNet
     NDLNetworkBuilder=[
         networkDescription=C:\jenkins\workspace\CNTK-Test-Windows-W1\Tests\EndToEndTests\Image\AlexNet/AlexNet.ndl
     ]
@@ -337,23 +339,23 @@ configparameters: AlexNet.cntk:Train=[
     ]    
 ]
 
-07/13/2016 04:39:08: <<<<<<<<<<<<<<<<<<<< PROCESSED CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
-07/13/2016 04:39:08: Commands: Train AddTop5Eval Test
-07/13/2016 04:39:08: Precision = "float"
-07/13/2016 04:39:08: CNTKModelPath: C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu/models/AlexNet
-07/13/2016 04:39:08: CNTKCommandTrainInfo: Train : 3
-07/13/2016 04:39:08: CNTKCommandTrainInfo: CNTKNoMoreCommands_Total : 3
+07/14/2016 05:29:39: <<<<<<<<<<<<<<<<<<<< PROCESSED CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
+07/14/2016 05:29:39: Commands: Train AddTop5Eval Test
+07/14/2016 05:29:39: Precision = "float"
+07/14/2016 05:29:39: CNTKModelPath: C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu/models/AlexNet
+07/14/2016 05:29:39: CNTKCommandTrainInfo: Train : 3
+07/14/2016 05:29:39: CNTKCommandTrainInfo: CNTKNoMoreCommands_Total : 3
 
-07/13/2016 04:39:08: ##############################################################################
-07/13/2016 04:39:08: #                                                                            #
-07/13/2016 04:39:08: # Action "train"                                                             #
-07/13/2016 04:39:08: #                                                                            #
-07/13/2016 04:39:08: ##############################################################################
+07/14/2016 05:29:39: ##############################################################################
+07/14/2016 05:29:39: #                                                                            #
+07/14/2016 05:29:39: # Action "train"                                                             #
+07/14/2016 05:29:39: #                                                                            #
+07/14/2016 05:29:39: ##############################################################################
 
-07/13/2016 04:39:08: CNTKCommandTrainBegin: Train
+07/14/2016 05:29:39: CNTKCommandTrainBegin: Train
 NDLBuilder Using GPU 0
 useParallelTrain option is not enabled. ParallelTrain config will be ignored.
-07/13/2016 04:39:08: Creating virgin network.
+07/14/2016 05:29:39: Creating virgin network.
 Microsoft::MSR::CNTK::GPUMatrix<ElemType>::SetGaussianRandomValue (GPU): creating curand object with seed 1, sizeof(ElemType)==4
 
 Post-processing network...
@@ -441,14 +443,14 @@ pool3: using cuDNN convolution engine for geometry: Input: 13 x 13 x 256, Output
 
 Post-processing network complete.
 
-07/13/2016 04:39:09: Created model with 48 nodes on GPU 0.
+07/14/2016 05:29:40: Created model with 48 nodes on GPU 0.
 
-07/13/2016 04:39:09: Training criterion node(s):
-07/13/2016 04:39:09: 	ce = CrossEntropyWithSoftmax
+07/14/2016 05:29:40: Training criterion node(s):
+07/14/2016 05:29:40: 	ce = CrossEntropyWithSoftmax
 
-07/13/2016 04:39:09: Evaluation criterion node(s):
+07/14/2016 05:29:40: Evaluation criterion node(s):
 
-07/13/2016 04:39:09: 	err = ErrorPrediction
+07/14/2016 05:29:40: 	err = ErrorPrediction
 
 
 Allocating matrices for forward and/or backward propagation.
@@ -456,101 +458,101 @@ Allocating matrices for forward and/or backward propagation.
 Memory Sharing Structure:
 
 0000000000000000: {[err Gradient[1]] [features Gradient[224 x 224 x 3 x *]] [labels Gradient[1000 x *]] }
-0000004436DA90B0: {[labels Value[1000 x *]] }
-0000004436DA9330: {[conv1.b Value[1 x 1 x 64]] }
-0000004436DA96F0: {[conv3.W Value[384 x 1728]] }
-0000004436DA9830: {[conv2.W Value[192 x 1600]] }
-0000004436DA9D30: {[conv4.b Value[1 x 1 x 256]] }
-0000004436DAA050: {[conv4.W Value[256 x 3456]] }
-0000004436DAA410: {[conv5.b Value[1 x 1 x 256]] }
-0000004436DAA870: {[h1.b Value[4096]] }
-0000004436DAA910: {[conv1.W Value[64 x 363]] }
-0000004436DAAA50: {[conv3.b Value[1 x 1 x 384]] }
-0000004436DAAC30: {[h1.W Value[4096 x 6 x 6 x 256]] }
-0000004436DAACD0: {[conv2.b Value[1 x 1 x 192]] }
-0000004436DAAD70: {[conv5.W Value[256 x 2304]] }
-0000004443FD9820: {[features Value[224 x 224 x 3 x *]] }
-00000044441ED440: {[OutputNodes.W Value[1000 x 4096]] }
-00000044441ED6C0: {[OutputNodes.b Value[1000]] }
-00000044441ED940: {[h2.b Value[4096]] }
-00000044441EDD00: {[h2.W Value[4096 x 4096]] }
-0000004451BA03C0: {[conv4.W Gradient[256 x 3456]] [conv4.z Value[13 x 13 x 256 x *]] }
-0000004451BA0460: {[conv1.c Gradient[56 x 56 x 64 x *]] [conv1.y Value[56 x 56 x 64 x *]] }
-0000004451BA0500: {[conv4.c Gradient[13 x 13 x 256 x *]] [conv4.y Value[13 x 13 x 256 x *]] }
-0000004451BA0640: {[h1_d Value[4096 x *]] }
-0000004451BA0A00: {[err Value[1]] }
-0000004451BA0D20: {[ce Value[1]] }
-0000004451BA0DC0: {[conv1.W Gradient[64 x 363]] [conv1.z Value[56 x 56 x 64 x *]] }
-0000004451BA1040: {[OutputNodes.z Value[1000 x *]] }
-0000004451BA10E0: {[conv2.c Value[27 x 27 x 192 x *]] }
-0000004451BA1220: {[conv2.W Gradient[192 x 1600]] [conv2.z Value[27 x 27 x 192 x *]] }
-0000004451BA12C0: {[conv2.z Gradient[27 x 27 x 192 x *]] [pool1 Gradient[27 x 27 x 64 x *]] [pool2 Value[13 x 13 x 192 x *]] }
-0000004451BA1360: {[conv3.c Value[13 x 13 x 384 x *]] }
-0000004451BA14A0: {[conv1.z Gradient[56 x 56 x 64 x *]] [pool1 Value[27 x 27 x 64 x *]] }
-0000004451BA1540: {[conv2.c Gradient[27 x 27 x 192 x *]] [conv2.y Value[27 x 27 x 192 x *]] }
-0000004451BA15E0: {[conv2.b Gradient[1 x 1 x 192]] [conv2.y Gradient[27 x 27 x 192 x *]] }
-0000004451BA1680: {[conv3.c Gradient[13 x 13 x 384 x *]] [conv3.y Value[13 x 13 x 384 x *]] }
-0000004451BA1720: {[conv3.z Gradient[13 x 13 x 384 x *]] [pool2 Gradient[13 x 13 x 192 x *]] }
-0000004451BA17C0: {[conv5.c Value[13 x 13 x 256 x *]] }
-0000004451BA1900: {[conv3.b Gradient[1 x 1 x 384]] [conv3.y Gradient[13 x 13 x 384 x *]] [conv4.z Gradient[13 x 13 x 256 x *]] }
-0000004451BA19A0: {[conv5.c Gradient[13 x 13 x 256 x *]] [conv5.y Value[13 x 13 x 256 x *]] }
-0000004451BA1A40: {[conv4.b Gradient[1 x 1 x 256]] [conv4.y Gradient[13 x 13 x 256 x *]] [conv5.z Gradient[13 x 13 x 256 x *]] [pool3 Value[6 x 6 x 256 x *]] }
-0000004451BA1CC0: {[h1.W Gradient[4096 x 6 x 6 x 256]] [h1.z Value[4096 x *]] }
-0000004451BA1D60: {[h1.t Gradient[4096 x *]] [h1.y Value[4096 x *]] }
-0000004451BA23A0: {[conv1.c Value[56 x 56 x 64 x *]] }
-0000004451BA2440: {[conv1.b Gradient[1 x 1 x 64]] [conv1.y Gradient[56 x 56 x 64 x *]] }
-0000004451BA24E0: {[conv3.W Gradient[384 x 1728]] [conv3.z Value[13 x 13 x 384 x *]] }
-0000004451BA26C0: {[conv5.W Gradient[256 x 2304]] [conv5.z Value[13 x 13 x 256 x *]] }
-0000004451BA29E0: {[conv5.b Gradient[1 x 1 x 256]] [conv5.y Gradient[13 x 13 x 256 x *]] [h1.t Value[4096 x *]] }
-0000004451BA2B20: {[conv4.c Value[13 x 13 x 256 x *]] }
-0000004454A73890: {[OutputNodes.b Gradient[1000]] }
-0000004454A73BB0: {[h1_d Gradient[4096 x *]] [h2.z Gradient[4096 x *]] }
-0000004454A73CF0: {[h2_d Gradient[4096 x *]] }
-0000004454A740B0: {[h2_d Value[4096 x *]] }
-0000004454A74290: {[OutputNodes.t Value[1000 x *]] [h2.b Gradient[4096]] [h2.y Gradient[4096 x *]] }
-0000004454A743D0: {[h2.t Gradient[4096 x *]] [h2.y Value[4096 x *]] }
-0000004454A74470: {[h1.b Gradient[4096]] [h1.y Gradient[4096 x *]] [h2.t Value[4096 x *]] }
-0000004454A745B0: {[OutputNodes.W Gradient[1000 x 4096]] [OutputNodes.z Gradient[1000 x *]] }
-0000004454A74650: {[OutputNodes.t Gradient[1000 x *]] }
-0000004454A746F0: {[ce Gradient[1]] }
-0000004454A74DD0: {[h1.z Gradient[4096 x *]] [pool3 Gradient[6 x 6 x 256 x *]] }
-0000004454A74F10: {[h2.W Gradient[4096 x 4096]] [h2.z Value[4096 x *]] }
+00000075DBB72BB0: {[conv1.b Value[1 x 1 x 64]] }
+00000075DBB72ED0: {[features Value[224 x 224 x 3 x *]] }
+00000075DBB745F0: {[conv1.W Value[64 x 363]] }
+00000075DBB747D0: {[labels Value[1000 x *]] }
+00000075ED0C5F50: {[conv5.W Value[256 x 2304]] }
+00000075ED0C5FF0: {[h1.b Value[4096]] }
+00000075ED0C6090: {[conv2.W Value[192 x 1600]] }
+00000075ED0C6450: {[conv3.b Value[1 x 1 x 384]] }
+00000075ED0C6950: {[conv3.W Value[384 x 1728]] }
+00000075ED0C6A90: {[conv4.b Value[1 x 1 x 256]] }
+00000075ED0C6D10: {[h1.W Value[4096 x 6 x 6 x 256]] }
+00000075ED0C6EF0: {[conv2.b Value[1 x 1 x 192]] }
+00000075ED0C7030: {[h2.W Value[4096 x 4096]] }
+00000075ED0C7210: {[h2.b Value[4096]] }
+00000075ED0C73F0: {[conv4.W Value[256 x 3456]] }
+00000075ED0C75D0: {[conv5.b Value[1 x 1 x 256]] }
+00000075ED0C77B0: {[OutputNodes.W Value[1000 x 4096]] }
+00000075ED0C7DF0: {[OutputNodes.b Value[1000]] }
+00000075F9E74380: {[OutputNodes.b Gradient[1000]] }
+00000075F9E74560: {[conv1.z Gradient[56 x 56 x 64 x *]] [pool1 Value[27 x 27 x 64 x *]] }
+00000075F9E74600: {[conv2.c Value[27 x 27 x 192 x *]] }
+00000075F9E746A0: {[ce Value[1]] }
+00000075F9E74740: {[conv2.b Gradient[1 x 1 x 192]] [conv2.y Gradient[27 x 27 x 192 x *]] }
+00000075F9E747E0: {[conv4.c Value[13 x 13 x 256 x *]] }
+00000075F9E74880: {[conv2.c Gradient[27 x 27 x 192 x *]] [conv2.y Value[27 x 27 x 192 x *]] }
+00000075F9E74920: {[h1.W Gradient[4096 x 6 x 6 x 256]] [h1.z Value[4096 x *]] }
+00000075F9E749C0: {[conv2.z Gradient[27 x 27 x 192 x *]] [pool1 Gradient[27 x 27 x 64 x *]] [pool2 Value[13 x 13 x 192 x *]] }
+00000075F9E74A60: {[conv5.W Gradient[256 x 2304]] [conv5.z Value[13 x 13 x 256 x *]] }
+00000075F9E74B00: {[h1.z Gradient[4096 x *]] [pool3 Gradient[6 x 6 x 256 x *]] }
+00000075F9E74C40: {[OutputNodes.t Value[1000 x *]] [h2.b Gradient[4096]] [h2.y Gradient[4096 x *]] }
+00000075F9E74D80: {[h2_d Gradient[4096 x *]] }
+00000075F9E74F60: {[conv3.c Gradient[13 x 13 x 384 x *]] [conv3.y Value[13 x 13 x 384 x *]] }
+00000075F9E75000: {[OutputNodes.W Gradient[1000 x 4096]] [OutputNodes.z Gradient[1000 x *]] }
+00000075F9E751E0: {[h2_d Value[4096 x *]] }
+00000075F9E75280: {[conv5.b Gradient[1 x 1 x 256]] [conv5.y Gradient[13 x 13 x 256 x *]] [h1.t Value[4096 x *]] }
+00000075F9E75460: {[OutputNodes.z Value[1000 x *]] }
+00000075F9E75500: {[err Value[1]] }
+00000075F9E75640: {[conv4.W Gradient[256 x 3456]] [conv4.z Value[13 x 13 x 256 x *]] }
+00000075F9E756E0: {[conv4.b Gradient[1 x 1 x 256]] [conv4.y Gradient[13 x 13 x 256 x *]] [conv5.z Gradient[13 x 13 x 256 x *]] [pool3 Value[6 x 6 x 256 x *]] }
+00000075F9E758C0: {[conv1.b Gradient[1 x 1 x 64]] [conv1.y Gradient[56 x 56 x 64 x *]] }
+00000075F9E75B40: {[conv3.W Gradient[384 x 1728]] [conv3.z Value[13 x 13 x 384 x *]] }
+00000075F9E75BE0: {[conv5.c Gradient[13 x 13 x 256 x *]] [conv5.y Value[13 x 13 x 256 x *]] }
+00000075F9E75C80: {[h2.W Gradient[4096 x 4096]] [h2.z Value[4096 x *]] }
+00000075F9E75DC0: {[conv1.W Gradient[64 x 363]] [conv1.z Value[56 x 56 x 64 x *]] }
+00000075F9E75E60: {[conv2.W Gradient[192 x 1600]] [conv2.z Value[27 x 27 x 192 x *]] }
+00000075F9E75F00: {[conv1.c Value[56 x 56 x 64 x *]] }
+00000075F9E75FA0: {[conv3.z Gradient[13 x 13 x 384 x *]] [pool2 Gradient[13 x 13 x 192 x *]] }
+00000075F9E76040: {[h1.t Gradient[4096 x *]] [h1.y Value[4096 x *]] }
+00000075F9E760E0: {[OutputNodes.t Gradient[1000 x *]] }
+00000075F9E76220: {[conv3.c Value[13 x 13 x 384 x *]] }
+00000075F9E762C0: {[conv3.b Gradient[1 x 1 x 384]] [conv3.y Gradient[13 x 13 x 384 x *]] [conv4.z Gradient[13 x 13 x 256 x *]] }
+00000075F9E76360: {[h1_d Value[4096 x *]] }
+00000075F9E76400: {[h2.t Gradient[4096 x *]] [h2.y Value[4096 x *]] }
+00000075F9E764A0: {[h1.b Gradient[4096]] [h1.y Gradient[4096 x *]] [h2.t Value[4096 x *]] }
+00000075F9E765E0: {[conv4.c Gradient[13 x 13 x 256 x *]] [conv4.y Value[13 x 13 x 256 x *]] }
+00000075F9E76680: {[conv1.c Gradient[56 x 56 x 64 x *]] [conv1.y Value[56 x 56 x 64 x *]] }
+00000075F9E769A0: {[conv5.c Value[13 x 13 x 256 x *]] }
+00000075F9E76A40: {[h1_d Gradient[4096 x *]] [h2.z Gradient[4096 x *]] }
+00000075F9E76AE0: {[ce Gradient[1]] }
 
-07/13/2016 04:39:09: No PreCompute nodes found, skipping PreCompute step.
+07/14/2016 05:29:40: No PreCompute nodes found, skipping PreCompute step.
 
-07/13/2016 04:39:12: Starting Epoch 1: learning rate per sample = 0.000625  effective momentum = 0.900000  momentum as time constant = 151.9 samples
+07/14/2016 05:29:43: Starting Epoch 1: learning rate per sample = 0.000625  effective momentum = 0.900000  momentum as time constant = 151.9 samples
 BlockRandomizer::StartEpoch: epoch 0: frames [0..2999] (first sequence at sample 0), data subset 0 of 1
 
-07/13/2016 04:39:12: Starting minibatch loop.
-07/13/2016 04:39:24:  Epoch[ 1 of 3]-Minibatch[   1- 100]: ce = 7.43274475 * 1600; err = 0.99875000 * 1600; time = 11.1949s; samplesPerSecond = 142.9
-07/13/2016 04:39:31: Finished Epoch[ 1 of 3]: [Training] ce = 7.24000253 * 2999; err = 0.99899967 * 2999; totalSamplesSeen = 2999; learningRatePerSample = 0.00062499999; epochTime=18.2336s
-07/13/2016 04:39:34: SGD: Saving checkpoint model 'C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu/models/AlexNet.1'
+07/14/2016 05:29:43: Starting minibatch loop.
+07/14/2016 05:29:52:  Epoch[ 1 of 3]-Minibatch[   1- 100]: ce = 7.43084106 * 1600; err = 1.00000000 * 1600; time = 8.6662s; samplesPerSecond = 184.6
+07/14/2016 05:29:58: Finished Epoch[ 1 of 3]: [Training] ce = 7.24046297 * 2999; err = 0.99933311 * 2999; totalSamplesSeen = 2999; learningRatePerSample = 0.00062499999; epochTime=14.5058s
+07/14/2016 05:30:01: SGD: Saving checkpoint model 'C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu/models/AlexNet.1'
 
-07/13/2016 04:39:37: Starting Epoch 2: learning rate per sample = 0.000625  effective momentum = 0.900000  momentum as time constant = 151.9 samples
+07/14/2016 05:30:04: Starting Epoch 2: learning rate per sample = 0.000625  effective momentum = 0.900000  momentum as time constant = 151.9 samples
 BlockRandomizer::StartEpoch: epoch 1: frames [2999..5998] (first sequence at sample 2999), data subset 0 of 1
 
-07/13/2016 04:39:37: Starting minibatch loop.
-07/13/2016 04:39:46:  Epoch[ 2 of 3]-Minibatch[   1- 100, 100.00%]: ce = 6.90609558 * 1600; err = 0.99937500 * 1600; time = 8.0685s; samplesPerSecond = 198.3
-07/13/2016 04:39:53: Finished Epoch[ 2 of 3]: [Training] ce = 6.92030872 * 2999; err = 0.99866622 * 2999; totalSamplesSeen = 5998; learningRatePerSample = 0.00062499999; epochTime=15.1671s
-07/13/2016 04:39:56: SGD: Saving checkpoint model 'C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu/models/AlexNet.2'
+07/14/2016 05:30:04: Starting minibatch loop.
+07/14/2016 05:30:11:  Epoch[ 2 of 3]-Minibatch[   1- 100, 100.00%]: ce = 6.90477295 * 1600; err = 0.99750000 * 1600; time = 6.7376s; samplesPerSecond = 237.5
+07/14/2016 05:30:17: Finished Epoch[ 2 of 3]: [Training] ce = 6.91899709 * 2999; err = 0.99799933 * 2999; totalSamplesSeen = 5998; learningRatePerSample = 0.00062499999; epochTime=12.6276s
+07/14/2016 05:30:20: SGD: Saving checkpoint model 'C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu/models/AlexNet.2'
 
-07/13/2016 04:39:59: Starting Epoch 3: learning rate per sample = 0.000625  effective momentum = 0.900000  momentum as time constant = 151.9 samples
+07/14/2016 05:30:23: Starting Epoch 3: learning rate per sample = 0.000625  effective momentum = 0.900000  momentum as time constant = 151.9 samples
 BlockRandomizer::StartEpoch: epoch 2: frames [5998..8997] (first sequence at sample 5998), data subset 0 of 1
 
-07/13/2016 04:39:59: Starting minibatch loop.
-07/13/2016 04:40:08:  Epoch[ 3 of 3]-Minibatch[   1- 100, 100.00%]: ce = 6.87634521 * 1600; err = 0.99750000 * 1600; time = 8.1916s; samplesPerSecond = 195.3
-07/13/2016 04:40:15: Finished Epoch[ 3 of 3]: [Training] ce = 6.88545205 * 2999; err = 0.99833278 * 2999; totalSamplesSeen = 8997; learningRatePerSample = 0.00062499999; epochTime=15.1076s
-07/13/2016 04:40:18: SGD: Saving checkpoint model 'C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160713043743.262110\Image_AlexNet@release_gpu/models/AlexNet'
-07/13/2016 04:40:21: CNTKCommandTrainEnd: Train
+07/14/2016 05:30:23: Starting minibatch loop.
+07/14/2016 05:30:30:  Epoch[ 3 of 3]-Minibatch[   1- 100, 100.00%]: ce = 6.87016174 * 1600; err = 0.99875000 * 1600; time = 6.9253s; samplesPerSecond = 231.0
+07/14/2016 05:30:36: Finished Epoch[ 3 of 3]: [Training] ce = 6.88057803 * 2999; err = 0.99799933 * 2999; totalSamplesSeen = 8997; learningRatePerSample = 0.00062499999; epochTime=12.746s
+07/14/2016 05:30:39: SGD: Saving checkpoint model 'C:\Users\svcphil\AppData\Local\Temp\cntk-test-20160714052910.364117\Image_AlexNet@release_gpu/models/AlexNet'
+07/14/2016 05:30:42: CNTKCommandTrainEnd: Train
 
-07/13/2016 04:40:21: Action "train" complete.
+07/14/2016 05:30:42: Action "train" complete.
 
 
-07/13/2016 04:40:21: ##############################################################################
-07/13/2016 04:40:21: #                                                                            #
-07/13/2016 04:40:21: # Action "edit"                                                              #
-07/13/2016 04:40:21: #                                                                            #
-07/13/2016 04:40:21: ##############################################################################
+07/14/2016 05:30:42: ##############################################################################
+07/14/2016 05:30:42: #                                                                            #
+07/14/2016 05:30:42: # Action "edit"                                                              #
+07/14/2016 05:30:42: #                                                                            #
+07/14/2016 05:30:42: ##############################################################################
 
 
 Post-processing network...
@@ -712,14 +714,14 @@ Validating network, final pass.
 Post-processing network complete.
 
 
-07/13/2016 04:40:28: Action "edit" complete.
+07/14/2016 05:30:49: Action "edit" complete.
 
 
-07/13/2016 04:40:28: ##############################################################################
-07/13/2016 04:40:28: #                                                                            #
-07/13/2016 04:40:28: # Action "test"                                                              #
-07/13/2016 04:40:28: #                                                                            #
-07/13/2016 04:40:28: ##############################################################################
+07/14/2016 05:30:49: ##############################################################################
+07/14/2016 05:30:49: #                                                                            #
+07/14/2016 05:30:49: # Action "test"                                                              #
+07/14/2016 05:30:49: #                                                                            #
+07/14/2016 05:30:49: ##############################################################################
 
 NDLBuilder Using GPU 0
 
@@ -816,58 +818,58 @@ Allocating matrices for forward and/or backward propagation.
 Memory Sharing Structure:
 
 0000000000000000: {[OutputNodes.W Gradient[1000 x 4096]] [OutputNodes.b Gradient[1000]] [OutputNodes.t Gradient[1000 x *2]] [OutputNodes.z Gradient[1000 x *2]] [ce Gradient[1]] [conv1.W Gradient[64 x 363]] [conv1.b Gradient[1 x 1 x 64]] [conv1.c Gradient[56 x 56 x 64 x *2]] [conv1.y Gradient[56 x 56 x 64 x *2]] [conv1.z Gradient[56 x 56 x 64 x *2]] [conv2.W Gradient[192 x 1600]] [conv2.b Gradient[1 x 1 x 192]] [conv2.c Gradient[27 x 27 x 192 x *2]] [conv2.y Gradient[27 x 27 x 192 x *2]] [conv2.z Gradient[27 x 27 x 192 x *2]] [conv3.W Gradient[384 x 1728]] [conv3.b Gradient[1 x 1 x 384]] [conv3.c Gradient[13 x 13 x 384 x *2]] [conv3.y Gradient[13 x 13 x 384 x *2]] [conv3.z Gradient[13 x 13 x 384 x *2]] [conv4.W Gradient[256 x 3456]] [conv4.b Gradient[1 x 1 x 256]] [conv4.c Gradient[13 x 13 x 256 x *2]] [conv4.y Gradient[13 x 13 x 256 x *2]] [conv4.z Gradient[13 x 13 x 256 x *2]] [conv5.W Gradient[256 x 2304]] [conv5.b Gradient[1 x 1 x 256]] [conv5.c Gradient[13 x 13 x 256 x *2]] [conv5.y Gradient[13 x 13 x 256 x *2]] [conv5.z Gradient[13 x 13 x 256 x *2]] [err Gradient[1]] [features Gradient[224 x 224 x 3 x *2]] [h1.W Gradient[4096 x 6 x 6 x 256]] [h1.b Gradient[4096]] [h1.t Gradient[4096 x *2]] [h1.y Gradient[4096 x *2]] [h1.z Gradient[4096 x *2]] [h1_d Gradient[4096 x *2]] [h2.W Gradient[4096 x 4096]] [h2.b Gradient[4096]] [h2.t Gradient[4096 x *2]] [h2.y Gradient[4096 x *2]] [h2.z Gradient[4096 x *2]] [h2_d Gradient[4096 x *2]] [labels Gradient[1000 x *2]] [pool1 Gradient[27 x 27 x 64 x *2]] [pool2 Gradient[13 x 13 x 192 x *2]] [pool3 Gradient[6 x 6 x 256 x *2]] }
-000000442477A6A0: {[conv2.W Value[192 x 1600]] }
-000000442477A740: {[conv1.W Value[64 x 363]] }
-000000442477A880: {[conv2.b Value[1 x 1 x 192]] }
-000000442477A920: {[conv3.b Value[1 x 1 x 384]] }
-000000442477AB00: {[conv1.b Value[1 x 1 x 64]] }
-000000442477B140: {[conv3.W Value[384 x 1728]] }
-000000442477B3C0: {[labels Value[1000 x *2]] }
-00000044256DEA00: {[OutputNodes.b Value[1000]] }
-00000044256DEAA0: {[h2.b Value[4096]] }
-00000044256DEDC0: {[OutputNodes.W Value[1000 x 4096]] }
-0000004425E89E90: {[conv4.c Value[13 x 13 x 256 x *2]] }
-0000004425E89F30: {[conv4.z Value[13 x 13 x 256 x *2]] }
-0000004425E8A110: {[err Value[1]] }
-0000004425E8A2F0: {[conv2.z Value[27 x 27 x 192 x *2]] }
-0000004425E8A390: {[conv4.y Value[13 x 13 x 256 x *2]] }
-0000004425E8A430: {[conv1.y Value[56 x 56 x 64 x *2]] }
-0000004425E8A4D0: {[conv1.c Value[56 x 56 x 64 x *2]] }
-0000004425E8A610: {[conv2.y Value[27 x 27 x 192 x *2]] }
-0000004425E8A6B0: {[pool2 Value[13 x 13 x 192 x *2]] }
-0000004425E8A750: {[conv3.z Value[13 x 13 x 384 x *2]] }
-0000004425E8A7F0: {[conv1.z Value[56 x 56 x 64 x *2]] }
-0000004425E8A930: {[pool1 Value[27 x 27 x 64 x *2]] }
-0000004425E8A9D0: {[conv3.c Value[13 x 13 x 384 x *2]] }
-0000004425E8AA70: {[conv3.y Value[13 x 13 x 384 x *2]] }
-0000004425E8ABB0: {[conv2.c Value[27 x 27 x 192 x *2]] }
-0000004425E8AC50: {[ce Value[1]] }
-000000442707A210: {[conv5.W Value[256 x 2304]] }
-000000442707A490: {[h1.W Value[4096 x 6 x 6 x 256]] }
-000000442707A530: {[conv4.W Value[256 x 3456]] }
-000000442707A710: {[h1.b Value[4096]] }
-000000442707A850: {[h2.W Value[4096 x 4096]] }
-000000442707ACB0: {[conv5.b Value[1 x 1 x 256]] }
-000000442707AFD0: {[conv4.b Value[1 x 1 x 256]] }
-0000004427E74810: {[features Value[224 x 224 x 3 x *2]] }
-00000044700E6DD0: {[conv5.c Value[13 x 13 x 256 x *2]] }
-000000447D5D2230: {[OutputNodes.z Value[1000 x *2]] }
-000000447D5D2370: {[conv5.z Value[13 x 13 x 256 x *2]] }
-000000447D5D2410: {[h2.y Value[4096 x *2]] }
-000000447D5D27D0: {[pool3 Value[6 x 6 x 256 x *2]] }
-000000447D5D2A50: {[h2_d Value[4096 x *2]] }
-000000447D5D2B90: {[h1_d Value[4096 x *2]] }
-000000447D5D2CD0: {[OutputNodes.t Value[1000 x *2]] }
-000000447D5D2D70: {[conv5.y Value[13 x 13 x 256 x *2]] }
-000000447D5D2E10: {[h1.t Value[4096 x *2]] }
-000000447D5D2EB0: {[h1.y Value[4096 x *2]] }
-000000447D5D2F50: {[h2.t Value[4096 x *2]] }
-000000447D5D2FF0: {[h2.z Value[4096 x *2]] }
-000000447D5D3090: {[h1.z Value[4096 x *2]] }
+00000075DBB72BB0: {[h1.b Value[4096]] }
+00000075DBB72E30: {[h2.W Value[4096 x 4096]] }
+00000075DBB73290: {[h1.W Value[4096 x 6 x 6 x 256]] }
+00000075DBB73330: {[h2.b Value[4096]] }
+00000075F0174F50: {[OutputNodes.z Value[1000 x *2]] }
+00000075F0174FF0: {[conv4.c Value[13 x 13 x 256 x *2]] }
+00000075F0175090: {[conv5.z Value[13 x 13 x 256 x *2]] }
+00000075F0175130: {[conv2.z Value[27 x 27 x 192 x *2]] }
+00000075F0175310: {[h2.t Value[4096 x *2]] }
+00000075F0175450: {[err Value[1]] }
+00000075F01754F0: {[conv1.z Value[56 x 56 x 64 x *2]] }
+00000075F0175590: {[OutputNodes.W Value[1000 x 4096]] }
+00000075F0175630: {[conv5.c Value[13 x 13 x 256 x *2]] }
+00000075F01756D0: {[h1.z Value[4096 x *2]] }
+00000075F0175770: {[h2.y Value[4096 x *2]] }
+00000075F0175810: {[OutputNodes.t Value[1000 x *2]] }
+00000075F0175950: {[conv1.c Value[56 x 56 x 64 x *2]] }
+00000075F01759F0: {[pool1 Value[27 x 27 x 64 x *2]] }
+00000075F0175A90: {[conv3.c Value[13 x 13 x 384 x *2]] }
+00000075F0175B30: {[conv4.z Value[13 x 13 x 256 x *2]] }
+00000075F0175BD0: {[h1.y Value[4096 x *2]] }
+00000075F0175DB0: {[ce Value[1]] }
+00000075F0175E50: {[conv5.y Value[13 x 13 x 256 x *2]] }
+00000075F0175EF0: {[h2.z Value[4096 x *2]] }
+00000075F0175F90: {[OutputNodes.b Value[1000]] }
+00000075F0176030: {[h2_d Value[4096 x *2]] }
+00000075F01760D0: {[conv4.y Value[13 x 13 x 256 x *2]] }
+00000075F01762B0: {[pool2 Value[13 x 13 x 192 x *2]] }
+00000075F0176350: {[conv2.c Value[27 x 27 x 192 x *2]] }
+00000075F01765D0: {[pool3 Value[6 x 6 x 256 x *2]] }
+00000075F01767B0: {[conv1.y Value[56 x 56 x 64 x *2]] }
+00000075F0176850: {[h1.t Value[4096 x *2]] }
+00000075F0176A30: {[h1_d Value[4096 x *2]] }
+00000075F0176B70: {[conv3.z Value[13 x 13 x 384 x *2]] }
+00000075F0176D50: {[conv2.y Value[27 x 27 x 192 x *2]] }
+00000075F0176DF0: {[conv3.y Value[13 x 13 x 384 x *2]] }
+00000075F9E74380: {[features Value[224 x 224 x 3 x *2]] }
+00000075F9E746A0: {[conv3.W Value[384 x 1728]] }
+00000075F9E74920: {[conv3.b Value[1 x 1 x 384]] }
+00000075F9E74CE0: {[conv4.W Value[256 x 3456]] }
+00000075F9E751E0: {[conv2.b Value[1 x 1 x 192]] }
+00000075F9E753C0: {[conv1.W Value[64 x 363]] }
+00000075F9E75DC0: {[conv1.b Value[1 x 1 x 64]] }
+00000075F9E75FA0: {[conv2.W Value[192 x 1600]] }
+00000075F9E765E0: {[labels Value[1000 x *2]] }
+00000075F9E76EA0: {[conv5.b Value[1 x 1 x 256]] }
+00000075F9E771C0: {[conv5.W Value[256 x 2304]] }
+00000075F9E77F80: {[conv4.b Value[1 x 1 x 256]] }
 
-07/13/2016 04:40:31: Minibatch[1-32]: err = 0.99800000 * 500; ce = 7.32805452 * 500
-07/13/2016 04:40:31: Final Results: Minibatch[1-32]: err = 0.99800000 * 500; ce = 7.32805452 * 500; perplexity = 1522.41706237
+07/14/2016 05:30:51: Minibatch[1-32]: err = 0.99800000 * 500; ce = 7.32805450 * 500
+07/14/2016 05:30:51: Final Results: Minibatch[1-32]: err = 0.99800000 * 500; ce = 7.32805450 * 500; perplexity = 1522.41703333
 
-07/13/2016 04:40:31: Action "test" complete.
+07/14/2016 05:30:51: Action "test" complete.
 
-07/13/2016 04:40:31: __COMPLETED__
+07/14/2016 05:30:51: __COMPLETED__

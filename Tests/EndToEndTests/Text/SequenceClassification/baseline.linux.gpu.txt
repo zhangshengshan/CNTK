@@ -3,13 +3,13 @@ CPU info:
     Hardware threads: 24
     Total Memory: 264172964 kB
 -------------------------------------------------------------------
-=== Running /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/debug/bin/cntk configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config/seqcla.cntk currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data RunDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config OutputDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu DeviceId=0 timestamping=true
+=== Running /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/release/bin/cntk configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config/seqcla.cntk currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data RunDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config OutputDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu DeviceId=0 timestamping=true
 -------------------------------------------------------------------
 Build info: 
 
-		Built time: Jul 13 2016 11:58:00
+		Built time: Jul 14 2016 12:04:41
 		Last modified date: Tue Jul 12 04:28:35 2016
-		Build type: debug
+		Build type: release
 		Build target: GPU
 		With 1bit-SGD: no
 		Math lib: mkl
@@ -17,45 +17,45 @@ Build info:
 		CUB_PATH: /usr/local/cub-1.4.1
 		CUDNN_PATH: /usr/local/cudnn-4.0
 		Build Branch: HEAD
-		Build SHA1: 50bb4c8afbc87c14548a5b5f315a064186a5cb5f
-		Built by philly on 2bc22072e267
+		Build SHA1: 72bee394bf461e8f6f0feb593a8416c05f481957
+		Built by philly on 34e58dd0283f
 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
 -------------------------------------------------------------------
 Changed current directory to /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data
-07/13/2016 12:23:35: -------------------------------------------------------------------
-07/13/2016 12:23:35: Build info: 
+07/14/2016 12:34:20: -------------------------------------------------------------------
+07/14/2016 12:34:20: Build info: 
 
-07/13/2016 12:23:35: 		Built time: Jul 13 2016 11:58:00
-07/13/2016 12:23:35: 		Last modified date: Tue Jul 12 04:28:35 2016
-07/13/2016 12:23:35: 		Build type: debug
-07/13/2016 12:23:35: 		Build target: GPU
-07/13/2016 12:23:35: 		With 1bit-SGD: no
-07/13/2016 12:23:35: 		Math lib: mkl
-07/13/2016 12:23:35: 		CUDA_PATH: /usr/local/cuda-7.5
-07/13/2016 12:23:35: 		CUB_PATH: /usr/local/cub-1.4.1
-07/13/2016 12:23:35: 		CUDNN_PATH: /usr/local/cudnn-4.0
-07/13/2016 12:23:35: 		Build Branch: HEAD
-07/13/2016 12:23:35: 		Build SHA1: 50bb4c8afbc87c14548a5b5f315a064186a5cb5f
-07/13/2016 12:23:35: 		Built by philly on 2bc22072e267
-07/13/2016 12:23:35: 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
-07/13/2016 12:23:35: -------------------------------------------------------------------
-07/13/2016 12:23:36: -------------------------------------------------------------------
-07/13/2016 12:23:36: GPU info:
+07/14/2016 12:34:20: 		Built time: Jul 14 2016 12:04:41
+07/14/2016 12:34:20: 		Last modified date: Tue Jul 12 04:28:35 2016
+07/14/2016 12:34:20: 		Build type: release
+07/14/2016 12:34:20: 		Build target: GPU
+07/14/2016 12:34:20: 		With 1bit-SGD: no
+07/14/2016 12:34:20: 		Math lib: mkl
+07/14/2016 12:34:20: 		CUDA_PATH: /usr/local/cuda-7.5
+07/14/2016 12:34:20: 		CUB_PATH: /usr/local/cub-1.4.1
+07/14/2016 12:34:20: 		CUDNN_PATH: /usr/local/cudnn-4.0
+07/14/2016 12:34:20: 		Build Branch: HEAD
+07/14/2016 12:34:20: 		Build SHA1: 72bee394bf461e8f6f0feb593a8416c05f481957
+07/14/2016 12:34:20: 		Built by philly on 34e58dd0283f
+07/14/2016 12:34:20: 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
+07/14/2016 12:34:20: -------------------------------------------------------------------
+07/14/2016 12:34:21: -------------------------------------------------------------------
+07/14/2016 12:34:21: GPU info:
 
-07/13/2016 12:23:36: 		Device[0]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:23:36: 		Device[1]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:23:36: 		Device[2]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:23:36: 		Device[3]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:23:36: -------------------------------------------------------------------
+07/14/2016 12:34:21: 		Device[0]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:34:21: 		Device[1]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:34:21: 		Device[2]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:34:21: 		Device[3]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:34:21: -------------------------------------------------------------------
 
-07/13/2016 12:23:36: Running on localhost at 2016/07/13 12:23:36
-07/13/2016 12:23:36: Command line: 
-/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/debug/bin/cntk  configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config/seqcla.cntk  currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data  RunDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu  DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data  ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config  OutputDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu  DeviceId=0  timestamping=true
+07/14/2016 12:34:21: Running on localhost at 2016/07/14 12:34:21
+07/14/2016 12:34:21: Command line: 
+/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/release/bin/cntk  configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config/seqcla.cntk  currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data  RunDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu  DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data  ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config  OutputDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu  DeviceId=0  timestamping=true
 
 
 
-07/13/2016 12:23:36: >>>>>>>>>>>>>>>>>>>> RAW CONFIG (VARIABLES NOT RESOLVED) >>>>>>>>>>>>>>>>>>>>
-07/13/2016 12:23:36: RootDir = ".."
+07/14/2016 12:34:21: >>>>>>>>>>>>>>>>>>>> RAW CONFIG (VARIABLES NOT RESOLVED) >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:34:21: RootDir = ".."
 ConfigDir = "$RootDir$/Config"
 DataDir   = "$RootDir$/Data"
 OutputDir = "$RootDir$/Output"
@@ -157,24 +157,24 @@ Write=[
 outputPath = "$OutputDir$/output.txt"        
 ]
 currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data
-RunDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu
+RunDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu
 DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data
 ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config
-OutputDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu
+OutputDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu
 DeviceId=0
 timestamping=true
 
-07/13/2016 12:23:36: <<<<<<<<<<<<<<<<<<<< RAW CONFIG (VARIABLES NOT RESOLVED)  <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:34:21: <<<<<<<<<<<<<<<<<<<< RAW CONFIG (VARIABLES NOT RESOLVED)  <<<<<<<<<<<<<<<<<<<<
 
-07/13/2016 12:23:36: >>>>>>>>>>>>>>>>>>>> RAW CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
-07/13/2016 12:23:36: RootDir = ".."
+07/14/2016 12:34:21: >>>>>>>>>>>>>>>>>>>> RAW CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:34:21: RootDir = ".."
 ConfigDir = "../Config"
 DataDir   = "../Data"
 OutputDir = "../Output"
-ModelDir  = "/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models"
+ModelDir  = "/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models"
 command=Train 
 deviceId = 0
-modelPath="/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models/seqcla.dnn"
+modelPath="/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models/seqcla.dnn"
 Train=[
     action="train"
     run=BrainScriptNetworkBuilder
@@ -239,7 +239,7 @@ labels   = Input(numLabels)
             ]
         ]
    ]    
-outputPath = "/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/output.txt"        
+outputPath = "/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/output.txt"        
 ]
 Write=[
     action="test"
@@ -249,7 +249,7 @@ Write=[
       sampleSeparator=\n%d\t|w\s
       elementSeparator=\s
     ]
-    modelFile = "/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models/seqcla.dnn"    
+    modelFile = "/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models/seqcla.dnn"    
     reader = [
             readerType = "CNTKTextFormatReader"
             file = "/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data/Train.txt"            
@@ -266,29 +266,29 @@ Write=[
                 ]
             ]
    ]    
-outputPath = "/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/output.txt"        
+outputPath = "/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/output.txt"        
 ]
 currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data
-RunDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu
+RunDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu
 DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data
 ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config
-OutputDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu
+OutputDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu
 DeviceId=0
 timestamping=true
 
-07/13/2016 12:23:36: <<<<<<<<<<<<<<<<<<<< RAW CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:34:21: <<<<<<<<<<<<<<<<<<<< RAW CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
 
-07/13/2016 12:23:36: >>>>>>>>>>>>>>>>>>>> PROCESSED CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:34:21: >>>>>>>>>>>>>>>>>>>> PROCESSED CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
 configparameters: seqcla.cntk:command=Train
 configparameters: seqcla.cntk:ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config
 configparameters: seqcla.cntk:currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data
 configparameters: seqcla.cntk:DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data
 configparameters: seqcla.cntk:deviceId=0
-configparameters: seqcla.cntk:ModelDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models
-configparameters: seqcla.cntk:modelPath=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models/seqcla.dnn
-configparameters: seqcla.cntk:OutputDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu
+configparameters: seqcla.cntk:ModelDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models
+configparameters: seqcla.cntk:modelPath=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models/seqcla.dnn
+configparameters: seqcla.cntk:OutputDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu
 configparameters: seqcla.cntk:RootDir=..
-configparameters: seqcla.cntk:RunDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu
+configparameters: seqcla.cntk:RunDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu
 configparameters: seqcla.cntk:timestamping=true
 configparameters: seqcla.cntk:Train=[
     action="train"
@@ -354,7 +354,7 @@ labels   = Input(numLabels)
             ]
         ]
    ]    
-outputPath = "/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/output.txt"        
+outputPath = "/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/output.txt"        
 ]
 
 configparameters: seqcla.cntk:Write=[
@@ -365,7 +365,7 @@ configparameters: seqcla.cntk:Write=[
       sampleSeparator=\n%d\t|w\s
       elementSeparator=\s
     ]
-    modelFile = "/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models/seqcla.dnn"    
+    modelFile = "/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models/seqcla.dnn"    
     reader = [
             readerType = "CNTKTextFormatReader"
             file = "/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data/Train.txt"            
@@ -382,25 +382,25 @@ configparameters: seqcla.cntk:Write=[
                 ]
             ]
    ]    
-outputPath = "/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/output.txt"        
+outputPath = "/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/output.txt"        
 ]
 
-07/13/2016 12:23:36: <<<<<<<<<<<<<<<<<<<< PROCESSED CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
-07/13/2016 12:23:36: Commands: Train
-07/13/2016 12:23:36: Precision = "float"
-07/13/2016 12:23:36: CNTKModelPath: /tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models/seqcla.dnn
-07/13/2016 12:23:36: CNTKCommandTrainInfo: Train : 5
-07/13/2016 12:23:36: CNTKCommandTrainInfo: CNTKNoMoreCommands_Total : 5
+07/14/2016 12:34:21: <<<<<<<<<<<<<<<<<<<< PROCESSED CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:34:21: Commands: Train
+07/14/2016 12:34:21: Precision = "float"
+07/14/2016 12:34:21: CNTKModelPath: /tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models/seqcla.dnn
+07/14/2016 12:34:21: CNTKCommandTrainInfo: Train : 5
+07/14/2016 12:34:21: CNTKCommandTrainInfo: CNTKNoMoreCommands_Total : 5
 
-07/13/2016 12:23:36: ##############################################################################
-07/13/2016 12:23:36: #                                                                            #
-07/13/2016 12:23:36: # Action "train"                                                             #
-07/13/2016 12:23:36: #                                                                            #
-07/13/2016 12:23:36: ##############################################################################
+07/14/2016 12:34:21: ##############################################################################
+07/14/2016 12:34:21: #                                                                            #
+07/14/2016 12:34:21: # Action "train"                                                             #
+07/14/2016 12:34:21: #                                                                            #
+07/14/2016 12:34:21: ##############################################################################
 
-07/13/2016 12:23:36: CNTKCommandTrainBegin: Train
+07/14/2016 12:34:21: CNTKCommandTrainBegin: Train
 
-07/13/2016 12:23:36: Creating virgin network.
+07/14/2016 12:34:21: Creating virgin network.
 
 Post-processing network...
 
@@ -516,14 +516,14 @@ Validating network, final pass.
 
 Post-processing network complete.
 
-07/13/2016 12:23:36: Created model with 71 nodes on GPU 0.
+07/14/2016 12:34:21: Created model with 71 nodes on GPU 0.
 
-07/13/2016 12:23:36: Training criterion node(s):
-07/13/2016 12:23:36: 	ce = CrossEntropyWithSoftmax
+07/14/2016 12:34:21: Training criterion node(s):
+07/14/2016 12:34:21: 	ce = CrossEntropyWithSoftmax
 
-07/13/2016 12:23:36: Evaluation criterion node(s):
+07/14/2016 12:34:21: Evaluation criterion node(s):
 
-07/13/2016 12:23:36: 	err = ErrorPrediction
+07/14/2016 12:34:21: 	err = ErrorPrediction
 
 
 Allocating matrices for forward and/or backward propagation.
@@ -531,158 +531,158 @@ Allocating matrices for forward and/or backward propagation.
 Memory Sharing Structure:
 
 (nil): {[BS.Constants.Zero Gradient[1]] [err Gradient[1]] [features Gradient[1 x t]] [l1.embedding Gradient[50 x 2000]] [l1.embedding.x Gradient[2000 x 50]] [l1.lookup Gradient[50 x t]] [labels Gradient[5 x *]] [out Gradient[5 x 1 x WhereNodeAxis]] [t Gradient[1 x 1 x t]] [t Value[1 x 1 x t]] }
-0x7fd3821a3bb8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Value[25]] }
-0x7fd3821a4ca8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 50]] }
-0x7fd3821a5da8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 25]] }
-0x7fd3821a6d38: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[1].ElementTimesArgs[0] Value[25]] }
-0x7fd3821a7448: {[l2.lstm.prevState.c Value[25 x t]] }
-0x7fd3821a9968: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Value[25]] }
-0x7fd3821aab38: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 50]] }
-0x7fd3821ab1b8: {[l2.result.out.indexSequence.indexSequence Value[1 x WhereNodeAxis]] }
-0x7fd3821abbc8: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 25]] }
-0x7fd3821acc18: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[1].ElementTimesArgs[0] Value[25]] }
-0x7fd3821ae298: {[l2.lstm.lstmState._privateInnards.ot._ Gradient[25 x t]] [l2.result.beginFlags Value[1 x t]] [l2.result.beginFlags.input.z Gradient[1 x t]] }
-0x7fd3821ae3a8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[0] Value[25]] }
-0x7fd3821af5e8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 50]] }
-0x7fd3821b0a18: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[1].TimesArgs[0] Value[25 x 25]] }
-0x7fd3821b0d18: {[l3.z.B Value[5 x 1]] }
-0x7fd3821b8648: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Value[25 x t]] }
-0x7fd3821b8808: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0] Value[25 x t]] [l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 50]] }
-0x7fd3821b8908: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0] Value[25 x t]] [l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 50]] }
-0x7fd3821b8e68: {[l1.lookup Value[50 x t]] }
-0x7fd3821b9348: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Value[25 x t]] [l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Gradient[25]] }
-0x7fd3821b9508: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0] Value[25 x t]] [l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 50]] }
-0x7fd3821b96c8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Gradient[25]] [l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Value[25 x t]] }
-0x7fd3821ba1d8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[1] Value[25 x t]] [l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Gradient[25]] }
-0x7fd3821ba398: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0] Value[25 x t]] [l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 50]] }
-0x7fd3821ba558: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[1] Value[25 x t]] }
-0x7fd3821ba718: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0] Value[25 x t]] }
-0x7fd3821ba8d8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[1] Value[25 x t]] }
-0x7fd3821baa98: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0] Value[25 x t]] }
-0x7fd3821bac58: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[1] Value[25 x t]] }
-0x7fd3821bae18: {[l2.lstm.lstmState._privateInnards.ft._ Value[25 x t]] }
-0x7fd3821bafd8: {[l2.lstm.lstmState._privateInnards.ft Value[25 x t]] }
-0x7fd3821bb198: {[l2.lstm.lstmState._privateInnards.bft Value[25 x t]] }
-0x7fd3821bb358: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[1] Value[25 x t]] }
-0x7fd3821bb518: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0] Value[25 x t]] }
-0x7fd3821bb6d8: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[1] Value[25 x t]] }
-0x7fd3821bb898: {[l2.lstm.lstmState._privateInnards.it._ Value[25 x t]] }
-0x7fd3821bba58: {[l2.lstm.lstmState._privateInnards.it Value[25 x t]] }
-0x7fd3821bbc18: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[1] Value[25 x t]] }
-0x7fd3821bbdd8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z Value[25 x t]] }
-0x7fd3821bbf98: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1] Value[25 x t]] }
-0x7fd3821bc158: {[l2.lstm.lstmState._privateInnards.bit Value[25 x t]] }
-0x7fd3821bc318: {[l2.lstm.lstmState._privateInnards.ct Value[25 x t]] }
-0x7fd3821bc4d8: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[1] Value[25 x t]] }
-0x7fd3821bc698: {[l2.lstm.lstmState._privateInnards.ot._ Value[25 x t]] }
-0x7fd3821bc858: {[l2.lstm.lstmState._privateInnards.ot Value[25 x t]] }
-0x7fd3821bca18: {[l2.lstm.lstmState._privateInnards.ht.ElementTimesArgs[1] Value[25 x t]] }
-0x7fd3821bcbd8: {[l2.lstm.lstmState._privateInnards.ht Value[25 x t]] }
-0x7fd3821bcd98: {[l2.lstm.lstmState._privateInnards.ot Gradient[25 x t]] [l2.result.beginFlags.input.z.ElementTimesArgs[0] Value[1 x t]] }
-0x7fd3821bcf58: {[l2.lstm.lstmState._privateInnards.ct Gradient[25 x t]] [l2.result.beginFlags.input.z Value[1 x t]] }
-0x7fd3821bd118: {[l2.lstm.lstmState._privateInnards.ht.ElementTimesArgs[1] Gradient[25 x t]] [l2.result.beginFlags.input Value[1 x t]] [l2.result.beginFlags.input.z.ElementTimesArgs[0] Gradient[1 x t]] }
-0x7fd3821bd2d8: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0] Gradient[25 x t]] [l2.result.beginFlags.input Gradient[1 x t]] [l2.result.out Value[25 x WhereNodeAxis]] [l2.result.out.indexSequence.indexSequence Gradient[1 x WhereNodeAxis]] }
-0x7fd3821bd498: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[1] Gradient[25 x t]] [l2.result.beginFlags Gradient[1 x t]] [l2.result.out.indexSequence Gradient[1 x WhereNodeAxis]] [l3.z.z.PlusArgs[0] Value[5 x WhereNodeAxis]] }
-0x7fd3821bd658: {[l3.z.W Gradient[5 x 25]] [l3.z.z Value[5 x 1 x WhereNodeAxis]] }
-0x7fd3821bd818: {[l2.lstm.lstmState._privateInnards.ht Gradient[25 x t]] [l3.act Value[5 x 1 x WhereNodeAxis]] [l3.z.z.PlusArgs[0] Gradient[5 x WhereNodeAxis]] }
-0x7fd3821bd9d8: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[1].ElementTimesArgs[0] Gradient[25]] [l2.result.out Gradient[25 x WhereNodeAxis]] [l3.z.z Gradient[5 x 1 x WhereNodeAxis]] [l3p Value[5 x 1 x *]] }
-0x7fd3821be488: {[ce Gradient[1]] }
-0x7fd3821be648: {[l2.lstm.lstmState._privateInnards.bft Gradient[25 x t]] [l3p Gradient[5 x 1 x *]] }
-0x7fd3821be808: {[l3.act Gradient[5 x 1 x WhereNodeAxis]] [l3.z.B Gradient[5 x 1]] }
-0x7fd3821beb18: {[l2.lstm.lstmState._privateInnards.bit Gradient[25 x t]] }
-0x7fd3821becd8: {[l2.lstm.lstmState._privateInnards.it Gradient[25 x t]] }
-0x7fd3821bee98: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1] Gradient[25 x t]] }
-0x7fd3821bf058: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z Gradient[25 x t]] }
-0x7fd3821bf218: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0] Gradient[25 x t]] }
-0x7fd3821bf3d8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[1] Gradient[25 x t]] }
-0x7fd3821bf598: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[1].TimesArgs[0] Gradient[25 x 25]] }
-0x7fd3821bf758: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[1] Gradient[25 x t]] [l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Gradient[25 x t]] [l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Gradient[25 x t]] [l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Gradient[25 x t]] [l2.lstm.prevState.h Gradient[25 x t]] }
-0x7fd3821bf918: {[l2.lstm.lstmState._privateInnards.it._ Gradient[25 x t]] }
-0x7fd3821bfad8: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0] Gradient[25 x t]] }
-0x7fd3821bfc98: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[1] Gradient[25 x t]] }
-0x7fd3821bfe58: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[1].ElementTimesArgs[0] Gradient[25]] }
-0x7fd3821c0018: {[l2.lstm.prevState.c Gradient[25 x t]] }
-0x7fd3821c01d8: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0] Gradient[25 x t]] }
-0x7fd3821c0398: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[1] Gradient[25 x t]] }
-0x7fd3821c0558: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 25]] }
-0x7fd3821c0718: {[l2.lstm.lstmState._privateInnards.ft Gradient[25 x t]] }
-0x7fd3821c08d8: {[l2.lstm.lstmState._privateInnards.ft._ Gradient[25 x t]] }
-0x7fd3821c0a98: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0] Gradient[25 x t]] }
-0x7fd3821c0c58: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[1] Gradient[25 x t]] }
-0x7fd3821c0e18: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[1].ElementTimesArgs[0] Gradient[25]] }
-0x7fd3821c0fd8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0] Gradient[25 x t]] }
-0x7fd3821c1198: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[1] Gradient[25 x t]] }
-0x7fd3821c1358: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 25]] }
-0x7fd3821c1518: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0] Gradient[25 x t]] }
-0x7fd3821c16d8: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[1] Gradient[25 x t]] }
-0x7fd3821c1898: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 25]] }
-0x7fd382907398: {[out Value[5 x 1 x WhereNodeAxis]] }
-0x7fd382908388: {[l2.result.out.indexSequence Value[1 x WhereNodeAxis]] }
-0x7fd382911e18: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Value[25]] }
-0x7fd382914628: {[features Value[1 x t]] }
-0x7fd382914ea8: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 50]] }
-0x7fd382916038: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 25]] }
-0x7fd38291af78: {[l1.embedding.x Value[2000 x 50]] }
-0x7fd38291bbc8: {[ce Value[1]] }
-0x7fd38291c608: {[l1.embedding Value[50 x 2000]] }
-0x7fd38291ced8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[0] Gradient[25]] [l2.lstm.prevState.h Value[25 x t]] }
-0x7fd38291e368: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[1].ElementTimesArgs[0] Value[25]] }
-0x7fd382963b78: {[l3.z.W Value[5 x 25]] }
-0x7fd3829644c8: {[err Value[1]] }
-0x7fd3879f0338: {[BS.Constants.Zero Value[1]] }
-0x7fd3879f7598: {[labels Value[5 x *]] }
+0x7f75a7130658: {[ce Value[1]] }
+0x7f75a7135208: {[l3.z.W Value[5 x 25]] }
+0x7f75a7136c98: {[BS.Constants.Zero Value[1]] }
+0x7f75a7136d88: {[l3.z.B Value[5 x 1]] }
+0x7f75a7137558: {[out Value[5 x 1 x WhereNodeAxis]] }
+0x7f75a713a058: {[l2.result.out.indexSequence Value[1 x WhereNodeAxis]] }
+0x7f75a7140b58: {[l2.lstm.lstmState._privateInnards.ot._ Gradient[25 x t]] [l2.result.beginFlags Value[1 x t]] [l2.result.beginFlags.input.z Gradient[1 x t]] }
+0x7f75a7142e28: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 50]] }
+0x7f75a7143b78: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Value[25]] }
+0x7f75a7146d18: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 25]] }
+0x7f75a71492a8: {[l2.result.out.indexSequence.indexSequence Value[1 x WhereNodeAxis]] }
+0x7f75a71498c8: {[features Value[1 x t]] }
+0x7f75a714ce18: {[l1.embedding.x Value[2000 x 50]] }
+0x7f75a714e0f8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[0] Gradient[25]] [l2.lstm.prevState.h Value[25 x t]] }
+0x7f75a7150098: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[1].ElementTimesArgs[0] Value[25]] }
+0x7f75a7152208: {[err Value[1]] }
+0x7f75a7152b28: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 50]] }
+0x7f75a7153058: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Value[25]] }
+0x7f75a71555f8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 25]] }
+0x7f75a71563d8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[1].ElementTimesArgs[0] Value[25]] }
+0x7f75a7157538: {[l2.lstm.prevState.c Value[25 x t]] }
+0x7f75a7158f88: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Value[25]] }
+0x7f75a715a128: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 50]] }
+0x7f75a715b208: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 25]] }
+0x7f75a715c2e8: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[1].ElementTimesArgs[0] Value[25]] }
+0x7f75a715da98: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[0] Value[25]] }
+0x7f75a715ec78: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 50]] }
+0x7f75a715f2a8: {[l1.embedding Value[50 x 2000]] }
+0x7f75a715ff08: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[1].TimesArgs[0] Value[25 x 25]] }
+0x7f75a7167bf8: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Value[25 x t]] }
+0x7f75a7167db8: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0] Value[25 x t]] [l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 50]] }
+0x7f75a7168358: {[l1.lookup Value[50 x t]] }
+0x7f75a7168898: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Value[25 x t]] [l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Gradient[25]] }
+0x7f75a7168a58: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0] Value[25 x t]] [l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 50]] }
+0x7f75a7168c18: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Gradient[25]] [l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Value[25 x t]] }
+0x7f75a7169668: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0] Value[25 x t]] [l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 50]] }
+0x7f75a71697c8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[1] Value[25 x t]] [l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Gradient[25]] }
+0x7f75a7169988: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0] Value[25 x t]] [l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 50]] }
+0x7f75a7169b48: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[1] Value[25 x t]] }
+0x7f75a7169d08: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0] Value[25 x t]] }
+0x7f75a7169ec8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[1] Value[25 x t]] }
+0x7f75a716a088: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0] Value[25 x t]] }
+0x7f75a716a248: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[1] Value[25 x t]] }
+0x7f75a716a408: {[l2.lstm.lstmState._privateInnards.ft._ Value[25 x t]] }
+0x7f75a716a5c8: {[l2.lstm.lstmState._privateInnards.ft Value[25 x t]] }
+0x7f75a716a788: {[l2.lstm.lstmState._privateInnards.bft Value[25 x t]] }
+0x7f75a716a948: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[1] Value[25 x t]] }
+0x7f75a716ab08: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0] Value[25 x t]] }
+0x7f75a716acc8: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[1] Value[25 x t]] }
+0x7f75a716ae88: {[l2.lstm.lstmState._privateInnards.it._ Value[25 x t]] }
+0x7f75a716b048: {[l2.lstm.lstmState._privateInnards.it Value[25 x t]] }
+0x7f75a716b208: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[1] Value[25 x t]] }
+0x7f75a716b3c8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z Value[25 x t]] }
+0x7f75a716b588: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1] Value[25 x t]] }
+0x7f75a716b748: {[l2.lstm.lstmState._privateInnards.bit Value[25 x t]] }
+0x7f75a716b908: {[l2.lstm.lstmState._privateInnards.ct Value[25 x t]] }
+0x7f75a716bac8: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[1] Value[25 x t]] }
+0x7f75a716bc88: {[l2.lstm.lstmState._privateInnards.ot._ Value[25 x t]] }
+0x7f75a716be48: {[l2.lstm.lstmState._privateInnards.ot Value[25 x t]] }
+0x7f75a716c008: {[l2.lstm.lstmState._privateInnards.ht.ElementTimesArgs[1] Value[25 x t]] }
+0x7f75a716c1c8: {[l2.lstm.lstmState._privateInnards.ht Value[25 x t]] }
+0x7f75a716c388: {[l2.lstm.lstmState._privateInnards.ot Gradient[25 x t]] [l2.result.beginFlags.input.z.ElementTimesArgs[0] Value[1 x t]] }
+0x7f75a716c548: {[l2.lstm.lstmState._privateInnards.ct Gradient[25 x t]] [l2.result.beginFlags.input.z Value[1 x t]] }
+0x7f75a716c708: {[l2.lstm.lstmState._privateInnards.ht.ElementTimesArgs[1] Gradient[25 x t]] [l2.result.beginFlags.input Value[1 x t]] [l2.result.beginFlags.input.z.ElementTimesArgs[0] Gradient[1 x t]] }
+0x7f75a716c8c8: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0] Gradient[25 x t]] [l2.result.beginFlags.input Gradient[1 x t]] [l2.result.out Value[25 x WhereNodeAxis]] [l2.result.out.indexSequence.indexSequence Gradient[1 x WhereNodeAxis]] }
+0x7f75a716ca88: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[1] Gradient[25 x t]] [l2.result.beginFlags Gradient[1 x t]] [l2.result.out.indexSequence Gradient[1 x WhereNodeAxis]] [l3.z.z.PlusArgs[0] Value[5 x WhereNodeAxis]] }
+0x7f75a716cc48: {[l3.z.W Gradient[5 x 25]] [l3.z.z Value[5 x 1 x WhereNodeAxis]] }
+0x7f75a716ce08: {[l2.lstm.lstmState._privateInnards.ht Gradient[25 x t]] [l3.act Value[5 x 1 x WhereNodeAxis]] [l3.z.z.PlusArgs[0] Gradient[5 x WhereNodeAxis]] }
+0x7f75a716cfc8: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[1].ElementTimesArgs[0] Gradient[25]] [l2.result.out Gradient[25 x WhereNodeAxis]] [l3.z.z Gradient[5 x 1 x WhereNodeAxis]] [l3p Value[5 x 1 x *]] }
+0x7f75a716da48: {[ce Gradient[1]] }
+0x7f75a716dc08: {[l2.lstm.lstmState._privateInnards.bft Gradient[25 x t]] [l3p Gradient[5 x 1 x *]] }
+0x7f75a716ddc8: {[l3.act Gradient[5 x 1 x WhereNodeAxis]] [l3.z.B Gradient[5 x 1]] }
+0x7f75a716e0d8: {[l2.lstm.lstmState._privateInnards.bit Gradient[25 x t]] }
+0x7f75a716e298: {[l2.lstm.lstmState._privateInnards.it Gradient[25 x t]] }
+0x7f75a716e458: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1] Gradient[25 x t]] }
+0x7f75a716e618: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z Gradient[25 x t]] }
+0x7f75a716e7d8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0] Gradient[25 x t]] }
+0x7f75a716e998: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[1] Gradient[25 x t]] }
+0x7f75a716eb58: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[1].TimesArgs[0] Gradient[25 x 25]] }
+0x7f75a716ed18: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[1] Gradient[25 x t]] [l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Gradient[25 x t]] [l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Gradient[25 x t]] [l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Gradient[25 x t]] [l2.lstm.prevState.h Gradient[25 x t]] }
+0x7f75a716eed8: {[l2.lstm.lstmState._privateInnards.it._ Gradient[25 x t]] }
+0x7f75a716f098: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0] Gradient[25 x t]] }
+0x7f75a716f1f8: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[1] Gradient[25 x t]] }
+0x7f75a716f3b8: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[1].ElementTimesArgs[0] Gradient[25]] }
+0x7f75a716f578: {[l2.lstm.prevState.c Gradient[25 x t]] }
+0x7f75a716f738: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0] Gradient[25 x t]] }
+0x7f75a716f8f8: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[1] Gradient[25 x t]] }
+0x7f75a716fab8: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 25]] }
+0x7f75a716fc78: {[l2.lstm.lstmState._privateInnards.ft Gradient[25 x t]] }
+0x7f75a716fe38: {[l2.lstm.lstmState._privateInnards.ft._ Gradient[25 x t]] }
+0x7f75a716fff8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0] Gradient[25 x t]] }
+0x7f75a71701b8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[1] Gradient[25 x t]] }
+0x7f75a7170378: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[1].ElementTimesArgs[0] Gradient[25]] }
+0x7f75a7170538: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0] Gradient[25 x t]] }
+0x7f75a71706f8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[1] Gradient[25 x t]] }
+0x7f75a71708b8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 25]] }
+0x7f75a7170a78: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0] Gradient[25 x t]] }
+0x7f75a7170c38: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[1] Gradient[25 x t]] }
+0x7f75a7170df8: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 25]] }
+0x7f75adcf9348: {[labels Value[5 x *]] }
 
-07/13/2016 12:23:36: No PreCompute nodes found, skipping PreCompute step.
+07/14/2016 12:34:21: No PreCompute nodes found, skipping PreCompute step.
 
-07/13/2016 12:23:36: Starting Epoch 1: learning rate per sample = 0.000500  effective momentum = 0.900000  momentum as time constant = 1898.2 samples
+07/14/2016 12:34:21: Starting Epoch 1: learning rate per sample = 0.000500  effective momentum = 0.900000  momentum as time constant = 1898.2 samples
 BlockRandomizer::StartEpoch: epoch 0: frames [0..5433] (first sequence at sample 0), data subset 0 of 1
 
-07/13/2016 12:23:36: Starting minibatch loop.
+07/14/2016 12:34:21: Starting minibatch loop.
 WARNING: The same matrix with dim [1, 44] has been transferred between different devices for 20 times.
-07/13/2016 12:23:38: Finished Epoch[ 1 of 5]: [Training] ce = 1.58071315 * 1247; err = 0.49879711 * 1247; totalSamplesSeen = 1247; learningRatePerSample = 0.00050000002; epochTime=1.49719s
-07/13/2016 12:23:38: SGD: Saving checkpoint model '/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models/seqcla.dnn.1'
+07/14/2016 12:34:22: Finished Epoch[ 1 of 5]: [Training] ce = 1.58071315 * 1247; err = 0.49879711 * 1247; totalSamplesSeen = 1247; learningRatePerSample = 0.00050000002; epochTime=0.456444s
+07/14/2016 12:34:22: SGD: Saving checkpoint model '/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models/seqcla.dnn.1'
 
-07/13/2016 12:23:38: Starting Epoch 2: learning rate per sample = 0.000500  effective momentum = 0.900000  momentum as time constant = 1898.2 samples
+07/14/2016 12:34:22: Starting Epoch 2: learning rate per sample = 0.000500  effective momentum = 0.900000  momentum as time constant = 1898.2 samples
 BlockRandomizer::StartEpoch: epoch 1: frames [5433..10866] (first sequence at sample 5433), data subset 0 of 1
 
-07/13/2016 12:23:38: Starting minibatch loop.
-07/13/2016 12:23:39: Finished Epoch[ 2 of 5]: [Training] ce = 1.49387495 * 1247; err = 0.44667201 * 1247; totalSamplesSeen = 2494; learningRatePerSample = 0.00050000002; epochTime=1.37033s
-07/13/2016 12:23:39: SGD: Saving checkpoint model '/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models/seqcla.dnn.2'
+07/14/2016 12:34:22: Starting minibatch loop.
+07/14/2016 12:34:22: Finished Epoch[ 2 of 5]: [Training] ce = 1.49387495 * 1247; err = 0.44667201 * 1247; totalSamplesSeen = 2494; learningRatePerSample = 0.00050000002; epochTime=0.340272s
+07/14/2016 12:34:22: SGD: Saving checkpoint model '/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models/seqcla.dnn.2'
 
-07/13/2016 12:23:39: Starting Epoch 3: learning rate per sample = 0.000500  effective momentum = 0.900000  momentum as time constant = 1898.2 samples
+07/14/2016 12:34:22: Starting Epoch 3: learning rate per sample = 0.000500  effective momentum = 0.900000  momentum as time constant = 1898.2 samples
 BlockRandomizer::StartEpoch: epoch 2: frames [10866..16299] (first sequence at sample 10866), data subset 0 of 1
 
-07/13/2016 12:23:39: Starting minibatch loop.
-07/13/2016 12:23:40: Finished Epoch[ 3 of 5]: [Training] ce = 1.42189918 * 1247; err = 0.44667201 * 1247; totalSamplesSeen = 3741; learningRatePerSample = 0.00050000002; epochTime=1.39973s
-07/13/2016 12:23:40: SGD: Saving checkpoint model '/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models/seqcla.dnn.3'
+07/14/2016 12:34:22: Starting minibatch loop.
+07/14/2016 12:34:23: Finished Epoch[ 3 of 5]: [Training] ce = 1.42189918 * 1247; err = 0.44667201 * 1247; totalSamplesSeen = 3741; learningRatePerSample = 0.00050000002; epochTime=0.376259s
+07/14/2016 12:34:23: SGD: Saving checkpoint model '/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models/seqcla.dnn.3'
 
-07/13/2016 12:23:41: Starting Epoch 4: learning rate per sample = 0.000500  effective momentum = 0.900000  momentum as time constant = 1898.2 samples
+07/14/2016 12:34:23: Starting Epoch 4: learning rate per sample = 0.000500  effective momentum = 0.900000  momentum as time constant = 1898.2 samples
 BlockRandomizer::StartEpoch: epoch 3: frames [16299..21732] (first sequence at sample 16299), data subset 0 of 1
 
-07/13/2016 12:23:41: Starting minibatch loop.
-07/13/2016 12:23:42: Finished Epoch[ 4 of 5]: [Training] ce = 1.36936852 * 1247; err = 0.44667201 * 1247; totalSamplesSeen = 4988; learningRatePerSample = 0.00050000002; epochTime=1.34645s
-07/13/2016 12:23:42: SGD: Saving checkpoint model '/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models/seqcla.dnn.4'
+07/14/2016 12:34:23: Starting minibatch loop.
+07/14/2016 12:34:23: Finished Epoch[ 4 of 5]: [Training] ce = 1.36936852 * 1247; err = 0.44667201 * 1247; totalSamplesSeen = 4988; learningRatePerSample = 0.00050000002; epochTime=0.325786s
+07/14/2016 12:34:23: SGD: Saving checkpoint model '/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models/seqcla.dnn.4'
 
-07/13/2016 12:23:42: Starting Epoch 5: learning rate per sample = 0.000500  effective momentum = 0.900000  momentum as time constant = 1898.2 samples
+07/14/2016 12:34:23: Starting Epoch 5: learning rate per sample = 0.000500  effective momentum = 0.900000  momentum as time constant = 1898.2 samples
 BlockRandomizer::StartEpoch: epoch 4: frames [21732..27165] (first sequence at sample 21732), data subset 0 of 1
 
-07/13/2016 12:23:42: Starting minibatch loop.
-07/13/2016 12:23:43: Finished Epoch[ 5 of 5]: [Training] ce = 1.33139231 * 1247; err = 0.44667201 * 1247; totalSamplesSeen = 6235; learningRatePerSample = 0.00050000002; epochTime=1.34934s
-07/13/2016 12:23:43: SGD: Saving checkpoint model '/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models/seqcla.dnn'
-07/13/2016 12:23:43: CNTKCommandTrainEnd: Train
+07/14/2016 12:34:23: Starting minibatch loop.
+07/14/2016 12:34:23: Finished Epoch[ 5 of 5]: [Training] ce = 1.33139231 * 1247; err = 0.44667201 * 1247; totalSamplesSeen = 6235; learningRatePerSample = 0.00050000002; epochTime=0.358626s
+07/14/2016 12:34:23: SGD: Saving checkpoint model '/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models/seqcla.dnn'
+07/14/2016 12:34:23: CNTKCommandTrainEnd: Train
 
-07/13/2016 12:23:43: Action "train" complete.
+07/14/2016 12:34:23: Action "train" complete.
 
-07/13/2016 12:23:43: __COMPLETED__
+07/14/2016 12:34:23: __COMPLETED__
 === Deleting last epoch data
 ==== Re-running from checkpoint
-=== Running /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/debug/bin/cntk configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config/seqcla.cntk currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data RunDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config OutputDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu DeviceId=0 timestamping=true makeMode=true
+=== Running /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/release/bin/cntk configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config/seqcla.cntk currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data RunDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config OutputDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu DeviceId=0 timestamping=true makeMode=true
 -------------------------------------------------------------------
 Build info: 
 
-		Built time: Jul 13 2016 11:58:00
+		Built time: Jul 14 2016 12:04:41
 		Last modified date: Tue Jul 12 04:28:35 2016
-		Build type: debug
+		Build type: release
 		Build target: GPU
 		With 1bit-SGD: no
 		Math lib: mkl
@@ -690,45 +690,45 @@ Build info:
 		CUB_PATH: /usr/local/cub-1.4.1
 		CUDNN_PATH: /usr/local/cudnn-4.0
 		Build Branch: HEAD
-		Build SHA1: 50bb4c8afbc87c14548a5b5f315a064186a5cb5f
-		Built by philly on 2bc22072e267
+		Build SHA1: 72bee394bf461e8f6f0feb593a8416c05f481957
+		Built by philly on 34e58dd0283f
 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
 -------------------------------------------------------------------
 Changed current directory to /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data
-07/13/2016 12:23:45: -------------------------------------------------------------------
-07/13/2016 12:23:45: Build info: 
+07/14/2016 12:34:24: -------------------------------------------------------------------
+07/14/2016 12:34:24: Build info: 
 
-07/13/2016 12:23:45: 		Built time: Jul 13 2016 11:58:00
-07/13/2016 12:23:45: 		Last modified date: Tue Jul 12 04:28:35 2016
-07/13/2016 12:23:45: 		Build type: debug
-07/13/2016 12:23:45: 		Build target: GPU
-07/13/2016 12:23:45: 		With 1bit-SGD: no
-07/13/2016 12:23:45: 		Math lib: mkl
-07/13/2016 12:23:45: 		CUDA_PATH: /usr/local/cuda-7.5
-07/13/2016 12:23:45: 		CUB_PATH: /usr/local/cub-1.4.1
-07/13/2016 12:23:45: 		CUDNN_PATH: /usr/local/cudnn-4.0
-07/13/2016 12:23:45: 		Build Branch: HEAD
-07/13/2016 12:23:45: 		Build SHA1: 50bb4c8afbc87c14548a5b5f315a064186a5cb5f
-07/13/2016 12:23:45: 		Built by philly on 2bc22072e267
-07/13/2016 12:23:45: 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
-07/13/2016 12:23:45: -------------------------------------------------------------------
-07/13/2016 12:23:46: -------------------------------------------------------------------
-07/13/2016 12:23:46: GPU info:
+07/14/2016 12:34:24: 		Built time: Jul 14 2016 12:04:41
+07/14/2016 12:34:24: 		Last modified date: Tue Jul 12 04:28:35 2016
+07/14/2016 12:34:24: 		Build type: release
+07/14/2016 12:34:24: 		Build target: GPU
+07/14/2016 12:34:24: 		With 1bit-SGD: no
+07/14/2016 12:34:24: 		Math lib: mkl
+07/14/2016 12:34:24: 		CUDA_PATH: /usr/local/cuda-7.5
+07/14/2016 12:34:24: 		CUB_PATH: /usr/local/cub-1.4.1
+07/14/2016 12:34:24: 		CUDNN_PATH: /usr/local/cudnn-4.0
+07/14/2016 12:34:24: 		Build Branch: HEAD
+07/14/2016 12:34:24: 		Build SHA1: 72bee394bf461e8f6f0feb593a8416c05f481957
+07/14/2016 12:34:24: 		Built by philly on 34e58dd0283f
+07/14/2016 12:34:24: 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
+07/14/2016 12:34:24: -------------------------------------------------------------------
+07/14/2016 12:34:25: -------------------------------------------------------------------
+07/14/2016 12:34:25: GPU info:
 
-07/13/2016 12:23:46: 		Device[0]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:23:46: 		Device[1]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:23:46: 		Device[2]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:23:46: 		Device[3]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:23:46: -------------------------------------------------------------------
+07/14/2016 12:34:25: 		Device[0]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:34:25: 		Device[1]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:34:25: 		Device[2]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:34:25: 		Device[3]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:34:25: -------------------------------------------------------------------
 
-07/13/2016 12:23:46: Running on localhost at 2016/07/13 12:23:46
-07/13/2016 12:23:46: Command line: 
-/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/debug/bin/cntk  configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config/seqcla.cntk  currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data  RunDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu  DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data  ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config  OutputDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu  DeviceId=0  timestamping=true  makeMode=true
+07/14/2016 12:34:25: Running on localhost at 2016/07/14 12:34:25
+07/14/2016 12:34:25: Command line: 
+/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/release/bin/cntk  configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config/seqcla.cntk  currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data  RunDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu  DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data  ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config  OutputDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu  DeviceId=0  timestamping=true  makeMode=true
 
 
 
-07/13/2016 12:23:46: >>>>>>>>>>>>>>>>>>>> RAW CONFIG (VARIABLES NOT RESOLVED) >>>>>>>>>>>>>>>>>>>>
-07/13/2016 12:23:46: RootDir = ".."
+07/14/2016 12:34:25: >>>>>>>>>>>>>>>>>>>> RAW CONFIG (VARIABLES NOT RESOLVED) >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:34:25: RootDir = ".."
 ConfigDir = "$RootDir$/Config"
 DataDir   = "$RootDir$/Data"
 OutputDir = "$RootDir$/Output"
@@ -830,25 +830,25 @@ Write=[
 outputPath = "$OutputDir$/output.txt"        
 ]
 currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data
-RunDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu
+RunDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu
 DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data
 ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config
-OutputDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu
+OutputDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu
 DeviceId=0
 timestamping=true
 makeMode=true
 
-07/13/2016 12:23:46: <<<<<<<<<<<<<<<<<<<< RAW CONFIG (VARIABLES NOT RESOLVED)  <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:34:25: <<<<<<<<<<<<<<<<<<<< RAW CONFIG (VARIABLES NOT RESOLVED)  <<<<<<<<<<<<<<<<<<<<
 
-07/13/2016 12:23:46: >>>>>>>>>>>>>>>>>>>> RAW CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
-07/13/2016 12:23:46: RootDir = ".."
+07/14/2016 12:34:25: >>>>>>>>>>>>>>>>>>>> RAW CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:34:25: RootDir = ".."
 ConfigDir = "../Config"
 DataDir   = "../Data"
 OutputDir = "../Output"
-ModelDir  = "/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models"
+ModelDir  = "/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models"
 command=Train 
 deviceId = 0
-modelPath="/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models/seqcla.dnn"
+modelPath="/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models/seqcla.dnn"
 Train=[
     action="train"
     run=BrainScriptNetworkBuilder
@@ -913,7 +913,7 @@ labels   = Input(numLabels)
             ]
         ]
    ]    
-outputPath = "/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/output.txt"        
+outputPath = "/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/output.txt"        
 ]
 Write=[
     action="test"
@@ -923,7 +923,7 @@ Write=[
       sampleSeparator=\n%d\t|w\s
       elementSeparator=\s
     ]
-    modelFile = "/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models/seqcla.dnn"    
+    modelFile = "/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models/seqcla.dnn"    
     reader = [
             readerType = "CNTKTextFormatReader"
             file = "/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data/Train.txt"            
@@ -940,31 +940,31 @@ Write=[
                 ]
             ]
    ]    
-outputPath = "/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/output.txt"        
+outputPath = "/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/output.txt"        
 ]
 currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data
-RunDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu
+RunDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu
 DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data
 ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config
-OutputDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu
+OutputDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu
 DeviceId=0
 timestamping=true
 makeMode=true
 
-07/13/2016 12:23:46: <<<<<<<<<<<<<<<<<<<< RAW CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:34:25: <<<<<<<<<<<<<<<<<<<< RAW CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
 
-07/13/2016 12:23:46: >>>>>>>>>>>>>>>>>>>> PROCESSED CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:34:25: >>>>>>>>>>>>>>>>>>>> PROCESSED CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
 configparameters: seqcla.cntk:command=Train
 configparameters: seqcla.cntk:ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Config
 configparameters: seqcla.cntk:currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data
 configparameters: seqcla.cntk:DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data
 configparameters: seqcla.cntk:deviceId=0
 configparameters: seqcla.cntk:makeMode=true
-configparameters: seqcla.cntk:ModelDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models
-configparameters: seqcla.cntk:modelPath=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models/seqcla.dnn
-configparameters: seqcla.cntk:OutputDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu
+configparameters: seqcla.cntk:ModelDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models
+configparameters: seqcla.cntk:modelPath=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models/seqcla.dnn
+configparameters: seqcla.cntk:OutputDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu
 configparameters: seqcla.cntk:RootDir=..
-configparameters: seqcla.cntk:RunDir=/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu
+configparameters: seqcla.cntk:RunDir=/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu
 configparameters: seqcla.cntk:timestamping=true
 configparameters: seqcla.cntk:Train=[
     action="train"
@@ -1030,7 +1030,7 @@ labels   = Input(numLabels)
             ]
         ]
    ]    
-outputPath = "/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/output.txt"        
+outputPath = "/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/output.txt"        
 ]
 
 configparameters: seqcla.cntk:Write=[
@@ -1041,7 +1041,7 @@ configparameters: seqcla.cntk:Write=[
       sampleSeparator=\n%d\t|w\s
       elementSeparator=\s
     ]
-    modelFile = "/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models/seqcla.dnn"    
+    modelFile = "/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models/seqcla.dnn"    
     reader = [
             readerType = "CNTKTextFormatReader"
             file = "/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Text/SequenceClassification/Data/Train.txt"            
@@ -1058,25 +1058,25 @@ configparameters: seqcla.cntk:Write=[
                 ]
             ]
    ]    
-outputPath = "/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/output.txt"        
+outputPath = "/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/output.txt"        
 ]
 
-07/13/2016 12:23:46: <<<<<<<<<<<<<<<<<<<< PROCESSED CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
-07/13/2016 12:23:46: Commands: Train
-07/13/2016 12:23:46: Precision = "float"
-07/13/2016 12:23:46: CNTKModelPath: /tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models/seqcla.dnn
-07/13/2016 12:23:46: CNTKCommandTrainInfo: Train : 5
-07/13/2016 12:23:46: CNTKCommandTrainInfo: CNTKNoMoreCommands_Total : 5
+07/14/2016 12:34:25: <<<<<<<<<<<<<<<<<<<< PROCESSED CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:34:25: Commands: Train
+07/14/2016 12:34:25: Precision = "float"
+07/14/2016 12:34:25: CNTKModelPath: /tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models/seqcla.dnn
+07/14/2016 12:34:25: CNTKCommandTrainInfo: Train : 5
+07/14/2016 12:34:25: CNTKCommandTrainInfo: CNTKNoMoreCommands_Total : 5
 
-07/13/2016 12:23:46: ##############################################################################
-07/13/2016 12:23:46: #                                                                            #
-07/13/2016 12:23:46: # Action "train"                                                             #
-07/13/2016 12:23:46: #                                                                            #
-07/13/2016 12:23:46: ##############################################################################
+07/14/2016 12:34:25: ##############################################################################
+07/14/2016 12:34:25: #                                                                            #
+07/14/2016 12:34:25: # Action "train"                                                             #
+07/14/2016 12:34:25: #                                                                            #
+07/14/2016 12:34:25: ##############################################################################
 
-07/13/2016 12:23:46: CNTKCommandTrainBegin: Train
+07/14/2016 12:34:25: CNTKCommandTrainBegin: Train
 
-07/13/2016 12:23:46: Starting from checkpoint. Loading network from '/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models/seqcla.dnn.4'.
+07/14/2016 12:34:25: Starting from checkpoint. Loading network from '/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models/seqcla.dnn.4'.
 
 Post-processing network...
 
@@ -1192,14 +1192,14 @@ Validating network, final pass.
 
 Post-processing network complete.
 
-07/13/2016 12:23:46: Loaded model with 71 nodes on GPU 0.
+07/14/2016 12:34:25: Loaded model with 71 nodes on GPU 0.
 
-07/13/2016 12:23:46: Training criterion node(s):
-07/13/2016 12:23:46: 	ce = CrossEntropyWithSoftmax
+07/14/2016 12:34:25: Training criterion node(s):
+07/14/2016 12:34:25: 	ce = CrossEntropyWithSoftmax
 
-07/13/2016 12:23:46: Evaluation criterion node(s):
+07/14/2016 12:34:25: Evaluation criterion node(s):
 
-07/13/2016 12:23:46: 	err = ErrorPrediction
+07/14/2016 12:34:25: 	err = ErrorPrediction
 
 
 Allocating matrices for forward and/or backward propagation.
@@ -1207,118 +1207,118 @@ Allocating matrices for forward and/or backward propagation.
 Memory Sharing Structure:
 
 (nil): {[BS.Constants.Zero Gradient[1]] [err Gradient[1]] [features Gradient[1 x t1]] [l1.embedding Gradient[50 x 2000]] [l1.embedding.x Gradient[2000 x 50]] [l1.lookup Gradient[50 x t1]] [labels Gradient[5 x *]] [out Gradient[5 x 1 x WhereNodeAxis]] [t Gradient[1 x 1 x t1]] [t Value[1 x 1 x t1]] }
-0x7f163f079c68: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Value[25]] }
-0x7f163f07b2c8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 50]] }
-0x7f163f07bd08: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 50]] }
-0x7f163f07c888: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 25]] }
-0x7f163f07ce08: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[1].ElementTimesArgs[0] Value[25]] }
-0x7f163f07fc18: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 25]] }
-0x7f163f080058: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Value[25]] }
-0x7f163f082a98: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Value[25]] }
-0x7f163f083618: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[1].ElementTimesArgs[0] Value[25]] }
-0x7f163f085138: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 50]] }
-0x7f163f0866f8: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 25]] }
-0x7f163f086c78: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[1].ElementTimesArgs[0] Value[25]] }
-0x7f163f089038: {[l2.lstm.prevState.c Value[25 x t1]] }
-0x7f163f089708: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[0] Gradient[25]] [l2.lstm.prevState.h Value[25 x t1]] }
-0x7f163f089dd8: {[l2.lstm.lstmState._privateInnards.ot._ Gradient[25 x t1]] [l2.result.beginFlags Value[1 x t1]] [l2.result.beginFlags.input.z Gradient[1 x t1]] }
-0x7f163f08b108: {[l2.result.out.indexSequence Value[1 x WhereNodeAxis]] }
-0x7f163f08b268: {[l2.result.out.indexSequence.indexSequence Value[1 x WhereNodeAxis]] }
-0x7f163f08bb98: {[l3.z.W Value[5 x 25]] }
-0x7f163f08bed8: {[l3.z.B Value[5 x 1]] }
-0x7f163f08dbb8: {[labels Value[5 x *]] }
-0x7f163f092e28: {[out Value[5 x 1 x WhereNodeAxis]] }
-0x7f163f092fe8: {[ce Value[1]] }
-0x7f163f0962e8: {[l1.embedding Value[50 x 2000]] }
-0x7f163f0967e8: {[err Value[1]] }
-0x7f163f09be68: {[l1.lookup Value[50 x t1]] }
-0x7f163f09bf38: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Value[25 x t1]] }
-0x7f163f09cbe8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Value[25 x t1]] [l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Gradient[25]] }
-0x7f163f09cda8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0] Value[25 x t1]] [l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 50]] }
-0x7f163f09d348: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0] Value[25 x t1]] [l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 50]] }
-0x7f163f09d888: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Gradient[25]] [l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Value[25 x t1]] }
-0x7f163f09da48: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0] Value[25 x t1]] [l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 50]] }
-0x7f163f09dc08: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[1] Value[25 x t1]] [l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Gradient[25]] }
-0x7f163f09e658: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0] Value[25 x t1]] [l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 50]] }
-0x7f163f09e7b8: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[1] Value[25 x t1]] }
-0x7f163f09e978: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0] Value[25 x t1]] }
-0x7f163f09eb38: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[1] Value[25 x t1]] }
-0x7f163f09ecf8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0] Value[25 x t1]] }
-0x7f163f09eeb8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[1] Value[25 x t1]] }
-0x7f163f09f078: {[l2.lstm.lstmState._privateInnards.ft._ Value[25 x t1]] }
-0x7f163f09f238: {[l2.lstm.lstmState._privateInnards.ft Value[25 x t1]] }
-0x7f163f09f3f8: {[l2.lstm.lstmState._privateInnards.bft Value[25 x t1]] }
-0x7f163f09f5b8: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[1] Value[25 x t1]] }
-0x7f163f09f778: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0] Value[25 x t1]] }
-0x7f163f09f938: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[1] Value[25 x t1]] }
-0x7f163f09faf8: {[l2.lstm.lstmState._privateInnards.it._ Value[25 x t1]] }
-0x7f163f09fcb8: {[l2.lstm.lstmState._privateInnards.it Value[25 x t1]] }
-0x7f163f09fe78: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[1] Value[25 x t1]] }
-0x7f163f0a0038: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z Value[25 x t1]] }
-0x7f163f0a01f8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1] Value[25 x t1]] }
-0x7f163f0a03b8: {[l2.lstm.lstmState._privateInnards.bit Value[25 x t1]] }
-0x7f163f0a0578: {[l2.lstm.lstmState._privateInnards.ct Value[25 x t1]] }
-0x7f163f0a0738: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[1] Value[25 x t1]] }
-0x7f163f0a08f8: {[l2.lstm.lstmState._privateInnards.ot._ Value[25 x t1]] }
-0x7f163f0a0ab8: {[l2.lstm.lstmState._privateInnards.ot Value[25 x t1]] }
-0x7f163f0a0c78: {[l2.lstm.lstmState._privateInnards.ht.ElementTimesArgs[1] Value[25 x t1]] }
-0x7f163f0a0e38: {[l2.lstm.lstmState._privateInnards.ht Value[25 x t1]] }
-0x7f163f0a0ff8: {[l2.lstm.lstmState._privateInnards.ot Gradient[25 x t1]] [l2.result.beginFlags.input.z.ElementTimesArgs[0] Value[1 x t1]] }
-0x7f163f0a11b8: {[l2.lstm.lstmState._privateInnards.ct Gradient[25 x t1]] [l2.result.beginFlags.input.z Value[1 x t1]] }
-0x7f163f0a1378: {[l2.lstm.lstmState._privateInnards.ht.ElementTimesArgs[1] Gradient[25 x t1]] [l2.result.beginFlags.input Value[1 x t1]] [l2.result.beginFlags.input.z.ElementTimesArgs[0] Gradient[1 x t1]] }
-0x7f163f0a1538: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0] Gradient[25 x t1]] [l2.result.beginFlags.input Gradient[1 x t1]] [l2.result.out Value[25 x WhereNodeAxis]] [l2.result.out.indexSequence.indexSequence Gradient[1 x WhereNodeAxis]] }
-0x7f163f0a16f8: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[1] Gradient[25 x t1]] [l2.result.beginFlags Gradient[1 x t1]] [l2.result.out.indexSequence Gradient[1 x WhereNodeAxis]] [l3.z.z.PlusArgs[0] Value[5 x WhereNodeAxis]] }
-0x7f163f0a18b8: {[l3.z.W Gradient[5 x 25]] [l3.z.z Value[5 x 1 x WhereNodeAxis]] }
-0x7f163f0a1a78: {[l2.lstm.lstmState._privateInnards.ht Gradient[25 x t1]] [l3.act Value[5 x 1 x WhereNodeAxis]] [l3.z.z.PlusArgs[0] Gradient[5 x WhereNodeAxis]] }
-0x7f163f0a1c38: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[1].ElementTimesArgs[0] Gradient[25]] [l2.result.out Gradient[25 x WhereNodeAxis]] [l3.z.z Gradient[5 x 1 x WhereNodeAxis]] [l3p Value[5 x 1 x *]] }
-0x7f163f0a26b8: {[ce Gradient[1]] }
-0x7f163f0a2878: {[l2.lstm.lstmState._privateInnards.bft Gradient[25 x t1]] [l3p Gradient[5 x 1 x *]] }
-0x7f163f0a2a38: {[l3.act Gradient[5 x 1 x WhereNodeAxis]] [l3.z.B Gradient[5 x 1]] }
-0x7f163f0a2c88: {[l2.lstm.lstmState._privateInnards.bit Gradient[25 x t1]] }
-0x7f163f0a2e48: {[l2.lstm.lstmState._privateInnards.it Gradient[25 x t1]] }
-0x7f163f0a3008: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1] Gradient[25 x t1]] }
-0x7f163f0a31c8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z Gradient[25 x t1]] }
-0x7f163f0a3388: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0] Gradient[25 x t1]] }
-0x7f163f0a3548: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[1] Gradient[25 x t1]] }
-0x7f163f0a3708: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[1].TimesArgs[0] Gradient[25 x 25]] }
-0x7f163f0a38c8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[1] Gradient[25 x t1]] [l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Gradient[25 x t1]] [l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Gradient[25 x t1]] [l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Gradient[25 x t1]] [l2.lstm.prevState.h Gradient[25 x t1]] }
-0x7f163f0a3a88: {[l2.lstm.lstmState._privateInnards.it._ Gradient[25 x t1]] }
-0x7f163f0a3c48: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0] Gradient[25 x t1]] }
-0x7f163f0a3e08: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[1] Gradient[25 x t1]] }
-0x7f163f0a3fc8: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[1].ElementTimesArgs[0] Gradient[25]] }
-0x7f163f0a4188: {[l2.lstm.prevState.c Gradient[25 x t1]] }
-0x7f163f0a4348: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0] Gradient[25 x t1]] }
-0x7f163f0a4508: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[1] Gradient[25 x t1]] }
-0x7f163f0a46c8: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 25]] }
-0x7f163f0a4888: {[l2.lstm.lstmState._privateInnards.ft Gradient[25 x t1]] }
-0x7f163f0a4a48: {[l2.lstm.lstmState._privateInnards.ft._ Gradient[25 x t1]] }
-0x7f163f0a4c08: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0] Gradient[25 x t1]] }
-0x7f163f0a4dc8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[1] Gradient[25 x t1]] }
-0x7f163f0a4f88: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[1].ElementTimesArgs[0] Gradient[25]] }
-0x7f163f0a5148: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0] Gradient[25 x t1]] }
-0x7f163f0a5308: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[1] Gradient[25 x t1]] }
-0x7f163f0a54c8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 25]] }
-0x7f163f0a5688: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0] Gradient[25 x t1]] }
-0x7f163f0a5848: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[1] Gradient[25 x t1]] }
-0x7f163f0a5a08: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 25]] }
-0x7f163f254be8: {[l1.embedding.x Value[2000 x 50]] }
-0x7f163f257158: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 50]] }
-0x7f163f2577c8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[0] Value[25]] }
-0x7f163f258e38: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[1].TimesArgs[0] Value[25 x 25]] }
-0x7f163f263068: {[features Value[1 x t1]] }
-0x7f164109f5a8: {[BS.Constants.Zero Value[1]] }
+0x7f2dc358c498: {[features Value[1 x t1]] }
+0x7f2dc4e21b78: {[l1.embedding.x Value[2000 x 50]] }
+0x7f2dc4e229e8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 50]] }
+0x7f2dc4e23aa8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[0] Value[25]] }
+0x7f2dc4e24b38: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[1].TimesArgs[0] Value[25 x 25]] }
+0x7f2dc4e25768: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 50]] }
+0x7f2dc4e27d68: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Value[25]] }
+0x7f2dc4e29578: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 25]] }
+0x7f2dc4e2a6a8: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 50]] }
+0x7f2dc4e2b168: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[1].ElementTimesArgs[0] Value[25]] }
+0x7f2dc4e2dc78: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Value[25]] }
+0x7f2dc4e2e868: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 25]] }
+0x7f2dc4e2f998: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Value[25]] }
+0x7f2dc4e30458: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[1].ElementTimesArgs[0] Value[25]] }
+0x7f2dc4e33388: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 50]] }
+0x7f2dc4e342c8: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Value[25 x 25]] }
+0x7f2dc4e34e48: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[1].ElementTimesArgs[0] Value[25]] }
+0x7f2dc4e367a8: {[l2.lstm.prevState.c Value[25 x t1]] }
+0x7f2dc4e36ee8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[0] Gradient[25]] [l2.lstm.prevState.h Value[25 x t1]] }
+0x7f2dc4e37618: {[l2.lstm.lstmState._privateInnards.ot._ Gradient[25 x t1]] [l2.result.beginFlags Value[1 x t1]] [l2.result.beginFlags.input.z Gradient[1 x t1]] }
+0x7f2dc4e389a8: {[l2.result.out.indexSequence Value[1 x WhereNodeAxis]] }
+0x7f2dc4e38b08: {[l2.result.out.indexSequence.indexSequence Value[1 x WhereNodeAxis]] }
+0x7f2dc4e39438: {[l3.z.W Value[5 x 25]] }
+0x7f2dc4e39778: {[l3.z.B Value[5 x 1]] }
+0x7f2dc4e3b458: {[labels Value[5 x *]] }
+0x7f2dc4e3f018: {[err Value[1]] }
+0x7f2dc4e40928: {[out Value[5 x 1 x WhereNodeAxis]] }
+0x7f2dc4e42f18: {[ce Value[1]] }
+0x7f2dc4e43b28: {[l1.embedding Value[50 x 2000]] }
+0x7f2dc4e49798: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Value[25 x t1]] }
+0x7f2dc4e49868: {[l1.lookup Value[50 x t1]] }
+0x7f2dc4e4a518: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Value[25 x t1]] [l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Gradient[25]] }
+0x7f2dc4e4a6d8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0] Value[25 x t1]] [l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 50]] }
+0x7f2dc4e4ac78: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0] Value[25 x t1]] [l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 50]] }
+0x7f2dc4e4b1b8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Gradient[25]] [l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Value[25 x t1]] }
+0x7f2dc4e4b378: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0] Value[25 x t1]] [l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 50]] }
+0x7f2dc4e4b538: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[1] Value[25 x t1]] [l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[0] Gradient[25]] }
+0x7f2dc4e4bf88: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0] Value[25 x t1]] [l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 50]] }
+0x7f2dc4e4c0e8: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[1] Value[25 x t1]] }
+0x7f2dc4e4c2a8: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0] Value[25 x t1]] }
+0x7f2dc4e4c468: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[1] Value[25 x t1]] }
+0x7f2dc4e4c628: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0] Value[25 x t1]] }
+0x7f2dc4e4c7e8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[1] Value[25 x t1]] }
+0x7f2dc4e4c9a8: {[l2.lstm.lstmState._privateInnards.ft._ Value[25 x t1]] }
+0x7f2dc4e4cb68: {[l2.lstm.lstmState._privateInnards.ft Value[25 x t1]] }
+0x7f2dc4e4cd28: {[l2.lstm.lstmState._privateInnards.bft Value[25 x t1]] }
+0x7f2dc4e4cee8: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[1] Value[25 x t1]] }
+0x7f2dc4e4d0a8: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0] Value[25 x t1]] }
+0x7f2dc4e4d268: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[1] Value[25 x t1]] }
+0x7f2dc4e4d428: {[l2.lstm.lstmState._privateInnards.it._ Value[25 x t1]] }
+0x7f2dc4e4d5e8: {[l2.lstm.lstmState._privateInnards.it Value[25 x t1]] }
+0x7f2dc4e4d7a8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[1] Value[25 x t1]] }
+0x7f2dc4e4d968: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z Value[25 x t1]] }
+0x7f2dc4e4db28: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1] Value[25 x t1]] }
+0x7f2dc4e4dce8: {[l2.lstm.lstmState._privateInnards.bit Value[25 x t1]] }
+0x7f2dc4e4dea8: {[l2.lstm.lstmState._privateInnards.ct Value[25 x t1]] }
+0x7f2dc4e4e068: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[1] Value[25 x t1]] }
+0x7f2dc4e4e228: {[l2.lstm.lstmState._privateInnards.ot._ Value[25 x t1]] }
+0x7f2dc4e4e3e8: {[l2.lstm.lstmState._privateInnards.ot Value[25 x t1]] }
+0x7f2dc4e4e5a8: {[l2.lstm.lstmState._privateInnards.ht.ElementTimesArgs[1] Value[25 x t1]] }
+0x7f2dc4e4e768: {[l2.lstm.lstmState._privateInnards.ht Value[25 x t1]] }
+0x7f2dc4e4e928: {[l2.lstm.lstmState._privateInnards.ot Gradient[25 x t1]] [l2.result.beginFlags.input.z.ElementTimesArgs[0] Value[1 x t1]] }
+0x7f2dc4e4eae8: {[l2.lstm.lstmState._privateInnards.ct Gradient[25 x t1]] [l2.result.beginFlags.input.z Value[1 x t1]] }
+0x7f2dc4e4eca8: {[l2.lstm.lstmState._privateInnards.ht.ElementTimesArgs[1] Gradient[25 x t1]] [l2.result.beginFlags.input Value[1 x t1]] [l2.result.beginFlags.input.z.ElementTimesArgs[0] Gradient[1 x t1]] }
+0x7f2dc4e4ee68: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0] Gradient[25 x t1]] [l2.result.beginFlags.input Gradient[1 x t1]] [l2.result.out Value[25 x WhereNodeAxis]] [l2.result.out.indexSequence.indexSequence Gradient[1 x WhereNodeAxis]] }
+0x7f2dc4e4f028: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[1] Gradient[25 x t1]] [l2.result.beginFlags Gradient[1 x t1]] [l2.result.out.indexSequence Gradient[1 x WhereNodeAxis]] [l3.z.z.PlusArgs[0] Value[5 x WhereNodeAxis]] }
+0x7f2dc4e4f1e8: {[l3.z.W Gradient[5 x 25]] [l3.z.z Value[5 x 1 x WhereNodeAxis]] }
+0x7f2dc4e4f3a8: {[l2.lstm.lstmState._privateInnards.ht Gradient[25 x t1]] [l3.act Value[5 x 1 x WhereNodeAxis]] [l3.z.z.PlusArgs[0] Gradient[5 x WhereNodeAxis]] }
+0x7f2dc4e4f568: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[1].ElementTimesArgs[0] Gradient[25]] [l2.result.out Gradient[25 x WhereNodeAxis]] [l3.z.z Gradient[5 x 1 x WhereNodeAxis]] [l3p Value[5 x 1 x *]] }
+0x7f2dc4e4ffe8: {[ce Gradient[1]] }
+0x7f2dc4e501a8: {[l2.lstm.lstmState._privateInnards.bft Gradient[25 x t1]] [l3p Gradient[5 x 1 x *]] }
+0x7f2dc4e50368: {[l3.act Gradient[5 x 1 x WhereNodeAxis]] [l3.z.B Gradient[5 x 1]] }
+0x7f2dc4e505b8: {[l2.lstm.lstmState._privateInnards.bit Gradient[25 x t1]] }
+0x7f2dc4e50778: {[l2.lstm.lstmState._privateInnards.it Gradient[25 x t1]] }
+0x7f2dc4e50938: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1] Gradient[25 x t1]] }
+0x7f2dc4e50af8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z Gradient[25 x t1]] }
+0x7f2dc4e50cb8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0] Gradient[25 x t1]] }
+0x7f2dc4e50e78: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[1] Gradient[25 x t1]] }
+0x7f2dc4e51038: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[1].TimesArgs[0] Gradient[25 x 25]] }
+0x7f2dc4e511f8: {[l2.lstm.lstmState._privateInnards.bit.ElementTimesArgs[1].z.PlusArgs[0].PlusArgs[1] Gradient[25 x t1]] [l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Gradient[25 x t1]] [l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Gradient[25 x t1]] [l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0].PlusArgs[1] Gradient[25 x t1]] [l2.lstm.prevState.h Gradient[25 x t1]] }
+0x7f2dc4e513b8: {[l2.lstm.lstmState._privateInnards.it._ Gradient[25 x t1]] }
+0x7f2dc4e51578: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0] Gradient[25 x t1]] }
+0x7f2dc4e51738: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[1] Gradient[25 x t1]] }
+0x7f2dc4e518f8: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[1].ElementTimesArgs[0] Gradient[25]] }
+0x7f2dc4e51ab8: {[l2.lstm.prevState.c Gradient[25 x t1]] }
+0x7f2dc4e51c78: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[0] Gradient[25 x t1]] }
+0x7f2dc4e51e38: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[1] Gradient[25 x t1]] }
+0x7f2dc4e51ff8: {[l2.lstm.lstmState._privateInnards.it._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 25]] }
+0x7f2dc4e521b8: {[l2.lstm.lstmState._privateInnards.ft Gradient[25 x t1]] }
+0x7f2dc4e52378: {[l2.lstm.lstmState._privateInnards.ft._ Gradient[25 x t1]] }
+0x7f2dc4e52538: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0] Gradient[25 x t1]] }
+0x7f2dc4e526f8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[1] Gradient[25 x t1]] }
+0x7f2dc4e528b8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[1].ElementTimesArgs[0] Gradient[25]] }
+0x7f2dc4e52a78: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[0] Gradient[25 x t1]] }
+0x7f2dc4e52c38: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[1] Gradient[25 x t1]] }
+0x7f2dc4e52df8: {[l2.lstm.lstmState._privateInnards.ft._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 25]] }
+0x7f2dc4e52fb8: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[0] Gradient[25 x t1]] }
+0x7f2dc4e53178: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[1] Gradient[25 x t1]] }
+0x7f2dc4e53338: {[l2.lstm.lstmState._privateInnards.ot._.PlusArgs[0].PlusArgs[1].TimesArgs[0] Gradient[25 x 25]] }
+0x7f2dca59cd78: {[BS.Constants.Zero Value[1]] }
 
-07/13/2016 12:23:46: No PreCompute nodes found, skipping PreCompute step.
+07/14/2016 12:34:25: No PreCompute nodes found, skipping PreCompute step.
 
-07/13/2016 12:23:46: Starting Epoch 5: learning rate per sample = 0.000500  effective momentum = 0.900000  momentum as time constant = 1898.2 samples
+07/14/2016 12:34:25: Starting Epoch 5: learning rate per sample = 0.000500  effective momentum = 0.900000  momentum as time constant = 1898.2 samples
 BlockRandomizer::StartEpoch: epoch 4: frames [21732..27165] (first sequence at sample 21732), data subset 0 of 1
 
-07/13/2016 12:23:46: Starting minibatch loop.
+07/14/2016 12:34:25: Starting minibatch loop.
 WARNING: The same matrix with dim [1, 49] has been transferred between different devices for 20 times.
-07/13/2016 12:23:48: Finished Epoch[ 5 of 5]: [Training] ce = 1.33139231 * 1247; err = 0.44667201 * 1247; totalSamplesSeen = 6235; learningRatePerSample = 0.00050000002; epochTime=1.52656s
-07/13/2016 12:23:48: SGD: Saving checkpoint model '/tmp/cntk-test-20160713121920.930131/Text_SequenceClassification@debug_gpu/Models/seqcla.dnn'
-07/13/2016 12:23:48: CNTKCommandTrainEnd: Train
+07/14/2016 12:34:26: Finished Epoch[ 5 of 5]: [Training] ce = 1.33139231 * 1247; err = 0.44667201 * 1247; totalSamplesSeen = 6235; learningRatePerSample = 0.00050000002; epochTime=0.446412s
+07/14/2016 12:34:26: SGD: Saving checkpoint model '/tmp/cntk-test-20160714122957.627315/Text_SequenceClassification@release_gpu/Models/seqcla.dnn'
+07/14/2016 12:34:26: CNTKCommandTrainEnd: Train
 
-07/13/2016 12:23:48: Action "train" complete.
+07/14/2016 12:34:26: Action "train" complete.
 
-07/13/2016 12:23:48: __COMPLETED__
+07/14/2016 12:34:26: __COMPLETED__
