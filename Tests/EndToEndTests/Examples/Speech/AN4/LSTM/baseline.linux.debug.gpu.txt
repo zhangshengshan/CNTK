@@ -3,12 +3,12 @@ CPU info:
     Hardware threads: 24
     Total Memory: 264172964 kB
 -------------------------------------------------------------------
-=== Running /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/1bitsgd/debug/bin/cntk configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/LSTM/../../../../../../Examples/Speech/AN4/Config/LSTM-NDL.cntk currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data RunDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_LSTM@debug_gpu DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/LSTM/../../../../../../Examples/Speech/AN4/Config OutputDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_LSTM@debug_gpu DeviceId=0 timestamping=true speechTrain=[SGD=[maxEpochs=1]] speechTrain=[SGD=[epochSize=64]] parallelTrain=false
+=== Running /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/1bitsgd/debug/bin/cntk configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/LSTM/../../../../../../Examples/Speech/AN4/Config/LSTM-NDL.cntk currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data RunDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_LSTM@debug_gpu DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/LSTM/../../../../../../Examples/Speech/AN4/Config OutputDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_LSTM@debug_gpu DeviceId=0 timestamping=true speechTrain=[SGD=[maxEpochs=1]] speechTrain=[SGD=[epochSize=64]] parallelTrain=false
 -------------------------------------------------------------------
 Build info: 
 
-		Built time: Jul 13 2016 15:56:58
-		Last modified date: Tue Jul 12 10:36:36 2016
+		Built time: Jul 14 2016 12:03:01
+		Last modified date: Wed Jul 13 15:01:07 2016
 		Build type: debug
 		Build target: GPU
 		With 1bit-SGD: yes
@@ -17,45 +17,45 @@ Build info:
 		CUB_PATH: /usr/local/cub-1.4.1
 		CUDNN_PATH: /usr/local/cudnn-4.0
 		Build Branch: HEAD
-		Build SHA1: 539ab7467b022b4ffa087721bcf20d18485c8d0d
-		Built by philly on a77bf6d98305
+		Build SHA1: 72bee394bf461e8f6f0feb593a8416c05f481957
+		Built by philly on 389da049305d
 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
 -------------------------------------------------------------------
 Changed current directory to /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data
-07/13/2016 16:45:31: -------------------------------------------------------------------
-07/13/2016 16:45:31: Build info: 
+07/14/2016 12:10:44: -------------------------------------------------------------------
+07/14/2016 12:10:44: Build info: 
 
-07/13/2016 16:45:31: 		Built time: Jul 13 2016 15:56:58
-07/13/2016 16:45:31: 		Last modified date: Tue Jul 12 10:36:36 2016
-07/13/2016 16:45:31: 		Build type: debug
-07/13/2016 16:45:31: 		Build target: GPU
-07/13/2016 16:45:31: 		With 1bit-SGD: yes
-07/13/2016 16:45:31: 		Math lib: mkl
-07/13/2016 16:45:31: 		CUDA_PATH: /usr/local/cuda-7.5
-07/13/2016 16:45:31: 		CUB_PATH: /usr/local/cub-1.4.1
-07/13/2016 16:45:31: 		CUDNN_PATH: /usr/local/cudnn-4.0
-07/13/2016 16:45:31: 		Build Branch: HEAD
-07/13/2016 16:45:31: 		Build SHA1: 539ab7467b022b4ffa087721bcf20d18485c8d0d
-07/13/2016 16:45:31: 		Built by philly on a77bf6d98305
-07/13/2016 16:45:31: 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
-07/13/2016 16:45:31: -------------------------------------------------------------------
-07/13/2016 16:45:32: -------------------------------------------------------------------
-07/13/2016 16:45:32: GPU info:
+07/14/2016 12:10:44: 		Built time: Jul 14 2016 12:03:01
+07/14/2016 12:10:44: 		Last modified date: Wed Jul 13 15:01:07 2016
+07/14/2016 12:10:44: 		Build type: debug
+07/14/2016 12:10:44: 		Build target: GPU
+07/14/2016 12:10:44: 		With 1bit-SGD: yes
+07/14/2016 12:10:44: 		Math lib: mkl
+07/14/2016 12:10:44: 		CUDA_PATH: /usr/local/cuda-7.5
+07/14/2016 12:10:44: 		CUB_PATH: /usr/local/cub-1.4.1
+07/14/2016 12:10:44: 		CUDNN_PATH: /usr/local/cudnn-4.0
+07/14/2016 12:10:44: 		Build Branch: HEAD
+07/14/2016 12:10:44: 		Build SHA1: 72bee394bf461e8f6f0feb593a8416c05f481957
+07/14/2016 12:10:44: 		Built by philly on 389da049305d
+07/14/2016 12:10:44: 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
+07/14/2016 12:10:44: -------------------------------------------------------------------
+07/14/2016 12:10:45: -------------------------------------------------------------------
+07/14/2016 12:10:45: GPU info:
 
-07/13/2016 16:45:32: 		Device[0]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 16:45:32: 		Device[1]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 16:45:32: 		Device[2]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 16:45:32: 		Device[3]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 16:45:32: -------------------------------------------------------------------
+07/14/2016 12:10:45: 		Device[0]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:10:45: 		Device[1]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:10:45: 		Device[2]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:10:45: 		Device[3]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:10:45: -------------------------------------------------------------------
 
-07/13/2016 16:45:32: Running on localhost at 2016/07/13 16:45:32
-07/13/2016 16:45:32: Command line: 
-/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/1bitsgd/debug/bin/cntk  configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/LSTM/../../../../../../Examples/Speech/AN4/Config/LSTM-NDL.cntk  currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data  RunDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_LSTM@debug_gpu  DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data  ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/LSTM/../../../../../../Examples/Speech/AN4/Config  OutputDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_LSTM@debug_gpu  DeviceId=0  timestamping=true  speechTrain=[SGD=[maxEpochs=1]]  speechTrain=[SGD=[epochSize=64]]  parallelTrain=false
+07/14/2016 12:10:45: Running on localhost at 2016/07/14 12:10:45
+07/14/2016 12:10:45: Command line: 
+/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/1bitsgd/debug/bin/cntk  configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/LSTM/../../../../../../Examples/Speech/AN4/Config/LSTM-NDL.cntk  currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data  RunDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_LSTM@debug_gpu  DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data  ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/LSTM/../../../../../../Examples/Speech/AN4/Config  OutputDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_LSTM@debug_gpu  DeviceId=0  timestamping=true  speechTrain=[SGD=[maxEpochs=1]]  speechTrain=[SGD=[epochSize=64]]  parallelTrain=false
 
 
 
-07/13/2016 16:45:32: >>>>>>>>>>>>>>>>>>>> RAW CONFIG (VARIABLES NOT RESOLVED) >>>>>>>>>>>>>>>>>>>>
-07/13/2016 16:45:32: RootDir = ".."
+07/14/2016 12:10:45: >>>>>>>>>>>>>>>>>>>> RAW CONFIG (VARIABLES NOT RESOLVED) >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:10:45: RootDir = ".."
 ConfigDir = "$RootDir$/Config"
 DataDir = "$RootDir$/Data"
 OutputDir = "$RootDir$/Output"
@@ -103,29 +103,29 @@ speechTrain = [
     ]
 ]
 currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data
-RunDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_LSTM@debug_gpu
+RunDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_LSTM@debug_gpu
 DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data
 ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/LSTM/../../../../../../Examples/Speech/AN4/Config
-OutputDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_LSTM@debug_gpu
+OutputDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_LSTM@debug_gpu
 DeviceId=0
 timestamping=true
 speechTrain=[SGD=[maxEpochs=1]]
 speechTrain=[SGD=[epochSize=64]]
 parallelTrain=false
 
-07/13/2016 16:45:32: <<<<<<<<<<<<<<<<<<<< RAW CONFIG (VARIABLES NOT RESOLVED)  <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:10:45: <<<<<<<<<<<<<<<<<<<< RAW CONFIG (VARIABLES NOT RESOLVED)  <<<<<<<<<<<<<<<<<<<<
 
-07/13/2016 16:45:32: >>>>>>>>>>>>>>>>>>>> RAW CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
-07/13/2016 16:45:32: RootDir = ".."
+07/14/2016 12:10:45: >>>>>>>>>>>>>>>>>>>> RAW CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:10:45: RootDir = ".."
 ConfigDir = "../Config"
 DataDir = "../Data"
 OutputDir = "../Output"
-ModelDir = "/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_LSTM@debug_gpu/Models"
+ModelDir = "/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_LSTM@debug_gpu/Models"
 deviceId = -1
 command = speechTrain
 precision = "float"
 traceLevel = 1
-modelPath = "/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_LSTM@debug_gpu/Models/cntkSpeechLSTM.dnn"
+modelPath = "/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_LSTM@debug_gpu/Models/cntkSpeechLSTM.dnn"
 parallelTrain = true
 frameMode = false
 truncated = true
@@ -164,32 +164,32 @@ speechTrain = [
     ]
 ]
 currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data
-RunDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_LSTM@debug_gpu
+RunDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_LSTM@debug_gpu
 DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data
 ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/LSTM/../../../../../../Examples/Speech/AN4/Config
-OutputDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_LSTM@debug_gpu
+OutputDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_LSTM@debug_gpu
 DeviceId=0
 timestamping=true
 speechTrain=[SGD=[maxEpochs=1]]
 speechTrain=[SGD=[epochSize=64]]
 parallelTrain=false
 
-07/13/2016 16:45:32: <<<<<<<<<<<<<<<<<<<< RAW CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:10:45: <<<<<<<<<<<<<<<<<<<< RAW CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
 
-07/13/2016 16:45:32: >>>>>>>>>>>>>>>>>>>> PROCESSED CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:10:45: >>>>>>>>>>>>>>>>>>>> PROCESSED CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
 configparameters: LSTM-NDL.cntk:command=speechTrain
 configparameters: LSTM-NDL.cntk:ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Examples/Speech/AN4/LSTM/../../../../../../Examples/Speech/AN4/Config
 configparameters: LSTM-NDL.cntk:currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data
 configparameters: LSTM-NDL.cntk:DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data
 configparameters: LSTM-NDL.cntk:deviceId=0
 configparameters: LSTM-NDL.cntk:frameMode=false
-configparameters: LSTM-NDL.cntk:ModelDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_LSTM@debug_gpu/Models
-configparameters: LSTM-NDL.cntk:modelPath=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_LSTM@debug_gpu/Models/cntkSpeechLSTM.dnn
-configparameters: LSTM-NDL.cntk:OutputDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_LSTM@debug_gpu
+configparameters: LSTM-NDL.cntk:ModelDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_LSTM@debug_gpu/Models
+configparameters: LSTM-NDL.cntk:modelPath=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_LSTM@debug_gpu/Models/cntkSpeechLSTM.dnn
+configparameters: LSTM-NDL.cntk:OutputDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_LSTM@debug_gpu
 configparameters: LSTM-NDL.cntk:parallelTrain=false
 configparameters: LSTM-NDL.cntk:precision=float
 configparameters: LSTM-NDL.cntk:RootDir=..
-configparameters: LSTM-NDL.cntk:RunDir=/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_LSTM@debug_gpu
+configparameters: LSTM-NDL.cntk:RunDir=/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_LSTM@debug_gpu
 configparameters: LSTM-NDL.cntk:speechTrain=[
     action = "train"
     nbrUttsIneachRecurrentIter = 16
@@ -228,20 +228,20 @@ configparameters: LSTM-NDL.cntk:speechTrain=[
 configparameters: LSTM-NDL.cntk:timestamping=true
 configparameters: LSTM-NDL.cntk:traceLevel=1
 configparameters: LSTM-NDL.cntk:truncated=true
-07/13/2016 16:45:32: <<<<<<<<<<<<<<<<<<<< PROCESSED CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
-07/13/2016 16:45:32: Commands: speechTrain
-07/13/2016 16:45:32: Precision = "float"
-07/13/2016 16:45:32: CNTKModelPath: /tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_LSTM@debug_gpu/Models/cntkSpeechLSTM.dnn
-07/13/2016 16:45:32: CNTKCommandTrainInfo: speechTrain : 1
-07/13/2016 16:45:32: CNTKCommandTrainInfo: CNTKNoMoreCommands_Total : 1
+07/14/2016 12:10:45: <<<<<<<<<<<<<<<<<<<< PROCESSED CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:10:45: Commands: speechTrain
+07/14/2016 12:10:45: Precision = "float"
+07/14/2016 12:10:45: CNTKModelPath: /tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_LSTM@debug_gpu/Models/cntkSpeechLSTM.dnn
+07/14/2016 12:10:45: CNTKCommandTrainInfo: speechTrain : 1
+07/14/2016 12:10:45: CNTKCommandTrainInfo: CNTKNoMoreCommands_Total : 1
 
-07/13/2016 16:45:32: ##############################################################################
-07/13/2016 16:45:32: #                                                                            #
-07/13/2016 16:45:32: # Action "train"                                                             #
-07/13/2016 16:45:32: #                                                                            #
-07/13/2016 16:45:32: ##############################################################################
+07/14/2016 12:10:45: ##############################################################################
+07/14/2016 12:10:45: #                                                                            #
+07/14/2016 12:10:45: # Action "train"                                                             #
+07/14/2016 12:10:45: #                                                                            #
+07/14/2016 12:10:45: ##############################################################################
 
-07/13/2016 16:45:32: CNTKCommandTrainBegin: speechTrain
+07/14/2016 12:10:45: CNTKCommandTrainBegin: speechTrain
 NDLBuilder Using GPU 0
 reading script file /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data/glob_0000.scp ... 948 entries
 total 132 state names in state list /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Examples/Speech/AN4/Data/state.list
@@ -250,7 +250,7 @@ htkmlfreader: reading MLF file /home/philly/jenkins/workspace/CNTK-Test-Linux-W1
 label set 0: 129 classes
 minibatchutterancesource: 948 utterances grouped into 3 chunks, av. chunk size: 316.0 utterances, 84244.7 frames
 useParallelTrain option is not enabled. ParallelTrain config will be ignored.
-07/13/2016 16:45:32: Creating virgin network.
+07/14/2016 12:10:45: Creating virgin network.
 SetUniformRandomValue (GPU): creating curand object with seed 1, sizeof(ElemType)==4
 
 Post-processing network...
@@ -435,14 +435,14 @@ Validating network, final pass.
 
 Post-processing network complete.
 
-07/13/2016 16:45:33: Created model with 113 nodes on GPU 0.
+07/14/2016 12:10:46: Created model with 113 nodes on GPU 0.
 
-07/13/2016 16:45:33: Training criterion node(s):
-07/13/2016 16:45:33: 	ce = CrossEntropyWithSoftmax
+07/14/2016 12:10:46: Training criterion node(s):
+07/14/2016 12:10:46: 	ce = CrossEntropyWithSoftmax
 
-07/13/2016 16:45:33: Evaluation criterion node(s):
+07/14/2016 12:10:46: Evaluation criterion node(s):
 
-07/13/2016 16:45:33: 	err = ErrorPrediction
+07/14/2016 12:10:46: 	err = ErrorPrediction
 
 
 Allocating matrices for forward and/or backward propagation.
@@ -450,177 +450,177 @@ Allocating matrices for forward and/or backward propagation.
 Memory Sharing Structure:
 
 (nil): {[err Gradient[1]] [featNorm.xMean Gradient[363]] [featNorm.xNorm Gradient[363 x *]] [featNorm.xStdDev Gradient[363]] [features Gradient[363 x *]] [labels Gradient[132 x *]] [logPrior.logPrior Gradient[132]] [logPrior.prior Gradient[132]] [scaledLogLikelihood Gradient[132 x 1 x *]] }
-0x7f3562408808: {[LSTMoutput2.Wmr Value[512 x 1024]] }
-0x7f356240a5b8: {[LSTMoutput3.wx Value[4096 x 512]] }
-0x7f356240b228: {[LSTMoutput3.b Value[4096 x 1]] }
-0x7f356240ba38: {[LSTMoutput3.Wh Value[4096 x 512]] }
-0x7f356240d248: {[LSTMoutput3.Wcf Value[1024]] }
-0x7f356240da58: {[LSTMoutput3.Wco Value[1024]] }
-0x7f356240e5a8: {[LSTMoutput2.mt Gradient[1024 x 1 x *]] [LSTMoutput3.dh Value[512 x 1 x *]] [LSTMoutput3.wxx Gradient[4096 x 1 x *]] }
-0x7f356240edc8: {[LSTMoutput2.Wco Gradient[1024]] [LSTMoutput3.dc Value[1024 x 1 x *]] }
-0x7f3562413f28: {[LSTMoutput3.Wmr Value[512 x 1024]] }
-0x7f3562414e48: {[W Value[132 x 512]] }
-0x7f3562415a68: {[b Value[132 x 1]] }
-0x7f35624168d8: {[logPrior.prior Value[132]] }
-0x7f3564300808: {[LSTMoutput1.wxx Value[4096 x *]] }
-0x7f35643010b8: {[LSTMoutput1.wx Gradient[4096 x 363]] [LSTMoutput1.wxxpb Value[4096 x 1 x *]] }
-0x7f3564301248: {[LSTMoutput1.G3 Value[1024 x 1 x *]] }
-0x7f3564301408: {[LSTMoutput1.Wcfdc Value[1024 x 1 x *]] }
-0x7f35643015c8: {[LSTMoutput1.unnamed151 Value[1024 x 1 x *]] }
-0x7f3564301788: {[LSTMoutput1.ft Value[1024 x 1 x *]] }
-0x7f3564301c48: {[LSTMoutput1.whh Value[4096 x 1 x *]] }
-0x7f3564301da8: {[LSTMoutput1.wxxpbpwhh Value[4096 x 1 x *]] }
-0x7f3564301f68: {[LSTMoutput1.G4 Value[1024 x 1 x *]] }
-0x7f3564302928: {[LSTMoutput1.bft Value[1024 x 1 x *]] }
-0x7f3564302a88: {[LSTMoutput1.G1 Value[1024 x 1 x *]] }
-0x7f3564302c48: {[LSTMoutput1.Wcidc Value[1024 x 1 x *]] }
-0x7f3564302e08: {[LSTMoutput1.unnamed149 Value[1024 x 1 x *]] }
-0x7f3564302fc8: {[LSTMoutput1.it Value[1024 x 1 x *]] }
-0x7f3564303188: {[LSTMoutput1.G2 Value[1024 x 1 x *]] }
-0x7f3564303348: {[LSTMoutput1.unnamed150 Value[1024 x 1 x *]] }
-0x7f3564303508: {[LSTMoutput1.bit Value[1024 x 1 x *]] }
-0x7f35643036c8: {[LSTMoutput1.ct Value[1024 x 1 x *]] }
-0x7f3564303888: {[LSTMoutput1.Wcoct Value[1024 x 1 x *]] }
-0x7f3564303a48: {[LSTMoutput1.unnamed152 Value[1024 x 1 x *]] }
-0x7f3564303c08: {[LSTMoutput1.ot Value[1024 x 1 x *]] }
-0x7f3564303dc8: {[LSTMoutput1.unnamed153 Value[1024 x 1 x *]] }
-0x7f3564303f88: {[LSTMoutput1.mt Value[1024 x 1 x *]] }
-0x7f3564304148: {[LSTMoutput1.output Value[512 x 1 x *]] }
-0x7f3564304308: {[LSTMoutput1.Wmr Gradient[512 x 1024]] [LSTMoutput2.wxx Value[4096 x 1 x *]] }
-0x7f35643044c8: {[LSTMoutput2.wx Gradient[4096 x 512]] [LSTMoutput2.wxxpb Value[4096 x 1 x *]] }
-0x7f3564304688: {[LSTMoutput1.ot Gradient[1024 x 1 x *]] [LSTMoutput2.whh Value[4096 x 1 x *]] }
-0x7f3564304848: {[LSTMoutput1.ct Gradient[1024 x 1 x *]] [LSTMoutput2.wxxpbpwhh Value[4096 x 1 x *]] }
-0x7f3564304a08: {[LSTMoutput1.G4 Gradient[1024 x 1 x *]] [LSTMoutput2.G4 Value[1024 x 1 x *]] }
-0x7f3564304bc8: {[LSTMoutput2.G3 Value[1024 x 1 x *]] }
-0x7f3564304d88: {[LSTMoutput1.unnamed150 Gradient[1024 x 1 x *]] [LSTMoutput2.Wcfdc Value[1024 x 1 x *]] }
-0x7f3564304f48: {[LSTMoutput1.wxxpbpwhh Gradient[4096 x 1 x *]] [LSTMoutput2.unnamed159 Value[1024 x 1 x *]] }
-0x7f3564305108: {[LSTMoutput1.G1 Gradient[1024 x 1 x *]] [LSTMoutput2.ft Value[1024 x 1 x *]] }
-0x7f35643052c8: {[LSTMoutput2.bft Value[1024 x 1 x *]] }
-0x7f3564305488: {[LSTMoutput1.Wci Gradient[1024]] [LSTMoutput2.G1 Value[1024 x 1 x *]] }
-0x7f3564305648: {[LSTMoutput1.G3 Gradient[1024 x 1 x *]] [LSTMoutput2.Wcidc Value[1024 x 1 x *]] }
-0x7f3564305808: {[LSTMoutput2.unnamed157 Value[1024 x 1 x *]] }
-0x7f35643059c8: {[LSTMoutput1.Wcf Gradient[1024]] [LSTMoutput2.it Value[1024 x 1 x *]] }
-0x7f3564305b88: {[LSTMoutput1.whh Gradient[4096 x 1 x *]] [LSTMoutput2.G2 Value[1024 x 1 x *]] }
-0x7f3564305d48: {[LSTMoutput1.b Gradient[4096 x 1]] [LSTMoutput1.dh Gradient[512 x 1 x *]] [LSTMoutput2.unnamed158 Value[1024 x 1 x *]] }
-0x7f3564305f08: {[LSTMoutput2.bit Value[1024 x 1 x *]] }
-0x7f35643060c8: {[LSTMoutput2.ct Value[1024 x 1 x *]] }
-0x7f3564306288: {[LSTMoutput2.Wcoct Value[1024 x 1 x *]] }
-0x7f3564306448: {[LSTMoutput2.unnamed160 Value[1024 x 1 x *]] }
-0x7f3564306608: {[LSTMoutput2.ot Value[1024 x 1 x *]] }
-0x7f35643067c8: {[LSTMoutput2.unnamed161 Value[1024 x 1 x *]] }
-0x7f3564306988: {[LSTMoutput2.mt Value[1024 x 1 x *]] }
-0x7f3564306b48: {[LSTMoutput2.output Value[512 x 1 x *]] }
-0x7f3564306d08: {[LSTMoutput2.Wmr Gradient[512 x 1024]] [LSTMoutput3.wxx Value[4096 x 1 x *]] }
-0x7f3564306ec8: {[LSTMoutput3.wx Gradient[4096 x 512]] [LSTMoutput3.wxxpb Value[4096 x 1 x *]] }
-0x7f3564307088: {[LSTMoutput2.ot Gradient[1024 x 1 x *]] [LSTMoutput3.whh Value[4096 x 1 x *]] }
-0x7f3564307248: {[LSTMoutput2.ct Gradient[1024 x 1 x *]] [LSTMoutput3.wxxpbpwhh Value[4096 x 1 x *]] }
-0x7f3564307408: {[LSTMoutput1.Wcoct Gradient[1024 x 1 x *]] [LSTMoutput2.G4 Gradient[1024 x 1 x *]] [LSTMoutput3.G4 Value[1024 x 1 x *]] }
-0x7f35643075c8: {[LSTMoutput3.G3 Value[1024 x 1 x *]] }
-0x7f3564307788: {[LSTMoutput2.unnamed158 Gradient[1024 x 1 x *]] [LSTMoutput3.Wcfdc Value[1024 x 1 x *]] }
-0x7f3564307948: {[LSTMoutput1.unnamed152 Gradient[1024 x 1 x *]] [LSTMoutput2.wxxpbpwhh Gradient[4096 x 1 x *]] [LSTMoutput3.unnamed167 Value[1024 x 1 x *]] }
-0x7f3564307b08: {[LSTMoutput1.dc Gradient[1024 x 1 x *]] [LSTMoutput2.G1 Gradient[1024 x 1 x *]] [LSTMoutput3.ft Value[1024 x 1 x *]] }
-0x7f3564307cc8: {[LSTMoutput1.unnamed151 Gradient[1024 x 1 x *]] [LSTMoutput3.bft Value[1024 x 1 x *]] }
-0x7f3564307e88: {[LSTMoutput2.Wci Gradient[1024]] [LSTMoutput3.G1 Value[1024 x 1 x *]] }
-0x7f3564308048: {[LSTMoutput2.G3 Gradient[1024 x 1 x *]] [LSTMoutput3.Wcidc Value[1024 x 1 x *]] }
-0x7f3564308208: {[LSTMoutput1.it Gradient[1024 x 1 x *]] [LSTMoutput3.unnamed165 Value[1024 x 1 x *]] }
-0x7f35643083c8: {[LSTMoutput2.Wcf Gradient[1024]] [LSTMoutput3.it Value[1024 x 1 x *]] }
-0x7f3564308588: {[LSTMoutput1.unnamed153 Gradient[1024 x 1 x *]] [LSTMoutput2.whh Gradient[4096 x 1 x *]] [LSTMoutput3.G2 Value[1024 x 1 x *]] }
-0x7f3564308748: {[LSTMoutput2.b Gradient[4096 x 1]] [LSTMoutput2.dh Gradient[512 x 1 x *]] [LSTMoutput3.unnamed166 Value[1024 x 1 x *]] }
-0x7f3564308908: {[LSTMoutput3.bit Value[1024 x 1 x *]] }
-0x7f3564308ac8: {[LSTMoutput3.ct Value[1024 x 1 x *]] }
-0x7f3564308c88: {[LSTMoutput3.Wcoct Value[1024 x 1 x *]] }
-0x7f3564308e48: {[LSTMoutput3.unnamed168 Value[1024 x 1 x *]] }
-0x7f3564309008: {[LSTMoutput3.ot Value[1024 x 1 x *]] }
-0x7f35643091c8: {[LSTMoutput3.unnamed169 Value[1024 x 1 x *]] }
-0x7f3564309388: {[LSTMoutput3.mt Value[1024 x 1 x *]] }
-0x7f3564309548: {[LSTMoutput3.output Value[512 x 1 x *]] }
-0x7f3564309708: {[LSTMoutput3.Wmr Gradient[512 x 1024]] [unnamed174 Value[132 x 1 x *]] }
-0x7f35643098c8: {[LSTMoutputW Value[132 x 1 x *]] [W Gradient[132 x 512]] }
-0x7f356430a348: {[ce Gradient[1]] }
-0x7f356430a508: {[LSTMoutput3.output Gradient[512 x 1 x *]] [LSTMoutputW Gradient[132 x 1 x *]] }
-0x7f356430a6c8: {[LSTMoutput3.mt Gradient[1024 x 1 x *]] [unnamed174 Gradient[132 x 1 x *]] }
-0x7f356430a888: {[b Gradient[132 x 1]] }
-0x7f356430aa48: {[LSTMoutput3.ot Gradient[1024 x 1 x *]] }
-0x7f356430ac08: {[LSTMoutput3.unnamed169 Gradient[1024 x 1 x *]] }
-0x7f356430adc8: {[LSTMoutput3.ct Gradient[1024 x 1 x *]] }
-0x7f356430af88: {[LSTMoutput3.unnamed168 Gradient[1024 x 1 x *]] }
-0x7f356430b148: {[LSTMoutput2.Wcoct Gradient[1024 x 1 x *]] [LSTMoutput3.G4 Gradient[1024 x 1 x *]] }
-0x7f356430b308: {[LSTMoutput3.Wcoct Gradient[1024 x 1 x *]] }
-0x7f356430b848: {[LSTMoutput3.Wco Gradient[1024]] }
-0x7f356430ba08: {[LSTMoutput1.ft Gradient[1024 x 1 x *]] [LSTMoutput3.bft Gradient[1024 x 1 x *]] }
-0x7f356430bbc8: {[LSTMoutput3.bit Gradient[1024 x 1 x *]] }
-0x7f356430bd88: {[LSTMoutput1.output Gradient[512 x 1 x *]] [LSTMoutput2.wxxpb Gradient[4096 x 1 x *]] [LSTMoutput3.it Gradient[1024 x 1 x *]] }
-0x7f356430bf48: {[LSTMoutput3.unnamed166 Gradient[1024 x 1 x *]] }
-0x7f356430c108: {[LSTMoutput2.Wh Gradient[4096 x 512]] [LSTMoutput3.G2 Gradient[1024 x 1 x *]] }
-0x7f356430c2c8: {[LSTMoutput2.unnamed160 Gradient[1024 x 1 x *]] [LSTMoutput3.wxxpbpwhh Gradient[4096 x 1 x *]] }
-0x7f356430c488: {[LSTMoutput1.bit Gradient[1024 x 1 x *]] [LSTMoutput3.unnamed165 Gradient[1024 x 1 x *]] }
-0x7f356430c648: {[LSTMoutput1.bft Gradient[1024 x 1 x *]] [LSTMoutput2.dc Gradient[1024 x 1 x *]] [LSTMoutput3.G1 Gradient[1024 x 1 x *]] }
-0x7f356430c808: {[LSTMoutput1.G2 Gradient[1024 x 1 x *]] [LSTMoutput2.Wcfdc Gradient[1024 x 1 x *]] [LSTMoutput3.Wcidc Gradient[1024 x 1 x *]] }
-0x7f356430c9c8: {[LSTMoutput1.unnamed149 Gradient[1024 x 1 x *]] [LSTMoutput2.unnamed159 Gradient[1024 x 1 x *]] }
-0x7f356430cb88: {[LSTMoutput1.Wcidc Gradient[1024 x 1 x *]] [LSTMoutput2.ft Gradient[1024 x 1 x *]] }
-0x7f356430cd48: {[LSTMoutput3.Wci Gradient[1024]] }
-0x7f356430cf08: {[LSTMoutput2.bft Gradient[1024 x 1 x *]] [LSTMoutput3.dc Gradient[1024 x 1 x *]] }
-0x7f356430d0c8: {[LSTMoutput1.Wcfdc Gradient[1024 x 1 x *]] [LSTMoutput2.Wcidc Gradient[1024 x 1 x *]] [LSTMoutput3.ft Gradient[1024 x 1 x *]] }
-0x7f356430d288: {[LSTMoutput2.unnamed157 Gradient[1024 x 1 x *]] [LSTMoutput3.unnamed167 Gradient[1024 x 1 x *]] }
-0x7f356430d448: {[LSTMoutput3.G3 Gradient[1024 x 1 x *]] }
-0x7f356430d608: {[LSTMoutput1.Wh Gradient[4096 x 512]] [LSTMoutput2.G2 Gradient[1024 x 1 x *]] [LSTMoutput3.Wcfdc Gradient[1024 x 1 x *]] }
-0x7f356430d7c8: {[LSTMoutput1.wxxpb Gradient[4096 x 1 x *]] [LSTMoutput2.it Gradient[1024 x 1 x *]] }
-0x7f356430d988: {[LSTMoutput2.bit Gradient[1024 x 1 x *]] }
-0x7f356430db48: {[LSTMoutput3.Wcf Gradient[1024]] }
-0x7f356430dd08: {[LSTMoutput2.output Gradient[512 x 1 x *]] [LSTMoutput3.wxxpb Gradient[4096 x 1 x *]] }
-0x7f356430dec8: {[LSTMoutput2.unnamed161 Gradient[1024 x 1 x *]] [LSTMoutput3.whh Gradient[4096 x 1 x *]] }
-0x7f356430e088: {[LSTMoutput3.Wh Gradient[4096 x 512]] }
-0x7f356430e248: {[LSTMoutput3.b Gradient[4096 x 1]] [LSTMoutput3.dh Gradient[512 x 1 x *]] }
-0x7f35645f3f28: {[err Value[1]] }
-0x7f35645f4088: {[scaledLogLikelihood Value[132 x 1 x *]] }
-0x7f35645f7868: {[ce Value[1]] }
-0x7f35645fe448: {[featNorm.xNorm Value[363 x *]] }
-0x7f3564cb3658: {[labels Value[132 x *]] }
-0x7f3564cb4578: {[featNorm.xMean Value[363]] }
-0x7f3564cb4af8: {[featNorm.xStdDev Value[363]] }
-0x7f3564cb5918: {[LSTMoutput1.wx Value[4096 x 363]] }
-0x7f3564cb66a8: {[LSTMoutput1.b Value[4096 x 1]] }
-0x7f3564cb75c8: {[LSTMoutput1.Wh Value[4096 x 512]] }
-0x7f3564cb8408: {[LSTMoutput1.Wci Value[1024]] }
-0x7f3564cb8df8: {[LSTMoutput1.Wcf Value[1024]] }
-0x7f3564cb9638: {[LSTMoutput1.Wco Value[1024]] }
-0x7f3564cba1f8: {[LSTMoutput1.dh Value[512 x 1 x *]] [LSTMoutput1.wxx Gradient[4096 x *]] }
-0x7f3564cbaa68: {[LSTMoutput1.dc Value[1024 x 1 x *]] }
-0x7f3564cbfb78: {[LSTMoutput1.Wmr Value[512 x 1024]] }
-0x7f3564cc0b28: {[LSTMoutput2.wx Value[4096 x 512]] }
-0x7f3564cc1488: {[LSTMoutput2.b Value[4096 x 1]] }
-0x7f3564cc1d68: {[LSTMoutput3.Wci Value[1024]] }
-0x7f3564cc2118: {[LSTMoutput2.Wh Value[4096 x 512]] }
-0x7f3564cc2d68: {[LSTMoutput2.Wci Value[1024]] }
-0x7f3564cc35f8: {[LSTMoutput2.Wcf Value[1024]] }
-0x7f3564cc3e38: {[LSTMoutput2.Wco Value[1024]] }
-0x7f3564cc4928: {[LSTMoutput1.mt Gradient[1024 x 1 x *]] [LSTMoutput2.dh Value[512 x 1 x *]] [LSTMoutput2.wxx Gradient[4096 x 1 x *]] }
-0x7f3564cc5168: {[LSTMoutput1.Wco Gradient[1024]] [LSTMoutput2.dc Value[1024 x 1 x *]] }
-0x7f3569a3b608: {[logPrior.logPrior Value[132]] }
-0x7f356a0df508: {[features Value[363 x *]] }
+0x7f70a458aff8: {[err Value[1]] }
+0x7f70a458b158: {[scaledLogLikelihood Value[132 x 1 x *]] }
+0x7f70a458c428: {[ce Value[1]] }
+0x7f70a4592ed8: {[LSTMoutput1.wx Gradient[4096 x 363]] [LSTMoutput1.wxxpb Value[4096 x 1 x *]] }
+0x7f70a4595258: {[featNorm.xNorm Value[363 x *]] }
+0x7f70a4595b08: {[LSTMoutput1.wxx Value[4096 x *]] }
+0x7f70a4595c98: {[LSTMoutput1.G3 Value[1024 x 1 x *]] }
+0x7f70a4595e58: {[LSTMoutput1.Wcfdc Value[1024 x 1 x *]] }
+0x7f70a4596018: {[LSTMoutput1.unnamed151 Value[1024 x 1 x *]] }
+0x7f70a45961d8: {[LSTMoutput1.ft Value[1024 x 1 x *]] }
+0x7f70a4596698: {[LSTMoutput1.whh Value[4096 x 1 x *]] }
+0x7f70a45967f8: {[LSTMoutput1.wxxpbpwhh Value[4096 x 1 x *]] }
+0x7f70a45969b8: {[LSTMoutput1.G4 Value[1024 x 1 x *]] }
+0x7f70a4597378: {[LSTMoutput1.bft Value[1024 x 1 x *]] }
+0x7f70a45974d8: {[LSTMoutput1.G1 Value[1024 x 1 x *]] }
+0x7f70a4597638: {[LSTMoutput1.Wcidc Value[1024 x 1 x *]] }
+0x7f70a45977f8: {[LSTMoutput1.unnamed149 Value[1024 x 1 x *]] }
+0x7f70a45979b8: {[LSTMoutput1.it Value[1024 x 1 x *]] }
+0x7f70a4597b78: {[LSTMoutput1.G2 Value[1024 x 1 x *]] }
+0x7f70a4597d38: {[LSTMoutput1.unnamed150 Value[1024 x 1 x *]] }
+0x7f70a4597ef8: {[LSTMoutput1.bit Value[1024 x 1 x *]] }
+0x7f70a45980b8: {[LSTMoutput1.ct Value[1024 x 1 x *]] }
+0x7f70a4598278: {[LSTMoutput1.Wcoct Value[1024 x 1 x *]] }
+0x7f70a4598438: {[LSTMoutput1.unnamed152 Value[1024 x 1 x *]] }
+0x7f70a45985f8: {[LSTMoutput1.ot Value[1024 x 1 x *]] }
+0x7f70a45987b8: {[LSTMoutput1.unnamed153 Value[1024 x 1 x *]] }
+0x7f70a4598978: {[LSTMoutput1.mt Value[1024 x 1 x *]] }
+0x7f70a4598b38: {[LSTMoutput1.output Value[512 x 1 x *]] }
+0x7f70a4598cf8: {[LSTMoutput1.Wmr Gradient[512 x 1024]] [LSTMoutput2.wxx Value[4096 x 1 x *]] }
+0x7f70a4598eb8: {[LSTMoutput2.wx Gradient[4096 x 512]] [LSTMoutput2.wxxpb Value[4096 x 1 x *]] }
+0x7f70a4599078: {[LSTMoutput1.ot Gradient[1024 x 1 x *]] [LSTMoutput2.whh Value[4096 x 1 x *]] }
+0x7f70a4599238: {[LSTMoutput1.ct Gradient[1024 x 1 x *]] [LSTMoutput2.wxxpbpwhh Value[4096 x 1 x *]] }
+0x7f70a45993f8: {[LSTMoutput1.G4 Gradient[1024 x 1 x *]] [LSTMoutput2.G4 Value[1024 x 1 x *]] }
+0x7f70a45995b8: {[LSTMoutput2.G3 Value[1024 x 1 x *]] }
+0x7f70a4599778: {[LSTMoutput1.unnamed150 Gradient[1024 x 1 x *]] [LSTMoutput2.Wcfdc Value[1024 x 1 x *]] }
+0x7f70a4599938: {[LSTMoutput1.wxxpbpwhh Gradient[4096 x 1 x *]] [LSTMoutput2.unnamed159 Value[1024 x 1 x *]] }
+0x7f70a4599af8: {[LSTMoutput1.G1 Gradient[1024 x 1 x *]] [LSTMoutput2.ft Value[1024 x 1 x *]] }
+0x7f70a4599cb8: {[LSTMoutput2.bft Value[1024 x 1 x *]] }
+0x7f70a4599e78: {[LSTMoutput1.Wci Gradient[1024]] [LSTMoutput2.G1 Value[1024 x 1 x *]] }
+0x7f70a459a038: {[LSTMoutput1.G3 Gradient[1024 x 1 x *]] [LSTMoutput2.Wcidc Value[1024 x 1 x *]] }
+0x7f70a459a1f8: {[LSTMoutput2.unnamed157 Value[1024 x 1 x *]] }
+0x7f70a459a3b8: {[LSTMoutput1.Wcf Gradient[1024]] [LSTMoutput2.it Value[1024 x 1 x *]] }
+0x7f70a459a578: {[LSTMoutput1.whh Gradient[4096 x 1 x *]] [LSTMoutput2.G2 Value[1024 x 1 x *]] }
+0x7f70a459a738: {[LSTMoutput1.b Gradient[4096 x 1]] [LSTMoutput1.dh Gradient[512 x 1 x *]] [LSTMoutput2.unnamed158 Value[1024 x 1 x *]] }
+0x7f70a459a8f8: {[LSTMoutput2.bit Value[1024 x 1 x *]] }
+0x7f70a459aab8: {[LSTMoutput2.ct Value[1024 x 1 x *]] }
+0x7f70a459ac78: {[LSTMoutput2.Wcoct Value[1024 x 1 x *]] }
+0x7f70a459ae38: {[LSTMoutput2.unnamed160 Value[1024 x 1 x *]] }
+0x7f70a459aff8: {[LSTMoutput2.ot Value[1024 x 1 x *]] }
+0x7f70a459b1b8: {[LSTMoutput2.unnamed161 Value[1024 x 1 x *]] }
+0x7f70a459b378: {[LSTMoutput2.mt Value[1024 x 1 x *]] }
+0x7f70a459b538: {[LSTMoutput2.output Value[512 x 1 x *]] }
+0x7f70a459b6f8: {[LSTMoutput2.Wmr Gradient[512 x 1024]] [LSTMoutput3.wxx Value[4096 x 1 x *]] }
+0x7f70a459b8b8: {[LSTMoutput3.wx Gradient[4096 x 512]] [LSTMoutput3.wxxpb Value[4096 x 1 x *]] }
+0x7f70a459ba78: {[LSTMoutput2.ot Gradient[1024 x 1 x *]] [LSTMoutput3.whh Value[4096 x 1 x *]] }
+0x7f70a459bc38: {[LSTMoutput2.ct Gradient[1024 x 1 x *]] [LSTMoutput3.wxxpbpwhh Value[4096 x 1 x *]] }
+0x7f70a459bdf8: {[LSTMoutput1.Wcoct Gradient[1024 x 1 x *]] [LSTMoutput2.G4 Gradient[1024 x 1 x *]] [LSTMoutput3.G4 Value[1024 x 1 x *]] }
+0x7f70a459bfb8: {[LSTMoutput3.G3 Value[1024 x 1 x *]] }
+0x7f70a459c178: {[LSTMoutput2.unnamed158 Gradient[1024 x 1 x *]] [LSTMoutput3.Wcfdc Value[1024 x 1 x *]] }
+0x7f70a459c338: {[LSTMoutput1.unnamed152 Gradient[1024 x 1 x *]] [LSTMoutput2.wxxpbpwhh Gradient[4096 x 1 x *]] [LSTMoutput3.unnamed167 Value[1024 x 1 x *]] }
+0x7f70a459c4f8: {[LSTMoutput1.dc Gradient[1024 x 1 x *]] [LSTMoutput2.G1 Gradient[1024 x 1 x *]] [LSTMoutput3.ft Value[1024 x 1 x *]] }
+0x7f70a459c6b8: {[LSTMoutput1.unnamed151 Gradient[1024 x 1 x *]] [LSTMoutput3.bft Value[1024 x 1 x *]] }
+0x7f70a459c878: {[LSTMoutput2.Wci Gradient[1024]] [LSTMoutput3.G1 Value[1024 x 1 x *]] }
+0x7f70a459ca38: {[LSTMoutput2.G3 Gradient[1024 x 1 x *]] [LSTMoutput3.Wcidc Value[1024 x 1 x *]] }
+0x7f70a459cbf8: {[LSTMoutput1.it Gradient[1024 x 1 x *]] [LSTMoutput3.unnamed165 Value[1024 x 1 x *]] }
+0x7f70a459cdb8: {[LSTMoutput2.Wcf Gradient[1024]] [LSTMoutput3.it Value[1024 x 1 x *]] }
+0x7f70a459cf78: {[LSTMoutput1.unnamed153 Gradient[1024 x 1 x *]] [LSTMoutput2.whh Gradient[4096 x 1 x *]] [LSTMoutput3.G2 Value[1024 x 1 x *]] }
+0x7f70a459d138: {[LSTMoutput2.b Gradient[4096 x 1]] [LSTMoutput2.dh Gradient[512 x 1 x *]] [LSTMoutput3.unnamed166 Value[1024 x 1 x *]] }
+0x7f70a459d2f8: {[LSTMoutput3.bit Value[1024 x 1 x *]] }
+0x7f70a459d4b8: {[LSTMoutput3.ct Value[1024 x 1 x *]] }
+0x7f70a459d678: {[LSTMoutput3.Wcoct Value[1024 x 1 x *]] }
+0x7f70a459d838: {[LSTMoutput3.unnamed168 Value[1024 x 1 x *]] }
+0x7f70a459d9f8: {[LSTMoutput3.ot Value[1024 x 1 x *]] }
+0x7f70a459dbb8: {[LSTMoutput3.unnamed169 Value[1024 x 1 x *]] }
+0x7f70a459dd78: {[LSTMoutput3.mt Value[1024 x 1 x *]] }
+0x7f70a459df38: {[LSTMoutput3.output Value[512 x 1 x *]] }
+0x7f70a459e0f8: {[LSTMoutput3.Wmr Gradient[512 x 1024]] [unnamed174 Value[132 x 1 x *]] }
+0x7f70a459e2b8: {[LSTMoutputW Value[132 x 1 x *]] [W Gradient[132 x 512]] }
+0x7f70a459ed38: {[ce Gradient[1]] }
+0x7f70a459eef8: {[LSTMoutput3.output Gradient[512 x 1 x *]] [LSTMoutputW Gradient[132 x 1 x *]] }
+0x7f70a459f0b8: {[LSTMoutput3.mt Gradient[1024 x 1 x *]] [unnamed174 Gradient[132 x 1 x *]] }
+0x7f70a459f278: {[b Gradient[132 x 1]] }
+0x7f70a459f438: {[LSTMoutput3.ot Gradient[1024 x 1 x *]] }
+0x7f70a459f5f8: {[LSTMoutput3.unnamed169 Gradient[1024 x 1 x *]] }
+0x7f70a459f7b8: {[LSTMoutput3.ct Gradient[1024 x 1 x *]] }
+0x7f70a459f978: {[LSTMoutput3.unnamed168 Gradient[1024 x 1 x *]] }
+0x7f70a459fb38: {[LSTMoutput2.Wcoct Gradient[1024 x 1 x *]] [LSTMoutput3.G4 Gradient[1024 x 1 x *]] }
+0x7f70a459fcf8: {[LSTMoutput3.Wcoct Gradient[1024 x 1 x *]] }
+0x7f70a45a0238: {[LSTMoutput3.Wco Gradient[1024]] }
+0x7f70a45a03f8: {[LSTMoutput1.ft Gradient[1024 x 1 x *]] [LSTMoutput3.bft Gradient[1024 x 1 x *]] }
+0x7f70a45a05b8: {[LSTMoutput3.bit Gradient[1024 x 1 x *]] }
+0x7f70a45a0778: {[LSTMoutput1.output Gradient[512 x 1 x *]] [LSTMoutput2.wxxpb Gradient[4096 x 1 x *]] [LSTMoutput3.it Gradient[1024 x 1 x *]] }
+0x7f70a45a0938: {[LSTMoutput3.unnamed166 Gradient[1024 x 1 x *]] }
+0x7f70a45a0af8: {[LSTMoutput2.Wh Gradient[4096 x 512]] [LSTMoutput3.G2 Gradient[1024 x 1 x *]] }
+0x7f70a45a0cb8: {[LSTMoutput2.unnamed160 Gradient[1024 x 1 x *]] [LSTMoutput3.wxxpbpwhh Gradient[4096 x 1 x *]] }
+0x7f70a45a0e78: {[LSTMoutput1.bit Gradient[1024 x 1 x *]] [LSTMoutput3.unnamed165 Gradient[1024 x 1 x *]] }
+0x7f70a45a1038: {[LSTMoutput1.bft Gradient[1024 x 1 x *]] [LSTMoutput2.dc Gradient[1024 x 1 x *]] [LSTMoutput3.G1 Gradient[1024 x 1 x *]] }
+0x7f70a45a11f8: {[LSTMoutput1.G2 Gradient[1024 x 1 x *]] [LSTMoutput2.Wcfdc Gradient[1024 x 1 x *]] [LSTMoutput3.Wcidc Gradient[1024 x 1 x *]] }
+0x7f70a45a13b8: {[LSTMoutput1.unnamed149 Gradient[1024 x 1 x *]] [LSTMoutput2.unnamed159 Gradient[1024 x 1 x *]] }
+0x7f70a45a1578: {[LSTMoutput1.Wcidc Gradient[1024 x 1 x *]] [LSTMoutput2.ft Gradient[1024 x 1 x *]] }
+0x7f70a45a1738: {[LSTMoutput3.Wci Gradient[1024]] }
+0x7f70a45a18f8: {[LSTMoutput2.bft Gradient[1024 x 1 x *]] [LSTMoutput3.dc Gradient[1024 x 1 x *]] }
+0x7f70a45a1ab8: {[LSTMoutput1.Wcfdc Gradient[1024 x 1 x *]] [LSTMoutput2.Wcidc Gradient[1024 x 1 x *]] [LSTMoutput3.ft Gradient[1024 x 1 x *]] }
+0x7f70a45a1c78: {[LSTMoutput2.unnamed157 Gradient[1024 x 1 x *]] [LSTMoutput3.unnamed167 Gradient[1024 x 1 x *]] }
+0x7f70a45a1e38: {[LSTMoutput3.G3 Gradient[1024 x 1 x *]] }
+0x7f70a45a1ff8: {[LSTMoutput1.Wh Gradient[4096 x 512]] [LSTMoutput2.G2 Gradient[1024 x 1 x *]] [LSTMoutput3.Wcfdc Gradient[1024 x 1 x *]] }
+0x7f70a45a21b8: {[LSTMoutput1.wxxpb Gradient[4096 x 1 x *]] [LSTMoutput2.it Gradient[1024 x 1 x *]] }
+0x7f70a45a2378: {[LSTMoutput2.bit Gradient[1024 x 1 x *]] }
+0x7f70a45a2538: {[LSTMoutput3.Wcf Gradient[1024]] }
+0x7f70a45a26f8: {[LSTMoutput2.output Gradient[512 x 1 x *]] [LSTMoutput3.wxxpb Gradient[4096 x 1 x *]] }
+0x7f70a45a28b8: {[LSTMoutput2.unnamed161 Gradient[1024 x 1 x *]] [LSTMoutput3.whh Gradient[4096 x 1 x *]] }
+0x7f70a45a2a78: {[LSTMoutput3.Wh Gradient[4096 x 512]] }
+0x7f70a45a2c38: {[LSTMoutput3.b Gradient[4096 x 1]] [LSTMoutput3.dh Gradient[512 x 1 x *]] }
+0x7f70a4ea1378: {[logPrior.prior Value[132]] }
+0x7f70a70024b8: {[LSTMoutput1.wx Value[4096 x 363]] }
+0x7f70a7003328: {[LSTMoutput1.b Value[4096 x 1]] }
+0x7f70a70041e8: {[LSTMoutput1.Wh Value[4096 x 512]] }
+0x7f70a7005088: {[LSTMoutput1.Wci Value[1024]] }
+0x7f70a7005a68: {[LSTMoutput1.Wcf Value[1024]] }
+0x7f70a7006268: {[LSTMoutput1.Wco Value[1024]] }
+0x7f70a7006e18: {[LSTMoutput1.dh Value[512 x 1 x *]] [LSTMoutput1.wxx Gradient[4096 x *]] }
+0x7f70a7007688: {[LSTMoutput1.dc Value[1024 x 1 x *]] }
+0x7f70a700c718: {[LSTMoutput1.Wmr Value[512 x 1024]] }
+0x7f70a700d6c8: {[LSTMoutput2.wx Value[4096 x 512]] }
+0x7f70a700e338: {[LSTMoutput2.b Value[4096 x 1]] }
+0x7f70a700e8d8: {[LSTMoutput3.Wci Value[1024]] }
+0x7f70a700ecc8: {[LSTMoutput2.Wh Value[4096 x 512]] }
+0x7f70a700f8a8: {[LSTMoutput2.Wci Value[1024]] }
+0x7f70a7010138: {[LSTMoutput2.Wcf Value[1024]] }
+0x7f70a7010978: {[LSTMoutput2.Wco Value[1024]] }
+0x7f70a70114a8: {[LSTMoutput1.mt Gradient[1024 x 1 x *]] [LSTMoutput2.dh Value[512 x 1 x *]] [LSTMoutput2.wxx Gradient[4096 x 1 x *]] }
+0x7f70a7011ce8: {[LSTMoutput1.Wco Gradient[1024]] [LSTMoutput2.dc Value[1024 x 1 x *]] }
+0x7f70a7016df8: {[LSTMoutput2.Wmr Value[512 x 1024]] }
+0x7f70a7017da8: {[LSTMoutput3.wx Value[4096 x 512]] }
+0x7f70a7018708: {[LSTMoutput3.b Value[4096 x 1]] }
+0x7f70a70191d8: {[LSTMoutput3.Wh Value[4096 x 512]] }
+0x7f70a701a8e8: {[LSTMoutput3.Wcf Value[1024]] }
+0x7f70a701b128: {[LSTMoutput3.Wco Value[1024]] }
+0x7f70a701bc58: {[LSTMoutput2.mt Gradient[1024 x 1 x *]] [LSTMoutput3.dh Value[512 x 1 x *]] [LSTMoutput3.wxx Gradient[4096 x 1 x *]] }
+0x7f70a701c488: {[LSTMoutput2.Wco Gradient[1024]] [LSTMoutput3.dc Value[1024 x 1 x *]] }
+0x7f70a7021598: {[LSTMoutput3.Wmr Value[512 x 1024]] }
+0x7f70a7022468: {[W Value[132 x 512]] }
+0x7f70a7022e58: {[b Value[132 x 1]] }
+0x7f70a705ff18: {[labels Value[132 x *]] }
+0x7f70a7060ec8: {[featNorm.xMean Value[363]] }
+0x7f70a70613f8: {[featNorm.xStdDev Value[363]] }
+0x7f70a7c9d5f8: {[logPrior.logPrior Value[132]] }
+0x7f70a7cb9388: {[features Value[363 x *]] }
 
 
-07/13/2016 16:45:33: Precomputing --> 3 PreCompute nodes found.
+07/14/2016 12:10:46: Precomputing --> 3 PreCompute nodes found.
 
-07/13/2016 16:45:33: 	featNorm.xMean = Mean()
-07/13/2016 16:45:33: 	featNorm.xStdDev = InvStdDev()
-07/13/2016 16:45:33: 	logPrior.prior = Mean()
+07/14/2016 12:10:46: 	featNorm.xMean = Mean()
+07/14/2016 12:10:46: 	featNorm.xStdDev = InvStdDev()
+07/14/2016 12:10:46: 	logPrior.prior = Mean()
 minibatchiterator: epoch 0: frames [0..252734] (first utterance at frame 0), data subset 0 of 1, with 1 datapasses
 requiredata: determined feature kind as 33-dimensional 'USER' with frame shift 10.0 ms
 
-07/13/2016 16:45:38: Precomputing --> Completed.
+07/14/2016 12:10:51: Precomputing --> Completed.
 
 
-07/13/2016 16:45:39: Starting Epoch 1: learning rate per sample = 0.001953  effective momentum = 0.000000  momentum as time constant = 0.0 samples
+07/14/2016 12:10:51: Starting Epoch 1: learning rate per sample = 0.001953  effective momentum = 0.000000  momentum as time constant = 0.0 samples
 minibatchiterator: epoch 0: frames [0..64] (first utterance at frame 0), data subset 0 of 1, with 1 datapasses
 
-07/13/2016 16:45:39: Starting minibatch loop.
-07/13/2016 16:45:40:  Epoch[ 1 of 1]-Minibatch[   1-  10, 250.00%]: ce = 4.86142883 * 160; err = 0.79375000 * 160; time = 1.5751s; samplesPerSecond = 101.6
-07/13/2016 16:45:42:  Epoch[ 1 of 1]-Minibatch[  11-  20, 500.00%]: ce = 4.87465820 * 160; err = 0.99375000 * 160; time = 1.5457s; samplesPerSecond = 103.5
-07/13/2016 16:45:42: Finished Epoch[ 1 of 1]: [Training] ce = 4.86475065 * 348; err = 0.87931034 * 348; totalSamplesSeen = 348; learningRatePerSample = 0.001953125; epochTime=3.441s
-07/13/2016 16:45:43: SGD: Saving checkpoint model '/tmp/cntk-test-20160713164450.924519/Examples/Speech/AN4_LSTM@debug_gpu/Models/cntkSpeechLSTM.dnn'
-07/13/2016 16:45:43: CNTKCommandTrainEnd: speechTrain
+07/14/2016 12:10:51: Starting minibatch loop.
+07/14/2016 12:10:53:  Epoch[ 1 of 1]-Minibatch[   1-  10, 250.00%]: ce = 4.86142883 * 160; err = 0.79375000 * 160; time = 1.5866s; samplesPerSecond = 100.8
+07/14/2016 12:10:54:  Epoch[ 1 of 1]-Minibatch[  11-  20, 500.00%]: ce = 4.87465820 * 160; err = 0.99375000 * 160; time = 1.5333s; samplesPerSecond = 104.4
+07/14/2016 12:10:55: Finished Epoch[ 1 of 1]: [Training] ce = 4.86475065 * 348; err = 0.87931034 * 348; totalSamplesSeen = 348; learningRatePerSample = 0.001953125; epochTime=3.43478s
+07/14/2016 12:10:55: SGD: Saving checkpoint model '/tmp/cntk-test-20160714120740.596001/Examples/Speech/AN4_LSTM@debug_gpu/Models/cntkSpeechLSTM.dnn'
+07/14/2016 12:10:56: CNTKCommandTrainEnd: speechTrain
 
-07/13/2016 16:45:43: Action "train" complete.
+07/14/2016 12:10:56: Action "train" complete.
 
-07/13/2016 16:45:43: __COMPLETED__
+07/14/2016 12:10:56: __COMPLETED__

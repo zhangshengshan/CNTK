@@ -3,13 +3,13 @@ CPU info:
     Hardware threads: 24
     Total Memory: 264172964 kB
 -------------------------------------------------------------------
-=== Running /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/debug/bin/cntk configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/DNN/WriteCommand/cntk.cntk currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/Data RunDir=/tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/Data ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/DNN/WriteCommand OutputDir=/tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu DeviceId=0 timestamping=true shareNodeValueMatrices=true
+=== Running /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/release/bin/cntk configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/DNN/WriteCommand/cntk.cntk currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/Data RunDir=/tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/Data ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/DNN/WriteCommand OutputDir=/tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu DeviceId=0 timestamping=true shareNodeValueMatrices=true
 -------------------------------------------------------------------
 Build info: 
 
-		Built time: Jul 13 2016 11:58:00
+		Built time: Jul 14 2016 12:04:41
 		Last modified date: Tue Jul 12 04:28:35 2016
-		Build type: debug
+		Build type: release
 		Build target: GPU
 		With 1bit-SGD: no
 		Math lib: mkl
@@ -17,45 +17,45 @@ Build info:
 		CUB_PATH: /usr/local/cub-1.4.1
 		CUDNN_PATH: /usr/local/cudnn-4.0
 		Build Branch: HEAD
-		Build SHA1: 50bb4c8afbc87c14548a5b5f315a064186a5cb5f
-		Built by philly on 2bc22072e267
+		Build SHA1: 72bee394bf461e8f6f0feb593a8416c05f481957
+		Built by philly on 34e58dd0283f
 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
 -------------------------------------------------------------------
 Changed current directory to /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/Data
-07/13/2016 12:22:24: -------------------------------------------------------------------
-07/13/2016 12:22:24: Build info: 
+07/14/2016 12:32:37: -------------------------------------------------------------------
+07/14/2016 12:32:37: Build info: 
 
-07/13/2016 12:22:24: 		Built time: Jul 13 2016 11:58:00
-07/13/2016 12:22:24: 		Last modified date: Tue Jul 12 04:28:35 2016
-07/13/2016 12:22:24: 		Build type: debug
-07/13/2016 12:22:24: 		Build target: GPU
-07/13/2016 12:22:24: 		With 1bit-SGD: no
-07/13/2016 12:22:24: 		Math lib: mkl
-07/13/2016 12:22:24: 		CUDA_PATH: /usr/local/cuda-7.5
-07/13/2016 12:22:24: 		CUB_PATH: /usr/local/cub-1.4.1
-07/13/2016 12:22:24: 		CUDNN_PATH: /usr/local/cudnn-4.0
-07/13/2016 12:22:24: 		Build Branch: HEAD
-07/13/2016 12:22:24: 		Build SHA1: 50bb4c8afbc87c14548a5b5f315a064186a5cb5f
-07/13/2016 12:22:24: 		Built by philly on 2bc22072e267
-07/13/2016 12:22:24: 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
-07/13/2016 12:22:24: -------------------------------------------------------------------
-07/13/2016 12:22:25: -------------------------------------------------------------------
-07/13/2016 12:22:25: GPU info:
+07/14/2016 12:32:37: 		Built time: Jul 14 2016 12:04:41
+07/14/2016 12:32:37: 		Last modified date: Tue Jul 12 04:28:35 2016
+07/14/2016 12:32:37: 		Build type: release
+07/14/2016 12:32:37: 		Build target: GPU
+07/14/2016 12:32:37: 		With 1bit-SGD: no
+07/14/2016 12:32:37: 		Math lib: mkl
+07/14/2016 12:32:37: 		CUDA_PATH: /usr/local/cuda-7.5
+07/14/2016 12:32:37: 		CUB_PATH: /usr/local/cub-1.4.1
+07/14/2016 12:32:37: 		CUDNN_PATH: /usr/local/cudnn-4.0
+07/14/2016 12:32:37: 		Build Branch: HEAD
+07/14/2016 12:32:37: 		Build SHA1: 72bee394bf461e8f6f0feb593a8416c05f481957
+07/14/2016 12:32:37: 		Built by philly on 34e58dd0283f
+07/14/2016 12:32:37: 		Build Path: /home/philly/jenkins/workspace/CNTK-Build-Linux
+07/14/2016 12:32:37: -------------------------------------------------------------------
+07/14/2016 12:32:38: -------------------------------------------------------------------
+07/14/2016 12:32:38: GPU info:
 
-07/13/2016 12:22:25: 		Device[0]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:22:25: 		Device[1]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:22:25: 		Device[2]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:22:25: 		Device[3]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
-07/13/2016 12:22:25: -------------------------------------------------------------------
+07/14/2016 12:32:38: 		Device[0]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:32:38: 		Device[1]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:32:38: 		Device[2]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:32:38: 		Device[3]: cores = 2880; computeCapability = 3.5; type = "GeForce GTX 780 Ti"; memory = 3071 MB
+07/14/2016 12:32:38: -------------------------------------------------------------------
 
-07/13/2016 12:22:25: Running on localhost at 2016/07/13 12:22:25
-07/13/2016 12:22:25: Command line: 
-/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/debug/bin/cntk  configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/DNN/WriteCommand/cntk.cntk  currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/Data  RunDir=/tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu  DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/Data  ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/DNN/WriteCommand  OutputDir=/tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu  DeviceId=0  timestamping=true  shareNodeValueMatrices=true
+07/14/2016 12:32:38: Running on localhost at 2016/07/14 12:32:38
+07/14/2016 12:32:38: Command line: 
+/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/build/gpu/release/bin/cntk  configFile=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/DNN/WriteCommand/cntk.cntk  currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/Data  RunDir=/tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu  DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/Data  ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/DNN/WriteCommand  OutputDir=/tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu  DeviceId=0  timestamping=true  shareNodeValueMatrices=true
 
 
 
-07/13/2016 12:22:25: >>>>>>>>>>>>>>>>>>>> RAW CONFIG (VARIABLES NOT RESOLVED) >>>>>>>>>>>>>>>>>>>>
-07/13/2016 12:22:25: precision = "float"
+07/14/2016 12:32:38: >>>>>>>>>>>>>>>>>>>> RAW CONFIG (VARIABLES NOT RESOLVED) >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:32:38: precision = "float"
 command = speechTrain:write
 deviceId = $DeviceId$
 parallelTrain = false
@@ -135,25 +135,25 @@ write = [
     outputPath = "$RunDir$/Output"
 ]
 currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/Data
-RunDir=/tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu
+RunDir=/tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu
 DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/Data
 ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/DNN/WriteCommand
-OutputDir=/tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu
+OutputDir=/tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu
 DeviceId=0
 timestamping=true
 shareNodeValueMatrices=true
 
-07/13/2016 12:22:25: <<<<<<<<<<<<<<<<<<<< RAW CONFIG (VARIABLES NOT RESOLVED)  <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:32:38: <<<<<<<<<<<<<<<<<<<< RAW CONFIG (VARIABLES NOT RESOLVED)  <<<<<<<<<<<<<<<<<<<<
 
-07/13/2016 12:22:25: >>>>>>>>>>>>>>>>>>>> RAW CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
-07/13/2016 12:22:25: precision = "float"
+07/14/2016 12:32:38: >>>>>>>>>>>>>>>>>>>> RAW CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:32:38: precision = "float"
 command = speechTrain:write
 deviceId = 0
 parallelTrain = false
 makeMode = false
 speechTrain = [
     action = "train"
-    modelPath = "/tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu/models/cntkSpeech.dnn"
+    modelPath = "/tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu/models/cntkSpeech.dnn"
     deviceId = 0
     traceLevel = 1
     SimpleNetworkBuilder = [
@@ -206,7 +206,7 @@ speechTrain = [
 ]
 write = [
     action = write
-    modelPath = "/tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu/models/cntkSpeech.dnn"
+    modelPath = "/tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu/models/cntkSpeech.dnn"
     outputNodeNames=ScaledLogLikelihood
     deviceId = 0
     traceLevel = 1
@@ -223,34 +223,34 @@ write = [
             scpFile = "glob_0000.write.scp"
         ]
     ]
-    outputPath = "/tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu/Output"
+    outputPath = "/tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu/Output"
 ]
 currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/Data
-RunDir=/tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu
+RunDir=/tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu
 DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/Data
 ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/DNN/WriteCommand
-OutputDir=/tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu
+OutputDir=/tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu
 DeviceId=0
 timestamping=true
 shareNodeValueMatrices=true
 
-07/13/2016 12:22:25: <<<<<<<<<<<<<<<<<<<< RAW CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:32:38: <<<<<<<<<<<<<<<<<<<< RAW CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
 
-07/13/2016 12:22:25: >>>>>>>>>>>>>>>>>>>> PROCESSED CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
+07/14/2016 12:32:38: >>>>>>>>>>>>>>>>>>>> PROCESSED CONFIG WITH ALL VARIABLES RESOLVED >>>>>>>>>>>>>>>>>>>>
 configparameters: cntk.cntk:command=speechTrain:write
 configparameters: cntk.cntk:ConfigDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/DNN/WriteCommand
 configparameters: cntk.cntk:currentDirectory=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/Data
 configparameters: cntk.cntk:DataDir=/home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/Data
 configparameters: cntk.cntk:deviceId=0
 configparameters: cntk.cntk:makeMode=false
-configparameters: cntk.cntk:OutputDir=/tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu
+configparameters: cntk.cntk:OutputDir=/tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu
 configparameters: cntk.cntk:parallelTrain=false
 configparameters: cntk.cntk:precision=float
-configparameters: cntk.cntk:RunDir=/tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu
+configparameters: cntk.cntk:RunDir=/tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu
 configparameters: cntk.cntk:shareNodeValueMatrices=true
 configparameters: cntk.cntk:speechTrain=[
     action = "train"
-    modelPath = "/tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu/models/cntkSpeech.dnn"
+    modelPath = "/tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu/models/cntkSpeech.dnn"
     deviceId = 0
     traceLevel = 1
     SimpleNetworkBuilder = [
@@ -305,7 +305,7 @@ configparameters: cntk.cntk:speechTrain=[
 configparameters: cntk.cntk:timestamping=true
 configparameters: cntk.cntk:write=[
     action = write
-    modelPath = "/tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu/models/cntkSpeech.dnn"
+    modelPath = "/tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu/models/cntkSpeech.dnn"
     outputNodeNames=ScaledLogLikelihood
     deviceId = 0
     traceLevel = 1
@@ -322,23 +322,23 @@ configparameters: cntk.cntk:write=[
             scpFile = "glob_0000.write.scp"
         ]
     ]
-    outputPath = "/tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu/Output"
+    outputPath = "/tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu/Output"
 ]
 
-07/13/2016 12:22:25: <<<<<<<<<<<<<<<<<<<< PROCESSED CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
-07/13/2016 12:22:25: Commands: speechTrain write
-07/13/2016 12:22:25: Precision = "float"
-07/13/2016 12:22:25: CNTKModelPath: /tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu/models/cntkSpeech.dnn
-07/13/2016 12:22:25: CNTKCommandTrainInfo: speechTrain : 3
-07/13/2016 12:22:25: CNTKCommandTrainInfo: CNTKNoMoreCommands_Total : 3
+07/14/2016 12:32:38: <<<<<<<<<<<<<<<<<<<< PROCESSED CONFIG WITH ALL VARIABLES RESOLVED <<<<<<<<<<<<<<<<<<<<
+07/14/2016 12:32:38: Commands: speechTrain write
+07/14/2016 12:32:38: Precision = "float"
+07/14/2016 12:32:38: CNTKModelPath: /tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu/models/cntkSpeech.dnn
+07/14/2016 12:32:38: CNTKCommandTrainInfo: speechTrain : 3
+07/14/2016 12:32:38: CNTKCommandTrainInfo: CNTKNoMoreCommands_Total : 3
 
-07/13/2016 12:22:25: ##############################################################################
-07/13/2016 12:22:25: #                                                                            #
-07/13/2016 12:22:25: # Action "train"                                                             #
-07/13/2016 12:22:25: #                                                                            #
-07/13/2016 12:22:25: ##############################################################################
+07/14/2016 12:32:38: ##############################################################################
+07/14/2016 12:32:38: #                                                                            #
+07/14/2016 12:32:38: # Action "train"                                                             #
+07/14/2016 12:32:38: #                                                                            #
+07/14/2016 12:32:38: ##############################################################################
 
-07/13/2016 12:22:25: CNTKCommandTrainBegin: speechTrain
+07/14/2016 12:32:38: CNTKCommandTrainBegin: speechTrain
 SimpleNetworkBuilder Using GPU 0
 reading script file glob_0000.scp ... 948 entries
 total 132 state names in state list /home/philly/jenkins/workspace/CNTK-Test-Linux-W1/Tests/EndToEndTests/Speech/Data/state.list
@@ -347,7 +347,7 @@ htkmlfreader: reading MLF file /home/philly/jenkins/workspace/CNTK-Test-Linux-W1
 label set 0: 129 classes
 minibatchutterancesource: 948 utterances grouped into 3 chunks, av. chunk size: 316.0 utterances, 84244.7 frames
 useParallelTrain option is not enabled. ParallelTrain config will be ignored.
-07/13/2016 12:22:25: Creating virgin network.
+07/14/2016 12:32:38: Creating virgin network.
 SetUniformRandomValue (GPU): creating curand object with seed 1, sizeof(ElemType)==4
 
 Post-processing network...
@@ -400,14 +400,14 @@ Validating network, final pass.
 
 Post-processing network complete.
 
-07/13/2016 12:22:25: Created model with 25 nodes on GPU 0.
+07/14/2016 12:32:38: Created model with 25 nodes on GPU 0.
 
-07/13/2016 12:22:25: Training criterion node(s):
-07/13/2016 12:22:25: 	CrossEntropyWithSoftmax = CrossEntropyWithSoftmax
+07/14/2016 12:32:38: Training criterion node(s):
+07/14/2016 12:32:38: 	CrossEntropyWithSoftmax = CrossEntropyWithSoftmax
 
-07/13/2016 12:22:25: Evaluation criterion node(s):
+07/14/2016 12:32:38: Evaluation criterion node(s):
 
-07/13/2016 12:22:25: 	EvalErrorPrediction = ErrorPrediction
+07/14/2016 12:32:38: 	EvalErrorPrediction = ErrorPrediction
 
 
 Allocating matrices for forward and/or backward propagation.
@@ -415,116 +415,116 @@ Allocating matrices for forward and/or backward propagation.
 Memory Sharing Structure:
 
 (nil): {[EvalErrorPrediction Gradient[1]] [InvStdOfFeatures Gradient[363]] [LogOfPrior Gradient[132]] [MVNormalizedFeatures Gradient[363 x *]] [MeanOfFeatures Gradient[363]] [PosteriorProb Gradient[132 x 1 x *]] [PosteriorProb Value[132 x 1 x *]] [Prior Gradient[132]] [ScaledLogLikelihood Gradient[132 x 1 x *]] [features Gradient[363 x *]] [labels Gradient[132 x *]] }
-0x20cb0e8: {[features Value[363 x *]] }
-0x7ff7499d9668: {[MeanOfFeatures Value[363]] }
-0x7ff7499d9b78: {[InvStdOfFeatures Value[363]] }
-0x7ff7499da8b8: {[W0 Value[512 x 363]] }
-0x7ff7499f8338: {[B0 Value[512 x 1]] }
-0x7ff7499fa578: {[W1 Value[512 x 512]] }
-0x7ff74b6b0228: {[B1 Value[512 x 1]] }
-0x7ff74b6b13c8: {[W2 Value[132 x 512]] }
-0x7ff74b6b1b48: {[B2 Value[132 x 1]] }
-0x7ff74b6b2ea8: {[labels Value[132 x *]] }
-0x7ff74b6b4108: {[Prior Value[132]] }
-0x7ff74b6b99f8: {[EvalErrorPrediction Value[1]] }
-0x7ff74b6b9cd8: {[ScaledLogLikelihood Value[132 x 1 x *]] }
-0x7ff74b6b9e98: {[CrossEntropyWithSoftmax Value[1]] }
-0x7ff74b6ba518: {[LogOfPrior Value[132]] }
-0x7ff74b6bb658: {[MVNormalizedFeatures Value[363 x *]] }
-0x7ff74b6bbd58: {[H1 Value[512 x 1 x *]] [W0*features Gradient[512 x *]] [W0*features Value[512 x *]] }
-0x7ff74b6bc288: {[H2 Value[512 x 1 x *]] [W0 Gradient[512 x 363]] [W0*features+B0 Gradient[512 x 1 x *]] [W0*features+B0 Value[512 x 1 x *]] [W1*H1 Gradient[512 x 1 x *]] [W1*H1 Value[512 x 1 x *]] }
-0x7ff74b6bc3e8: {[W1*H1+B1 Value[512 x 1 x *]] [W2*H1 Value[132 x 1 x *]] }
-0x7ff74b6bc5a8: {[HLast Value[132 x 1 x *]] [W2 Gradient[132 x 512]] }
-0x7ff74b6bcf48: {[CrossEntropyWithSoftmax Gradient[1]] }
-0x7ff74b6bd108: {[B1 Gradient[512 x 1]] [H2 Gradient[512 x 1 x *]] [HLast Gradient[132 x 1 x *]] }
-0x7ff74b6bd2c8: {[W1 Gradient[512 x 512]] [W1*H1+B1 Gradient[512 x 1 x *]] [W2*H1 Gradient[132 x 1 x *]] }
-0x7ff74b6bd488: {[B2 Gradient[132 x 1]] }
-0x7ff74b6bd678: {[B0 Gradient[512 x 1]] [H1 Gradient[512 x 1 x *]] }
+0x7f8f94c48ac8: {[MVNormalizedFeatures Value[363 x *]] }
+0x7f8f94c491c8: {[H1 Value[512 x 1 x *]] [W0*features Gradient[512 x *]] [W0*features Value[512 x *]] }
+0x7f8f94c496f8: {[H2 Value[512 x 1 x *]] [W0 Gradient[512 x 363]] [W0*features+B0 Gradient[512 x 1 x *]] [W0*features+B0 Value[512 x 1 x *]] [W1*H1 Gradient[512 x 1 x *]] [W1*H1 Value[512 x 1 x *]] }
+0x7f8f94c49858: {[W1*H1+B1 Value[512 x 1 x *]] [W2*H1 Value[132 x 1 x *]] }
+0x7f8f94c49a18: {[HLast Value[132 x 1 x *]] [W2 Gradient[132 x 512]] }
+0x7f8f94c4a3b8: {[CrossEntropyWithSoftmax Gradient[1]] }
+0x7f8f94c4a578: {[B1 Gradient[512 x 1]] [H2 Gradient[512 x 1 x *]] [HLast Gradient[132 x 1 x *]] }
+0x7f8f94c4a738: {[W1 Gradient[512 x 512]] [W1*H1+B1 Gradient[512 x 1 x *]] [W2*H1 Gradient[132 x 1 x *]] }
+0x7f8f94c4a8f8: {[B2 Gradient[132 x 1]] }
+0x7f8f94c4aae8: {[B0 Gradient[512 x 1]] [H1 Gradient[512 x 1 x *]] }
+0x7f8f9535abe8: {[W1 Value[512 x 512]] }
+0x7f8f9535b9b8: {[B1 Value[512 x 1]] }
+0x7f8f9535cb58: {[W2 Value[132 x 512]] }
+0x7f8f9535d2d8: {[B2 Value[132 x 1]] }
+0x7f8f9535e638: {[labels Value[132 x *]] }
+0x7f8f9535f898: {[Prior Value[132]] }
+0x7f8f95365138: {[EvalErrorPrediction Value[1]] }
+0x7f8f95365438: {[ScaledLogLikelihood Value[132 x 1 x *]] }
+0x7f8f953655f8: {[CrossEntropyWithSoftmax Value[1]] }
+0x7f8f95365bf8: {[LogOfPrior Value[132]] }
+0x7f8f9536b228: {[B0 Value[512 x 1]] }
+0x7f8f95563d68: {[W0 Value[512 x 363]] }
+0x7f8f957544b8: {[MeanOfFeatures Value[363]] }
+0x7f8f95754988: {[InvStdOfFeatures Value[363]] }
+0x7f8f9a209658: {[features Value[363 x *]] }
 
 
-07/13/2016 12:22:25: Precomputing --> 3 PreCompute nodes found.
+07/14/2016 12:32:38: Precomputing --> 3 PreCompute nodes found.
 
-07/13/2016 12:22:25: 	MeanOfFeatures = Mean()
-07/13/2016 12:22:25: 	InvStdOfFeatures = InvStdDev()
-07/13/2016 12:22:25: 	Prior = Mean()
+07/14/2016 12:32:38: 	MeanOfFeatures = Mean()
+07/14/2016 12:32:38: 	InvStdOfFeatures = InvStdDev()
+07/14/2016 12:32:38: 	Prior = Mean()
 minibatchiterator: epoch 0: frames [0..252734] (first utterance at frame 0), data subset 0 of 1, with 1 datapasses
 requiredata: determined feature kind as 33-dimensional 'USER' with frame shift 10.0 ms
 
-07/13/2016 12:22:30: Precomputing --> Completed.
+07/14/2016 12:32:39: Precomputing --> Completed.
 
 
-07/13/2016 12:22:30: Starting Epoch 1: learning rate per sample = 0.015625  effective momentum = 0.900000  momentum as time constant = 607.4 samples
+07/14/2016 12:32:39: Starting Epoch 1: learning rate per sample = 0.015625  effective momentum = 0.900000  momentum as time constant = 607.4 samples
 minibatchiterator: epoch 0: frames [0..20480] (first utterance at frame 0), data subset 0 of 1, with 1 datapasses
 
-07/13/2016 12:22:30: Starting minibatch loop.
-07/13/2016 12:22:31:  Epoch[ 1 of 3]-Minibatch[   1-  10, 3.12%]: CrossEntropyWithSoftmax = 4.32135277 * 640; EvalErrorPrediction = 0.90000000 * 640; time = 0.0602s; samplesPerSecond = 10636.5
-07/13/2016 12:22:31:  Epoch[ 1 of 3]-Minibatch[  11-  20, 6.25%]: CrossEntropyWithSoftmax = 4.15070992 * 640; EvalErrorPrediction = 0.86718750 * 640; time = 0.0579s; samplesPerSecond = 11057.2
-07/13/2016 12:22:31:  Epoch[ 1 of 3]-Minibatch[  21-  30, 9.38%]: CrossEntropyWithSoftmax = 3.99901123 * 640; EvalErrorPrediction = 0.87656250 * 640; time = 0.0579s; samplesPerSecond = 11049.2
-07/13/2016 12:22:31:  Epoch[ 1 of 3]-Minibatch[  31-  40, 12.50%]: CrossEntropyWithSoftmax = 3.86945953 * 640; EvalErrorPrediction = 0.87656250 * 640; time = 0.0578s; samplesPerSecond = 11067.5
-07/13/2016 12:22:31:  Epoch[ 1 of 3]-Minibatch[  41-  50, 15.62%]: CrossEntropyWithSoftmax = 3.80219574 * 640; EvalErrorPrediction = 0.87812500 * 640; time = 0.0579s; samplesPerSecond = 11060.6
-07/13/2016 12:22:31:  Epoch[ 1 of 3]-Minibatch[  51-  60, 18.75%]: CrossEntropyWithSoftmax = 3.72890930 * 640; EvalErrorPrediction = 0.86875000 * 640; time = 0.0581s; samplesPerSecond = 11024.0
-07/13/2016 12:22:31:  Epoch[ 1 of 3]-Minibatch[  61-  70, 21.88%]: CrossEntropyWithSoftmax = 3.56186981 * 640; EvalErrorPrediction = 0.82343750 * 640; time = 0.0567s; samplesPerSecond = 11280.7
-07/13/2016 12:22:31:  Epoch[ 1 of 3]-Minibatch[  71-  80, 25.00%]: CrossEntropyWithSoftmax = 3.42790527 * 640; EvalErrorPrediction = 0.80781250 * 640; time = 0.0567s; samplesPerSecond = 11287.3
-07/13/2016 12:22:31:  Epoch[ 1 of 3]-Minibatch[  81-  90, 28.12%]: CrossEntropyWithSoftmax = 3.33928528 * 640; EvalErrorPrediction = 0.77343750 * 640; time = 0.0566s; samplesPerSecond = 11315.2
-07/13/2016 12:22:31:  Epoch[ 1 of 3]-Minibatch[  91- 100, 31.25%]: CrossEntropyWithSoftmax = 3.36398926 * 640; EvalErrorPrediction = 0.84375000 * 640; time = 0.0560s; samplesPerSecond = 11437.1
-07/13/2016 12:22:31:  Epoch[ 1 of 3]-Minibatch[ 101- 110, 34.38%]: CrossEntropyWithSoftmax = 3.21223450 * 640; EvalErrorPrediction = 0.75312500 * 640; time = 0.0560s; samplesPerSecond = 11434.9
-07/13/2016 12:22:31:  Epoch[ 1 of 3]-Minibatch[ 111- 120, 37.50%]: CrossEntropyWithSoftmax = 3.31265564 * 640; EvalErrorPrediction = 0.78750000 * 640; time = 0.0561s; samplesPerSecond = 11403.3
-07/13/2016 12:22:31:  Epoch[ 1 of 3]-Minibatch[ 121- 130, 40.62%]: CrossEntropyWithSoftmax = 3.14082031 * 640; EvalErrorPrediction = 0.74687500 * 640; time = 0.0559s; samplesPerSecond = 11455.6
-07/13/2016 12:22:31:  Epoch[ 1 of 3]-Minibatch[ 131- 140, 43.75%]: CrossEntropyWithSoftmax = 3.00689697 * 640; EvalErrorPrediction = 0.69687500 * 640; time = 0.0560s; samplesPerSecond = 11420.2
-07/13/2016 12:22:31:  Epoch[ 1 of 3]-Minibatch[ 141- 150, 46.88%]: CrossEntropyWithSoftmax = 3.00495911 * 640; EvalErrorPrediction = 0.72343750 * 640; time = 0.0559s; samplesPerSecond = 11441.4
-07/13/2016 12:22:31:  Epoch[ 1 of 3]-Minibatch[ 151- 160, 50.00%]: CrossEntropyWithSoftmax = 2.97858887 * 640; EvalErrorPrediction = 0.73906250 * 640; time = 0.0559s; samplesPerSecond = 11451.1
-07/13/2016 12:22:31:  Epoch[ 1 of 3]-Minibatch[ 161- 170, 53.12%]: CrossEntropyWithSoftmax = 2.85686035 * 640; EvalErrorPrediction = 0.70781250 * 640; time = 0.0558s; samplesPerSecond = 11467.5
-07/13/2016 12:22:31:  Epoch[ 1 of 3]-Minibatch[ 171- 180, 56.25%]: CrossEntropyWithSoftmax = 2.69053345 * 640; EvalErrorPrediction = 0.67187500 * 640; time = 0.0562s; samplesPerSecond = 11383.8
-07/13/2016 12:22:32:  Epoch[ 1 of 3]-Minibatch[ 181- 190, 59.38%]: CrossEntropyWithSoftmax = 2.78653564 * 640; EvalErrorPrediction = 0.70468750 * 640; time = 0.0563s; samplesPerSecond = 11360.4
-07/13/2016 12:22:32:  Epoch[ 1 of 3]-Minibatch[ 191- 200, 62.50%]: CrossEntropyWithSoftmax = 2.57702026 * 640; EvalErrorPrediction = 0.64843750 * 640; time = 0.0563s; samplesPerSecond = 11375.4
-07/13/2016 12:22:32:  Epoch[ 1 of 3]-Minibatch[ 201- 210, 65.62%]: CrossEntropyWithSoftmax = 2.61571655 * 640; EvalErrorPrediction = 0.66406250 * 640; time = 0.0563s; samplesPerSecond = 11362.6
-07/13/2016 12:22:32:  Epoch[ 1 of 3]-Minibatch[ 211- 220, 68.75%]: CrossEntropyWithSoftmax = 2.55236206 * 640; EvalErrorPrediction = 0.65781250 * 640; time = 0.0562s; samplesPerSecond = 11391.8
-07/13/2016 12:22:32:  Epoch[ 1 of 3]-Minibatch[ 221- 230, 71.88%]: CrossEntropyWithSoftmax = 2.48211670 * 640; EvalErrorPrediction = 0.62500000 * 640; time = 0.0563s; samplesPerSecond = 11363.6
-07/13/2016 12:22:32:  Epoch[ 1 of 3]-Minibatch[ 231- 240, 75.00%]: CrossEntropyWithSoftmax = 2.38778687 * 640; EvalErrorPrediction = 0.62812500 * 640; time = 0.0563s; samplesPerSecond = 11377.0
-07/13/2016 12:22:32:  Epoch[ 1 of 3]-Minibatch[ 241- 250, 78.12%]: CrossEntropyWithSoftmax = 2.36900635 * 640; EvalErrorPrediction = 0.64843750 * 640; time = 0.0563s; samplesPerSecond = 11358.6
-07/13/2016 12:22:32:  Epoch[ 1 of 3]-Minibatch[ 251- 260, 81.25%]: CrossEntropyWithSoftmax = 2.43967285 * 640; EvalErrorPrediction = 0.63281250 * 640; time = 0.0562s; samplesPerSecond = 11388.9
-07/13/2016 12:22:32:  Epoch[ 1 of 3]-Minibatch[ 261- 270, 84.38%]: CrossEntropyWithSoftmax = 2.30281982 * 640; EvalErrorPrediction = 0.61250000 * 640; time = 0.0562s; samplesPerSecond = 11385.1
-07/13/2016 12:22:32:  Epoch[ 1 of 3]-Minibatch[ 271- 280, 87.50%]: CrossEntropyWithSoftmax = 2.19668579 * 640; EvalErrorPrediction = 0.55937500 * 640; time = 0.0562s; samplesPerSecond = 11379.2
-07/13/2016 12:22:32:  Epoch[ 1 of 3]-Minibatch[ 281- 290, 90.62%]: CrossEntropyWithSoftmax = 2.28980103 * 640; EvalErrorPrediction = 0.60468750 * 640; time = 0.0562s; samplesPerSecond = 11387.7
-07/13/2016 12:22:32:  Epoch[ 1 of 3]-Minibatch[ 291- 300, 93.75%]: CrossEntropyWithSoftmax = 2.17750854 * 640; EvalErrorPrediction = 0.62187500 * 640; time = 0.0563s; samplesPerSecond = 11374.5
-07/13/2016 12:22:32:  Epoch[ 1 of 3]-Minibatch[ 301- 310, 96.88%]: CrossEntropyWithSoftmax = 2.26263428 * 640; EvalErrorPrediction = 0.59687500 * 640; time = 0.0561s; samplesPerSecond = 11403.3
-07/13/2016 12:22:32:  Epoch[ 1 of 3]-Minibatch[ 311- 320, 100.00%]: CrossEntropyWithSoftmax = 2.15072632 * 640; EvalErrorPrediction = 0.56250000 * 640; time = 0.0548s; samplesPerSecond = 11669.5
-07/13/2016 12:22:32: Finished Epoch[ 1 of 3]: [Training] CrossEntropyWithSoftmax = 2.97995720 * 20480; EvalErrorPrediction = 0.72216797 * 20480; totalSamplesSeen = 20480; learningRatePerSample = 0.015625; epochTime=1.81489s
-07/13/2016 12:22:32: SGD: Saving checkpoint model '/tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu/models/cntkSpeech.dnn.1'
+07/14/2016 12:32:39: Starting minibatch loop.
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[   1-  10, 3.12%]: CrossEntropyWithSoftmax = 4.32135277 * 640; EvalErrorPrediction = 0.90000000 * 640; time = 0.0117s; samplesPerSecond = 54883.8
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[  11-  20, 6.25%]: CrossEntropyWithSoftmax = 4.15070992 * 640; EvalErrorPrediction = 0.86718750 * 640; time = 0.0082s; samplesPerSecond = 77896.8
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[  21-  30, 9.38%]: CrossEntropyWithSoftmax = 3.99901123 * 640; EvalErrorPrediction = 0.87656250 * 640; time = 0.0082s; samplesPerSecond = 77783.2
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[  31-  40, 12.50%]: CrossEntropyWithSoftmax = 3.86945953 * 640; EvalErrorPrediction = 0.87656250 * 640; time = 0.0082s; samplesPerSecond = 78210.9
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[  41-  50, 15.62%]: CrossEntropyWithSoftmax = 3.80219574 * 640; EvalErrorPrediction = 0.87812500 * 640; time = 0.0082s; samplesPerSecond = 77953.7
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[  51-  60, 18.75%]: CrossEntropyWithSoftmax = 3.72890930 * 640; EvalErrorPrediction = 0.86875000 * 640; time = 0.0082s; samplesPerSecond = 78220.5
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[  61-  70, 21.88%]: CrossEntropyWithSoftmax = 3.56186981 * 640; EvalErrorPrediction = 0.82343750 * 640; time = 0.0082s; samplesPerSecond = 78153.6
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[  71-  80, 25.00%]: CrossEntropyWithSoftmax = 3.42790527 * 640; EvalErrorPrediction = 0.80781250 * 640; time = 0.0082s; samplesPerSecond = 78077.3
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[  81-  90, 28.12%]: CrossEntropyWithSoftmax = 3.33928528 * 640; EvalErrorPrediction = 0.77343750 * 640; time = 0.0082s; samplesPerSecond = 77944.2
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[  91- 100, 31.25%]: CrossEntropyWithSoftmax = 3.36398926 * 640; EvalErrorPrediction = 0.84375000 * 640; time = 0.0082s; samplesPerSecond = 77972.7
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 101- 110, 34.38%]: CrossEntropyWithSoftmax = 3.21223450 * 640; EvalErrorPrediction = 0.75312500 * 640; time = 0.0102s; samplesPerSecond = 62555.0
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 111- 120, 37.50%]: CrossEntropyWithSoftmax = 3.31265564 * 640; EvalErrorPrediction = 0.78750000 * 640; time = 0.0082s; samplesPerSecond = 77792.6
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 121- 130, 40.62%]: CrossEntropyWithSoftmax = 3.14082031 * 640; EvalErrorPrediction = 0.74687500 * 640; time = 0.0083s; samplesPerSecond = 77453.7
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 131- 140, 43.75%]: CrossEntropyWithSoftmax = 3.00689697 * 640; EvalErrorPrediction = 0.69687500 * 640; time = 0.0085s; samplesPerSecond = 75241.0
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 141- 150, 46.88%]: CrossEntropyWithSoftmax = 3.00495911 * 640; EvalErrorPrediction = 0.72343750 * 640; time = 0.0075s; samplesPerSecond = 85458.7
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 151- 160, 50.00%]: CrossEntropyWithSoftmax = 2.97858887 * 640; EvalErrorPrediction = 0.73906250 * 640; time = 0.0076s; samplesPerSecond = 84455.0
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 161- 170, 53.12%]: CrossEntropyWithSoftmax = 2.85686035 * 640; EvalErrorPrediction = 0.70781250 * 640; time = 0.0076s; samplesPerSecond = 84712.1
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 171- 180, 56.25%]: CrossEntropyWithSoftmax = 2.69053345 * 640; EvalErrorPrediction = 0.67187500 * 640; time = 0.0075s; samplesPerSecond = 85607.3
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 181- 190, 59.38%]: CrossEntropyWithSoftmax = 2.78653564 * 640; EvalErrorPrediction = 0.70468750 * 640; time = 0.0074s; samplesPerSecond = 86288.3
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 191- 200, 62.50%]: CrossEntropyWithSoftmax = 2.57702026 * 640; EvalErrorPrediction = 0.64843750 * 640; time = 0.0075s; samplesPerSecond = 85721.9
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 201- 210, 65.62%]: CrossEntropyWithSoftmax = 2.61571655 * 640; EvalErrorPrediction = 0.66406250 * 640; time = 0.0074s; samplesPerSecond = 86114.1
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 211- 220, 68.75%]: CrossEntropyWithSoftmax = 2.55236206 * 640; EvalErrorPrediction = 0.65781250 * 640; time = 0.0075s; samplesPerSecond = 85883.0
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 221- 230, 71.88%]: CrossEntropyWithSoftmax = 2.48211670 * 640; EvalErrorPrediction = 0.62500000 * 640; time = 0.0074s; samplesPerSecond = 86218.5
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 231- 240, 75.00%]: CrossEntropyWithSoftmax = 2.38778687 * 640; EvalErrorPrediction = 0.62812500 * 640; time = 0.0074s; samplesPerSecond = 86323.2
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 241- 250, 78.12%]: CrossEntropyWithSoftmax = 2.36900635 * 640; EvalErrorPrediction = 0.64843750 * 640; time = 0.0074s; samplesPerSecond = 85952.2
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 251- 260, 81.25%]: CrossEntropyWithSoftmax = 2.43967285 * 640; EvalErrorPrediction = 0.63281250 * 640; time = 0.0074s; samplesPerSecond = 86148.9
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 261- 270, 84.38%]: CrossEntropyWithSoftmax = 2.30281982 * 640; EvalErrorPrediction = 0.61250000 * 640; time = 0.0074s; samplesPerSecond = 86044.6
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 271- 280, 87.50%]: CrossEntropyWithSoftmax = 2.19668579 * 640; EvalErrorPrediction = 0.55937500 * 640; time = 0.0075s; samplesPerSecond = 85242.4
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 281- 290, 90.62%]: CrossEntropyWithSoftmax = 2.28980103 * 640; EvalErrorPrediction = 0.60468750 * 640; time = 0.0075s; samplesPerSecond = 85756.4
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 291- 300, 93.75%]: CrossEntropyWithSoftmax = 2.17750854 * 640; EvalErrorPrediction = 0.62187500 * 640; time = 0.0074s; samplesPerSecond = 86102.5
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 301- 310, 96.88%]: CrossEntropyWithSoftmax = 2.26263428 * 640; EvalErrorPrediction = 0.59687500 * 640; time = 0.0074s; samplesPerSecond = 86299.9
+07/14/2016 12:32:39:  Epoch[ 1 of 3]-Minibatch[ 311- 320, 100.00%]: CrossEntropyWithSoftmax = 2.15072632 * 640; EvalErrorPrediction = 0.56250000 * 640; time = 0.0074s; samplesPerSecond = 86125.7
+07/14/2016 12:32:39: Finished Epoch[ 1 of 3]: [Training] CrossEntropyWithSoftmax = 2.97995720 * 20480; EvalErrorPrediction = 0.72216797 * 20480; totalSamplesSeen = 20480; learningRatePerSample = 0.015625; epochTime=0.257835s
+07/14/2016 12:32:39: SGD: Saving checkpoint model '/tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu/models/cntkSpeech.dnn.1'
 
-07/13/2016 12:22:32: Starting Epoch 2: learning rate per sample = 0.001953  effective momentum = 0.656119  momentum as time constant = 607.5 samples
+07/14/2016 12:32:39: Starting Epoch 2: learning rate per sample = 0.001953  effective momentum = 0.656119  momentum as time constant = 607.5 samples
 minibatchiterator: epoch 1: frames [20480..40960] (first utterance at frame 20480), data subset 0 of 1, with 1 datapasses
 
-07/13/2016 12:22:32: Starting minibatch loop.
-07/13/2016 12:22:32:  Epoch[ 2 of 3]-Minibatch[   1-  10, 12.50%]: CrossEntropyWithSoftmax = 2.01598530 * 2560; EvalErrorPrediction = 0.54140625 * 2560; time = 0.0851s; samplesPerSecond = 30093.2
-07/13/2016 12:22:32:  Epoch[ 2 of 3]-Minibatch[  11-  20, 25.00%]: CrossEntropyWithSoftmax = 1.98818569 * 2560; EvalErrorPrediction = 0.54296875 * 2560; time = 0.0830s; samplesPerSecond = 30845.6
-07/13/2016 12:22:33:  Epoch[ 2 of 3]-Minibatch[  21-  30, 37.50%]: CrossEntropyWithSoftmax = 1.98698120 * 2560; EvalErrorPrediction = 0.54140625 * 2560; time = 0.0830s; samplesPerSecond = 30828.5
-07/13/2016 12:22:33:  Epoch[ 2 of 3]-Minibatch[  31-  40, 50.00%]: CrossEntropyWithSoftmax = 1.93126144 * 2560; EvalErrorPrediction = 0.52773437 * 2560; time = 0.0829s; samplesPerSecond = 30876.5
-07/13/2016 12:22:33:  Epoch[ 2 of 3]-Minibatch[  41-  50, 62.50%]: CrossEntropyWithSoftmax = 1.90067825 * 2560; EvalErrorPrediction = 0.52656250 * 2560; time = 0.0829s; samplesPerSecond = 30863.8
-07/13/2016 12:22:33:  Epoch[ 2 of 3]-Minibatch[  51-  60, 75.00%]: CrossEntropyWithSoftmax = 1.97115860 * 2560; EvalErrorPrediction = 0.54140625 * 2560; time = 0.0840s; samplesPerSecond = 30465.3
-07/13/2016 12:22:33:  Epoch[ 2 of 3]-Minibatch[  61-  70, 87.50%]: CrossEntropyWithSoftmax = 1.89518127 * 2560; EvalErrorPrediction = 0.52031250 * 2560; time = 0.0843s; samplesPerSecond = 30372.4
-07/13/2016 12:22:33:  Epoch[ 2 of 3]-Minibatch[  71-  80, 100.00%]: CrossEntropyWithSoftmax = 1.90450439 * 2560; EvalErrorPrediction = 0.53164062 * 2560; time = 0.0786s; samplesPerSecond = 32552.6
-07/13/2016 12:22:33: Finished Epoch[ 2 of 3]: [Training] CrossEntropyWithSoftmax = 1.94924202 * 20480; EvalErrorPrediction = 0.53417969 * 20480; totalSamplesSeen = 40960; learningRatePerSample = 0.001953125; epochTime=0.672583s
-07/13/2016 12:22:33: SGD: Saving checkpoint model '/tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu/models/cntkSpeech.dnn.2'
+07/14/2016 12:32:39: Starting minibatch loop.
+07/14/2016 12:32:39:  Epoch[ 2 of 3]-Minibatch[   1-  10, 12.50%]: CrossEntropyWithSoftmax = 2.01598530 * 2560; EvalErrorPrediction = 0.54140625 * 2560; time = 0.0142s; samplesPerSecond = 180612.4
+07/14/2016 12:32:39:  Epoch[ 2 of 3]-Minibatch[  11-  20, 25.00%]: CrossEntropyWithSoftmax = 1.98818569 * 2560; EvalErrorPrediction = 0.54296875 * 2560; time = 0.0119s; samplesPerSecond = 215397.6
+07/14/2016 12:32:39:  Epoch[ 2 of 3]-Minibatch[  21-  30, 37.50%]: CrossEntropyWithSoftmax = 1.98698120 * 2560; EvalErrorPrediction = 0.54140625 * 2560; time = 0.0119s; samplesPerSecond = 214243.9
+07/14/2016 12:32:39:  Epoch[ 2 of 3]-Minibatch[  31-  40, 50.00%]: CrossEntropyWithSoftmax = 1.93126144 * 2560; EvalErrorPrediction = 0.52773437 * 2560; time = 0.0119s; samplesPerSecond = 214909.3
+07/14/2016 12:32:39:  Epoch[ 2 of 3]-Minibatch[  41-  50, 62.50%]: CrossEntropyWithSoftmax = 1.90067825 * 2560; EvalErrorPrediction = 0.52656250 * 2560; time = 0.0119s; samplesPerSecond = 215035.7
+07/14/2016 12:32:39:  Epoch[ 2 of 3]-Minibatch[  51-  60, 75.00%]: CrossEntropyWithSoftmax = 1.97115860 * 2560; EvalErrorPrediction = 0.54140625 * 2560; time = 0.0120s; samplesPerSecond = 212907.5
+07/14/2016 12:32:39:  Epoch[ 2 of 3]-Minibatch[  61-  70, 87.50%]: CrossEntropyWithSoftmax = 1.89518127 * 2560; EvalErrorPrediction = 0.52031250 * 2560; time = 0.0119s; samplesPerSecond = 215524.5
+07/14/2016 12:32:39:  Epoch[ 2 of 3]-Minibatch[  71-  80, 100.00%]: CrossEntropyWithSoftmax = 1.90450439 * 2560; EvalErrorPrediction = 0.53164062 * 2560; time = 0.0119s; samplesPerSecond = 215906.2
+07/14/2016 12:32:39: Finished Epoch[ 2 of 3]: [Training] CrossEntropyWithSoftmax = 1.94924202 * 20480; EvalErrorPrediction = 0.53417969 * 20480; totalSamplesSeen = 40960; learningRatePerSample = 0.001953125; epochTime=0.099643s
+07/14/2016 12:32:39: SGD: Saving checkpoint model '/tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu/models/cntkSpeech.dnn.2'
 
-07/13/2016 12:22:33: Starting Epoch 3: learning rate per sample = 0.000098  effective momentum = 0.656119  momentum as time constant = 2429.9 samples
+07/14/2016 12:32:39: Starting Epoch 3: learning rate per sample = 0.000098  effective momentum = 0.656119  momentum as time constant = 2429.9 samples
 minibatchiterator: epoch 2: frames [40960..61440] (first utterance at frame 40960), data subset 0 of 1, with 1 datapasses
 
-07/13/2016 12:22:33: Starting minibatch loop.
-07/13/2016 12:22:33:  Epoch[ 3 of 3]-Minibatch[   1-  10, 50.00%]: CrossEntropyWithSoftmax = 1.87359848 * 10240; EvalErrorPrediction = 0.51933594 * 10240; time = 0.2141s; samplesPerSecond = 47822.1
-07/13/2016 12:22:33:  Epoch[ 3 of 3]-Minibatch[  11-  20, 100.00%]: CrossEntropyWithSoftmax = 1.86656265 * 10240; EvalErrorPrediction = 0.51748047 * 10240; time = 0.1768s; samplesPerSecond = 57910.7
-07/13/2016 12:22:33: Finished Epoch[ 3 of 3]: [Training] CrossEntropyWithSoftmax = 1.87008057 * 20480; EvalErrorPrediction = 0.51840820 * 20480; totalSamplesSeen = 61440; learningRatePerSample = 9.7656251e-05; epochTime=0.421184s
-07/13/2016 12:22:33: SGD: Saving checkpoint model '/tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu/models/cntkSpeech.dnn'
-07/13/2016 12:22:34: CNTKCommandTrainEnd: speechTrain
+07/14/2016 12:32:39: Starting minibatch loop.
+07/14/2016 12:32:39:  Epoch[ 3 of 3]-Minibatch[   1-  10, 50.00%]: CrossEntropyWithSoftmax = 1.87359848 * 10240; EvalErrorPrediction = 0.51933594 * 10240; time = 0.0351s; samplesPerSecond = 291962.5
+07/14/2016 12:32:39:  Epoch[ 3 of 3]-Minibatch[  11-  20, 100.00%]: CrossEntropyWithSoftmax = 1.86656265 * 10240; EvalErrorPrediction = 0.51748047 * 10240; time = 0.0293s; samplesPerSecond = 349321.1
+07/14/2016 12:32:39: Finished Epoch[ 3 of 3]: [Training] CrossEntropyWithSoftmax = 1.87008057 * 20480; EvalErrorPrediction = 0.51840820 * 20480; totalSamplesSeen = 61440; learningRatePerSample = 9.7656251e-05; epochTime=0.068017s
+07/14/2016 12:32:39: SGD: Saving checkpoint model '/tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu/models/cntkSpeech.dnn'
+07/14/2016 12:32:39: CNTKCommandTrainEnd: speechTrain
 
-07/13/2016 12:22:34: Action "train" complete.
+07/14/2016 12:32:39: Action "train" complete.
 
 
-07/13/2016 12:22:34: ##############################################################################
-07/13/2016 12:22:34: #                                                                            #
-07/13/2016 12:22:34: # Action "write"                                                             #
-07/13/2016 12:22:34: #                                                                            #
-07/13/2016 12:22:34: ##############################################################################
+07/14/2016 12:32:39: ##############################################################################
+07/14/2016 12:32:39: #                                                                            #
+07/14/2016 12:32:39: # Action "write"                                                             #
+07/14/2016 12:32:39: #                                                                            #
+07/14/2016 12:32:39: ##############################################################################
 
 reading script file glob_0000.write.scp ... 10 entries
 
@@ -585,21 +585,21 @@ Allocating matrices for forward and/or backward propagation.
 Memory Sharing Structure:
 
 (nil): {[B0 Gradient[512 x 1]] [B1 Gradient[512 x 1]] [B2 Gradient[132 x 1]] [CrossEntropyWithSoftmax Gradient[1]] [CrossEntropyWithSoftmax Value[1]] [EvalErrorPrediction Gradient[1]] [EvalErrorPrediction Value[1]] [H1 Gradient[512 x 1 x *1]] [H2 Gradient[512 x 1 x *1]] [HLast Gradient[132 x 1 x *1]] [InvStdOfFeatures Gradient[363]] [LogOfPrior Gradient[132]] [MVNormalizedFeatures Gradient[363 x *1]] [MeanOfFeatures Gradient[363]] [PosteriorProb Gradient[132 x 1 x *1]] [PosteriorProb Value[132 x 1 x *1]] [Prior Gradient[132]] [ScaledLogLikelihood Gradient[132 x 1 x *1]] [W0 Gradient[512 x 363]] [W0*features Gradient[512 x *1]] [W0*features+B0 Gradient[512 x 1 x *1]] [W1 Gradient[512 x 512]] [W1*H1 Gradient[512 x 1 x *1]] [W1*H1+B1 Gradient[512 x 1 x *1]] [W2 Gradient[132 x 512]] [W2*H1 Gradient[132 x 1 x *1]] [features Gradient[363 x *1]] [labels Gradient[132 x *1]] }
-0x7ff741167dd8: {[B1 Value[512 x 1]] }
-0x7ff7411691b8: {[ScaledLogLikelihood Value[132 x 1 x *1]] }
-0x7ff74116a618: {[Prior Value[132]] }
-0x7ff741185b68: {[LogOfPrior Value[132]] }
-0x7ff741187448: {[B2 Value[132 x 1]] }
-0x7ff7475061d8: {[B0 Value[512 x 1]] }
-0x7ff7499d99e8: {[H1 Value[512 x 1 x *1]] [W0*features Value[512 x *1]] [W1*H1+B1 Value[512 x 1 x *1]] [W2*H1 Value[132 x 1 x *1]] }
-0x7ff7499f9638: {[H2 Value[512 x 1 x *1]] [HLast Value[132 x 1 x *1]] [MVNormalizedFeatures Value[363 x *1]] [W0*features+B0 Value[512 x 1 x *1]] [W1*H1 Value[512 x 1 x *1]] }
-0x7ff74b6af968: {[features Value[363 x *1]] }
-0x7ff74b6b0518: {[W2 Value[132 x 512]] }
-0x7ff74b6bbdd8: {[W1 Value[512 x 512]] }
-0x7ff74b6bbf98: {[W0 Value[512 x 363]] }
-0x7ff74b6be008: {[MeanOfFeatures Value[363]] }
-0x7ff74b6bed38: {[labels Value[132 x *1]] }
-0x7ff74b6bf8e8: {[InvStdOfFeatures Value[363]] }
+0x7f8f94c93338: {[MeanOfFeatures Value[363]] }
+0x7f8f9535e7f8: {[H2 Value[512 x 1 x *1]] [HLast Value[132 x 1 x *1]] [MVNormalizedFeatures Value[363 x *1]] [W0*features+B0 Value[512 x 1 x *1]] [W1*H1 Value[512 x 1 x *1]] }
+0x7f8f9536b228: {[B1 Value[512 x 1]] }
+0x7f8f95564328: {[Prior Value[132]] }
+0x7f8f9a227ce8: {[B0 Value[512 x 1]] }
+0x7f8f9a22af58: {[H1 Value[512 x 1 x *1]] [W0*features Value[512 x *1]] [W1*H1+B1 Value[512 x 1 x *1]] [W2*H1 Value[132 x 1 x *1]] }
+0x7f8f9a2463c8: {[InvStdOfFeatures Value[363]] }
+0x7f8f9a2484b8: {[W1 Value[512 x 512]] }
+0x7f8f9a2487c8: {[W0 Value[512 x 363]] }
+0x7f8f9a248928: {[W2 Value[132 x 512]] }
+0x7f8f9a258b38: {[ScaledLogLikelihood Value[132 x 1 x *1]] }
+0x7f8f9a258bd8: {[LogOfPrior Value[132]] }
+0x7f8f9a6bb878: {[labels Value[132 x *1]] }
+0x7f8f9a6bc558: {[B2 Value[132 x 1]] }
+0x7f8f9a6bebe8: {[features Value[363 x *1]] }
 
 evaluate: reading 368 frames of An4/71/71/cen5-fjam-b.mfc
 Minibatch[0]: ActualMBSize = 368
@@ -621,9 +621,9 @@ evaluate: reading 78 frames of An4/454/454/an70-meht-b.mfc
 Minibatch[8]: ActualMBSize = 78
 evaluate: reading 228 frames of An4/254/254/cen6-ftmj-b.mfc
 Minibatch[9]: ActualMBSize = 228
-Written to /tmp/cntk-test-20160713121920.930131/Speech/DNN_WriteCommand@debug_gpu/Output*
+Written to /tmp/cntk-test-20160714122957.627315/Speech/DNN_WriteCommand@release_gpu/Output*
 Total Samples Evaluated = 3250
 
-07/13/2016 12:22:34: Action "write" complete.
+07/14/2016 12:32:40: Action "write" complete.
 
-07/13/2016 12:22:34: __COMPLETED__
+07/14/2016 12:32:40: __COMPLETED__
