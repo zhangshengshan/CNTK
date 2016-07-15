@@ -35,6 +35,9 @@
 #     defaults to /usr/local/
 # These can be overridden on the command line, e.g. make BUILDTYPE=debug
 
+# TODO: Build static libraries for common dependencies that are shared by multiple 
+# targets, e.g. eval and CNTK.
+
 ARCH=$(shell uname)
 
 ifndef BUILD_TOP
@@ -68,7 +71,7 @@ INCLUDEPATH:= $(addprefix $(SOURCEDIR)/, Common/Include CNTKv2LibraryDll CNTKv2L
 # COMMON_FLAGS include settings that are passed both to NVCC and C++ compilers.
 COMMON_FLAGS:= -D_POSIX_SOURCE -D_XOPEN_SOURCE=600 -D__USE_XOPEN2K -std=c++11
 CPPFLAGS:= 
-CXXFLAGS:= -msse3 -std=c++0x -fopenmp -fpermissive -fPIC -Werror -fcheck-new
+CXXFLAGS:= -msse3 -mssse3 -std=c++0x -fopenmp -fpermissive -fPIC -Werror -fcheck-new
 LIBPATH:=
 LIBS:=
 LDFLAGS:=
@@ -87,7 +90,7 @@ SRC:=
 all : buildall
 
 # Set up basic nvcc options and add CUDA targets from above
-CUFLAGS = -m 64
+CUFLAGS = -m 64 
 
 ifdef CUDA_PATH
   ifndef GDK_PATH
@@ -107,7 +110,7 @@ ifdef CUDA_PATH
   # This is a suggested/default location for NVML
   INCLUDEPATH+=$(GDK_PATH)/include/nvidia/gdk
   INCLUDEPATH+=$(CUB_PATH)
-  NVMLPATH=$(GDK_PATH)/src/gdk/nvml/lib
+  NVMLLIBPATH=$(GDK_PATH)/src/gdk/nvml/lib
 
 # Set up CUDA includes and libraries
   INCLUDEPATH += $(CUDA_PATH)/include
@@ -165,6 +168,10 @@ ifdef KALDI_PATH
 
   KALDI_LIBPATH += $(KALDI_PATH)/src/lib
   KALDI_LIBS += -lkaldi-util -lkaldi-matrix -lkaldi-base -lkaldi-hmm -lkaldi-cudamatrix -lkaldi-nnet -lkaldi-lat
+endif
+
+ifdef SUPPORT_AVX2
+  CPPFLAGS += -mavx2
 endif
 
 # Set up nvcc target architectures (will generate code to support them all, i.e. fat-binary, in release mode)
@@ -225,6 +232,7 @@ ORIGINDIR:='$$ORIGIN'
 
 CNTKMATH:=cntkmath
 
+RPATH=-Wl,-rpath,
 
 ########################################
 # Build info
@@ -238,7 +246,6 @@ BUILDINFO_OUTPUT := $(shell $(GENBUILD) $(BUILD_TOP)/Config.make && echo Success
 ifneq ("$(BUILDINFO_OUTPUT)","Success")
   $(error Could not generate $(BUILDINFO))
 endif
-
 
 ########################################
 # Math library
@@ -269,6 +276,7 @@ COMMON_SRC =\
 	$(SOURCEDIR)/Common/fileutil.cpp \
 
 MATH_SRC =\
+	$(SOURCEDIR)/Math/BlockHandlerSSE.cpp \
 	$(SOURCEDIR)/Math/CPUMatrix.cpp \
 	$(SOURCEDIR)/Math/CPUSparseMatrix.cpp \
 	$(SOURCEDIR)/Math/CPURNGHandle.cpp \
@@ -281,6 +289,12 @@ MATH_SRC =\
 	$(SOURCEDIR)/Math/CUDAPageLockedMemAllocator.cpp \
 	$(SOURCEDIR)/Math/ConvolutionEngine.cpp \
 	$(SOURCEDIR)/Math/BatchNormalizationEngine.cpp \
+
+ifdef SUPPORT_AVX2
+MATH_SRC +=\
+	$(SOURCEDIR)/Math/BlockHandlerAVX.cpp \
+
+endif
 
 ifdef CUDA_PATH
 MATH_SRC +=\
@@ -311,14 +325,13 @@ CNTKMATH_LIB:= $(LIBDIR)/lib$(CNTKMATH).so
 ALL += $(CNTKMATH_LIB)
 SRC+=$(MATH_SRC)
 
-RPATH=-Wl,-rpath,
-
 $(CNTKMATH_LIB): $(MATH_OBJ)
 	@echo $(SEPARATOR)
 	@echo creating $@ for $(ARCH) with build type $(BUILDTYPE)
 	@mkdir -p $(dir $@)
-	$(CXX) $(LDFLAGS) -shared $(patsubst %,-L%, $(LIBPATH) $(NVMLPATH)) $(patsubst %,$(RPATH)%, $(ORIGINDIR) $(LIBPATH)) -o $@ $^ $(LIBS) -fopenmp
+	$(CXX) $(LDFLAGS) -shared $(patsubst %,-L%, $(LIBPATH) $(NVMLLIBPATH)) $(patsubst %,$(RPATH)%, $(ORIGINDIR) $(LIBPATH)) -o $@ $^ $(LIBS) -fopenmp
 
+########################################
 # CNTKLibrary
 ########################################
 
@@ -377,14 +390,13 @@ CNTKLIBRARY_LIB:=$(LIBDIR)/lib$(CNTKLIBRARY).so
 ALL+=$(CNTKLIBRARY_LIB)
 SRC+=$(CNTKLIBRARY_SRC)
 
-RPATH=-Wl,-rpath,
-
 $(CNTKLIBRARY_LIB): $(CNTKLIBRARY_OBJ) | $(CNTKMATH_LIB)
 	@echo $(SEPARATOR)
 	@mkdir -p $(dir $@)
 	@echo building output for $(ARCH) with build type $(BUILDTYPE)
-	$(CXX) $(LDFLAGS) -shared $(patsubst %,-L%, $(LIBDIR) $(LIBPATH) $(NVMLPATH)) $(patsubst %,$(RPATH)%, $(ORIGINDIR) $(LIBPATH)) -o $@ $^ $(LIBS) -l$(CNTKMATH)
+	$(CXX) $(LDFLAGS) -shared $(patsubst %,-L%, $(LIBDIR) $(LIBPATH) $(NVMLLIBPATH)) $(patsubst %,$(RPATH)%, $(ORIGINDIR) $(LIBPATH)) -o $@ $^ $(LIBS) -l$(CNTKMATH)
 
+########################################
 # CNTKLibrary tests
 ########################################
 
@@ -401,14 +413,70 @@ CNTKLIBRARY_TESTS_OBJ := $(patsubst %.cu, $(OBJDIR)/%.o, $(patsubst %.cpp, $(OBJ
 ALL+=$(CNTKLIBRARY_TESTS)
 SRC+=$(CNTKLIBRARY_TESTS_SRC)
 
-RPATH=-Wl,-rpath,
-
 $(CNTKLIBRARY_TESTS): $(CNTKLIBRARY_TESTS_OBJ) | $(CNTKLIBRARY_LIB)
 	@echo $(SEPARATOR)
 	@mkdir -p $(dir $@)
 	@echo building output for $(ARCH) with build type $(BUILDTYPE)
-	$(CXX) $(LDFLAGS) $(patsubst %,-L%, $(LIBDIR) $(LIBPATH) $(NVMLPATH)) $(patsubst %,$(RPATH)%, $(ORIGINLIBDIR) $(LIBPATH)) -o $@ $^ $(LIBS) -l$(CNTKLIBRARY) -l$(CNTKMATH)
+	$(CXX) $(LDFLAGS) $(patsubst %,-L%, $(LIBDIR) $(LIBPATH) $(NVMLLIBPATH)) $(patsubst %,$(RPATH)%, $(ORIGINLIBDIR) $(LIBPATH)) -o $@ $^ $(LIBS) -l$(CNTKLIBRARY) -l$(CNTKMATH)
 
+########################################
+# LibEval
+########################################
+
+EVAL:=eval
+
+SGDLIB_SRC=\
+	$(SOURCEDIR)/SGDLib/Profiler.cpp \
+	$(SOURCEDIR)/SGDLib/SGD.cpp
+	
+EVAL_SRC=\
+	$(SOURCEDIR)/EvalDll/CNTKEval.cpp \
+	$(SOURCEDIR)/CNTK/BrainScript/BrainScriptEvaluator.cpp \
+	$(SOURCEDIR)/CNTK/BrainScript/BrainScriptParser.cpp \
+	$(SOURCEDIR)/CNTK/ModelEditLanguage.cpp \
+	$(SOURCEDIR)/ActionsLib/EvalActions.cpp \
+	$(SOURCEDIR)/ActionsLib/NetworkFactory.cpp \
+	$(SOURCEDIR)/ActionsLib/NetworkDescriptionLanguage.cpp \
+	$(SOURCEDIR)/ActionsLib/SimpleNetworkBuilder.cpp \
+	$(SOURCEDIR)/ActionsLib/NDLNetworkBuilder.cpp 
+
+EVAL_SRC+=$(SGDLIB_SRC)
+EVAL_SRC+=$(COMPUTATION_NETWORK_LIB_SRC)
+EVAL_SRC+=$(CNTK_COMMON_SRC)
+EVAL_SRC+=$(SEQUENCE_TRAINING_LIB_SRC)
+
+EVAL_OBJ:=$(patsubst %.cu, $(OBJDIR)/%.o, $(patsubst %.cpp, $(OBJDIR)/%.o, $(EVAL_SRC)))
+
+EVAL_LIB:=$(LIBDIR)/lib$(EVAL).so
+ALL+=$(EVAL_LIB)
+SRC+=$(EVAL_SRC)
+
+$(EVAL_LIB): $(EVAL_OBJ) 
+	@echo $(SEPARATOR)
+	@mkdir -p $(dir $@)
+	@echo Building $(EVAL_LIB) for $(ARCH) with build type $(BUILDTYPE)
+	$(CXX) $(LDFLAGS) -shared $(patsubst %,-L%, $(LIBDIR) $(LIBPATH) $(NVMLLIBPATH)) $(patsubst %,$(RPATH)%, $(ORIGINDIR) $(LIBPATH)) -o $@ $^ $(LIBS)
+
+########################################
+# Eval Sample client
+########################################
+EVAL_SAMPLE_CLIENT:=$(BINDIR)/cppevalclient
+
+EVAL_SAMPLE_CLIENT_SRC=\
+	$(SOURCEDIR)/../Examples/Evaluation/CPPEvalClient/CPPEvalClient.cpp 
+
+EVAL_SAMPLE_CLIENT_OBJ:=$(patsubst %.cpp, $(OBJDIR)/%.o, $(EVAL_SAMPLE_CLIENT_SRC))
+
+ALL+=$(EVAL_SAMPLE_CLIENT)
+SRC+=$(EVAL_SAMPLE_CLIENT_SRC)
+
+$(EVAL_SAMPLE_CLIENT): $(EVAL_SAMPLE_CLIENT_OBJ) | $(EVAL_LIB) $(CNTKMATH_LIB)
+	@echo $(SEPARATOR)
+	@mkdir -p $(dir $@)
+	@echo building $(EVAL_SAMPLE_CLIENT) for $(ARCH) with build type $(BUILDTYPE)
+	$(CXX) $(LDFLAGS) $(patsubst %,-L%, $(LIBDIR)) $(patsubst %,$(RPATH)%, $(ORIGINLIBDIR) $(LIBPATH)) -o $@ $^ -l$(EVAL) -l$(CNTKMATH)
+
+########################################
 # BinaryReader plugin
 ########################################
 
@@ -693,8 +761,6 @@ CNTK_SRC =\
 	$(SOURCEDIR)/CNTK/CNTK.cpp \
 	$(SOURCEDIR)/CNTK/ModelEditLanguage.cpp \
 	$(SOURCEDIR)/CNTK/tests.cpp \
-	$(SOURCEDIR)/SGDLib/Profiler.cpp \
-	$(SOURCEDIR)/SGDLib/SGD.cpp \
 	$(SOURCEDIR)/ActionsLib/TrainActions.cpp \
 	$(SOURCEDIR)/ActionsLib/EvalActions.cpp \
 	$(SOURCEDIR)/ActionsLib/OtherActions.cpp \
@@ -708,7 +774,7 @@ CNTK_SRC =\
 	$(SOURCEDIR)/CNTK/BrainScript/BrainScriptTest.cpp \
         $(SOURCEDIR)/ComputationNetworkLib/RNNNodes.cpp
 
-
+CNTK_SRC+=$(SGDLIB_SRC)
 CNTK_SRC+=$(CNTK_COMMON_SRC)
 CNTK_SRC+=$(COMPUTATION_NETWORK_LIB_SRC)
 CNTK_SRC+=$(SEQUENCE_TRAINING_LIB_SRC)
@@ -723,7 +789,7 @@ $(CNTK): $(CNTK_OBJ) | $(CNTKMATH_LIB)
 	@echo $(SEPARATOR)
 	@mkdir -p $(dir $@)
 	@echo building output for $(ARCH) with build type $(BUILDTYPE)
-	$(CXX) $(LDFLAGS) $(patsubst %,-L%, $(LIBDIR) $(LIBPATH) $(NVMLPATH)) $(patsubst %,$(RPATH)%, $(ORIGINLIBDIR) $(LIBPATH)) -o $@ $^ $(LIBS) -l$(CNTKMATH) -fopenmp
+	$(CXX) $(LDFLAGS) $(patsubst %,-L%, $(LIBDIR) $(LIBPATH) $(NVMLLIBPATH)) $(patsubst %,$(RPATH)%, $(ORIGINLIBDIR) $(LIBPATH)) -o $@ $^ $(LIBS) -l$(CNTKMATH) -fopenmp
 
 # manually deploy libcudnn
 
