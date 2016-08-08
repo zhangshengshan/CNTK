@@ -9,6 +9,7 @@
 #ifdef _WIN32
 #include <crtdefs.h>
 #endif
+#include <boost/test/floating_point_comparison.hpp>
 #include "../../../Source/Math/GPUSparseMatrix.h"
 
 using namespace Microsoft::MSR::CNTK;
@@ -24,6 +25,7 @@ const int c_j[9] = {0, 1, 1, 2, 0, 3, 4, 2, 4};
 const int c_rowCount = 4;
 const int c_colCount = 5;
 const int c_size = c_rowCount + c_colCount;
+const float relErr = 1e-5f;
 
 BOOST_AUTO_TEST_SUITE(GPUMatrixSuite)
 
@@ -80,7 +82,7 @@ BOOST_FIXTURE_TEST_CASE(GPUSparseMatrixScaleAndAdd, RandomSeedFixture)
     unique_ptr<float[]> c(denseMatrixC.CopyToArray());
     for (int i = 0; i < m * n; i++)
     {
-        BOOST_CHECK_EQUAL(alpha * (alpha * a[i] + beta * b[i]), c[i]);
+        BOOST_CHECK_CLOSE_FRACTION(alpha * (alpha * a[i] + beta * b[i]), c[i], relErr);
     }
 }
 
