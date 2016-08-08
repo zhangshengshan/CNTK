@@ -115,6 +115,8 @@ struct ReaderFixture
     string m_testDataPath;
     string m_parentPath;
 
+    double relError = 1e-5f;
+    
     string initialPath()
     {
         return m_initialWorkingPath;
@@ -165,32 +167,34 @@ struct ReaderFixture
     }
 
     // Helper function to compare files and verify that they are equivalent content-wise 
-    // (identical character content ignoring differences in white spaces).
+    // if allowTolerace is false, character based comparison ignoring differences in white spaces.
+    // if allowTolerance is true, the content is treated as a sequence of double, and tolerance is allowed when comparing content.
     void CheckFilesEquivalent(
         string filename1,
-        string filename2)
+        string filename2,
+        bool allowTolerance = false)
     {
         std::ifstream ifstream1(filename1);
         std::ifstream ifstream2(filename2);
 
-        /*std::istream_iterator<string> beginStream1(ifstream1), endStream1, it1;
-        std::istream_iterator<string> beginStream2(ifstream2), endStream2, it2;*/
+        std::istream_iterator<string> beginStream1(ifstream1), endStream1, it1;
+        std::istream_iterator<string> beginStream2(ifstream2), endStream2, it2;
 
-        std::istream_iterator<string> it1(ifstream1), it2(ifstream2), eos;
-
-        for (; it1 != eos && it2 != eos; it1++, it2++) 
+        if (allowTolerance)
         {
-            fprintf(stderr, "%f vs %f\n", boost::lexical_cast<float>(*it1), boost::lexical_cast<float>(*it2));
-            BOOST_CHECK_CLOSE_FRACTION(boost::lexical_cast<float>(*it1), boost::lexical_cast<float>(*it2), 1e-5f);
+            for (it1 = beginStream1, it2 = beginStream2; it1 != endStream1 && it2 != endStream2; it1++, it2++)
+            {
+                fprintf(stderr, "%f vs %f\n", boost::lexical_cast<double>(*it1), boost::lexical_cast<double>(*it2));
+                BOOST_CHECK_CLOSE_FRACTION(boost::lexical_cast<double>(*it1), boost::lexical_cast<double>(*it2), relError);
+            }
+
+            BOOST_CHECK_MESSAGE(it1 == endStream1 && it2 == endStream2, "Different number of elements in file " << filename1 << " and " << filename2);
         }
-
-       
-        BOOST_CHECK_MESSAGE(it1 != eos || it2 != eos, "Different number of elements in file " << filename1 << " and " << filename2);
-       
-        // BOOST_CHECK_EQUAL_COLLECTIONS(beginStream1, endStream1, beginStream2, endStream2);
+        else
+        {
+            BOOST_CHECK_EQUAL_COLLECTIONS(beginStream1, endStream1, beginStream2, endStream2);
+        }
     }
-
-
 
     // Helper function to write the Reader's content to a file.
     // testDataFilePath     : the file path for writing the minibatch data (used for comparing against control data)
@@ -404,6 +408,7 @@ struct ReaderFixture
     // sparseFeatures       : indicates whether the corresponding matrix type should be set to sparse or not
     // sparseLabels         : same as above, but for labels
     // useSharedLayout      : if false, an individual layout is created for each input
+    // allowTolerance       : if true, a predefined tolerance is allowed when comparing results
 
     template <class ElemType>
     void HelperRunReaderTest(
@@ -421,14 +426,16 @@ struct ReaderFixture
         size_t numSubsets,
         bool sparseFeatures = false,
         bool sparseLabels = false,
-        bool useSharedLayout = true,
-        std::vector<std::wstring> additionalConfigParameters = {})
+        bool useSharedLayout = true,        
+        std::vector<std::wstring> additionalConfigParameters = {},
+        bool allowTolerance = false)
     {
         HelperReadInAndWriteOut<ElemType>(configFileName, testDataFilePath, testSectionName, readerSectionName,
             epochSize, mbSize, epochs, numFeatureFiles, numLabelFiles, subsetNum,numSubsets,
             sparseFeatures, sparseLabels, useSharedLayout, additionalConfigParameters);
 
-        CheckFilesEquivalent(controlDataFilePath, testDataFilePath);
+        CheckFilesEquivalent(controlDataFilePath, testDataFilePath, allowTolerance);       
+        
     }
 
     // Helper function to run a Reader test and catch an expected exception.
