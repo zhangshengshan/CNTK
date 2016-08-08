@@ -82,6 +82,7 @@ BOOST_FIXTURE_TEST_CASE(GPUSparseMatrixScaleAndAdd, RandomSeedFixture)
     unique_ptr<float[]> c(denseMatrixC.CopyToArray());
     for (int i = 0; i < m * n; i++)
     {
+        // TODO: Switch to use BOOST_TEST with tolearance when we use C++11 
         BOOST_CHECK_CLOSE_FRACTION(alpha * (alpha * a[i] + beta * b[i]), c[i], relErr);
     }
 }
