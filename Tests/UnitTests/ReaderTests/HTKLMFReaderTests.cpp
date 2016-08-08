@@ -134,7 +134,12 @@ BOOST_AUTO_TEST_CASE(HTKMLFReaderSimpleDataLoop6)
         1,
         1,
         0,
-        1);
+        1,
+        false,
+        false,
+        true,
+        {},
+        false);
 };
 
 BOOST_AUTO_TEST_CASE(HTKMLFReaderSimpleDataLoop7)
@@ -262,7 +267,12 @@ BOOST_AUTO_TEST_CASE(HTKMLFReaderSimpleDataLoop16)
         1,
         1,
         0,
-        1);
+        1,
+        false,
+        false,
+        true,
+        {},
+        false);
 };
 
 BOOST_AUTO_TEST_CASE(HTKMLFReaderSimpleDataLoop19)
