@@ -6,6 +6,7 @@
 
 #include <boost/test/unit_test.hpp>
 #include "boost/filesystem.hpp"
+#include "boost/lexical_cast.hpp"
 #include "DataReader.h"
 
 using namespace Microsoft::MSR::CNTK;
@@ -172,10 +173,21 @@ struct ReaderFixture
         std::ifstream ifstream1(filename1);
         std::ifstream ifstream2(filename2);
 
-        std::istream_iterator<string> beginStream1(ifstream1), endStream1;
-        std::istream_iterator<string> beginStream2(ifstream2), endStream2;
+        /*std::istream_iterator<string> beginStream1(ifstream1), endStream1, it1;
+        std::istream_iterator<string> beginStream2(ifstream2), endStream2, it2;*/
 
-        BOOST_CHECK_EQUAL_COLLECTIONS(beginStream1, endStream1, beginStream2, endStream2);
+        std::istream_iterator<string> it1(ifstream1), it2(ifstream2), eos;
+
+        for (; it1 != eos && it2 != eos; it1++, it2++) 
+        {
+            fprintf(stderr, "%f vs %f\n", boost::lexical_cast<float>(*it1), boost::lexical_cast<float>(*it2));
+            BOOST_CHECK_CLOSE_FRACTION(boost::lexical_cast<float>(*it1), boost::lexical_cast<float>(*it2), 1e-5f);
+        }
+
+       
+        BOOST_CHECK_MESSAGE(it1 != eos || it2 != eos, "Different number of elements in file " << filename1 << " and " << filename2);
+       
+        // BOOST_CHECK_EQUAL_COLLECTIONS(beginStream1, endStream1, beginStream2, endStream2);
     }
 
 
