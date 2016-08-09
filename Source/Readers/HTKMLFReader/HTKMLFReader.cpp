@@ -1561,18 +1561,17 @@ bool HTKMLFReader<ElemType>::GetMinibatchToWrite(StreamMinibatchInputs& matrices
         {
             if (matrices.find(iter->first) == matrices.end())
             {
-                fprintf(stderr, "GetMinibatchToWrite: feature node %ls specified in reader not found in the network\n", iter->first.c_str());
-                RuntimeError("GetMinibatchToWrite: feature node specified in reader not found in the network.");
+                fprintf(stderr, "WARNING: GetMinibatchToWrite: feature node %ls specified in reader not found in the sub-network associated with the output nodes\n", iter->first.c_str());
             }
         }
 
-        /*
+        
         for (auto iter=matrices.begin();iter!=matrices.end();iter++)
         {
-        if (m_featureNameToIdMap.find(iter->first)==m_featureNameToIdMap.end())
-        RuntimeError(msra::strfun::strprintf("minibatch requested for input node %ws not found in reader - cannot generate input",iter->first.c_str()));
+            if (m_featureNameToIdMap.find(iter->first)==m_featureNameToIdMap.end())
+                RuntimeError("GetMinibatchToWrite: input node %ls needed to generate the outputs is not found in readers.",iter->first.c_str());
         }
-        */
+        
         m_checkDictionaryKeys = false;
     }
 
