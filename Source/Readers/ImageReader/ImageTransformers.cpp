@@ -199,6 +199,9 @@ cv::Rect CropTransformer::GetCropRect(CropType type, int viewIndex, int crow, in
     assert(ccol > 0);
     assert(0 < cropRatio && cropRatio <= 1.0);
 
+    fprintf(stderr, "**CropTransformer::GetCropRect: CropType=%d, viewIndex=%d, crow=%d, ccol=%d, cropRatio=%f, m_curAspectRatioRadius=%f\n",
+            type, viewIndex, crow, ccol, cropRatio, m_curAspectRatioRadius);
+
     // Get square crop size that preserves aspect ratio.
     int cropSize = (int)(std::min(crow, ccol) * cropRatio);
     int cropSizeX = cropSize;
@@ -223,6 +226,8 @@ cv::Rect CropTransformer::GetCropRect(CropType type, int viewIndex, int crow, in
         // This clamping should be ok if jittering ratio is not too big.
         cropSizeX = std::min(cropSizeX, ccol);
         cropSizeY = std::min(cropSizeY, crow);
+
+        fprintf(stderr, "**CropTransformer::GetCropRect: cropSizeX=%f, cropSizeY=%f\n", cropSizeX, cropSizeY);
     }
 
     int xOff = -1;
@@ -281,7 +286,10 @@ cv::Rect CropTransformer::GetCropRect(CropType type, int viewIndex, int crow, in
 
     assert(0 <= xOff && xOff <= ccol - cropSizeX);
     assert(0 <= yOff && yOff <= crow - cropSizeY);
+
+    fprintf(stderr, "**CropTransformer::GetCropRect: result: xoff=%d, yoff=%d, cropSizeX=%d, cropSizeY=%d\n", xOff, yOff, cropSizeX, cropSizeY);
     return cv::Rect(xOff, yOff, cropSizeX, cropSizeY);
+
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
