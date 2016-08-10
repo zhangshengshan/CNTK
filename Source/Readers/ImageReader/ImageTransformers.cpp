@@ -160,7 +160,7 @@ void CropTransformer::Apply(size_t id, cv::Mat &mat)
     if ((m_hFlip && std::bernoulli_distribution()(*rng)) ||
         viewIndex >= 5)
     {
-        fprintf(stderr, "** CropTransformer::Apply: apply cv::flip\n");
+        fprintf(stdout, "** CropTransformer::Apply: apply cv::flip\n");
         cv::flip(mat, mat, 1);
     }
 
@@ -537,7 +537,7 @@ void IntensityTransformer::Apply(cv::Mat &mat)
     alphas.at<float>(2) = d(*rng) * m_eigVal.at<float>(2);
     m_rngs.push(std::move(rng));
 
-    fprintf(stderr, "** IntensityTransformer::Apply: alphas.at(0)=%f, alphas.at(1)=%f, alphas.at(2)=%f\n", alphas.at<float>(0), alphas.at<float>(1), alphas.at<float>(2));
+    fprintf(stdout, "** IntensityTransformer::Apply: alphas.at(0)=%f, alphas.at(1)=%f, alphas.at(2)=%f\n", alphas.at<float>(0), alphas.at<float>(1), alphas.at<float>(2));
 
     assert(m_eigVec.rows == 3 && m_eigVec.cols == 3);
 
