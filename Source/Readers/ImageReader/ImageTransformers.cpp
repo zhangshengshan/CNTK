@@ -145,9 +145,10 @@ void CropTransformer::Apply(size_t id, cv::Mat &mat)
         }
         else
         {
-            ratio = UniRealT(m_cropRatioMin, m_cropRatioMax)(*rng);
+            ratio = UniRealT(m_cropRatioMin, m_cropRatioMax)(*rng);            
             assert(m_cropRatioMin <= ratio && ratio < m_cropRatioMax);
         }
+        fprintf(stderr, "** CropTransformer::Apply: UniRatio: ratio=%f, m_cropRatioMin=%f, m_cropRatioMax=%f, seed=%d\n", ratio, m_cropRatioMin, m_cropRatioMax, seed);
         break;
     default:
         RuntimeError("Jitter type currently not implemented.");
@@ -206,6 +207,7 @@ cv::Rect CropTransformer::GetCropRect(CropType type, int viewIndex, int crow, in
     if (m_curAspectRatioRadius > 0)
     {
         double factor = 1.0 + UniRealT(-m_curAspectRatioRadius, m_curAspectRatioRadius)(rng);
+        fprintf(stderr, "** CropTransformer::GetCropRect Ratio: factor=%f, m_curAspectRatioRadius=%f\n", factor, m_curAspectRatioRadius);
         double area = cropSize * cropSize;
         double newArea = area * factor;
         if (std::bernoulli_distribution()(rng))
@@ -236,6 +238,7 @@ cv::Rect CropTransformer::GetCropRect(CropType type, int viewIndex, int crow, in
         assert(viewIndex == 0);
         xOff = UniIntT(0, ccol - cropSizeX)(rng);
         yOff = UniIntT(0, crow - cropSizeY)(rng);
+        fprintf(stderr, "**CropTransformer::GetCropRect CropType::Random: xoff=%d, yoff=%d\n", xOff, yOff);
         break;
     case CropType::MultiView10:
     {
@@ -338,6 +341,7 @@ void ScaleTransformer::Apply(size_t id, cv::Mat &mat)
     auto rng = m_rngs.pop_or_create([seed]() { return std::make_unique<std::mt19937>(seed); });
 
     auto index = UniIntT(0, static_cast<int>(m_interp.size()) - 1)(*rng);
+    fprintf(stderr, "**ScaleTransformer::Apply: index=%d, m_interp.size()=%d, seed=%d\n", index, m_interp.size(), seed);
     assert(m_interp.size() > 0);
     cv::resize(mat, mat, cv::Size((int)m_imgWidth, (int)m_imgHeight), 0, 0, m_interp[index]);
 
@@ -597,18 +601,22 @@ void ColorTransformer::Apply(cv::Mat &mat)
         ElemType beta = 0;
         if (m_curBrightnessRadius > 0)
         {
-            UniRealT d(-m_curBrightnessRadius, m_curBrightnessRadius);
+            UniRealT d(-m_curBrightnessRadius, m_curBrightnessRadius);            
             // Compute mean value of the image.
             cv::Scalar imgMean = cv::sum(cv::sum(mat));
             // Compute beta as a fraction of the mean.
-            beta = (ElemType)(d(*rng) * imgMean[0] / (mat.rows * mat.cols * mat.channels()));
+            auto ud_beta = d(*rng);
+            beta = (ElemType)(ud_beta * imgMean[0] / (mat.rows * mat.cols * mat.channels()));
+            fprintf(stderr, "**ColorTransformer::Apply: ud_beta=%f, beta=%f, m_curBrightnessRadius=%f, seed=%d\n", ud_beta, beta, m_curBrightnessRadius, seed);
         }
 
         ElemType alpha = 1;
         if (m_curContrastRadius > 0)
         {
             UniRealT d(-m_curContrastRadius, m_curContrastRadius);
-            alpha = (ElemType)(1 + d(*rng));
+            auto ud_alpha = d(*rng);
+            alpha = (ElemType)(1 + ud_alpha);
+            fprintf(stderr, "**ColorTransformer::Apply: ud_alpha=%f, alpha=%f, m_curContrastRadius=%f, seed=%d\n", ud_alpha, alpha, m_curContrastRadius, seed);
         }
 
         // Could potentially use mat.convertTo(mat, -1, alpha, beta) 
@@ -624,7 +632,9 @@ void ColorTransformer::Apply(cv::Mat &mat)
     if (m_curSaturationRadius > 0 && mat.channels() == 3)
     {
         UniRealT d(-m_curSaturationRadius, m_curSaturationRadius);
-        double ratio = 1.0 + d(*rng);
+        auto ud_saturation = d(*rng);
+        double ratio = 1.0 + ud_saturation;
+        fprintf(stderr, "**ColorTransformer::Apply: ud_saturation=%f, ratio=%f, m_curSaturationRadius=%f, seed=%d\n", ud_saturation, ratio, m_curSaturationRadius, seed);
         assert(0 <= ratio && ratio <= 2);
 
         auto hsv = m_hsvTemp.pop_or_create([]() { return std::make_unique<cv::Mat>(); });
