@@ -1035,6 +1035,8 @@ void CPUMatrix<ElemType>::SetUniformRandomValue(const ElemType low, const ElemTy
 #endif
     std::uniform_real_distribution<ElemType> r(low, high);
 
+    fprintf(stdout, " ** CPUMatrix::SetUniformRandomValue\n");
+
     ElemType* bufPtr = Data();
     long m = (long) GetNumElements();
     // four-way unrolling
@@ -1069,6 +1071,7 @@ void CPUMatrix<ElemType>::SetGaussianRandomValue(const ElemType mean, const Elem
     std::default_random_engine generator(seed);
 #endif
     std::normal_distribution<ElemType> r(mean, sigma);
+    fprintf(stdout, " ** CPUMatrix::SetGaussianRandomValue\n");
     // #pragma omp parallel for   // is it thread safe?
     foreach_coord (i, j, us)
     {
@@ -1093,6 +1096,7 @@ void CPUMatrix<ElemType>::AddGaussianRandomValue(const ElemType mean, const Elem
     std::default_random_engine generator(seed);
 #endif
     std::normal_distribution<ElemType> r(mean, sigma);
+    fprintf(stdout, " ** CPUMatrix::AddGaussianRandomValue\n");
 
     long m = (long) GetNumRows(), n = (long) GetNumCols();
     for (long j = 0; j < n; j++)
@@ -1126,6 +1130,7 @@ void CPUMatrix<ElemType>::SetUniformRandomMask(const ElemType maskRate, const El
 
     auto& us = *this;
     std::uniform_real_distribution<ElemType> r(0, 1);
+    fprintf(stdout, " ** CPUMatrix::SetUniformRandomMask\n");
 
     long m = (long) GetNumRows(), n = (long) GetNumCols();
     ElemType v;
