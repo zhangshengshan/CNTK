@@ -21,6 +21,7 @@
 #include "CorpusDescriptor.h"
 #include "ConfigUtil.h"
 #include "StringUtil.h"
+#include <omp.h>
 
 namespace Microsoft { namespace MSR { namespace CNTK {
 
@@ -66,6 +67,12 @@ CompositeDataReader::CompositeDataReader(const ConfigParameters& config, MemoryP
     }
 
     m_precision = config("precision", "float");
+
+    int threadCount = config(L"numCPUThreads", 0);
+    if (threadCount > 0)
+    {
+        omp_set_num_threads(threadCount);
+    }
 
     // Creating deserializers.
     // TODO: Currently the primary deserializer defines the corpus. The logic will be moved to CorpusDescriptor class.
