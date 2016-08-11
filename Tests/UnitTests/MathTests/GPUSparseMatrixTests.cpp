@@ -59,8 +59,8 @@ BOOST_FIXTURE_TEST_CASE(GPUSparseMatrixScaleAndAdd, RandomSeedFixture)
     float b[m * n];
     for (int i = 0; i < m * n; i++)
     {
-        a[i] = static_cast<float>(rand());
-        b[i] = static_cast<float>(rand());
+        a[i] = static_cast<float>(rand()/32768);
+        b[i] = static_cast<float>(rand()/32768);
     }
 
     const GPUMatrix<float> denseMatrixA(m, n, c_deviceIdZero, a, MatrixFlags::matrixFlagNormal);
@@ -83,7 +83,8 @@ BOOST_FIXTURE_TEST_CASE(GPUSparseMatrixScaleAndAdd, RandomSeedFixture)
     for (int i = 0; i < m * n; i++)
     {
         // TODO: Switch to use BOOST_TEST with tolearance when we use C++11 
-        BOOST_CHECK_CLOSE_FRACTION(alpha * (alpha * a[i] + beta * b[i]), c[i], relErr);
+	BOOST_CHECK_EQUAL(alpha * (alpha * a[i] + beta * b[i]), c[i]);
+        //BOOST_CHECK_CLOSE_FRACTION(alpha * (alpha * a[i] + beta * b[i]), c[i], relErr);
     }
 }
 
