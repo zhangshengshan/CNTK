@@ -13,6 +13,7 @@
 #include "../../../Source/Math/BatchNormalizationEngine.h"
 #include "../../../Source/Math/CuDnnFactories.h"
 #include "common.h"
+#include <boost/random/normal_distribution.hpp>
 
 namespace Microsoft { namespace MSR { namespace CNTK { namespace Test {
 
@@ -76,7 +77,7 @@ BOOST_AUTO_TEST_SUITE(BatchNormalizationSuite)
 BOOST_AUTO_TEST_CASE(BatchNormalizationForward)
 {
     std::mt19937 rng(0);
-    std::normal_distribution<float> nd;
+    boost::random::normal_distribution<float> nd;
 
     auto initMat = [&](SingleMatrix& buf, size_t r, size_t c, vec& data) -> SingleMatrix
     {
@@ -209,7 +210,7 @@ BOOST_AUTO_TEST_CASE(BatchNormalizationForward)
 //        return;
 //
 //    std::mt19937 rng(0);
-//    std::normal_distribution<float> nd;
+//    boost::random::normal_distribution<float> nd;
 //
 //    auto initMat = [&](SingleMatrix& buf, size_t r, size_t c, vec& data) -> SingleMatrix
 //    {
@@ -291,7 +292,7 @@ BOOST_AUTO_TEST_CASE(BatchNormalizationForward)
 BOOST_AUTO_TEST_CASE(BatchNormalizationBackward)
 {
     std::mt19937 rng(0);
-    std::normal_distribution<float> nd;
+    boost::random::normal_distribution<float> nd;
 
     auto initMat = [&](SingleMatrix& buf, size_t r, size_t c, vec& data) -> SingleMatrix
     {
