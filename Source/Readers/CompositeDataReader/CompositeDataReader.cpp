@@ -71,6 +71,7 @@ CompositeDataReader::CompositeDataReader(const ConfigParameters& config, MemoryP
     int threadCount = config(L"numCPUThreads", 0);
     if (threadCount > 0)
     {
+	fprintf(stdout,"threadCount=%d\n", threadCount);
         omp_set_num_threads(threadCount);
     }
 
