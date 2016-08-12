@@ -82,6 +82,44 @@ static void DoEvalBase(const ConfigParameters& config, IDataReader& reader)
 }
 
 template <typename ElemType>
+static void DoEvalBNBase(const ConfigParameters& config, IDataReader& reader) 
+{
+	DEVICEID_TYPE deviceId = DeviceFromConfig(config);
+	ConfigArray minibatchSize = config(L"minibatchSize", "40960");
+	size_t epochSize = config(L"epochSize", "0");
+	if (epochSize == 0)
+	{
+		epochSize = requestDataSize;
+	}
+	wstring modelPath = config(L"modelPath");
+	intargvector mbSize = minibatchSize;
+
+	int traceLevel = config(L"traceLevel", "0");
+	size_t numMBsToShowResult = config(L"numMBsToShowResult", "100");
+	size_t maxSamplesInRAM = config(L"maxSamplesInRAM", (size_t)SIZE_MAX);
+	size_t numSubminiBatches = config(L"numSubminibatches", (size_t)1);
+
+	bool enableDistributedMBReading = config(L"distributedMBReading", false);
+
+	ConfigArray evalNodeNames = config(L"evalNodeNames", "");
+	vector<wstring> evalNodeNamesVector;
+	for (int i = 0; i < evalNodeNames.size(); ++i)
+	{
+		evalNodeNamesVector.push_back(evalNodeNames[i]);
+	}
+
+	auto net = ComputationNetwork::CreateFromFile<ElemType>(deviceId, modelPath);
+
+	// set tracing flags
+	net->EnableNodeTracing(config(L"traceNodeNamesReal", ConfigParameters::Array(stringargvector())),
+		config(L"traceNodeNamesCategory", ConfigParameters::Array(stringargvector())),
+		config(L"traceNodeNamesSparse", ConfigParameters::Array(stringargvector())));
+
+	SimpleEvaluator<ElemType> eval(net, MPIWrapper::GetInstance(), enableDistributedMBReading, numMBsToShowResult, traceLevel, maxSamplesInRAM, numSubminiBatches);
+	eval.EvaluateBatchNorm(&reader, evalNodeNamesVector, mbSize[0], epochSize);
+}
+
+template <typename ElemType>
 void DoEval(const ConfigParameters& config)
 {
     // test
@@ -93,8 +131,22 @@ void DoEval(const ConfigParameters& config)
     DoEvalBase<ElemType>(config, testDataReader);
 }
 
+template <typename ElemType>
+void DoEvalBN(const ConfigParameters& config)
+{
+	// bn eval
+	ConfigParameters readerConfig(config(L"reader"));
+	readerConfig.Insert("traceLevel", config(L"traceLevel", "0"));
+
+	DataReader bnEvalDataReader(readerConfig);
+
+	DoEvalBNBase<ElemType>(config, bnEvalDataReader);
+}
+
 template void DoEval<double>(const ConfigParameters& config);
 template void DoEval<float>(const ConfigParameters& config);
+template void DoEvalBN<double>(const ConfigParameters& config);
+template void DoEvalBN<float>(const ConfigParameters& config);
 
 // ===========================================================================
 // DoCrossValidate() - implements CNTK "cv" command

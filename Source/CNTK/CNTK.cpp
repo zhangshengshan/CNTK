@@ -241,6 +241,12 @@ void DoCommands(const ConfigParameters& config, const shared_ptr<MPIWrapper>& mp
                     LOGPRINTF(stderr, "CNTKCommandTrainEnd: %s\n", command[i].c_str());
                     fullEpochsOffset += GetMaxEpochs(commandParams);
                 }
+				else if (thisAction == "postbn")
+				{
+					LOGPRINTF(stderr, "CNTKCommandPostBNBegin: %s\n", command[i].c_str());
+					DoEvalBN<ElemType>(commandParams);
+					LOGPRINTF(stderr, "CNTKCommandPostBNEnd: %s\n", command[i].c_str());
+				}
                 else if (thisAction == "adapt")
                 {
                     DoAdapt<ElemType>(commandParams);

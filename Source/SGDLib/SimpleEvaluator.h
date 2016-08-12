@@ -257,6 +257,214 @@ public:
         return evalResults;
     }
 
+	// using test dataset to generate mean and std of Batch Normalization nodes
+	void EvaluateBatchNorm(IDataReader* dataReader, const vector<string>& evalNodeNames, const size_t mbSize, const size_t testSize = requestDataSize)
+	{
+		ScopedNetworkOperationMode modeGuard(m_net, NetworkOperationMode::inferring);
+
+		// determine nodes to evaluate
+		std::vector<ComputationNodeBasePtr> evalNodes;
+
+		set<ComputationNodeBasePtr> criteriaLogged; // (keeps track ot duplicates to avoid we don't double-log critera)
+		if (evalNodeNames.size() == 0)
+		{
+			fprintf(stderr, "evalNodeNames are not specified, using all the default evalnodes and training criterion nodes.\n");
+			if (m_net->EvaluationNodes().empty() && m_net->FinalCriterionNodes().empty())
+				InvalidArgument("There is no default evaluation node or training criterion specified in the network.");
+
+			for (const auto& node : m_net->EvaluationNodes())
+				if (criteriaLogged.insert(node).second)
+					evalNodes.push_back(node);
+
+			for (const auto& node : m_net->FinalCriterionNodes())
+				if (criteriaLogged.insert(node).second)
+					evalNodes.push_back(node);
+		}
+		else
+		{
+			for (int i = 0; i < evalNodeNames.size(); i++)
+			{
+				const auto& node = m_net->GetNodeFromName(evalNodeNames[i]);
+				if (!criteriaLogged.insert(node).second)
+					continue;
+				if (node->GetSampleLayout().GetNumElements() != 1)
+					InvalidArgument("Criterion nodes to evaluate must have dimension 1x1.");
+				evalNodes.push_back(node);
+			}
+		}
+
+		// initialize eval results
+		std::vector<EpochCriterion> evalResults(evalNodes.size(), EpochCriterion(0));
+
+		// allocate memory for forward computation
+		m_net->AllocateAllMatrices(evalNodes, {}, nullptr);
+
+		// prepare features and labels
+		auto& featureNodes = m_net->FeatureNodes();
+		auto& labelNodes = m_net->LabelNodes();
+
+		StreamMinibatchInputs inputMatrices;
+		for (auto& node : featureNodes)
+			inputMatrices.AddInput(node->NodeName(), node->ValuePtr(), node->GetMBLayout(), node->GetSampleLayout());
+		for (auto& node : labelNodes)
+			inputMatrices.AddInput(node->NodeName(), node->ValuePtr(), node->GetMBLayout(), node->GetSampleLayout());
+
+		// evaluate through minibatches
+		size_t totalEpochSamples = 0;
+		size_t numMBsRun = 0;
+		size_t numSamplesLastLogged = 0;
+		size_t numMBsRunLastLogged = 0; // MBs run before this display
+
+		std::vector<EpochCriterion> evalResultsLastLogged(evalResults.size(), EpochCriterion(0));
+
+		bool useParallelTrain = (m_mpi != nullptr);
+		bool useDistributedMBReading = useParallelTrain && m_enableDistributedMBReading && dataReader->SupportsDistributedMBRead();
+		if (useDistributedMBReading)
+			dataReader->StartDistributedMinibatchLoop(mbSize, 0, m_mpi->CurrentNodeRank(), m_mpi->NumNodesInUse(), testSize);
+		else
+			dataReader->StartMinibatchLoop(mbSize, 0, testSize);
+
+		m_net->StartEvaluateMinibatchLoop(evalNodes);
+
+		std::vector<Matrix<ElemType>*> learnParamsGradients;
+		DataReaderHelpers::SubminibatchDispatcher<ElemType> smbDispatcher;
+		size_t numSubminibatchesNeeded = DataReaderHelpers::GetNumSubminibatchesNeeded<ElemType>(dataReader, m_maxSamplesInRAM, m_numSubminiBatches, mbSize);
+
+		// Passing in two empty node lists so the dispatcher can work for the evalNodes.
+		std::list<ComputationNodeBasePtr> learnableNodes;
+		std::vector<ComputationNodeBasePtr> criterionNodes;
+		if (numSubminibatchesNeeded > 1)
+			smbDispatcher.Init(m_net, learnableNodes, criterionNodes, evalNodes);
+
+		CriterionAccumulator<ElemType> localEpochEvalErrors(evalNodes.size(), m_net->GetDeviceId());
+
+		const size_t numIterationsBeforePrintingProgress = 100;
+		size_t numItersSinceLastPrintOfProgress = 0;
+		bool noMoreSamplesToProcess = false;
+		for (;;)
+		{
+			size_t actualMBSize = 0;
+			bool wasDataRead = DataReaderHelpers::GetMinibatchIntoNetwork<ElemType>(*dataReader, m_net, nullptr, useDistributedMBReading, useParallelTrain, inputMatrices, actualMBSize, m_mpi);
+			// in case of distributed reading, we do a few more loops until all ranks have completed
+			// end of epoch
+			if (!wasDataRead && (!useDistributedMBReading || noMoreSamplesToProcess))
+				break;
+
+			// Note: If !wasDataRead then the data that GetMinibatchIntoNetwork() was supposed to full in are undefined.
+			// Must not touch them.
+			if (!wasDataRead)
+				actualMBSize = 0; // (undefined if !wasDataRead)
+
+			if (actualMBSize > 0)
+			{
+
+				size_t actualNumSubminibatches = numSubminibatchesNeeded <= 1 ? 1 : smbDispatcher.GetMinibatchIntoCache(*dataReader, *m_net, inputMatrices, numSubminibatchesNeeded);
+				for (size_t ismb = 0; ismb < actualNumSubminibatches; ismb++)
+				{
+					if (actualNumSubminibatches > 1)
+					{
+						smbDispatcher.GetSubMinibatchToNet(ismb); // get sub-minibatch from full-size one
+					}
+
+					ComputationNetwork::BumpEvalTimeStamp(featureNodes);
+					ComputationNetwork::BumpEvalTimeStamp(labelNodes);
+
+					m_net->ForwardProp(evalNodes);
+
+					// house-keeping for sub-minibatching
+					if (actualNumSubminibatches > 1)
+						smbDispatcher.DoneWithCurrentSubMinibatch(ismb); // page state out
+				} // end sub-minibatch loop
+
+				if (actualNumSubminibatches > 1)
+					smbDispatcher.DoneWithCurrentMinibatch();
+			} // if (actualMBSize > 0)
+
+			  // BUGBUG (Issue #95): Once we have multiple layouts, this must be done on a per-node basis.
+			size_t numSamplesWithLabel = wasDataRead ? m_net->GetNumSamplesWithLabelOfNetwork(actualMBSize) : 0;
+			size_t aggregateNumSamplesWithLabel = numSamplesWithLabel;
+			if (useParallelTrain)
+			{
+				if (m_gradHeader == nullptr)
+				{
+					m_gradHeader.reset(DistGradHeader::Create(evalNodes.size()), [](DistGradHeader* ptr) {
+						DistGradHeader::Destroy(ptr);
+					});
+					m_distGradAgg = make_shared<SimpleDistGradAggregator<ElemType>>(m_mpi, false, m_traceLevel);
+				}
+
+				m_gradHeader->numEvalNode = evalNodes.size();
+				m_gradHeader->numSamples = actualMBSize;
+				m_gradHeader->numSamplesWithLabel = numSamplesWithLabel;
+				m_gradHeader->criterion = 0.0; // (not used here)
+				for (size_t i = 0; i < evalNodes.size(); i++)
+					m_gradHeader->evalErrors[i] = localEpochEvalErrors.Assign(evalNodes, i, numSamplesWithLabel).GetCriterion(i);
+
+				// TODO: We are reusing the aggregation logic inside SimpleDistGradAggregator, which has a heavy dependency
+				// on the gradient matrix. At some point we should refactor the aggregator class to be able to only calculating
+				// eval results and then remove this hack.
+				if (learnParamsGradients.size() == 0)
+				{
+					Matrix<ElemType>* matrix = new Matrix<ElemType>((DEVICEID_TYPE)m_net->GetDeviceId());
+					learnParamsGradients.push_back(matrix);
+				}
+
+				// Using SimpleDistAggregator for eval results only. At some point we should rename the class to be just
+				// IDistAggregator and SimpleDistAggregator.
+				bool samplesProcessed = m_distGradAgg->AggregateGradients(learnParamsGradients, m_gradHeader.get(), 0);
+				noMoreSamplesToProcess = !samplesProcessed;
+
+				aggregateNumSamplesWithLabel = m_gradHeader->numSamplesWithLabel;
+				for (size_t i = 0; i < evalResults.size(); i++)
+					evalResults[i] += m_gradHeader->evalErrors[i];
+			}
+			else
+			{
+				if (actualMBSize != 0)
+				{
+					for (int i = 0; i < evalNodes.size(); i++)
+						evalResults[i] += localEpochEvalErrors.Assign(evalNodes, i, numSamplesWithLabel).GetCriterion(i);
+				}
+			}
+
+			totalEpochSamples += aggregateNumSamplesWithLabel;
+			numMBsRun++;
+
+			if (m_traceLevel > 0)
+			{
+				numSamplesLastLogged += aggregateNumSamplesWithLabel;
+
+				if (numMBsRun <= m_firstMBsToShowResult || (m_numMBsToShowResult && (numMBsRun % m_numMBsToShowResult == 0)))
+				{
+					DisplayEvalStatistics(numMBsRunLastLogged + 1, numMBsRun, numSamplesLastLogged, evalNodes, evalResults, evalResultsLastLogged);
+
+					for (int i = 0; i < evalResults.size(); i++)
+						evalResultsLastLogged[i] = evalResults[i];
+					numSamplesLastLogged = 0;
+					numMBsRunLastLogged = numMBsRun;
+				}
+			}
+
+			numItersSinceLastPrintOfProgress = ProgressTracing::TraceFakeProgress(numIterationsBeforePrintingProgress, numItersSinceLastPrintOfProgress);
+
+			// call DataEnd to check if end of sentence is reached
+			// datareader will do its necessary/specific process for sentence ending
+			dataReader->DataEnd();
+		}
+
+		// show last batch of results
+		if (m_traceLevel > 0 && numSamplesLastLogged > 0)
+		{
+			DisplayEvalStatistics(numMBsRunLastLogged + 1, numMBsRun, numSamplesLastLogged, evalNodes, evalResults, evalResultsLastLogged);
+		}
+
+		// final statistics
+		for (int i = 0; i < evalResultsLastLogged.size(); i++)
+			evalResultsLastLogged[i] = EpochCriterion(0); // clear this since statistics display will subtract the previous value
+
+		DisplayEvalStatistics(1, numMBsRun, totalEpochSamples, evalNodes, evalResults, evalResultsLastLogged, true, /*isFinal=*/true);
+	}
+
 protected:
     void DisplayEvalStatistics(const size_t startMBNum, const size_t endMBNum, const size_t numSamplesLastLogged,
                                const vector<ComputationNodeBasePtr>& evalNodes,
