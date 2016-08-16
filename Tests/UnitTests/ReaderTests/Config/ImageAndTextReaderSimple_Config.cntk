@@ -12,6 +12,7 @@ deviceId = -1
 outputNodeNames = "Dummy"
 traceLevel = 1
 frameMode = false
+numCPUThreads = 1
 
 Simple_Test = [
 
@@ -19,7 +20,7 @@ Simple_Test = [
 reader = [
         verbosity = 0
         randomize = true
-	numCPUThreads = 1
+	prefetch = false
 
         deserializers = (
             [
