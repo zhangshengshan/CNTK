@@ -82,7 +82,10 @@ BOOST_FIXTURE_TEST_CASE(GPUSparseMatrixScaleAndAdd, RandomSeedFixture)
     unique_ptr<float[]> c(denseMatrixC.CopyToArray());
     for (int i = 0; i < m * n; i++)
     {        
-        AreEqual(alpha * (alpha * a[i] + beta * b[i]), c[i], Err<float>::Rel, Err<float>::Abs);
+        float res1 = alpha * (alpha * a[i] + beta * b[i]);
+        float res2 = c[i];
+        BOOST_REQUIRE_MESSAGE(AreEqual(res1, res2, Err<float>::Rel, Err<float>::Abs), 
+                              "GPUSparseMatrixScaleAndAdd: first mismatch at " << i << ", " << res1 << "!=" << res2 << ", relErr=" << (std::abs(res1 - res2) / std::max(std::abs(res1), std::abs(res2))) << ", absErr = " << std::abs(res1 - res2));
     }
 }
 
