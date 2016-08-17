@@ -10,6 +10,7 @@
 #include <crtdefs.h>
 #endif
 #include "../../../Source/Math/GPUSparseMatrix.h"
+#include "common.h"
 
 using namespace Microsoft::MSR::CNTK;
 
@@ -51,7 +52,7 @@ BOOST_FIXTURE_TEST_CASE(GPUSparseMatrixConstructorsAndInitializers, RandomSeedFi
 BOOST_FIXTURE_TEST_CASE(GPUSparseMatrixScaleAndAdd, RandomSeedFixture)
 {
     const int m = 4;
-    const int n = 5;
+    const int n = 5;    
 
     float a[m * n];
     float b[m * n];
@@ -80,8 +81,8 @@ BOOST_FIXTURE_TEST_CASE(GPUSparseMatrixScaleAndAdd, RandomSeedFixture)
     const GPUMatrix<float> denseMatrixC = sparseMatrixC.CopyToDenseMatrix();
     unique_ptr<float[]> c(denseMatrixC.CopyToArray());
     for (int i = 0; i < m * n; i++)
-    {
-        BOOST_CHECK_EQUAL(alpha * (alpha * a[i] + beta * b[i]), c[i]);
+    {        
+        AreEqual(alpha * (alpha * a[i] + beta * b[i]), c[i], Err<float>::Rel, Err<float>::Abs);
     }
 }
 
