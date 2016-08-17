@@ -382,11 +382,13 @@ BOOST_AUTO_TEST_CASE(BatchNormalizationBackward)
             // REVIEW alexeyk: add cases for testing numerical stability.
 
             BOOST_REQUIRE_MESSAGE(!dScale.HasNan("dScale"), "dScale" << msgNan);
-            BOOST_REQUIRE_MESSAGE(CheckEqual(dScale, dScaleB, emsg, relErr * 32, absErr * 16), "dScale" << msg << ". " << emsg);
+            // After using boost norm_distribution, we have to adapt the tolerance value. But we get the same result on Windows and Linux.
+            // When using std norm_distribution, different tolerance values are needed for Windows than for Linux.
+            BOOST_REQUIRE_MESSAGE(CheckEqual(dScale, dScaleB, emsg, relErr * 88, absErr * 16), "dScale" << msg << ". " << emsg);
             BOOST_REQUIRE_MESSAGE(CountNans(dScaleBuf) == crowScaleBias * 2, "dScale" << msgNotNan);
 
             BOOST_REQUIRE_MESSAGE(!dBias.HasNan("dBias"), "dBias" << msgNan);
-            BOOST_REQUIRE_MESSAGE(CheckEqual(dBias, dBiasB, emsg, relErr * 32, absErr * 16), "dBias" << msg << ". " << emsg);
+            BOOST_REQUIRE_MESSAGE(CheckEqual(dBias, dBiasB, emsg, relErr * 50, absErr * 16), "dBias" << msg << ". " << emsg);
             BOOST_REQUIRE_MESSAGE(CountNans(dBiasBuf) == crowScaleBias * 2, "dBias" << msgNotNan);
 
 #if 0
