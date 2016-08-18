@@ -15,7 +15,6 @@
 #include <boost/random/bernoulli_distribution.hpp>
 #include <boost/random/normal_distribution.hpp>
 
-
 namespace Microsoft { namespace MSR { namespace CNTK 
 {
 
