@@ -7,14 +7,14 @@
 #include <array>
 #include <random>
 #include <numeric>
+#include <boost/random/normal_distribution.hpp>
+#include <boost/random/uniform_int_distribution.hpp>
 #include "../../../Source/Math/Matrix.h"
 #include "../../../Source/Math/CPUMatrix.h"
 #include "../../../Source/Math/GPUMatrix.h"
 #include "../../../Source/Math/ConvolutionEngine.h"
 #include "../../../Source/Math/CuDnnFactories.h"
 #include "common.h"
-#include <boost/random/normal_distribution.hpp>
-#include <boost/random/uniform_int_distribution.hpp>
 
 namespace Microsoft { namespace MSR { namespace CNTK { namespace Test {
 
