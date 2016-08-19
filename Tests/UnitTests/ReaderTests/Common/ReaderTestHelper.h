@@ -5,13 +5,13 @@
 #pragma once
 
 #include <boost/test/unit_test.hpp>
-#include "boost/filesystem.hpp"
-#include "boost/lexical_cast.hpp"
+#include <boost/filesystem.hpp>
+#include <boost/lexical_cast.hpp>
 #include "DataReader.h"
 
-using namespace Microsoft::MSR::CNTK;
-
 namespace Microsoft { namespace MSR { namespace CNTK { namespace Test {
+
+const double relError = 1e-5f;
 
 struct ReaderFixture
 {
@@ -114,9 +114,7 @@ struct ReaderFixture
     string m_initialWorkingPath;
     string m_testDataPath;
     string m_parentPath;
-
-    double relError = 1e-5f;
-    
+   
     string initialPath()
     {
         return m_initialWorkingPath;
